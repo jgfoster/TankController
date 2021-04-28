@@ -1,0 +1,32 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classUIState.html" title=" " alt="" coords="5,588,72,615"/>
+<area shape="rect" id="node2" href="$classCalibrationManagement.html" title=" " alt="" coords="120,208,279,235"/>
+<area shape="rect" id="node3" href="$classMainMenu.html" title=" " alt="" coords="158,259,241,285"/>
+<area shape="rect" id="node4" href="$classNumCollectorState.html" title=" " alt="" coords="133,309,265,336"/>
+<area shape="rect" id="node18" href="$classPIDTuningMenu.html" title=" " alt="" coords="142,360,257,387"/>
+<area shape="rect" id="node19" href="$classResetLCDScreen.html" title=" " alt="" coords="138,411,261,437"/>
+<area shape="rect" id="node20" href="$classSeeDeviceAddress.html" title=" " alt="" coords="133,461,266,488"/>
+<area shape="rect" id="node21" href="$classSeeDeviceUptime.html" title=" " alt="" coords="136,512,263,539"/>
+<area shape="rect" id="node22" href="$classSeeGoogleMins.html" title=" " alt="" coords="142,563,257,589"/>
+<area shape="rect" id="node23" href="$classSeeLogFile.html" title=" " alt="" coords="155,613,243,640"/>
+<area shape="rect" id="node24" href="$classSeePHSlope.html" title=" " alt="" coords="151,664,248,691"/>
+<area shape="rect" id="node25" href="$classSeePIDConstants.html" title=" " alt="" coords="136,715,263,741"/>
+<area shape="rect" id="node26" href="$classSeeTankID.html" title=" " alt="" coords="156,765,243,792"/>
+<area shape="rect" id="node27" href="$classSeeVersion.html" title=" " alt="" coords="155,816,244,843"/>
+<area shape="rect" id="node28" href="$classSetCalibrationClear.html" title=" " alt="" coords="133,867,266,893"/>
+<area shape="rect" id="node29" href="$classTemperatureCalibration.html" title=" " alt="" coords="121,917,277,944"/>
+<area shape="rect" id="node30" href="$classWait.html" title=" " alt="" coords="175,968,223,995"/>
+<area shape="rect" id="node5" href="$classEnablePID.html" title=" " alt="" coords="365,5,448,32"/>
+<area shape="rect" id="node6" href="$classPHCalibrationHigh.html" title=" " alt="" coords="342,56,471,83"/>
+<area shape="rect" id="node7" href="$classPHCalibrationLow.html" title=" " alt="" coords="343,107,470,133"/>
+<area shape="rect" id="node8" href="$classPHCalibrationMid.html" title=" " alt="" coords="345,157,468,184"/>
+<area shape="rect" id="node9" href="$classSetChillOrHeat.html" title=" " alt="" coords="352,208,461,235"/>
+<area shape="rect" id="node10" href="$classSetGoogleSheetInterval.html" title=" " alt="" coords="327,259,487,285"/>
+<area shape="rect" id="node11" href="$classSetKD.html" title=" " alt="" coords="377,309,437,336"/>
+<area shape="rect" id="node12" href="$classSetKI.html" title=" " alt="" coords="379,360,434,387"/>
+<area shape="rect" id="node13" href="$classSetKP.html" title=" " alt="" coords="377,411,437,437"/>
+<area shape="rect" id="node14" href="$classSetPHSetPoint.html" title=" " alt="" coords="351,461,462,488"/>
+<area shape="rect" id="node15" href="$classSetTankID.html" title=" " alt="" coords="365,512,449,539"/>
+<area shape="rect" id="node16" href="$classSetTempSetPoint.html" title=" " alt="" coords="344,563,469,589"/>
+<area shape="rect" id="node17" href="$classSetTime.html" title=" " alt="" coords="371,613,442,640"/>
+</map>

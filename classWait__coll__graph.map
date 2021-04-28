@@ -1,0 +1,8 @@
+<map id="Wait" name="Wait">
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,53,212"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="61,81,128,108"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="190,185,314,212"/>
+<area shape="rect" id="node4" href="$classSerial__TC.html" title=" " alt="" coords="194,81,273,108"/>
+<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="381,81,502,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="393,5,490,32"/>
+</map>

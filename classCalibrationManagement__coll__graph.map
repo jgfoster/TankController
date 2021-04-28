@@ -1,0 +1,8 @@
+<map id="CalibrationManagement" name="CalibrationManagement">
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,164,212"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="95,81,162,108"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="195,185,319,212"/>
+<area shape="rect" id="node4" href="$classSerial__TC.html" title=" " alt="" coords="205,81,284,108"/>
+<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="392,81,513,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="404,5,501,32"/>
+</map>

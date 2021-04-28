@@ -1,0 +1,10 @@
+<map id="src/UIState/SetTankID.cpp" name="src/UIState/SetTankID.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="121,5,300,32"/>
+<area shape="rect" id="node2" href="$SetTankID_8h.html" title=" " alt="" coords="62,80,157,107"/>
+<area shape="rect" id="node6" href="$EEPROM__TC_8h.html" title=" " alt="" coords="135,229,297,256"/>
+<area shape="rect" id="node7" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="249,80,431,107"/>
+<area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="5,155,165,181"/>
+<area shape="rect" id="node4" href="$UIState_8h.html" title=" " alt="" coords="33,229,111,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="178,304,254,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="372,155,479,181"/>
+</map>

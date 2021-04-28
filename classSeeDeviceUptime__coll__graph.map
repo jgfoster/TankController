@@ -1,0 +1,8 @@
+<map id="SeeDeviceUptime" name="SeeDeviceUptime">
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,132,212"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="79,81,146,108"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="171,185,295,212"/>
+<area shape="rect" id="node4" href="$classSerial__TC.html" title=" " alt="" coords="189,81,268,108"/>
+<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="376,81,497,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="388,5,485,32"/>
+</map>
