@@ -110,10 +110,16 @@ Functions</h2></td></tr>
 <tr class="separator:a07f36d984c9279ab10331d54f730c392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1a0012f611286fd6366453a5b1e6c43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="PID_8cpp.html#af1a0012f611286fd6366453a5b1e6c43">unittest</a> (setTunings)</td></tr>
 <tr class="separator:af1a0012f611286fd6366453a5b1e6c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42dc118041a6bc5bb0572b7c9b04fc57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="PID_8cpp.html#a42dc118041a6bc5bb0572b7c9b04fc57">unittest</a> (setKp)</td></tr>
+<tr class="separator:a42dc118041a6bc5bb0572b7c9b04fc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dcd2773481618086fb748151096369"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="PID_8cpp.html#aa7dcd2773481618086fb748151096369">unittest</a> (setKi)</td></tr>
+<tr class="separator:aa7dcd2773481618086fb748151096369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ab74eb0cb75ba447c063a49180f746"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="PID_8cpp.html#a88ab74eb0cb75ba447c063a49180f746">unittest</a> (setKd)</td></tr>
+<tr class="separator:a88ab74eb0cb75ba447c063a49180f746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a07f36d984c9279ab10331d54f730c392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07f36d984c9279ab10331d54f730c392">&#9670;&nbsp;</a></span>unittest() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f36d984c9279ab10331d54f730c392">&#9670;&nbsp;</a></span>unittest() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,35 +134,35 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00034">34</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                  {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *pPID = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  pPID-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(2, 5, 1);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// initialize the variables we&#39;re linked to</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">double</span> input = 50;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">double</span> setpoint = 100;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">double</span> output;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// turn the PID on</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    delay(200);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    output = pPID-&gt;<a class="code" href="classPID__TC.html#a7a0c92dbfcd62ca10173662476596b1a">computeOutput</a>(setpoint, input);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span> delta = output - input;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    input = input - (delta / 25.6);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  assertEqual(setpoint, round(input));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00033">33</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                  {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *pPID = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  pPID-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(2, 5, 1);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// initialize the variables we&#39;re linked to</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">double</span> input = 50;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">double</span> setpoint = 100;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">double</span> output;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// turn the PID on</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    delay(200);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    output = pPID-&gt;<a class="code" href="classPID__TC.html#a7a0c92dbfcd62ca10173662476596b1a">computeOutput</a>(setpoint, input);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">double</span> delta = output - input;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    input = input - (delta / 25.6);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  assertEqual(setpoint, round(input));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="ttc" id="aclassPID__TC_html"><div class="ttname"><a href="classPID__TC.html">PID_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00004">PID_TC.h:4</a></div></div>
 <div class="ttc" id="aclassPID__TC_html_a018320ab44c3ddbf18a1a7abd4d5701f"><div class="ttname"><a href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a></div><div class="ttdeci">static PID_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00011">PID_TC.cpp:11</a></div></div>
-<div class="ttc" id="aclassPID__TC_html_a5de741d35a434df7040d584ee705c1ca"><div class="ttname"><a href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">PID_TC::setTunings</a></div><div class="ttdeci">void setTunings(double Kp, double Ki, double Kd)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00054">PID_TC.cpp:54</a></div></div>
-<div class="ttc" id="aclassPID__TC_html_a7a0c92dbfcd62ca10173662476596b1a"><div class="ttname"><a href="classPID__TC.html#a7a0c92dbfcd62ca10173662476596b1a">PID_TC::computeOutput</a></div><div class="ttdeci">double computeOutput(double target, double current)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00042">PID_TC.cpp:42</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_a5de741d35a434df7040d584ee705c1ca"><div class="ttname"><a href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">PID_TC::setTunings</a></div><div class="ttdeci">void setTunings(double Kp, double Ki, double Kd)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00072">PID_TC.cpp:72</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_a7a0c92dbfcd62ca10173662476596b1a"><div class="ttname"><a href="classPID__TC.html#a7a0c92dbfcd62ca10173662476596b1a">PID_TC::computeOutput</a></div><div class="ttdeci">double computeOutput(double target, double current)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00045">PID_TC.cpp:45</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00042">PID_TC::computeOutput()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00054">PID_TC::setTunings()</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00045">PID_TC::computeOutput()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00072">PID_TC::setTunings()</a>.</p>
 
 </div>
 </div>
 <a id="ae9961b95f158cd8a05a8892a58b7eaec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9961b95f158cd8a05a8892a58b7eaec">&#9670;&nbsp;</a></span>unittest() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9961b95f158cd8a05a8892a58b7eaec">&#9670;&nbsp;</a></span>unittest() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,20 +180,22 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00016">16</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                      {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  PID *pPID = singleton-&gt;<a class="code" href="classPID__TC.html#ab57a3d0782b17c0de77f89cb41b1c995">getPID</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  assertEqual(100000.0, pPID-&gt;GetKp());</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  assertEqual(0.0, pPID-&gt;GetKi());</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  assertEqual(0.0, pPID-&gt;GetKd());</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  assertEqual(AUTOMATIC, pPID-&gt;GetMode());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="aclassPID__TC_html_ab57a3d0782b17c0de77f89cb41b1c995"><div class="ttname"><a href="classPID__TC.html#ab57a3d0782b17c0de77f89cb41b1c995">PID_TC::getPID</a></div><div class="ttdeci">PID * getPID()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00013">PID_TC.h:13</a></div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  assertEqual(100000.0, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  assertEqual(0.0, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  assertEqual(0.0, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  assertEqual(AUTOMATIC, singleton-&gt;<a class="code" href="classPID__TC.html#a3b8c7eff67ff9af9d14c4e3994192309">getMode</a>());</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="aclassPID__TC_html_a3b8c7eff67ff9af9d14c4e3994192309"><div class="ttname"><a href="classPID__TC.html#a3b8c7eff67ff9af9d14c4e3994192309">PID_TC::getMode</a></div><div class="ttdeci">int getMode()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00019">PID_TC.h:19</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_a44098e1aeb0aa6453f5707c487c04009"><div class="ttname"><a href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">PID_TC::getKd</a></div><div class="ttdeci">double getKd()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00010">PID_TC.h:10</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_a5a9c6af27ce35e3fdb29303d58642ba5"><div class="ttname"><a href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">PID_TC::getKi</a></div><div class="ttdeci">double getKi()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00013">PID_TC.h:13</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_a5e6d381fb3ed9b8be227b4d8d4f5b857"><div class="ttname"><a href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">PID_TC::getKp</a></div><div class="ttdeci">double getKp()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8h_source.html#l00016">PID_TC.h:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getPID()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00010">PID_TC::getKd()</a>, <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getKi()</a>, <a class="el" href="PID__TC_8h_source.html#l00016">PID_TC::getKp()</a>, <a class="el" href="PID__TC_8h_source.html#l00019">PID_TC::getMode()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>.</p>
 
 </div>
 </div>
 <a id="a17124a670bbb84e5e58736f166090f9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17124a670bbb84e5e58736f166090f9b">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a17124a670bbb84e5e58736f166090f9b">&#9670;&nbsp;</a></span>unittest() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,25 +210,115 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00025">25</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                      {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();                 <span class="comment">// this puts stuff on the serial port that we want to ignore</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// so here we ignore it!</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">logToSerial</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  assertEqual(<span class="stringliteral">&quot;Kp: 100000.0 Ki:    0.0 Kd:    0.0\r\nPID output (s): 0.0\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00024">24</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                      {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();                 <span class="comment">// this puts stuff on the serial port that we want to ignore</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// so here we ignore it!</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">logToSerial</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  assertEqual(<span class="stringliteral">&quot;Kp: 100000.0 Ki:    0.0 Kd:    0.0\r\nPID output (s): 0.0\r\n&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00010">Blink.cpp:10</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
-<div class="ttc" id="aclassPID__TC_html_ae45b55c61c1971635a6dd5131f739daa"><div class="ttname"><a href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">PID_TC::logToSerial</a></div><div class="ttdeci">void logToSerial()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00049">PID_TC.cpp:49</a></div></div>
+<div class="ttc" id="aclassPID__TC_html_ae45b55c61c1971635a6dd5131f739daa"><div class="ttname"><a href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">PID_TC::logToSerial</a></div><div class="ttdeci">void logToSerial()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00052">PID_TC.cpp:52</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00049">PID_TC::logToSerial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, and <a class="el" href="Blink_8cpp_source.html#l00010">state</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00052">PID_TC::logToSerial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, and <a class="el" href="Blink_8cpp_source.html#l00010">state</a>.</p>
+
+</div>
+</div>
+<a id="a88ab74eb0cb75ba447c063a49180f746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ab74eb0cb75ba447c063a49180f746">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype">setKd&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00079">79</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#ae7dba4794d9be3cef11a1355f77c681f">setKd</a>(1);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  assertEqual(1, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  assertEqual(2, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  assertEqual(5, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="aclassPID__TC_html_ae7dba4794d9be3cef11a1355f77c681f"><div class="ttname"><a href="classPID__TC.html#ae7dba4794d9be3cef11a1355f77c681f">PID_TC::setKd</a></div><div class="ttdeci">void setKd(double Kd)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00057">PID_TC.cpp:57</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00010">PID_TC::getKd()</a>, <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getKi()</a>, <a class="el" href="PID__TC_8h_source.html#l00016">PID_TC::getKp()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00057">PID_TC::setKd()</a>.</p>
+
+</div>
+</div>
+<a id="aa7dcd2773481618086fb748151096369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7dcd2773481618086fb748151096369">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype">setKi&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00071">71</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#ad75e12cd9ae567926f37bd7045ebeca3">setKi</a>(5);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  assertEqual(5, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  assertEqual(2, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  assertEqual(10, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="aclassPID__TC_html_ad75e12cd9ae567926f37bd7045ebeca3"><div class="ttname"><a href="classPID__TC.html#ad75e12cd9ae567926f37bd7045ebeca3">PID_TC::setKi</a></div><div class="ttdeci">void setKi(double Ki)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00062">PID_TC.cpp:62</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00010">PID_TC::getKd()</a>, <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getKi()</a>, <a class="el" href="PID__TC_8h_source.html#l00016">PID_TC::getKp()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00062">PID_TC::setKi()</a>.</p>
+
+</div>
+</div>
+<a id="a42dc118041a6bc5bb0572b7c9b04fc57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42dc118041a6bc5bb0572b7c9b04fc57">&#9670;&nbsp;</a></span>unittest() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unittest </td>
+          <td>(</td>
+          <td class="paramtype">setKp&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00063">63</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#afac2e3d213d7d8b97bf598856f900ed2">setKp</a>(2);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  assertEqual(2, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  assertEqual(50, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  assertEqual(10, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="aclassPID__TC_html_afac2e3d213d7d8b97bf598856f900ed2"><div class="ttname"><a href="classPID__TC.html#afac2e3d213d7d8b97bf598856f900ed2">PID_TC::setKp</a></div><div class="ttdeci">void setKp(double Kp)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00067">PID_TC.cpp:67</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00010">PID_TC::getKd()</a>, <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getKi()</a>, <a class="el" href="PID__TC_8h_source.html#l00016">PID_TC::getKp()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00067">PID_TC::setKp()</a>.</p>
 
 </div>
 </div>
 <a id="af1a0012f611286fd6366453a5b1e6c43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a0012f611286fd6366453a5b1e6c43">&#9670;&nbsp;</a></span>unittest() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a0012f611286fd6366453a5b1e6c43">&#9670;&nbsp;</a></span>unittest() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,26 +333,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00052">52</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                     {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  PID *pPID = singleton-&gt;<a class="code" href="classPID__TC.html#ab57a3d0782b17c0de77f89cb41b1c995">getPID</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(2, 5, 1);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  assertEqual(2, pPID-&gt;GetKp());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  assertEqual(5, pPID-&gt;GetKi());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  assertEqual(1, pPID-&gt;GetKd());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(20, 50, 10);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  assertEqual(20, pPID-&gt;GetKp());</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  assertEqual(50, pPID-&gt;GetKi());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  assertEqual(10, pPID-&gt;GetKd());</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PID_8cpp_source.html#l00051">51</a> of file <a class="el" href="PID_8cpp_source.html">PID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                     {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *singleton = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(2, 5, 1);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  assertEqual(2, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertEqual(5, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  assertEqual(1, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  singleton-&gt;<a class="code" href="classPID__TC.html#a5de741d35a434df7040d584ee705c1ca">setTunings</a>(20, 50, 10);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  assertEqual(20, singleton-&gt;<a class="code" href="classPID__TC.html#a5e6d381fb3ed9b8be227b4d8d4f5b857">getKp</a>());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  assertEqual(50, singleton-&gt;<a class="code" href="classPID__TC.html#a5a9c6af27ce35e3fdb29303d58642ba5">getKi</a>());</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  assertEqual(10, singleton-&gt;<a class="code" href="classPID__TC.html#a44098e1aeb0aa6453f5707c487c04009">getKd</a>());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getPID()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00054">PID_TC::setTunings()</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8h_source.html#l00010">PID_TC::getKd()</a>, <a class="el" href="PID__TC_8h_source.html#l00013">PID_TC::getKi()</a>, <a class="el" href="PID__TC_8h_source.html#l00016">PID_TC::getKp()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00011">PID_TC::instance()</a>, and <a class="el" href="PID__TC_8cpp_source.html#l00072">PID_TC::setTunings()</a>.</p>
 
 </div>
 </div>
 <a id="a696635b9225d8e65779a920ff96765ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696635b9225d8e65779a920ff96765ad">&#9670;&nbsp;</a></span>unittest() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a696635b9225d8e65779a920ff96765ad">&#9670;&nbsp;</a></span>unittest() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
