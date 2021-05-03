@@ -1,5 +1,6 @@
 <map id="src/UIState/TemperatureCalibration.h" name="src/UIState/TemperatureCalibration.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,243,32"/>
-<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="85,80,163,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="86,155,162,181"/>
+<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="44,80,204,107"/>
+<area shape="rect" id="node3" href="$UIState_8h.html" title=" " alt="" coords="85,155,163,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="86,229,162,256"/>
 </map>

@@ -1,6 +1,5 @@
 <map id="src/UIState/SetCalibrationClear.h" name="src/UIState/SetCalibrationClear.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="13,95,173,121"/>
-<area shape="rect" id="node3" href="$UIState_8h.html" title=" " alt="" coords="54,169,131,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,244,131,271"/>
+<area shape="rect" id="node2" href="$UIState_8h.html" title=" " alt="" coords="54,95,131,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="55,169,131,196"/>
 </map>
