@@ -192,39 +192,44 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classTemperatureControl.html#a5297253ca377f401e4741659d4061aa3">TemperatureControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00054">54</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                                     {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> currentMillis = millis();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// pause 30 seconds between switching chiller on and off to prevent damage to chiller</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (currentMillis - <a class="code" href="classChiller.html#a97a77e6edcd91452306190253ffcea4b">previousMillis</a> &gt;= <a class="code" href="classChiller.html#a3fc3e97f7e6809b308c929b352122a2c">TIME_INTERVAL</a>) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> oldValue = digitalRead(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> newValue = oldValue;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classChiller.html#a97a77e6edcd91452306190253ffcea4b">previousMillis</a> = currentMillis;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// if the observed temperature is above the set point turn on the chiller</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      newValue = LOW;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// if the observed temperature is below the set point turn off the chiller</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      newValue = HIGH;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (newValue != oldValue) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">ts_printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;chiller off&quot;</span>) : F(<span class="stringliteral">&quot;chiller on&quot;</span>)));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00055">55</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                     {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> currentMillis = millis();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// pause 30 seconds between switching chiller on and off to prevent damage to chiller</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">if</span> (currentMillis - <a class="code" href="classChiller.html#a97a77e6edcd91452306190253ffcea4b">previousMillis</a> &gt;= <a class="code" href="classChiller.html#a3fc3e97f7e6809b308c929b352122a2c">TIME_INTERVAL</a>) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> oldValue = digitalRead(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> newValue = oldValue;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classChiller.html#a97a77e6edcd91452306190253ffcea4b">previousMillis</a> = currentMillis;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// if in calibration, turn unit off</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;isInCalibration()) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      newValue = HIGH;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// if the observed temperature is above the set point turn on the chiller</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      newValue = LOW;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// if the observed temperature is below the set point turn off the chiller</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      newValue = HIGH;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (newValue != oldValue) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">ts_printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;chiller off&quot;</span>) : F(<span class="stringliteral">&quot;chiller on&quot;</span>)));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="ttc" id="aclassChiller_html_a3fc3e97f7e6809b308c929b352122a2c"><div class="ttname"><a href="classChiller.html#a3fc3e97f7e6809b308c929b352122a2c">Chiller::TIME_INTERVAL</a></div><div class="ttdeci">const unsigned long TIME_INTERVAL</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00042">TemperatureControl.h:42</a></div></div>
 <div class="ttc" id="aclassChiller_html_a97a77e6edcd91452306190253ffcea4b"><div class="ttname"><a href="classChiller.html#a97a77e6edcd91452306190253ffcea4b">Chiller::previousMillis</a></div><div class="ttdeci">unsigned long previousMillis</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00043">TemperatureControl.h:43</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a0c1cee33bbac2dc5067e5e54bb3c7321"><div class="ttname"><a href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a></div><div class="ttdeci">static Serial_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00015">Serial_TC.cpp:15</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a7ea143d1c88a8f443fe9fa8f61342da0"><div class="ttname"><a href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">Serial_TC::ts_printf</a></div><div class="ttdeci">void ts_printf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00045">Serial_TC.cpp:45</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib.cpp:28</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a1f7dbba2655da3e1fdb6d113995873ed"><div class="ttname"><a href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">TemperatureControl::targetTemperature</a></div><div class="ttdeci">double targetTemperature</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00016">TemperatureControl.h:16</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a36bd39e89731b7f816babd6851d33523"><div class="ttname"><a href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">TemperatureControl::DELTA</a></div><div class="ttdeci">const double DELTA</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00015">TemperatureControl.h:15</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a7fab7a4780b048a707f01f00bd4e2342"><div class="ttname"><a href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">TemperatureControl::PIN</a></div><div class="ttdeci">const int PIN</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00014">TemperatureControl.h:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00015">TemperatureControl::DELTA</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">TemperatureControl::PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00043">previousMillis</a>, <a class="el" href="TemperatureControl_8h_source.html#l00016">TemperatureControl::targetTemperature</a>, <a class="el" href="TemperatureControl_8h_source.html#l00042">TIME_INTERVAL</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00045">Serial_TC::ts_printf()</a>.</p>
+<p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00015">TemperatureControl::DELTA</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib::instance()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">TemperatureControl::PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00043">previousMillis</a>, <a class="el" href="TemperatureControl_8h_source.html#l00016">TemperatureControl::targetTemperature</a>, <a class="el" href="TemperatureControl_8h_source.html#l00042">TIME_INTERVAL</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00045">Serial_TC::ts_printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControlTest_8cpp_source.html#l00014">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControlTest_8cpp_source.html#l00029">unittest()</a>.</p>
 
 </div>
 </div>
@@ -251,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00043">43</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00054">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00055">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00042">42</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00054">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00055">updateControl()</a>.</p>
 
 </div>
 </div>

@@ -131,6 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a65639f18f05ce52845bf3269c8b9eb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdef9dc129437c52038cbeb4f4dff03b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#acdef9dc129437c52038cbeb4f4dff03b">handleKey</a> (char <a class="el" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>)</td></tr>
 <tr class="separator:acdef9dc129437c52038cbeb4f4dff03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e5ade11ab9dceffc80b181357af413"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#ad5e5ade11ab9dceffc80b181357af413">isInCalibration</a> ()</td></tr>
+<tr class="separator:ad5e5ade11ab9dceffc80b181357af413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d58bb071e2f4b4eb78e0f1069a29f65"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a0d58bb071e2f4b4eb78e0f1069a29f65">isMainMenu</a> ()</td></tr>
 <tr class="separator:a0d58bb071e2f4b4eb78e0f1069a29f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14bebe1f298527641c25930ef6f0db59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">loop</a> ()</td></tr>
@@ -186,9 +188,9 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                 {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    this-&gt;tc = <a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
-<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00037">UIState.h:37</a></div></div>
+<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00040">UIState.h:40</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
+<p class="reference">References <a class="el" href="UIState_8h_source.html#l00040">tc</a>.</p>
 
 </div>
 </div>
@@ -258,7 +260,41 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00016">returnToMainMenu()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00073">TankControllerLib::handleUI()</a>, <a class="el" href="TankController_8py_source.html#l00260">TankController.TankController::Keyboard()</a>, and <a class="el" href="TankController_8py_source.html#l00256">TankController.TankController::KeypadEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00081">TankControllerLib::handleUI()</a>, <a class="el" href="TankController_8py_source.html#l00260">TankController.TankController::Keyboard()</a>, and <a class="el" href="TankController_8py_source.html#l00256">TankController.TankController::KeypadEvent()</a>.</p>
+
+</div>
+</div>
+<a id="ad5e5ade11ab9dceffc80b181357af413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e5ade11ab9dceffc80b181357af413">&#9670;&nbsp;</a></span>isInCalibration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UIState::isInCalibration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classPHCalibrationMid.html#a4c3385492b9430465df93518735c70b8">PHCalibrationMid</a>, <a class="el" href="classPHCalibrationLow.html#aef5a1fc1d82e330d4cc4cd07f6703049">PHCalibrationLow</a>, and <a class="el" href="classPHCalibrationHigh.html#aafa587dacf7da6aac82ffb727c8b3e3e">PHCalibrationHigh</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00023">23</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                 {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;  <span class="comment">// override to return true to disable controls</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00073">TankControllerLib::isInCalibration()</a>.</p>
 
 </div>
 </div>
@@ -287,10 +323,10 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classMainMenu.html#a4787fcbfbceac12f409c8adc9efff867">MainMenu</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00023">23</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                            {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00026">26</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -319,11 +355,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classWait.html#af6f7e34c6acd1211ff695eeb0c5a680f">Wait</a>, <a class="el" href="classSeePIDConstants.html#ad980b82b45bb9159f24dc84168a7d940">SeePIDConstants</a>, <a class="el" href="classSeeDeviceUptime.html#ab83681083d66f18b43aba8a1cd8ec0c8">SeeDeviceUptime</a>, and <a class="el" href="classMainMenu.html#a1030afe998ac2fbcaf6af266dc78195e">MainMenu</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00026">26</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                      {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00029">29</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                      {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00073">TankControllerLib::handleUI()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00081">TankControllerLib::handleUI()</a>.</p>
 
 </div>
 </div>
@@ -352,7 +388,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classWait.html#a1ca8a7a7db7a2b1d3432fc609f01340b">Wait</a>, <a class="el" href="classTemperatureCalibration.html#a740519f850d23dd7d10aed31840990eb">TemperatureCalibration</a>, <a class="el" href="classSetTime.html#ab783d32a78f08cd3e1bfc6828a9cf134">SetTime</a>, <a class="el" href="classSetTempSetPoint.html#a4efb1690a1add4f205d3b46c559a81f0">SetTempSetPoint</a>, <a class="el" href="classSetTankID.html#a8691e69d2042b58f5195b311c5c30f7b">SetTankID</a>, <a class="el" href="classSetPHSetPoint.html#a652ba6d8498192b83b249c3d05b3510e">SetPHSetPoint</a>, <a class="el" href="classSetKP.html#a349ddef9e6299c9ba15b27a76f79f2de">SetKP</a>, <a class="el" href="classSetKI.html#a02d6c6b8d4674e46e93d5a00cfc2fdc0">SetKI</a>, <a class="el" href="classSetKD.html#ac730250e963884d5b458a54daaa9c23c">SetKD</a>, <a class="el" href="classSetGoogleSheetInterval.html#af20285ef9df4f1d237167e235a7d3cb6">SetGoogleSheetInterval</a>, <a class="el" href="classSetChillOrHeat.html#aacd70781c4c2a9d5cce46f1be8222946">SetChillOrHeat</a>, <a class="el" href="classSetCalibrationClear.html#aac0299d0e0cd87df1288dcea1c9443c8">SetCalibrationClear</a>, <a class="el" href="classSeeVersion.html#a60f9e50de2af52d93906f0da07f09e20">SeeVersion</a>, <a class="el" href="classSeeTankID.html#a229b366a2fc502bb4cdbfe516900152e">SeeTankID</a>, <a class="el" href="classSeePIDConstants.html#a5e82acf5e4009321d5bb145acb88454a">SeePIDConstants</a>, <a class="el" href="classSeePHSlope.html#a2a81feed6249835f41e82cf4d6a2abca">SeePHSlope</a>, <a class="el" href="classSeeLogFile.html#afcad967c15d9cd5cd9306f79730d660f">SeeLogFile</a>, <a class="el" href="classSeeGoogleMins.html#adea139d504d4a71ca50e893a2fa4d878">SeeGoogleMins</a>, <a class="el" href="classSeeDeviceUptime.html#acd9fea4b78c67c7227e622f6fc68ff2c">SeeDeviceUptime</a>, <a class="el" href="classSeeDeviceAddress.html#a8c3e5691c071d667341133e90a437e47">SeeDeviceAddress</a>, <a class="el" href="classResetLCDScreen.html#a95bc4ae3511c69d8fa601e6156f593a1">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#ae916dcfee7ba7a3e6d359d91e997f167">PIDTuningMenu</a>, <a class="el" href="classPHCalibrationMid.html#a34fa2db011839112d689d668d443d3dd">PHCalibrationMid</a>, <a class="el" href="classPHCalibrationLow.html#af07925717eb66d029e9815986c3cd237">PHCalibrationLow</a>, <a class="el" href="classPHCalibrationHigh.html#a94f7a736b3aca84c7e61efe404b3c9c1">PHCalibrationHigh</a>, <a class="el" href="classMainMenu.html#a8d36189349cb25d9cbc442c80fbf26e9">MainMenu</a>, <a class="el" href="classEnablePID.html#aabd19b650d4ce93d70a5af0940070b94">EnablePID</a>, and <a class="el" href="classCalibrationManagement.html#a12ccac9f5cdfd39e9b498de5140cdf97">CalibrationManagement</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00073">TankControllerLib::handleUI()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00097">TankControllerLib::loop()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00131">TankControllerLib::setNextState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00155">TankControllerLib::stateName()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00176">TankControllerLib::updateState()</a>, and <a class="el" href="Wait_8cpp_source.html#l00006">Wait::Wait()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00081">TankControllerLib::handleUI()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00111">TankControllerLib::loop()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00137">TankControllerLib::setNextState()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00161">TankControllerLib::stateName()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00179">TankControllerLib::updateState()</a>, and <a class="el" href="Wait_8cpp_source.html#l00006">Wait::Wait()</a>.</p>
 
 </div>
 </div>
@@ -381,10 +417,10 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classTemperatureCalibration.html#a451cbd7057c1086126fa4df8807b1924">TemperatureCalibration</a>, <a class="el" href="classSetTime.html#a8f52449f5cc50a861f354dfdb679d923">SetTime</a>, <a class="el" href="classSetTempSetPoint.html#abb937a45566ce1cdf051852378c0f70d">SetTempSetPoint</a>, <a class="el" href="classSetTankID.html#a68ec40629e84ef0aee35a8867ec18d45">SetTankID</a>, <a class="el" href="classSetPHSetPoint.html#a4c7c07c5587a751cdd248e9e1b5afe5b">SetPHSetPoint</a>, <a class="el" href="classSetKP.html#aa693243d842d120bc6423eb227f58666">SetKP</a>, <a class="el" href="classSetKI.html#a7c6155cccd7ad183ff663ca7b3b69e22">SetKI</a>, <a class="el" href="classSetKD.html#af0f70eb120792adae2b79040ba6d6231">SetKD</a>, <a class="el" href="classSetGoogleSheetInterval.html#ac416c88b45d6397e6754b631e3937e02">SetGoogleSheetInterval</a>, <a class="el" href="classSetChillOrHeat.html#af6a94cfb4f55915d69281a806ac911c4">SetChillOrHeat</a>, <a class="el" href="classSetCalibrationClear.html#aa5aa90d29b1e34ffea9bf188af3581ec">SetCalibrationClear</a>, <a class="el" href="classSeeVersion.html#a36ea318160d983a76373d2787a53984d">SeeVersion</a>, <a class="el" href="classSeeTankID.html#a2cd6198bb99b54bef11eb2843725287b">SeeTankID</a>, <a class="el" href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">SeePHSlope</a>, <a class="el" href="classSeeLogFile.html#a7808101a90e6aeb1daae4e0237914d8b">SeeLogFile</a>, <a class="el" href="classSeeGoogleMins.html#a8845bf84a62ef34170eedf70873d526b">SeeGoogleMins</a>, <a class="el" href="classSeeDeviceAddress.html#af5f9b4fe51fc56c1f6bd182494c71090">SeeDeviceAddress</a>, <a class="el" href="classResetLCDScreen.html#a1f5e58ad16ae84d25ecc5485ee33854c">ResetLCDScreen</a>, <a class="el" href="classPIDTuningMenu.html#a68e90e62404b677e85628c1dc69f6e3c">PIDTuningMenu</a>, <a class="el" href="classPHCalibrationMid.html#a2834397b5e8ce4eb4f15d7cb91f9ed01">PHCalibrationMid</a>, <a class="el" href="classPHCalibrationLow.html#a2efc1ae17e2f4792f7799b3d60578c61">PHCalibrationLow</a>, <a class="el" href="classPHCalibrationHigh.html#a7364e91ae81fdeaf5c6bbbfb254f4d27">PHCalibrationHigh</a>, <a class="el" href="classMainMenu.html#a2a6e1d3e5fc01e4313d84c833093e937">MainMenu</a>, <a class="el" href="classEnablePID.html#a6d8d940c79822c0519ae00ee535cfeed">EnablePID</a>, and <a class="el" href="classCalibrationManagement.html#a1eaf3946584d91e5b09ee2ef8266a71a">CalibrationManagement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00029">29</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                               {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;                &quot;</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00032">32</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                               {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;                &quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="UIState_8cpp_source.html#l00028">start()</a>.</p>
 
@@ -427,7 +463,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclassUIState_html_a777d5464735cd39cddb517e186da6f35"><div class="ttname"><a href="classUIState.html#a777d5464735cd39cddb517e186da6f35">UIState::setNextState</a></div><div class="ttdeci">void setNextState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00024">UIState.cpp:24</a></div></div>
 <div class="ttc" id="aclassWait_html"><div class="ttname"><a href="classWait.html">Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="Wait_8h_source.html#l00009">Wait.h:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00024">setNextState()</a>, and <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
+<p class="reference">References <a class="el" href="UIState_8cpp_source.html#l00024">setNextState()</a>, and <a class="el" href="UIState_8h_source.html#l00040">tc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CalibrationManagement_8cpp_source.html#l00007">CalibrationManagement::handleKey()</a>, <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00015">NumCollectorState::handleKey()</a>, <a class="el" href="PIDTuningMenu_8cpp_source.html#l00007">PIDTuningMenu::handleKey()</a>, <a class="el" href="ResetLCDScreen_8cpp_source.html#l00007">ResetLCDScreen::handleKey()</a>, <a class="el" href="TemperatureCalibration_8cpp_source.html#l00007">TemperatureCalibration::handleKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00010">handleKey()</a>, <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, <a class="el" href="src_2UIState_2SetGoogleSheetInterval_8cpp_source.html#l00010">SetGoogleSheetInterval::setValue()</a>, <a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html#l00010">SetPHSetPoint::setValue()</a>, <a class="el" href="src_2UIState_2SetTankID_8cpp_source.html#l00010">SetTankID::setValue()</a>, <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, and <a class="el" href="src_2UIState_2SetTime_8cpp_source.html#l00012">SetTime::setValue()</a>.</p>
 
@@ -462,9 +498,9 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">setNextState</a>(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00010">Blink.cpp:10</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00131">TankControllerLib.cpp:131</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00137">TankControllerLib.cpp:137</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00131">TankControllerLib::setNextState()</a>, <a class="el" href="Blink_8cpp_source.html#l00010">state</a>, and <a class="el" href="UIState_8h_source.html#l00037">tc</a>.</p>
+<p class="reference">References <a class="el" href="TankControllerLib_8cpp_source.html#l00137">TankControllerLib::setNextState()</a>, <a class="el" href="Blink_8cpp_source.html#l00010">state</a>, and <a class="el" href="UIState_8h_source.html#l00040">tc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00064">MainMenu::handleKey()</a>, <a class="el" href="Wait_8cpp_source.html#l00017">Wait::loop()</a>, <a class="el" href="UIState_8cpp_source.html#l00016">returnToMainMenu()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00176">MainMenu::selectSet()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00139">MainMenu::selectView()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, and <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>.</p>
 
@@ -504,11 +540,11 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC.cpp:16</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC.cpp:87</a></div></div>
-<div class="ttc" id="aclassUIState_html_a0104fcd88e3ae4514e45b94806698ab8"><div class="ttname"><a href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00029">UIState.h:29</a></div></div>
+<div class="ttc" id="aclassUIState_html_a0104fcd88e3ae4514e45b94806698ab8"><div class="ttname"><a href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00032">UIState.h:32</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="UIState_8h_source.html#l00029">prompt()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="UIState_8h_source.html#l00032">prompt()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00069">NumCollectorState::start()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00176">TankControllerLib::updateState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="src_2UIState_2NumberCollectorState_8cpp_source.html#l00069">NumCollectorState::start()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00179">TankControllerLib::updateState()</a>.</p>
 
 </div>
 </div>
@@ -533,7 +569,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00037">37</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UIState_8h_source.html#l00040">40</a> of file <a class="el" href="UIState_8h_source.html">UIState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00064">MainMenu::handleKey()</a>, <a class="el" href="UIState_8cpp_source.html#l00016">returnToMainMenu()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00176">MainMenu::selectSet()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00139">MainMenu::selectView()</a>, <a class="el" href="UIState_8cpp_source.html#l00024">setNextState()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, <a class="el" href="UIState_8h_source.html#l00014">UIState()</a>, and <a class="el" href="Wait_8cpp_source.html#l00006">Wait::Wait()</a>.</p>
 

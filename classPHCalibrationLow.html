@@ -100,6 +100,8 @@ Collaboration diagram for PHCalibrationLow:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a03653d9a0f9ea0900b6144e9bba42e3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHCalibrationLow.html#a03653d9a0f9ea0900b6144e9bba42e3a">PHCalibrationLow</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
 <tr class="separator:a03653d9a0f9ea0900b6144e9bba42e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5a1fc1d82e330d4cc4cd07f6703049"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHCalibrationLow.html#aef5a1fc1d82e330d4cc4cd07f6703049">isInCalibration</a> ()</td></tr>
+<tr class="separator:aef5a1fc1d82e330d4cc4cd07f6703049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07925717eb66d029e9815986c3cd237"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHCalibrationLow.html#af07925717eb66d029e9815986c3cd237">name</a> ()</td></tr>
 <tr class="separator:af07925717eb66d029e9815986c3cd237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2efc1ae17e2f4792f7799b3d60578c61"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHCalibrationLow.html#a2efc1ae17e2f4792f7799b3d60578c61">prompt</a> ()</td></tr>
@@ -188,11 +190,43 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                          : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
 <div class="ttc" id="aclassNumCollectorState_html_a01afcb5b7abc78c4ebdaa7cbc9eb9fd1"><div class="ttname"><a href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState::NumCollectorState</a></div><div class="ttdeci">NumCollectorState(TankControllerLib *tc)</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00010">NumberCollectorState.h:10</a></div></div>
-<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00037">UIState.h:37</a></div></div>
+<div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00040">UIState.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aef5a1fc1d82e330d4cc4cd07f6703049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5a1fc1d82e330d4cc4cd07f6703049">&#9670;&nbsp;</a></span>isInCalibration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool PHCalibrationLow::isInCalibration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classUIState.html#ad5e5ade11ab9dceffc80b181357af413">UIState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="PHCalibrationLow_8h_source.html#l00013">13</a> of file <a class="el" href="PHCalibrationLow_8h_source.html">PHCalibrationLow.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                 {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;  <span class="comment">// disable controls during calibration</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="af07925717eb66d029e9815986c3cd237"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af07925717eb66d029e9815986c3cd237">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -218,10 +252,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PHCalibrationLow_8h_source.html#l00013">13</a> of file <a class="el" href="PHCalibrationLow_8h_source.html">PHCalibrationLow.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                     {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PHCalibrationLow&quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="PHCalibrationLow_8h_source.html#l00016">16</a> of file <a class="el" href="PHCalibrationLow_8h_source.html">PHCalibrationLow.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PHCalibrationLow&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,10 +284,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PHCalibrationLow_8h_source.html#l00016">16</a> of file <a class="el" href="PHCalibrationLow_8h_source.html">PHCalibrationLow.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;pH-Lowpoint     &quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="PHCalibrationLow_8h_source.html#l00019">19</a> of file <a class="el" href="PHCalibrationLow_8h_source.html">PHCalibrationLow.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                       {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;pH-Lowpoint     &quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -303,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassUIState_html_a777d5464735cd39cddb517e186da6f35"><div class="ttname"><a href="classUIState.html#a777d5464735cd39cddb517e186da6f35">UIState::setNextState</a></div><div class="ttdeci">void setNextState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00024">UIState.cpp:24</a></div></div>
 <div class="ttc" id="aclassWait_html"><div class="ttname"><a href="classWait.html">Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="Wait_8h_source.html#l00009">Wait.h:9</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00093">PHProbe::setLowpointCalibration()</a>, <a class="el" href="UIState_8cpp_source.html#l00024">UIState::setNextState()</a>, <a class="el" href="UIState_8h_source.html#l00037">UIState::tc</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00026">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00093">PHProbe::setLowpointCalibration()</a>, <a class="el" href="UIState_8cpp_source.html#l00024">UIState::setNextState()</a>, <a class="el" href="UIState_8h_source.html#l00040">UIState::tc</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00026">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>

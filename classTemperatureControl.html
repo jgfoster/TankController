@@ -162,11 +162,11 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>private constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00041">41</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                       {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, HIGH);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00042">42</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                       {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, HIGH);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="ttc" id="aclassEEPROM__TC_html_a3d76a02486f9ea6815637230cd1c2f54"><div class="ttname"><a href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">EEPROM_TC::getTemp</a></div><div class="ttdeci">virtual double getTemp()=0</div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a59c568088d819c574708d0fc47baa092"><div class="ttname"><a href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance(int version=0)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC.cpp:16</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a1f7dbba2655da3e1fdb6d113995873ed"><div class="ttname"><a href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">TemperatureControl::targetTemperature</a></div><div class="ttdeci">double targetTemperature</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00016">TemperatureControl.h:16</a></div></div>
@@ -231,21 +231,21 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static member function to return singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00030">30</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                               {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a920f0b1d8e273c7064e3d9fb996829c3">setHeat</a>(flag);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> &amp;&amp; (<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>-&gt;<a class="code" href="classTemperatureControl.html#a99fcf64cef88656d94575e3fd2cd7e4a">isHeater</a>() != flag)) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00031">31</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                               {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a920f0b1d8e273c7064e3d9fb996829c3">setHeat</a>(flag);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> &amp;&amp; (<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>-&gt;<a class="code" href="classTemperatureControl.html#a99fcf64cef88656d94575e3fd2cd7e4a">isHeater</a>() != flag)) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="ttc" id="aclassEEPROM__TC_html_a920f0b1d8e273c7064e3d9fb996829c3"><div class="ttname"><a href="classEEPROM__TC.html#a920f0b1d8e273c7064e3d9fb996829c3">EEPROM_TC::setHeat</a></div><div class="ttdeci">virtual void setHeat(bool value)=0</div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a14b32b1a0bf142fb2d3f767e8ae1989e"><div class="ttname"><a href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">TemperatureControl::_instance</a></div><div class="ttdeci">static TemperatureControl * _instance</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00011">TemperatureControl.h:11</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a99fcf64cef88656d94575e3fd2cd7e4a"><div class="ttname"><a href="classTemperatureControl.html#a99fcf64cef88656d94575e3fd2cd7e4a">TemperatureControl::isHeater</a></div><div class="ttdeci">virtual bool isHeater()=0</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00011">_instance</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>, <a class="el" href="classTemperatureControl.html#a99fcf64cef88656d94575e3fd2cd7e4a">isHeater()</a>, and <a class="el" href="classEEPROM__TC.html#a920f0b1d8e273c7064e3d9fb996829c3">EEPROM_TC::setHeat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, and <a class="el" href="Menu_8cpp_source.html#l00022">unittest_setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, and <a class="el" href="Menu_8cpp_source.html#l00024">unittest_setup()</a>.</p>
 
 </div>
 </div>
@@ -279,7 +279,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00016">targetTemperature</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00198">TankControllerLib::writeDataToSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00201">TankControllerLib::writeDataToSD()</a>.</p>
 
 </div>
 </div>
@@ -307,23 +307,23 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static member function to return singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00016">16</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                 {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;getHeat()) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">new</span> <a class="code" href="classHeater.html">Heater</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">new</span> <a class="code" href="classChiller.html">Chiller</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00017">17</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                 {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;getHeat()) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">new</span> <a class="code" href="classHeater.html">Heater</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a> = <span class="keyword">new</span> <a class="code" href="classChiller.html">Chiller</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classTemperatureControl.html#a14b32b1a0bf142fb2d3f767e8ae1989e">_instance</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="ttc" id="aclassChiller_html"><div class="ttname"><a href="classChiller.html">Chiller</a></div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00040">TemperatureControl.h:40</a></div></div>
 <div class="ttc" id="aclassHeater_html"><div class="ttname"><a href="classHeater.html">Heater</a></div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00032">TemperatureControl.h:32</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00011">_instance</a>, and <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="Menu_8cpp_source.html#l00022">unittest_setup()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00162">TankControllerLib::updateControls()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00198">TankControllerLib::writeDataToSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, <a class="el" href="src_2UIState_2SetChillOrHeat_8cpp_source.html#l00010">SetChillOrHeat::setValue()</a>, <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="Menu_8cpp_source.html#l00024">unittest_setup()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00168">TankControllerLib::updateControls()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00201">TankControllerLib::writeDataToSD()</a>.</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classChiller.html#aa66d188fbddd06bfa327cfdd6fa8bc65">Chiller</a>, and <a class="el" href="classHeater.html#ae17c16785b2452481fa28c032f1b1c6b">Heater</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00030">enableHeater()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00031">enableHeater()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>.</p>
 
 </div>
 </div>
@@ -373,16 +373,16 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>set target temperature and save in EEPROM </p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00049">49</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                                   {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">setTemp</a>(newTemperature);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = newTemperature;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00050">50</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                                                   {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">setTemp</a>(newTemperature);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = newTemperature;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="ttc" id="aclassEEPROM__TC_html_ac4d08ddc62aaf244d289b5db0c9999a0"><div class="ttname"><a href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp</a></div><div class="ttdeci">virtual void setTemp(double value)=0</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EEPROM__TC_8cpp_source.html#l00016">EEPROM_TC::instance()</a>, <a class="el" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp()</a>, and <a class="el" href="TemperatureControl_8h_source.html#l00016">targetTemperature</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="TCLibTest_8cpp_source.html#l00055">unittest()</a>, and <a class="el" href="Menu_8cpp_source.html#l00022">unittest_setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="src_2UIState_2SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="TCLibTest_8cpp_source.html#l00051">unittest()</a>, and <a class="el" href="Menu_8cpp_source.html#l00024">unittest_setup()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +412,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classChiller.html#a41591d6b6d653206be5e543e92a4ff0a">Chiller</a>, and <a class="el" href="classHeater.html#af78b19802d8778e7a34c6a928ccd2582">Heater</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00162">TankControllerLib::updateControls()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00168">TankControllerLib::updateControls()</a>.</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00011">11</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00030">enableHeater()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00016">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00031">enableHeater()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00017">instance()</a>.</p>
 
 </div>
 </div>
@@ -466,7 +466,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00015">15</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00076">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00054">Chiller::updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00081">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00055">Chiller::updateControl()</a>.</p>
 
 </div>
 </div>
@@ -492,7 +492,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00014">14</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00041">TemperatureControl()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00076">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00054">Chiller::updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00042">TemperatureControl()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00081">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00055">Chiller::updateControl()</a>.</p>
 
 </div>
 </div>
@@ -518,7 +518,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00016">16</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8h_source.html#l00024">getTargetTemperature()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00049">setTargetTemperature()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00041">TemperatureControl()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00076">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00054">Chiller::updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8h_source.html#l00024">getTargetTemperature()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00050">setTargetTemperature()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00042">TemperatureControl()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00081">Heater::updateControl()</a>, and <a class="el" href="TemperatureControl_8cpp_source.html#l00055">Chiller::updateControl()</a>.</p>
 
 </div>
 </div>

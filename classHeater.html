@@ -184,32 +184,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classTemperatureControl.html#a5297253ca377f401e4741659d4061aa3">TemperatureControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00076">76</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> oldValue = digitalRead(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">bool</span> newValue = oldValue;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// if the observed temperature is below the temperature set-point turn on the heater</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    newValue = LOW;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// if the observed temperature is above the temperature set-point turn off the heater</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    newValue = HIGH;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">if</span> (newValue != oldValue) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">ts_printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;heater off&quot;</span>) : F(<span class="stringliteral">&quot;heater on&quot;</span>)));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00081">81</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                                    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> oldValue = digitalRead(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> newValue = oldValue;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// if in calibration, turn unit off</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;isInCalibration()) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    newValue = HIGH;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// if the observed temperature is below the temperature set-point turn on the heater</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    newValue = LOW;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// if the observed temperature is above the temperature set-point turn off the heater</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a>) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    newValue = HIGH;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span> (newValue != oldValue) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">ts_printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;heater off&quot;</span>) : F(<span class="stringliteral">&quot;heater on&quot;</span>)));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="aclassSerial__TC_html_a0c1cee33bbac2dc5067e5e54bb3c7321"><div class="ttname"><a href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a></div><div class="ttdeci">static Serial_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00015">Serial_TC.cpp:15</a></div></div>
 <div class="ttc" id="aclassSerial__TC_html_a7ea143d1c88a8f443fe9fa8f61342da0"><div class="ttname"><a href="classSerial__TC.html#a7ea143d1c88a8f443fe9fa8f61342da0">Serial_TC::ts_printf</a></div><div class="ttdeci">void ts_printf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00045">Serial_TC.cpp:45</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib.cpp:28</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a1f7dbba2655da3e1fdb6d113995873ed"><div class="ttname"><a href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">TemperatureControl::targetTemperature</a></div><div class="ttdeci">double targetTemperature</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00016">TemperatureControl.h:16</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a36bd39e89731b7f816babd6851d33523"><div class="ttname"><a href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">TemperatureControl::DELTA</a></div><div class="ttdeci">const double DELTA</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00015">TemperatureControl.h:15</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a7fab7a4780b048a707f01f00bd4e2342"><div class="ttname"><a href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">TemperatureControl::PIN</a></div><div class="ttdeci">const int PIN</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00014">TemperatureControl.h:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00015">TemperatureControl::DELTA</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">TemperatureControl::PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00016">TemperatureControl::targetTemperature</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00045">Serial_TC::ts_printf()</a>.</p>
+<p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00015">TemperatureControl::DELTA</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib::instance()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">TemperatureControl::PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00016">TemperatureControl::targetTemperature</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00045">Serial_TC::ts_printf()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControlTest_8cpp_source.html#l00064">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControlTest_8cpp_source.html#l00101">unittest()</a>.</p>
 
 </div>
 </div>

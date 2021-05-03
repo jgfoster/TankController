@@ -10,7 +10,7 @@ var searchData=
   ['readserial1_290',['readSerial1',['../libTC_8cpp.html#a4b89bb58c5973a3ca0f492a8f7b7407e',1,'libTC.cpp']]],
   ['refresistor_291',['refResistor',['../classTempProbe__TC.html#a04f0fc0b763f5d9e24488aacd1fd5535',1,'TempProbe_TC']]],
   ['renewdhcplease_292',['renewDHCPLease',['../classEthernet__TC.html#a115eecdb10babebee5b0fd96404be72c',1,'Ethernet_TC']]],
-  ['reset_293',['reset',['../PHControlTest_8cpp.html#ad20897c5c8bd47f5d4005989bead0e55',1,'PHControlTest.cpp']]],
+  ['reset_293',['reset',['../classPID__TC.html#a07437aec1864563be49310ef7159ea65',1,'PID_TC::reset()'],['../PHControlTest_8cpp.html#ad20897c5c8bd47f5d4005989bead0e55',1,'reset():&#160;PHControlTest.cpp']]],
   ['resetlcdscreen_294',['ResetLCDScreen',['../classResetLCDScreen.html',1,'ResetLCDScreen'],['../classResetLCDScreen.html#a546f24ee02ce10616a0716b6051a14cd',1,'ResetLCDScreen::ResetLCDScreen()']]],
   ['resetlcdscreen_2ecpp_295',['ResetLCDScreen.cpp',['../ResetLCDScreen_8cpp.html',1,'']]],
   ['resetlcdscreen_2eh_296',['ResetLCDScreen.h',['../ResetLCDScreen_8h.html',1,'']]],

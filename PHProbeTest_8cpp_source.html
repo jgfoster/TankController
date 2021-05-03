@@ -193,12 +193,11 @@ $(function() {
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="PHProbeTest_8cpp.html#a91062f6bc0b7685741b05c6f137d2fc4">  121</a></span>&#160;<a class="code" href="PHProbeTest_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a>(clearCalibration) {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  GodmodeState *<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;reset();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">clearCalibration</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  assertEqual(<span class="stringliteral">&quot;Cal,clear\r&quot;</span>, GODMODE()-&gt;serialPort[1].dataOut);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">clearCalibration</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  assertEqual(<span class="stringliteral">&quot;Cal,clear\r&quot;</span>, GODMODE()-&gt;serialPort[1].dataOut);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;unittest_main()</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00010">Blink.cpp:10</a></div></div>
 <div class="ttc" id="aPHProbeTest_8cpp_html_a696635b9225d8e65779a920ff96765ad"><div class="ttname"><a href="PHProbeTest_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a></div><div class="ttdeci">unittest(singleton)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbeTest_8cpp_source.html#l00008">PHProbeTest.cpp:8</a></div></div>
 <div class="ttc" id="aPHProbe_8h_html"><div class="ttname"><a href="PHProbe_8h.html">PHProbe.h</a></div></div>
@@ -220,7 +219,7 @@ $(function() {
 <div class="ttc" id="aclassPHProbe_html_aee010401411de42b84abaabd8c4daa04"><div class="ttname"><a href="classPHProbe.html#aee010401411de42b84abaabd8c4daa04">PHProbe::setLowpointCalibration</a></div><div class="ttdeci">void setLowpointCalibration(double lowpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00093">PHProbe.cpp:93</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00009">TankControllerLib.h:9</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib.cpp:28</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_aeba296b1c881822a6bbeae0b0517d76d"><div class="ttname"><a href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">TankControllerLib::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00116">TankControllerLib.cpp:116</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_aeba296b1c881822a6bbeae0b0517d76d"><div class="ttname"><a href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">TankControllerLib::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00130">TankControllerLib.cpp:130</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
