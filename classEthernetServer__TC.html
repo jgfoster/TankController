@@ -149,14 +149,13 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="EthernetServer__TC_8cpp_source.html#l00023">23</a> of file <a class="el" href="EthernetServer__TC_8cpp_source.html">EthernetServer_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                                  : EthernetServer(port) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  begin();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a382f1b5425dfdac8f442b1f40154edc8">printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span>*)F(<span class="stringliteral">&quot;Ethernet Server is listening on port 80 of ??????&quot;</span>));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>((<span class="keyword">const</span> <span class="keywordtype">char</span>*)F(<span class="stringliteral">&quot;Ethernet Server is listening on port 80 of ??????&quot;</span>));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">//   TODO: Need Mock board for .localIP to work</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//   Serial_TC::instance()-&gt;printf(Ethernet.localIP());</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//   serial(Ethernet.localIP());</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="ttc" id="aclassSerial__TC_html_a0c1cee33bbac2dc5067e5e54bb3c7321"><div class="ttname"><a href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a></div><div class="ttdeci">static Serial_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00015">Serial_TC.cpp:15</a></div></div>
-<div class="ttc" id="aclassSerial__TC_html_a382f1b5425dfdac8f442b1f40154edc8"><div class="ttname"><a href="classSerial__TC.html#a382f1b5425dfdac8f442b1f40154edc8">Serial_TC::printf</a></div><div class="ttdeci">void printf(const char *format,...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00032">Serial_TC.cpp:32</a></div></div>
+<div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00032">Serial_TC::printf()</a>.</p>
+<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="EthernetServer__TC_8cpp_source.html#l00012">instance()</a>.</p>
 
@@ -223,11 +222,11 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// delay(ONE_SECOND_DELAY_IN_MILLIS);</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// close the connection:</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    rpc_client.stop();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classSerial__TC.html#a0c1cee33bbac2dc5067e5e54bb3c7321">Serial_TC::instance</a>()-&gt;<a class="code" href="classSerial__TC.html#a382f1b5425dfdac8f442b1f40154edc8">printf</a>((<span class="keyword">const</span> <span class="keywordtype">char</span>*)F(<span class="stringliteral">&quot;rpc_client disconnected&quot;</span>));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>((<span class="keyword">const</span> <span class="keywordtype">char</span>*)F(<span class="stringliteral">&quot;rpc_client disconnected&quot;</span>));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00015">Serial_TC::instance()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00032">Serial_TC::printf()</a>.</p>
+<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
 </div>
 </div>
