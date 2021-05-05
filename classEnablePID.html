@@ -99,8 +99,12 @@ Collaboration diagram for EnablePID:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adc5e1dfcbae4108c4173f61f6ccd078a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#adc5e1dfcbae4108c4173f61f6ccd078a">EnablePID</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
 <tr class="separator:adc5e1dfcbae4108c4173f61f6ccd078a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36aa0d6b259923ff2e7ae72795e3b46"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#ac36aa0d6b259923ff2e7ae72795e3b46">isInteger</a> ()</td></tr>
+<tr class="separator:ac36aa0d6b259923ff2e7ae72795e3b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd19b650d4ce93d70a5af0940070b94"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#aabd19b650d4ce93d70a5af0940070b94">name</a> ()</td></tr>
 <tr class="separator:aabd19b650d4ce93d70a5af0940070b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed274e8684f85b8f81b3f1b35dc76a1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#a9ed274e8684f85b8f81b3f1b35dc76a1">getCurrentValue</a> ()</td></tr>
+<tr class="separator:a9ed274e8684f85b8f81b3f1b35dc76a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d8d940c79822c0519ae00ee535cfeed"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#a6d8d940c79822c0519ae00ee535cfeed">prompt</a> ()</td></tr>
 <tr class="separator:a6d8d940c79822c0519ae00ee535cfeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b43238115fdf06ef1abceb7c9067732"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnablePID.html#a2b43238115fdf06ef1abceb7c9067732">setValue</a> (double <a class="el" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>)</td></tr>
@@ -135,8 +139,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a5ab51108683072589ae7cc54da488852 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">printValue</a> ()</td></tr>
 <tr class="separator:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">isInteger</a> ()</td></tr>
-<tr class="separator:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608d0ad71fdb11f21a20759ee23d327c inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#a608d0ad71fdb11f21a20759ee23d327c">getCurrentValuePrecision</a> ()</td></tr>
+<tr class="separator:a608d0ad71fdb11f21a20759ee23d327c inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUIState"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUIState')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUIState.html">UIState</a></td></tr>
 <tr class="memitem:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TCLibTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
 <tr class="separator:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +198,75 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ed274e8684f85b8f81b3f1b35dc76a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed274e8684f85b8f81b3f1b35dc76a1">&#9670;&nbsp;</a></span>getCurrentValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EnablePID::getCurrentValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>EnablePID.cpp </p>
+
+<p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html#l00010">10</a> of file <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html">EnablePID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                 {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">getUsePID</a>() ? 1 : 9;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a0b68770ec54ae43a7970736c191b8a8d"><div class="ttname"><a href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">PHControl::getUsePID</a></div><div class="ttdeci">bool getUsePID()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00022">PHControl.h:22</a></div></div>
+<div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00021">PHControl.cpp:21</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00022">PHControl::getUsePID()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00021">PHControl::instance()</a>.</p>
+
+</div>
+</div>
+<a id="ac36aa0d6b259923ff2e7ae72795e3b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36aa0d6b259923ff2e7ae72795e3b46">&#9670;&nbsp;</a></span>isInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool EnablePID::isInteger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="EnablePID_8h_source.html#l00013">13</a> of file <a class="el" href="EnablePID_8h_source.html">EnablePID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                           {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aabd19b650d4ce93d70a5af0940070b94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabd19b650d4ce93d70a5af0940070b94">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -219,10 +292,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EnablePID_8h_source.html#l00013">13</a> of file <a class="el" href="EnablePID_8h_source.html">EnablePID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                     {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;EnablePID&quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EnablePID_8h_source.html#l00016">16</a> of file <a class="el" href="EnablePID_8h_source.html">EnablePID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;EnablePID&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,10 +324,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EnablePID_8h_source.html#l00016">16</a> of file <a class="el" href="EnablePID_8h_source.html">EnablePID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PID 1:on; 9:off &quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="EnablePID_8h_source.html#l00020">20</a> of file <a class="el" href="EnablePID_8h_source.html">EnablePID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                       {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PID 1:on; 9:off &quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,31 +354,29 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>EnablePID.cpp </p>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a274efd4ddbddf3394f9f0c32bdf2e28c">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html#l00010">10</a> of file <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html">EnablePID.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                     {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> (!(<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 1.0 || <a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 9.0)) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;Invalid entry!  &quot;</span>, 1);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> flag = (int)<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 1;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#aa946e6752d87fc56aa82680607249ef7">setUsePID</a>(flag);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span> (flag) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;PID enabled     &quot;</span>, 1);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;PID disabled    &quot;</span>, 1);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html#l00014">14</a> of file <a class="el" href="src_2UIState_2EnablePID_8cpp_source.html">EnablePID.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                     {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span> (!(<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 1.0 || <a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 9.0)) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;Invalid entry!  &quot;</span>, 1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> flag = (int)<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a> == 1;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#aa946e6752d87fc56aa82680607249ef7">setUsePID</a>(flag);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (flag) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;PID enabled     &quot;</span>, 1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;PID disabled    &quot;</span>, 1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC.cpp:16</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC.cpp:87</a></div></div>
-<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00026">NumberCollectorState.h:26</a></div></div>
+<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>
 <div class="ttc" id="aclassPHControl_html_aa946e6752d87fc56aa82680607249ef7"><div class="ttname"><a href="classPHControl.html#aa946e6752d87fc56aa82680607249ef7">PHControl::setUsePID</a></div><div class="ttdeci">void setUsePID(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00043">PHControl.cpp:43</a></div></div>
-<div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00021">PHControl.cpp:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00021">PHControl::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00043">PHControl::setUsePID()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00026">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00021">PHControl::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00043">PHControl::setUsePID()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>

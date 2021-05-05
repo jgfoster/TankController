@@ -99,8 +99,12 @@ Collaboration diagram for SetChillOrHeat:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a497c8ba64f0a1df4fad3f01f3009c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#a7a497c8ba64f0a1df4fad3f01f3009c9">SetChillOrHeat</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
 <tr class="separator:a7a497c8ba64f0a1df4fad3f01f3009c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab199660da5035971efcd2c319a478c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#ab199660da5035971efcd2c319a478c0f">isInteger</a> ()</td></tr>
+<tr class="separator:ab199660da5035971efcd2c319a478c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd70781c4c2a9d5cce46f1be8222946"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#aacd70781c4c2a9d5cce46f1be8222946">name</a> ()</td></tr>
 <tr class="separator:aacd70781c4c2a9d5cce46f1be8222946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff651b818c1cee4495eb1061bd14bbb8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#aff651b818c1cee4495eb1061bd14bbb8">getCurrentValue</a> ()</td></tr>
+<tr class="separator:aff651b818c1cee4495eb1061bd14bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a94cfb4f55915d69281a806ac911c4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#af6a94cfb4f55915d69281a806ac911c4">prompt</a> ()</td></tr>
 <tr class="separator:af6a94cfb4f55915d69281a806ac911c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23ee5a3e16659d36cbfeda9c6dd82e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetChillOrHeat.html#a23ee5a3e16659d36cbfeda9c6dd82e2b">setValue</a> (double <a class="el" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>)</td></tr>
@@ -135,8 +139,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a5ab51108683072589ae7cc54da488852 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">printValue</a> ()</td></tr>
 <tr class="separator:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">isInteger</a> ()</td></tr>
-<tr class="separator:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608d0ad71fdb11f21a20759ee23d327c inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#a608d0ad71fdb11f21a20759ee23d327c">getCurrentValuePrecision</a> ()</td></tr>
+<tr class="separator:a608d0ad71fdb11f21a20759ee23d327c inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUIState"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUIState')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUIState.html">UIState</a></td></tr>
 <tr class="memitem:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TCLibTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
 <tr class="separator:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +198,70 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aff651b818c1cee4495eb1061bd14bbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff651b818c1cee4495eb1061bd14bbb8">&#9670;&nbsp;</a></span>getCurrentValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SetChillOrHeat::getCurrentValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00019">19</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                          {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab199660da5035971efcd2c319a478c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab199660da5035971efcd2c319a478c0f">&#9670;&nbsp;</a></span>isInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SetChillOrHeat::isInteger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00013">13</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                           {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aacd70781c4c2a9d5cce46f1be8222946"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacd70781c4c2a9d5cce46f1be8222946">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -219,10 +287,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00013">13</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                     {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetChillOrHeat&quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00016">16</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetChillOrHeat&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,10 +319,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00016">16</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;1:Chill; 9:Heat &quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetChillOrHeat_8h_source.html#l00022">22</a> of file <a class="el" href="SetChillOrHeat_8h_source.html">SetChillOrHeat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;1:Chill; 9:Heat &quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,12 +370,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC.cpp:16</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC.cpp:87</a></div></div>
-<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00026">NumberCollectorState.h:26</a></div></div>
+<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a3b6e11b6a38300e2697e65267a17f44d"><div class="ttname"><a href="classTemperatureControl.html#a3b6e11b6a38300e2697e65267a17f44d">TemperatureControl::instance</a></div><div class="ttdeci">static TemperatureControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00017">TemperatureControl.cpp:17</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_ad645b841bff6e07bc150ffc9f2e7780a"><div class="ttname"><a href="classTemperatureControl.html#ad645b841bff6e07bc150ffc9f2e7780a">TemperatureControl::enableHeater</a></div><div class="ttdeci">static void enableHeater(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00031">TemperatureControl.cpp:31</a></div></div>
-<div class="ttc" id="aclassUIState_html_a2dd85638d5f05240b042e6362ff9bf1a"><div class="ttname"><a href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(int msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00016">UIState.cpp:16</a></div></div>
+<div class="ttc" id="aclassUIState_html_a2dd85638d5f05240b042e6362ff9bf1a"><div class="ttname"><a href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(int msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00018">UIState.cpp:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TemperatureControl_8cpp_source.html#l00031">TemperatureControl::enableHeater()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00017">TemperatureControl::instance()</a>, <a class="el" href="UIState_8cpp_source.html#l00016">UIState::returnToMainMenu()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00026">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="TemperatureControl_8cpp_source.html#l00031">TemperatureControl::enableHeater()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00017">TemperatureControl::instance()</a>, <a class="el" href="UIState_8cpp_source.html#l00018">UIState::returnToMainMenu()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>

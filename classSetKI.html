@@ -101,6 +101,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac65ac2d9de6be3a066e3deae285f16b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d6c6b8d4674e46e93d5a00cfc2fdc0"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetKI.html#a02d6c6b8d4674e46e93d5a00cfc2fdc0">name</a> ()</td></tr>
 <tr class="separator:a02d6c6b8d4674e46e93d5a00cfc2fdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1437dc71204e018f26c234ab8a796c9c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetKI.html#a1437dc71204e018f26c234ab8a796c9c">getCurrentValue</a> ()</td></tr>
+<tr class="separator:a1437dc71204e018f26c234ab8a796c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76640af04c973fdd5399203157db3d76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetKI.html#a76640af04c973fdd5399203157db3d76">getCurrentValuePrecision</a> ()</td></tr>
+<tr class="separator:a76640af04c973fdd5399203157db3d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c6155cccd7ad183ff663ca7b3b69e22"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetKI.html#a7c6155cccd7ad183ff663ca7b3b69e22">prompt</a> ()</td></tr>
 <tr class="separator:a7c6155cccd7ad183ff663ca7b3b69e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50bd3bd044356e98fc97d8852762522"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetKI.html#ac50bd3bd044356e98fc97d8852762522">setValue</a> (double <a class="el" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>)</td></tr>
@@ -133,10 +137,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8e9678c3d38e0b079c90fe7f5418812d inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab51108683072589ae7cc54da488852 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#a5ab51108683072589ae7cc54da488852">handleDigit</a> (int digit)</td></tr>
 <tr class="separator:a5ab51108683072589ae7cc54da488852 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">printValue</a> ()</td></tr>
-<tr class="separator:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">isInteger</a> ()</td></tr>
 <tr class="separator:ab1b13b34ab4bc3cc689529c79c1680ee inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">printValue</a> ()</td></tr>
+<tr class="separator:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUIState"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUIState')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUIState.html">UIState</a></td></tr>
 <tr class="memitem:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TCLibTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
 <tr class="separator:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +198,70 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1437dc71204e018f26c234ab8a796c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1437dc71204e018f26c234ab8a796c9c">&#9670;&nbsp;</a></span>getCurrentValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SetKI::getCurrentValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SetKI_8h_source.html#l00016">16</a> of file <a class="el" href="SetKI_8h_source.html">SetKI.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                          {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a76640af04c973fdd5399203157db3d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76640af04c973fdd5399203157db3d76">&#9670;&nbsp;</a></span>getCurrentValuePrecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetKI::getCurrentValuePrecision </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classNumCollectorState.html#a608d0ad71fdb11f21a20759ee23d327c">NumCollectorState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="SetKI_8h_source.html#l00019">19</a> of file <a class="el" href="SetKI_8h_source.html">SetKI.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                 {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a02d6c6b8d4674e46e93d5a00cfc2fdc0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02d6c6b8d4674e46e93d5a00cfc2fdc0">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -251,10 +319,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetKI_8h_source.html#l00016">16</a> of file <a class="el" href="SetKI_8h_source.html">SetKI.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set KI          &quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetKI_8h_source.html#l00022">22</a> of file <a class="el" href="SetKI_8h_source.html">SetKI.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set KI          &quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -295,11 +363,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC.cpp:16</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC.cpp:87</a></div></div>
-<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00026">NumberCollectorState.h:26</a></div></div>
+<div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>
 <div class="ttc" id="aclassPID__TC_html_a018320ab44c3ddbf18a1a7abd4d5701f"><div class="ttname"><a href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a></div><div class="ttdeci">static PID_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00012">PID_TC.cpp:12</a></div></div>
 <div class="ttc" id="aclassPID__TC_html_ad75e12cd9ae567926f37bd7045ebeca3"><div class="ttname"><a href="classPID__TC.html#ad75e12cd9ae567926f37bd7045ebeca3">PID_TC::setKi</a></div><div class="ttdeci">void setKi(double Ki)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00083">PID_TC.cpp:83</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00083">PID_TC::setKi()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00026">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00016">LiquidCrystal_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00083">PID_TC::setKi()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00087">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>
