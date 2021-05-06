@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      newValue = HIGH;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (newValue != oldValue) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;chiller off&quot;</span>) : F(<span class="stringliteral">&quot;chiller on&quot;</span>)));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a>((newValue ? F(<span class="stringliteral">&quot;chiller off&quot;</span>) : F(<span class="stringliteral">&quot;chiller on&quot;</span>)));</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
@@ -151,7 +151,7 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    newValue = HIGH;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span> (newValue != oldValue) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)(newValue ? F(<span class="stringliteral">&quot;heater off&quot;</span>) : F(<span class="stringliteral">&quot;heater on&quot;</span>)));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a>((newValue ? F(<span class="stringliteral">&quot;heater off&quot;</span>) : F(<span class="stringliteral">&quot;heater on&quot;</span>)));</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, newValue);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>

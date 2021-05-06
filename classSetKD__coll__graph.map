@@ -1,8 +1,6 @@
 <map id="SetKD" name="SetKD">
-<area shape="rect" id="node1" title=" " alt="" coords="41,261,101,288"/>
-<area shape="rect" id="node2" href="$classNumCollectorState.html" title=" " alt="" coords="5,185,137,212"/>
-<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="95,81,162,108"/>
-<area shape="rect" id="node4" href="$classTankControllerLib.html" title=" " alt="" coords="161,185,285,212"/>
-<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="203,81,324,108"/>
-<area shape="rect" id="node6" title=" " alt="" coords="215,5,312,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="41,185,101,212"/>
+<area shape="rect" id="node2" href="$classNumCollectorState.html" title=" " alt="" coords="5,109,137,136"/>
+<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="101,5,167,32"/>
+<area shape="rect" id="node4" href="$classTankControllerLib.html" title=" " alt="" coords="161,109,285,136"/>
 </map>

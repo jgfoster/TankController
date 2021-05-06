@@ -224,7 +224,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00033">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="PHProbeTest_8cpp_source.html#l00019">unittest()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00199">TankControllerLib::writeDataToSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="PHProbeTest_8cpp_source.html#l00019">unittest()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00204">TankControllerLib::writeDataToSD()</a>.</p>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  String slope = <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.substring(7);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// output to log</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)F(<span class="stringliteral">&quot;Calibration Slope: %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)slope.c_str());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(F(<span class="stringliteral">&quot;Calibration Slope: %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)slope.c_str());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> slope;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
@@ -333,7 +333,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00031">_instance</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00026">PHProbe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00128">TankControllerLib::serialEvent1()</a>, <a class="el" href="PHCalibrationHigh_8cpp_source.html#l00009">PHCalibrationHigh::setValue()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00010">SeePHSlope::start()</a>, <a class="el" href="PHProbeTest_8cpp_source.html#l00008">unittest()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00166">TankControllerLib::updateControls()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00199">TankControllerLib::writeDataToSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00226">MainMenu::idle()</a>, <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00134">TankControllerLib::serialEvent1()</a>, <a class="el" href="PHCalibrationHigh_8cpp_source.html#l00009">PHCalibrationHigh::setValue()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00010">SeePHSlope::start()</a>, <a class="el" href="PHProbeTest_8cpp_source.html#l00008">unittest()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00171">TankControllerLib::updateControls()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00204">TankControllerLib::writeDataToSD()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {               <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(13);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)F(<span class="stringliteral">&quot;Serial1 = %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)<span class="keywordtype">string</span>.c_str());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(F(<span class="stringliteral">&quot;Serial1 = %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)<span class="keywordtype">string</span>.c_str());</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
@@ -399,7 +399,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="PHProbe_8h_source.html#l00034">slopeResponse</a>, and <a class="el" href="PHProbe_8h_source.html#l00033">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00128">TankControllerLib::serialEvent1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00134">TankControllerLib::serialEvent1()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    fullCommand = PARTIAL_COMMAND + <span class="stringliteral">&quot;20\r&quot;</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>((<span class="keyword">const</span> <span class="keywordtype">char</span> *)fullCommand.c_str());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - &quot;</span>, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)fullCommand.c_str());</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 </div><!-- fragment -->

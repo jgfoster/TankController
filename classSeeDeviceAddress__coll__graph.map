@@ -1,7 +1,5 @@
 <map id="SeeDeviceAddress" name="SeeDeviceAddress">
-<area shape="rect" id="node1" title=" " alt="" coords="5,185,139,212"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="92,81,159,108"/>
-<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="163,185,287,212"/>
-<area shape="rect" id="node4" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="199,81,321,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="211,5,309,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,109,139,136"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="103,5,169,32"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="163,109,287,136"/>
 </map>

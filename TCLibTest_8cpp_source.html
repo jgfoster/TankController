@@ -168,27 +168,28 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">char</span> data[4096];</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  file.read(data, file.size());</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  data[file.size()] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  String contents(data), line;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">int</span> i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  line = contents.substring(0, i);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  assertEqual(<span class="stringliteral">&quot;time,tankid,temp,temp setpoint,pH,pH setpoint,onTime,Kp,Ki,Kd&quot;</span>, line.c_str());</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  contents = contents.substring(i + 1);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  line = contents.substring(0, i);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  String expected(<span class="stringliteral">&quot;04/27/2021 14:24:51,   0, 20.021, 20.000, 7.5000, 7.5000,    0, 100000.0,   0.0,   0.0&quot;</span>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;expectedSize = &quot;</span> &lt;&lt; expected.length() &lt;&lt; <span class="stringliteral">&quot;; actualSize = &quot;</span> &lt;&lt; line.length());</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  assertEqual(expected, line);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  contents = contents.substring(i + 1);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  line = contents.substring(0, i);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  expected = String(<span class="stringliteral">&quot;04/27/2021 14:24:52,   0, 20.021, 20.000, 7.5000, 7.5000,    0, 100000.0,   0.0,   0.0&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;expectedSize = &quot;</span> &lt;&lt; expected.length() &lt;&lt; <span class="stringliteral">&quot;; actualSize = &quot;</span> &lt;&lt; line.length());</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  assertEqual(expected, line);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(data);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  file.close();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(data);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  String contents(data), line;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">int</span> i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  line = contents.substring(0, i);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  assertEqual(<span class="stringliteral">&quot;time,tankid,temp,temp setpoint,pH,pH setpoint,onTime,Kp,Ki,Kd&quot;</span>, line.c_str());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  contents = contents.substring(i + 1);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  line = contents.substring(0, i);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  String expected(<span class="stringliteral">&quot;04/27/2021 14:24:51,   0, 20.021, 20.000, 7.5000, 7.5000,    0, 100000.0,   0.0,   0.0&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;expectedSize = &quot;</span> &lt;&lt; expected.length() &lt;&lt; <span class="stringliteral">&quot;; actualSize = &quot;</span> &lt;&lt; line.length());</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  assertEqual(expected, line);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  contents = contents.substring(i + 1);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  i = contents.indexOf(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  line = contents.substring(0, i);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  expected = String(<span class="stringliteral">&quot;04/27/2021 14:24:52,   0, 20.021, 20.000, 7.5000, 7.5000,    0, 100000.0,   0.0,   0.0&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;expectedSize = &quot;</span> &lt;&lt; expected.length() &lt;&lt; <span class="stringliteral">&quot;; actualSize = &quot;</span> &lt;&lt; line.length());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  assertEqual(expected, line);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(data);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  file.close();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;unittest_main()</div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aPHControl_8h_html"><div class="ttname"><a href="PHControl_8h.html">PHControl.h</a></div></div>
 <div class="ttc" id="aPHProbe_8h_html"><div class="ttname"><a href="PHProbe_8h.html">PHProbe.h</a></div></div>
@@ -220,11 +221,11 @@ $(function() {
 <div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00015">PHProbe.cpp:15</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_a7de726655896225eab608c4eca64620d"><div class="ttname"><a href="classPHProbe.html#a7de726655896225eab608c4eca64620d">PHProbe::getPh</a></div><div class="ttdeci">double getPh()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00014">PHProbe.h:14</a></div></div>
 <div class="ttc" id="aclassSD__TC_html"><div class="ttname"><a href="classSD__TC.html">SD_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00012">SD_TC.h:12</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00014">SD_TC.cpp:14</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00009">TankControllerLib.h:9</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00109">TankControllerLib.cpp:109</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00115">TankControllerLib.cpp:115</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_a287a4571ad0c8a9cbab60a3cc40f43b5"><div class="ttname"><a href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00028">TankControllerLib.cpp:28</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_aeba296b1c881822a6bbeae0b0517d76d"><div class="ttname"><a href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">TankControllerLib::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00128">TankControllerLib.cpp:128</a></div></div>
+<div class="ttc" id="aclassTankControllerLib_html_aeba296b1c881822a6bbeae0b0517d76d"><div class="ttname"><a href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">TankControllerLib::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00134">TankControllerLib.cpp:134</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html"><div class="ttname"><a href="classTempProbe__TC.html">TempProbe_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00089">TempProbe_TC.h:89</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_a4c43d4a4b041a81ab34247f8b2bcb04a"><div class="ttname"><a href="classTempProbe__TC.html#a4c43d4a4b041a81ab34247f8b2bcb04a">TempProbe_TC::getRunningAverage</a></div><div class="ttdeci">double getRunningAverage()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8cpp_source.html#l00052">TempProbe_TC.cpp:52</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_ab1ac81002f8d2e86564804755baca4e8"><div class="ttname"><a href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a></div><div class="ttdeci">static TempProbe_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8cpp_source.html#l00017">TempProbe_TC.cpp:17</a></div></div>

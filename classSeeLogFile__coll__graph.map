@@ -1,7 +1,5 @@
 <map id="SeeLogFile" name="SeeLogFile">
-<area shape="rect" id="node1" title=" " alt="" coords="5,185,93,212"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="60,81,127,108"/>
-<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="121,185,245,212"/>
-<area shape="rect" id="node4" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="167,81,289,108"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,5,277,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,109,93,136"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="60,5,127,32"/>
+<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="119,109,243,136"/>
 </map>

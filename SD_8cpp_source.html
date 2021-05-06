@@ -167,27 +167,39 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="SD_8cpp.html#ad2fa4df9316d966d6d355c902cdd5d4d">   95</a></span>&#160;<a class="code" href="SD_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a>(printRootDirectory) {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  GodmodeState* <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classSD__TC.html">SD_TC</a>* <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a> = <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;<a class="code" href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">printRootDirectory</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;c&quot;</span>, FILE_WRITE).close();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;e&quot;</span>, FILE_WRITE).close();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;mkdir(<span class="stringliteral">&quot;d&quot;</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;d/d1&quot;</span>, FILE_WRITE).close();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;d/d2&quot;</span>, FILE_WRITE).close();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;<a class="code" href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">printRootDirectory</a>();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  String expect = String(<span class="stringliteral">&quot;c&gt;&gt;0\r\nd/\r\n&gt;d1&gt;&gt;0\r\n&gt;d2&gt;&gt;0\r\ne&gt;&gt;0\r\n&quot;</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  String output = String(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  std::replace(output.begin(), output.end(), <span class="charliteral">&#39;\t&#39;</span>, <span class="charliteral">&#39;&gt;&#39;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="comment">// output to serial creates additional files here and we want to ignore them!</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  output = output.substr(0, expect.length());</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  assertEqual(expect, output);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;c&quot;</span>, FILE_WRITE).close();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;e&quot;</span>, FILE_WRITE).close();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;mkdir(<span class="stringliteral">&quot;d&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;d/d1&quot;</span>, FILE_WRITE).close();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;open(<span class="stringliteral">&quot;d/d2&quot;</span>, FILE_WRITE).close();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;<a class="code" href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">printRootDirectory</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  String output = String(<a class="code" href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           c (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  assertNotEqual(-1, index);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           d/\r\n&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  assertNotEqual(-1, index);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;-           d1 (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  assertNotEqual(-1, index);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;-           d2 (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  assertNotEqual(-1, index);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           e (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  assertNotEqual(-1, index);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">           c (     0)</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">d/</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">-           d1 (     0)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">-           d2 (     0)</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">           e (     0)</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;unittest_main()</div>
 <div class="ttc" id="aBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="Blink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00010">Blink.cpp:10</a></div></div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aSD_8cpp_html_a696635b9225d8e65779a920ff96765ad"><div class="ttname"><a href="SD_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a></div><div class="ttdeci">unittest(singleton)</div><div class="ttdef"><b>Definition:</b> <a href="SD_8cpp_source.html#l00016">SD.cpp:16</a></div></div>
@@ -199,10 +211,10 @@ $(function() {
 <div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_afdcd786be827d68c0fcebd7c2c749d6f"><div class="ttname"><a href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">DateTime_TC::setAsCurrent</a></div><div class="ttdeci">void setAsCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00073">DateTime_TC.cpp:73</a></div></div>
 <div class="ttc" id="aclassSD__TC_html"><div class="ttname"><a href="classSD__TC.html">SD_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00012">SD_TC.h:12</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_a8536c28426883e4df70e488aa5f1c298"><div class="ttname"><a href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">SD_TC::printRootDirectory</a></div><div class="ttdeci">void printRootDirectory()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00082">SD_TC.cpp:82</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_aa4370e1c5e98d7bd9f28c16be289651c"><div class="ttname"><a href="classSD__TC.html#aa4370e1c5e98d7bd9f28c16be289651c">SD_TC::appendToDataLog</a></div><div class="ttdeci">void appendToDataLog(String header, String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00026">SD_TC.cpp:26</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00053">SD_TC.cpp:53</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00014">SD_TC.cpp:14</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_a8536c28426883e4df70e488aa5f1c298"><div class="ttname"><a href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">SD_TC::printRootDirectory</a></div><div class="ttdeci">void printRootDirectory()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00115">SD_TC.cpp:115</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_aa4370e1c5e98d7bd9f28c16be289651c"><div class="ttname"><a href="classSD__TC.html#aa4370e1c5e98d7bd9f28c16be289651c">SD_TC::appendToDataLog</a></div><div class="ttdeci">void appendToDataLog(String header, String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00038">SD_TC.cpp:38</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00086">SD_TC.cpp:86</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

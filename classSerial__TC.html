@@ -66,6 +66,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classSerial__TC-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -97,6 +98,11 @@ Static Public Member Functions</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a1084181ac129e9d2caa14995c0b9151b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b">Serial_TC</a> ()</td></tr>
 <tr class="separator:a1084181ac129e9d2caa14995c0b9151b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7aed1bfa6c14ad04e2752482d6dca3c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = false</td></tr>
+<tr class="separator:a7aed1bfa6c14ad04e2752482d6dca3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -213,13 +219,21 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[256];</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  vsnprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), format, args);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  Serial.println(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;<a class="code" href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">appendToSerialLog</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  Serial.flush();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// need to avoid recursion since SD_TC could call serial()</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// this seems to cause problems on the actual hardware</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;<a class="code" href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">appendToSerialLog</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00053">SD_TC.cpp:53</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00014">SD_TC.cpp:14</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00086">SD_TC.cpp:86</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>
+<div class="ttc" id="aclassSerial__TC_html_a7aed1bfa6c14ad04e2752482d6dca3c7"><div class="ttname"><a href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">Serial_TC::printIsActive</a></div><div class="ttdeci">bool printIsActive</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00027">Serial_TC.h:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00053">SD_TC::appendToSerialLog()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, and <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>.</p>
+<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00086">SD_TC::appendToSerialLog()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="SD__TC_8cpp_source.html#l00015">SD_TC::instance()</a>, and <a class="el" href="Serial__TC_8h_source.html#l00027">printIsActive</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00022">serialWithTime()</a>.</p>
 
@@ -250,6 +264,32 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00024">24</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00055">instance()</a>.</p>
+
+</div>
+</div>
+<a id="a7aed1bfa6c14ad04e2752482d6dca3c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aed1bfa6c14ad04e2752482d6dca3c7">&#9670;&nbsp;</a></span>printIsActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Serial_TC::printIsActive = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00027">27</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00072">vprintf()</a>.</p>
 
 </div>
 </div>

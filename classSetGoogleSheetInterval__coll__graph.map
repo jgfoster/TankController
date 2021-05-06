@@ -1,8 +1,6 @@
 <map id="SetGoogleSheetInterval" name="SetGoogleSheetInterval">
-<area shape="rect" id="node1" title=" " alt="" coords="5,261,165,288"/>
-<area shape="rect" id="node2" href="$classNumCollectorState.html" title=" " alt="" coords="19,185,151,212"/>
-<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="109,81,176,108"/>
-<area shape="rect" id="node4" href="$classTankControllerLib.html" title=" " alt="" coords="175,185,299,212"/>
-<area shape="rect" id="node5" href="$classLiquidCrystal__TC.html" title=" " alt="" coords="217,81,338,108"/>
-<area shape="rect" id="node6" title=" " alt="" coords="229,5,326,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,165,212"/>
+<area shape="rect" id="node2" href="$classNumCollectorState.html" title=" " alt="" coords="19,109,151,136"/>
+<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="115,5,181,32"/>
+<area shape="rect" id="node4" href="$classTankControllerLib.html" title=" " alt="" coords="175,109,299,136"/>
 </map>
