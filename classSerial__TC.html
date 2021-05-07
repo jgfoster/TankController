@@ -111,7 +111,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00015">15</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00013">13</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1084181ac129e9d2caa14995c0b9151b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1084181ac129e9d2caa14995c0b9151b">&#9670;&nbsp;</a></span>Serial_TC()</h2>
@@ -137,12 +137,12 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>constructor (private so clients use the singleton) </p>
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00065">65</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  Serial.begin(9600);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00048">48</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                     {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  Serial.begin(9600);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00055">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00038">instance()</a>.</p>
 
 </div>
 </div>
@@ -171,19 +171,19 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static member function to return singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00055">55</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                               {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a>) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a> = <span class="keyword">new</span> <a class="code" href="classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b">Serial_TC</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="ttc" id="aclassSerial__TC_html_a1084181ac129e9d2caa14995c0b9151b"><div class="ttname"><a href="classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b">Serial_TC::Serial_TC</a></div><div class="ttdeci">Serial_TC()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00065">Serial_TC.cpp:65</a></div></div>
-<div class="ttc" id="aclassSerial__TC_html_a7a4d52bd1cf6e84dd3cb8d5327b0760a"><div class="ttname"><a href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">Serial_TC::_instance</a></div><div class="ttdeci">static Serial_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00024">Serial_TC.h:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00038">38</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                               {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a>) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a> = <span class="keyword">new</span> <a class="code" href="classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b">Serial_TC</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">_instance</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="aclassSerial__TC_html_a1084181ac129e9d2caa14995c0b9151b"><div class="ttname"><a href="classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b">Serial_TC::Serial_TC</a></div><div class="ttdeci">Serial_TC()</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00048">Serial_TC.cpp:48</a></div></div>
+<div class="ttc" id="aclassSerial__TC_html_a7a4d52bd1cf6e84dd3cb8d5327b0760a"><div class="ttname"><a href="classSerial__TC.html#a7a4d52bd1cf6e84dd3cb8d5327b0760a">Serial_TC::_instance</a></div><div class="ttdeci">static Serial_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00022">Serial_TC.h:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8h_source.html#l00024">_instance</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00065">Serial_TC()</a>.</p>
+<p class="reference">References <a class="el" href="Serial__TC_8h_source.html#l00022">_instance</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00048">Serial_TC()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00022">serialWithTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00017">serialWithTime()</a>.</p>
 
 </div>
 </div>
@@ -214,28 +214,26 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>printf() uses a variant of snprintf() so supports the expected formats </p>
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00072">72</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                                        {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[256];</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  vsnprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), format, args);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  Serial.println(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  Serial.flush();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// need to avoid recursion since SD_TC could call serial()</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a>) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// this seems to cause problems on the actual hardware</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;<a class="code" href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">appendToSerialLog</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8cpp_source.html#l00055">55</a> of file <a class="el" href="Serial__TC_8cpp_source.html">Serial_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[256];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  vsnprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), format, args);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  Serial.println(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  Serial.flush();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// need to avoid recursion since SD_TC could call serial()</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// this seems to cause problems on the actual hardware</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// SD_TC::instance()-&gt;appendToSerialLog(buffer);</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00086">SD_TC.cpp:86</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>
-<div class="ttc" id="aclassSerial__TC_html_a7aed1bfa6c14ad04e2752482d6dca3c7"><div class="ttname"><a href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">Serial_TC::printIsActive</a></div><div class="ttdeci">bool printIsActive</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00027">Serial_TC.h:27</a></div></div>
+<div class="ttc" id="aclassSerial__TC_html_a7aed1bfa6c14ad04e2752482d6dca3c7"><div class="ttname"><a href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">Serial_TC::printIsActive</a></div><div class="ttdeci">bool printIsActive</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00025">Serial_TC.h:25</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00086">SD_TC::appendToSerialLog()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="SD__TC_8cpp_source.html#l00015">SD_TC::instance()</a>, and <a class="el" href="Serial__TC_8h_source.html#l00027">printIsActive</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, and <a class="el" href="Serial__TC_8h_source.html#l00025">printIsActive</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00022">serialWithTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00017">serialWithTime()</a>.</p>
 
 </div>
 </div>
@@ -261,9 +259,9 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static variable for singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00024">24</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00022">22</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00055">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00038">instance()</a>.</p>
 
 </div>
 </div>
@@ -287,9 +285,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00027">27</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00025">25</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00072">vprintf()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00055">vprintf()</a>.</p>
 
 </div>
 </div>

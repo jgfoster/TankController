@@ -87,8 +87,8 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//  instance methods</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">   26</a></span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe::PHProbe</a>() {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Serial1.print(F(<span class="stringliteral">&quot;*OK,0\r&quot;</span>));  <span class="comment">// Turn off the returning of OK after command to EZO pH</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  Serial1.print(F(<span class="stringliteral">&quot;C,1\r&quot;</span>));    <span class="comment">// Reset pH stamp to continuous measurement: once per second</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Serial1.print(<span class="stringliteral">&quot;*OK,0\r&quot;</span>);  <span class="comment">// Turn off the returning of OK after command to EZO pH</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  Serial1.print(<span class="stringliteral">&quot;C,1\r&quot;</span>);    <span class="comment">// Reset pH stamp to continuous measurement: once per second</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">PHProbe::clearCalibration</a>() {</div>
@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a>() {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  Serial1.print(F(<span class="stringliteral">&quot;Slope,?\r&quot;</span>));  <span class="comment">// Sending request for Calibration Slope</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  Serial1.print(<span class="stringliteral">&quot;Slope,?\r&quot;</span>);  <span class="comment">// Sending request for Calibration Slope</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">   39</a></span>&#160;String <a class="code" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">PHProbe::getSlope</a>() {</div>
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  String slope = <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.substring(7);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// output to log</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(F(<span class="stringliteral">&quot;Calibration Slope: %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)slope.c_str());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Calibration Slope: %s&quot;</span>, slope.c_str());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> slope;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
@@ -114,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {               <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(13);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(F(<span class="stringliteral">&quot;Serial1 = %s&quot;</span>), (<span class="keyword">const</span> <span class="keywordtype">char</span> *)<span class="keywordtype">string</span>.c_str());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Serial1 = %s&quot;</span>, <span class="keywordtype">string</span>.c_str());</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
