@@ -97,6 +97,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad509f83501ad56706481afa552a61554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8831fa8ca96b958901ec42aca342a9f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePHSlope.html#a8831fa8ca96b958901ec42aca342a9f7">start</a> ()</td></tr>
 <tr class="separator:a8831fa8ca96b958901ec42aca342a9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3015be64f5cea3b47fe9ea5b802902a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePHSlope.html#aa3015be64f5cea3b47fe9ea5b802902a">loop</a> ()</td></tr>
+<tr class="separator:aa3015be64f5cea3b47fe9ea5b802902a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a81feed6249835f41e82cf4d6a2abca"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePHSlope.html#a2a81feed6249835f41e82cf4d6a2abca">name</a> ()</td></tr>
 <tr class="separator:a2a81feed6249835f41e82cf4d6a2abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a503d05797f6314fb54c5eeb2cf748fce"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">prompt</a> ()</td></tr>
@@ -112,8 +114,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad5e5ade11ab9dceffc80b181357af413 inherit pub_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d58bb071e2f4b4eb78e0f1069a29f65 inherit pub_methods_classUIState"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a0d58bb071e2f4b4eb78e0f1069a29f65">isMainMenu</a> ()</td></tr>
 <tr class="separator:a0d58bb071e2f4b4eb78e0f1069a29f65 inherit pub_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14bebe1f298527641c25930ef6f0db59 inherit pub_methods_classUIState"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">loop</a> ()</td></tr>
-<tr class="separator:a14bebe1f298527641c25930ef6f0db59 inherit pub_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -165,6 +165,44 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa3015be64f5cea3b47fe9ea5b802902a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3015be64f5cea3b47fe9ea5b802902a">&#9670;&nbsp;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SeePHSlope::loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>SeePHSlope.cpp </p>
+
+<p>Reimplemented from <a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">UIState</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00010">10</a> of file <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html">SeePHSlope.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                      {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;getSlope().c_str(), 1);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
+<div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00015">PHProbe.cpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
+
+</div>
+</div>
 <a id="a2a81feed6249835f41e82cf4d6a2abca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a81feed6249835f41e82cf4d6a2abca">&#9670;&nbsp;</a></span>name()</h2>
 
@@ -190,10 +228,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SeePHSlope_8h_source.html#l00014">14</a> of file <a class="el" href="SeePHSlope_8h_source.html">SeePHSlope.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                     {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SeePHSlope&quot;</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SeePHSlope_8h_source.html#l00015">15</a> of file <a class="el" href="SeePHSlope_8h_source.html">SeePHSlope.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                     {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SeePHSlope&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -222,12 +260,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SeePHSlope_8h_source.html#l00017">17</a> of file <a class="el" href="SeePHSlope_8h_source.html">SeePHSlope.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                       {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PH Slope:       &quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SeePHSlope_8h_source.html#l00018">18</a> of file <a class="el" href="SeePHSlope_8h_source.html">SeePHSlope.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                       {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;PH Slope:       &quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  };</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00010">start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00014">start()</a>.</p>
 
 </div>
 </div>
@@ -253,21 +291,19 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SeePHSlope.cpp </p>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a9a4a56c0f68998ce342a73585c256cce">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00010">10</a> of file <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html">SeePHSlope.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                       {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">prompt</a>(), 0);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;getSlope().c_str(), 1);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
-<div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00015">PHProbe.cpp:15</a></div></div>
-<div class="ttc" id="aclassSeePHSlope_html_a503d05797f6314fb54c5eeb2cf748fce"><div class="ttname"><a href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">SeePHSlope::prompt</a></div><div class="ttdeci">const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="SeePHSlope_8h_source.html#l00017">SeePHSlope.h:17</a></div></div>
+<p class="definition">Definition at line <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html#l00014">14</a> of file <a class="el" href="src_2UIState_2SeePHSlope_8cpp_source.html">SeePHSlope.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                       {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<a class="code" href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">prompt</a>(), 0);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;requesting slope&quot;</span>, 1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">sendSlopeRequest</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="aclassPHProbe_html_a5c0653d0adf7bffb0316453c35f72f2a"><div class="ttname"><a href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a></div><div class="ttdeci">void sendSlopeRequest()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00035">PHProbe.cpp:35</a></div></div>
+<div class="ttc" id="aclassSeePHSlope_html_a503d05797f6314fb54c5eeb2cf748fce"><div class="ttname"><a href="classSeePHSlope.html#a503d05797f6314fb54c5eeb2cf748fce">SeePHSlope::prompt</a></div><div class="ttdeci">const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="SeePHSlope_8h_source.html#l00018">SeePHSlope.h:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="SeePHSlope_8h_source.html#l00017">prompt()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="SeePHSlope_8h_source.html#l00018">prompt()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00035">PHProbe::sendSlopeRequest()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>
