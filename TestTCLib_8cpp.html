@@ -299,18 +299,18 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="TestTCLib_8cpp.html#aee92a5500e7ea2defb70e1362e0e6725">pTC</a>-&gt;<a class="code" href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">serialEvent1</a>();                    <span class="comment">// fake interrupt</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// set target pH</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="TestTCLib_8cpp.html#ae2876e64795fc316f95cd942aa520d2e">pPHControl</a>-&gt;<a class="code" href="classPHControl.html#aa946e6752d87fc56aa82680607249ef7">setUsePID</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="TestTCLib_8cpp.html#ae2876e64795fc316f95cd942aa520d2e">pPHControl</a>-&gt;<a class="code" href="classPHControl.html#aa392cf8312f64f14c53d385edfb83db1">enablePID</a>(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="TestTCLib_8cpp.html#ae2876e64795fc316f95cd942aa520d2e">pPHControl</a>-&gt;<a class="code" href="classPHControl.html#aa7d546df18a4c01d406438b8eb6dbef6">setTargetPh</a>(7.5);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// clear SD card</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;removeAll();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="ttc" id="aclassPHControl_html_aa946e6752d87fc56aa82680607249ef7"><div class="ttname"><a href="classPHControl.html#aa946e6752d87fc56aa82680607249ef7">PHControl::setUsePID</a></div><div class="ttdeci">void setUsePID(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00047">PHControl.cpp:47</a></div></div>
+<div class="ttc" id="aclassPHControl_html_aa392cf8312f64f14c53d385edfb83db1"><div class="ttname"><a href="classPHControl.html#aa392cf8312f64f14c53d385edfb83db1">PHControl::enablePID</a></div><div class="ttdeci">void enablePID(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00047">PHControl.cpp:47</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html_aeba296b1c881822a6bbeae0b0517d76d"><div class="ttname"><a href="classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d">TankControllerLib::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00142">TankControllerLib.cpp:142</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_ab6c74b1b58593dddfcb2220e617a9562"><div class="ttname"><a href="classTempProbe__TC.html#ab6c74b1b58593dddfcb2220e617a9562">TempProbe_TC::setCorrection</a></div><div class="ttdeci">void setCorrection(float value)</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8cpp_source.html#l00075">TempProbe_TC.cpp:75</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TempProbe__TC_8cpp_source.html#l00053">TempProbe_TC::getRunningAverage()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00015">SD_TC::instance()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00021">pPHControl</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00017">pTC</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00142">TankControllerLib::serialEvent1()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00075">TempProbe_TC::setCorrection()</a>, <a class="el" href="PHControl_8cpp_source.html#l00039">PHControl::setTargetPh()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00067">TemperatureControl::setTargetTemperature()</a>, <a class="el" href="PHControl_8cpp_source.html#l00047">PHControl::setUsePID()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00016">state</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00019">tempControl</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00018">tempProbe</a>.</p>
+<p class="reference">References <a class="el" href="PHControl_8cpp_source.html#l00047">PHControl::enablePID()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00053">TempProbe_TC::getRunningAverage()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00015">SD_TC::instance()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00021">pPHControl</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00017">pTC</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00142">TankControllerLib::serialEvent1()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00075">TempProbe_TC::setCorrection()</a>, <a class="el" href="PHControl_8cpp_source.html#l00039">PHControl::setTargetPh()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00067">TemperatureControl::setTargetTemperature()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00016">state</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00019">tempControl</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00018">tempProbe</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TestTCLib_8cpp_source.html#l00019">19</a> of file <a class="el" href="TestTCLib_8cpp_source.html">TestTCLib.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00222">MainMenu::idle()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00051">unittest()</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00024">unittest_setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00221">MainMenu::idle()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00051">unittest()</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00024">unittest_setup()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TestTCLib_8cpp_source.html#l00018">18</a> of file <a class="el" href="TestTCLib_8cpp_source.html">TestTCLib.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00119">getTemperature()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00222">MainMenu::idle()</a>, <a class="el" href="libTC_8cpp_source.html#l00192">setTemperature()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00051">unittest()</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00024">unittest_setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="libTC_8cpp_source.html#l00119">getTemperature()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00221">MainMenu::idle()</a>, <a class="el" href="libTC_8cpp_source.html#l00192">setTemperature()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00051">unittest()</a>, and <a class="el" href="TestTCLib_8cpp_source.html#l00024">unittest_setup()</a>.</p>
 
 </div>
 </div>
