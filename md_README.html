@@ -67,12 +67,29 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://github.com/Open-Acidification/TankControllerLib/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-informational.svg" alt="GitHub license" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/Open-Acidification/TankControllerLib/releases"><img src="https://img.shields.io/badge/TankControllerLib-v0.0.0-informational.svg" alt="OA Box version" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/Open-Acidification/TankControllerLib/actions"><img src="https://github.com/Open-Acidification/TankControllerLib/workflows/Arduino%20CI/badge.svg" alt="testing status" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/Open-Acidification/TankControllerLib/blob/master/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" style="pointer-events: none;" class="inline"/></a></p>
-<p><a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square" alt="All Contributors" style="pointer-events: none;" class="inline"/></a></p>
+<p><a href="#contributors-"><img src="https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square" alt="All Contributors" style="pointer-events: none;" class="inline"/></a></p>
 <h1>Tank Controller Library</h1>
 <p>Arduino library for the Open Acidification pH Stat Controller</p>
-<h2>Installation</h2>
-<p>Use <a href="scripts/install.sh"><code>scripts/install.sh</code></a> to do the initial install. To build the GUI simulator, see <a href="GUI/build.sh">GUI/build.sh</a>.</p>
-<h2>Contributors ✨</h2>
+<h2>Use</h2>
+<h3>Development</h3>
+<ul>
+<li>Clone (or fork and clone if you might contribute to the project) this repository to the <a href="https://www.arduino.cc/en/Hacking/Libraries">Arduino Libraries directory</a>.</li>
+<li>Use <a href="scripts/install.sh"><code>scripts/install.sh</code></a> to do the initial install.</li>
+<li>After that use <a href="scripts/testAndBuild.sh"><code>scripts/testAndBuild.sh</code></a> to test.</li>
+<li>To build the GUI simulator, see <a href="GUI/build.sh">GUI/build.sh</a>.</li>
+</ul>
+<h3>Install</h3>
+<p>To install onto an Arduino Mega2560 use the <a href="https://www.arduino.cc/en/software">Arduino IDE</a>.</p>
+<p>By default, the Arduino compiler links to a <code>printf</code> library that does not support printing floating point numbers. To get that feature (which we use!), add the following lines to <code>boards.txt</code> and use the Tools menu to select "`RV printf Version: "Full printf"&lt;tt&gt;. On macOS, the&lt;/tt&gt;boards.txt&lt;tt&gt;is located at&lt;/tt&gt;~/Library/Arduino15/packages/arduino/hardware/avr/1.8.3`. For background see &lt;a href="<a href="https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6">https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6</a>"&gt;here.</p>
+<div class="fragment"><div class="line">menu.printf=AVR printf Version</div>
+<div class="line"> </div>
+<div class="line">mega.menu.printf.default=Default printf</div>
+<div class="line">mega.menu.printf.default.compiler.c.elf.extra_flags=</div>
+<div class="line">mega.menu.printf.full=Full printf</div>
+<div class="line">mega.menu.printf.full.compiler.c.elf.extra_flags=-Wl,-u,vfprintf -lprintf_flt</div>
+<div class="line">mega.menu.printf.minimal=Minimal printf</div>
+<div class="line">mega.menu.printf.minimal.compiler.c.elf.extra_flags=-Wl,-u,vfprintf -lprintf_min</div>
+</div><!-- fragment --><h2>Contributors ✨</h2>
 <p>Thanks goes to these wonderful people (<a href="https://allcontributors.org/docs/en/emoji-key">emoji key</a>):</p>
 <table class="doxtable">
 <tr>
@@ -89,7 +106,8 @@ $(function() {
 <a href="https://github.com/Open-Acidification/TankController/commits?author=atg7000" title="Code">💻</a> </td><td align="center"><a href="https://github.com/cherbel"><img src="https://avatars.githubusercontent.com/u/36583106?v=4?s=100" alt="" width="100px;" class="inline"/><sub><b>Caleb Herbel</b></sub></a><br  />
 <a href="https://github.com/Open-Acidification/TankController/commits?author=cherbel" title="Code">💻</a> </td><td align="center"><a href="https://github.com/lsaca05"><img src="https://avatars.githubusercontent.com/u/46550669?v=4?s=100" alt="" width="100px;" class="inline"/><sub><b>Lucas Saca</b></sub></a><br  />
 <a href="https://github.com/Open-Acidification/TankController/commits?author=lsaca05" title="Code">💻</a> </td><td align="center"><a href="https://github.com/EvanKropf"><img src="https://avatars.githubusercontent.com/u/59894430?v=4?s=100" alt="" width="100px;" class="inline"/><sub><b>EvanKropf</b></sub></a><br  />
-<a href="https://github.com/Open-Acidification/TankController/commits?author=EvanKropf" title="Code">💻</a>  </td></tr>
+<a href="https://github.com/Open-Acidification/TankController/commits?author=EvanKropf" title="Code">💻</a> </td><td align="center"><a href="https://github.com/genevea"><img src="https://avatars.githubusercontent.com/u/83893683?v=4?s=100" alt="" width="100px;" class="inline"/><sub><b>genevea</b></sub></a><br  />
+<a href="https://github.com/Open-Acidification/TankController/commits?author=genevea" title="Code">💻</a>  </td></tr>
 </table>
 <p>This project follows the <a href="https://github.com/all-contributors/all-contributors">all-contributors</a> specification. Contributions of any kind welcome! </p>
 </div></div><!-- contents -->

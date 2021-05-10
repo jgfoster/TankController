@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="418,5,591,47"/>
 <area shape="rect" id="node2" href="$MainMenu_8cpp.html" title=" " alt="" coords="5,102,183,129"/>
 <area shape="rect" id="node3" href="$PHCalibrationMid_8cpp.html" title=" " alt="" coords="207,95,381,136"/>
-<area shape="rect" id="node4" href="$PHCalibrationMidTest_8cpp.html" title=" " alt="" coords="405,102,604,129"/>
-<area shape="rect" id="node5" href="$PHControlTest_8cpp.html" title=" " alt="" coords="628,102,787,129"/>
-<area shape="rect" id="node6" href="$TemperatureControlTest_8cpp.html" title=" " alt="" coords="811,102,1023,129"/>
+<area shape="rect" id="node4" href="$TestPHCalibrationMid_8cpp.html" title=" " alt="" coords="405,102,604,129"/>
+<area shape="rect" id="node5" href="$TestPHControl_8cpp.html" title=" " alt="" coords="628,102,787,129"/>
+<area shape="rect" id="node6" href="$TestTemperatureControl_8cpp.html" title=" " alt="" coords="811,102,1023,129"/>
 </map>

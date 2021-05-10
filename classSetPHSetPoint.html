@@ -140,7 +140,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">printValue</a> ()</td></tr>
 <tr class="separator:afabb2e77ac28d26fbfc27fddb058c023 inherit pro_methods_classNumCollectorState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUIState"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUIState')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUIState.html">UIState</a></td></tr>
-<tr class="memitem:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TCLibTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
+<tr class="memitem:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TestTCLib_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
 <tr class="separator:a777d5464735cd39cddb517e186da6f35 inherit pro_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dd85638d5f05240b042e6362ff9bf1a inherit pro_methods_classUIState"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">returnToMainMenu</a> (int msDelay=0)</td></tr>
 <tr class="separator:a2dd85638d5f05240b042e6362ff9bf1a inherit pro_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,18 +214,23 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="SetPHSetPoint_8cpp.html">SetPHSetPoint.cpp</a> </p>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8h_source.html#l00016">16</a> of file <a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                          {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8cpp_source.html#l00010">10</a> of file <a class="el" href="SetPHSetPoint_8cpp_source.html">SetPHSetPoint.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                     {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#a328980bde9e51069627eaf7ff237800c">getTargetPh</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a328980bde9e51069627eaf7ff237800c"><div class="ttname"><a href="classPHControl.html#a328980bde9e51069627eaf7ff237800c">PHControl::getTargetPh</a></div><div class="ttdeci">double getTargetPh()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00019">PHControl.h:19</a></div></div>
+<div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00021">PHControl.cpp:21</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00019">PHControl::getTargetPh()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00021">PHControl::instance()</a>.</p>
+
 </div>
 </div>
 <a id="aed46e55266b59d3eefc8b9d7be3914b1"></a>
@@ -253,10 +258,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classNumCollectorState.html#a608d0ad71fdb11f21a20759ee23d327c">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8h_source.html#l00019">19</a> of file <a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                 {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 3;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8h_source.html#l00017">17</a> of file <a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                 {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,10 +322,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8h_source.html#l00022">22</a> of file <a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set pH Set Point&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8h_source.html#l00020">20</a> of file <a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                       {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set pH Set Point&quot;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -347,24 +352,22 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>SetPHSetPoint.cpp </p>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a274efd4ddbddf3394f9f0c32bdf2e28c">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html#l00010">10</a> of file <a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html">SetPHSetPoint.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                         {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#aa7d546df18a4c01d406438b8eb6dbef6">setTargetPh</a>(<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">char</span> output[17];</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  snprintf(output, <span class="keyword">sizeof</span>(output), <span class="stringliteral">&quot;New pH=%.4f&quot;</span>, <a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(output, 1);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">returnToMainMenu</a>(1000);  <span class="comment">// after 1-second delay</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SetPHSetPoint_8cpp_source.html#l00014">14</a> of file <a class="el" href="SetPHSetPoint_8cpp_source.html">SetPHSetPoint.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                         {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#aa7d546df18a4c01d406438b8eb6dbef6">setTargetPh</a>(<a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordtype">char</span> output[17];</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  snprintf(output, <span class="keyword">sizeof</span>(output), <span class="stringliteral">&quot;New pH=%.4f&quot;</span>, <a class="code" href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">value</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(output, 1);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">returnToMainMenu</a>(1000);  <span class="comment">// after 1-second delay</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
 <div class="ttc" id="aclassNumCollectorState_html_a2369c7dd710e35cebd0f3b10873d6ab4"><div class="ttname"><a href="classNumCollectorState.html#a2369c7dd710e35cebd0f3b10873d6ab4">NumCollectorState::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>
 <div class="ttc" id="aclassPHControl_html_aa7d546df18a4c01d406438b8eb6dbef6"><div class="ttname"><a href="classPHControl.html#aa7d546df18a4c01d406438b8eb6dbef6">PHControl::setTargetPh</a></div><div class="ttdeci">void setTargetPh(double newPh)</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00039">PHControl.cpp:39</a></div></div>
-<div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00021">PHControl.cpp:21</a></div></div>
 <div class="ttc" id="aclassUIState_html_a2dd85638d5f05240b042e6362ff9bf1a"><div class="ttname"><a href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(int msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00018">UIState.cpp:18</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00021">PHControl::instance()</a>, <a class="el" href="UIState_8cpp_source.html#l00018">UIState::returnToMainMenu()</a>, <a class="el" href="PHControl_8cpp_source.html#l00039">PHControl::setTargetPh()</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
@@ -373,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/UIState/<a class="el" href="SetPHSetPoint_8h_source.html">SetPHSetPoint.h</a></li>
-<li>src/UIState/<a class="el" href="src_2UIState_2SetPHSetPoint_8cpp_source.html">SetPHSetPoint.cpp</a></li>
+<li>src/UIState/<a class="el" href="SetPHSetPoint_8cpp_source.html">SetPHSetPoint.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
