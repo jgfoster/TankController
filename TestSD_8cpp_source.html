@@ -179,27 +179,19 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="TestTCLib_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;<a class="code" href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">printRootDirectory</a>();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  String output = String(<a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> index;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           c (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;c (0)\r\n&quot;</span>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  assertNotEqual(-1, index);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           d/\r\n&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;d/\r\n&quot;</span>);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  assertNotEqual(-1, index);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;-           d1 (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;- d1 (0)\r\n&quot;</span>);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  assertNotEqual(-1, index);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;-           d2 (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;- d2 (0)\r\n&quot;</span>);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  assertNotEqual(-1, index);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           e (     0)\r\n&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;e (0)\r\n&quot;</span>);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  assertNotEqual(-1, index);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">           c (     0)</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">d/</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">-           d1 (     0)</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">-           d2 (     0)</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">           e (     0)</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;unittest_main()</div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aSD__TC_8h_html"><div class="ttname"><a href="SD__TC_8h.html">SD_TC.h</a></div></div>
 <div class="ttc" id="aTC__util_8h_html"><div class="ttname"><a href="TC__util_8h.html">TC_util.h</a></div></div>
@@ -211,7 +203,7 @@ $(function() {
 <div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_afdcd786be827d68c0fcebd7c2c749d6f"><div class="ttname"><a href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">DateTime_TC::setAsCurrent</a></div><div class="ttdeci">void setAsCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00073">DateTime_TC.cpp:73</a></div></div>
 <div class="ttc" id="aclassSD__TC_html"><div class="ttname"><a href="classSD__TC.html">SD_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00012">SD_TC.h:12</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_a8536c28426883e4df70e488aa5f1c298"><div class="ttname"><a href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">SD_TC::printRootDirectory</a></div><div class="ttdeci">void printRootDirectory()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00115">SD_TC.cpp:115</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_a8536c28426883e4df70e488aa5f1c298"><div class="ttname"><a href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">SD_TC::printRootDirectory</a></div><div class="ttdeci">void printRootDirectory()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00121">SD_TC.cpp:121</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_aa4370e1c5e98d7bd9f28c16be289651c"><div class="ttname"><a href="classSD__TC.html#aa4370e1c5e98d7bd9f28c16be289651c">SD_TC::appendToDataLog</a></div><div class="ttdeci">void appendToDataLog(String header, String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00038">SD_TC.cpp:38</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_aac97eed912c69923e1748e2bec97cd9b"><div class="ttname"><a href="classSD__TC.html#aac97eed912c69923e1748e2bec97cd9b">SD_TC::appendToSerialLog</a></div><div class="ttdeci">void appendToSerialLog(String data)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00086">SD_TC.cpp:86</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00015">SD_TC.cpp:15</a></div></div>

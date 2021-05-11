@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    fullCommand = PARTIAL_COMMAND + <span class="stringliteral">&quot;20\r&quot;</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - &quot;</span>, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)fullCommand.c_str());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - %s&quot;</span>, fullCommand.c_str());</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
