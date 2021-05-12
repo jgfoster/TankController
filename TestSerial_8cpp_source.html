@@ -89,18 +89,11 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;abc %s %i %.4f&quot;</span>, <span class="stringliteral">&quot;XYZ&quot;</span>, 42, 1.375);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  assertEqual(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataIn);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  assertEqual(<span class="stringliteral">&quot;abc XYZ 42 1.3750\r\n&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// serial output with timestamp</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a>(<span class="stringliteral">&quot;foo&quot;</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  assertEqual(<span class="stringliteral">&quot;Timestamp of next line: 202&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut.substr(0, 27));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  assertEqual(<span class="stringliteral">&quot;.000\r\nfoo\r\n&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut.substr(27 + 16));</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;unittest_main()</div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
-<div class="ttc" id="aSerial__TC_8cpp_html_adef0c6b73b73237b715402b97c5da5d3"><div class="ttname"><a href="Serial__TC_8cpp.html#adef0c6b73b73237b715402b97c5da5d3">serialWithTime</a></div><div class="ttdeci">void serialWithTime(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00017">Serial_TC.cpp:17</a></div></div>
 <div class="ttc" id="aSerial__TC_8h_html"><div class="ttname"><a href="Serial__TC_8h.html">Serial_TC.h</a></div></div>
 <div class="ttc" id="aTC__util_8h_html"><div class="ttname"><a href="TC__util_8h.html">TC_util.h</a></div></div>
 <div class="ttc" id="aTestBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="TestBlink_8cpp_source.html#l00010">TestBlink.cpp:10</a></div></div>

@@ -128,39 +128,50 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  assertEqual(24, now1.second());</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// Remaining test deals with simulated delays</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#undef yield</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="UIState_8h.html">UIState/UIState.h</a>&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="TestDateTime_8cpp.html#a8c8faf4e5ea761f149048bbfd2affbf2">   73</a></span>&#160;<a class="code" href="TestDateTime_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a>(myDelay) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  uint32_t t1 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  std::this_thread::sleep_for(std::chrono::milliseconds(1));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  delay(10000);  <span class="comment">// this should be seen by arduino_ci, but not the underlying system</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  std::chrono::duration&lt;double, std::milli&gt; elapsed = end - start;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">// actual delay should a few milliseconds</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  assertTrue(1 &lt;= elapsed.count() &amp;&amp; elapsed.count() &lt;= 5);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  uint32_t t2 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// simulated delay should be 10 seconds</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  assertTrue(t1 + 10 &lt;= t2 &amp;&amp; t2 &lt;= t1 + 11);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="TestDateTime_8cpp.html#a07fc94b113b11772744ce3debfad2af0">   66</a></span>&#160;<a class="code" href="TestDateTime_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a>(printToSerial) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  GodmodeState *<a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> january(2021, 1, 15, 1, 48, 24);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  january.<a class="code" href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">setAsCurrent</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">printToSerial</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  assertEqual(<span class="stringliteral">&quot;2021-01-15 01:48:24\r\n&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Remaining test deals with simulated delays</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#undef yield</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="UIState_8h.html">UIState/UIState.h</a>&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="TestDateTime_8cpp.html#a8c8faf4e5ea761f149048bbfd2affbf2">   82</a></span>&#160;<a class="code" href="TestDateTime_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a>(myDelay) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  uint32_t t1 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::this_thread::sleep_for(std::chrono::milliseconds(1));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  delay(10000);  <span class="comment">// this should be seen by arduino_ci, but not the underlying system</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::chrono::duration&lt;double, std::milli&gt; elapsed = end - start;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// actual delay should a few milliseconds</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  assertTrue(1 &lt;= elapsed.count() &amp;&amp; elapsed.count() &lt;= 5);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  uint32_t t2 = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().unixtime();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// simulated delay should be 10 seconds</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  assertTrue(t1 + 10 &lt;= t2 &amp;&amp; t2 &lt;= t1 + 11);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;unittest_main()</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
+<div class="ttc" id="aTestBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="TestBlink_8cpp_source.html#l00010">TestBlink.cpp:10</a></div></div>
 <div class="ttc" id="aTestDateTime_8cpp_html_a696635b9225d8e65779a920ff96765ad"><div class="ttname"><a href="TestDateTime_8cpp.html#a696635b9225d8e65779a920ff96765ad">unittest</a></div><div class="ttdeci">unittest(singleton)</div><div class="ttdef"><b>Definition:</b> <a href="TestDateTime_8cpp_source.html#l00013">TestDateTime.cpp:13</a></div></div>
 <div class="ttc" id="aUIState_8h_html"><div class="ttname"><a href="UIState_8h.html">UIState.h</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_a3d8e5ba50584716afe65ba8827fb4f1b"><div class="ttname"><a href="classDateTime__TC.html#a3d8e5ba50584716afe65ba8827fb4f1b">DateTime_TC::rtc</a></div><div class="ttdeci">static RTC_PCF8523 * rtc()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00011">DateTime_TC.cpp:11</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00058">DateTime_TC.cpp:58</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_a6f85dfb1ec9ad818a818b60c614571ee"><div class="ttname"><a href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">DateTime_TC::printToSerial</a></div><div class="ttdeci">void printToSerial()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00055">DateTime_TC.cpp:55</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_adb9b751b4c0101f688621adfff1d3ad2"><div class="ttname"><a href="classDateTime__TC.html#adb9b751b4c0101f688621adfff1d3ad2">DateTime_TC::yearMonthAsPath</a></div><div class="ttdeci">void yearMonthAsPath(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00065">DateTime_TC.cpp:65</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_afdcd786be827d68c0fcebd7c2c749d6f"><div class="ttname"><a href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">DateTime_TC::setAsCurrent</a></div><div class="ttdeci">void setAsCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00073">DateTime_TC.cpp:73</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_afdcd786be827d68c0fcebd7c2c749d6f"><div class="ttname"><a href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">DateTime_TC::setAsCurrent</a></div><div class="ttdeci">void setAsCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC.cpp:80</a></div></div>
 <div class="ttc" id="alibTC_8cpp_html_afe70025add575198dbe626aeab331386"><div class="ttname"><a href="libTC_8cpp.html#afe70025add575198dbe626aeab331386">dateTime</a></div><div class="ttdeci">char * dateTime()</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00045">libTC.cpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
