@@ -82,5 +82,7 @@ var searchData=
   ['time_5fserverip_519',['time_serverIP',['../classEthernet__TC.html#ac590b5b6f700a2338e992edfb103e011',1,'Ethernet_TC']]],
   ['timer_520',['timer',['../classTankController_1_1TankController.html#a45c0c48700c612466c5329cb18927ccd',1,'TankController::TankController']]],
   ['title_521',['title',['../namespaceTankController.html#ad53645c073335ef8038d9d965bcc6f86',1,'TankController']]],
-  ['todaysdatafilename_522',['todaysDataFileName',['../classSD__TC.html#a82a541b86e6c9dcdc68c480815e141be',1,'SD_TC']]]
+  ['todaysdatafilename_522',['todaysDataFileName',['../classSD__TC.html#a82a541b86e6c9dcdc68c480815e141be',1,'SD_TC']]],
+  ['turn_5fsolenoid_5foff_523',['TURN_SOLENOID_OFF',['../TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b',1,'TankControllerLib.h']]],
+  ['turn_5fsolenoid_5fon_524',['TURN_SOLENOID_ON',['../TankControllerLib_8h.html#a8f4f5928dac06303977eacf87e9531fa',1,'TankControllerLib.h']]]
 ];
