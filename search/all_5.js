@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['eeprom_48',['eeprom',['../classTankController_1_1TankController.html#a8424d2b538291bbc3148d03803467112',1,'TankController.TankController.eeprom()'],['../libTC_8cpp.html#a231c574e99956196091663b46e622c28',1,'eeprom(uint8_t index):&#160;libTC.cpp']]],
+  ['eeprom_48',['eeprom',['../classTankController_1_1TankController.html#a8424d2b538291bbc3148d03803467112',1,'TankController.TankController.eeprom()'],['../libTC_8cpp.html#a7c0102ebbb96956261ee8f96d803c4d4',1,'eeprom(uint8_t index):&#160;libTC.cpp']]],
   ['eeprom_5fsize_49',['EEPROM_SIZE',['../libTC_8cpp.html#ae3ef7bba113f663df6996f286b632a3f',1,'libTC.cpp']]],
   ['eeprom_5ftc_50',['EEPROM_TC',['../classEEPROM__TC.html',1,'']]],
   ['eeprom_5ftc_2ecpp_51',['EEPROM_TC.cpp',['../EEPROM__TC_8cpp.html',1,'']]],
@@ -11,9 +11,9 @@ var searchData=
   ['eeprom_5ftc_5f3_56',['EEPROM_TC_3',['../classEEPROM__TC__3.html',1,'']]],
   ['eeprom_5ftc_5f3_2ecpp_57',['EEPROM_TC_3.cpp',['../EEPROM__TC__3_8cpp.html',1,'']]],
   ['eeprom_5ftc_5f3_2eh_58',['EEPROM_TC_3.h',['../EEPROM__TC__3_8h.html',1,'']]],
-  ['eepromreaddouble_59',['eepromReadDouble',['../classEEPROM__TC.html#ad76221b4312f79cb7d818b1c3e15f0c4',1,'EEPROM_TC']]],
+  ['eepromreadfloat_59',['eepromReadFloat',['../classEEPROM__TC.html#a9997cf5db9ef43fee3189ade856da834',1,'EEPROM_TC']]],
   ['eepromreadint_60',['eepromReadInt',['../classEEPROM__TC.html#a0de3f126dd0b720f708ef574ac0e8c37',1,'EEPROM_TC']]],
-  ['eepromwritedouble_61',['eepromWriteDouble',['../classEEPROM__TC.html#ac669c2e093773d0c849633d522535183',1,'EEPROM_TC']]],
+  ['eepromwritefloat_61',['eepromWriteFloat',['../classEEPROM__TC.html#a77b1655e89e8a189f8ac1de9a2673499',1,'EEPROM_TC']]],
   ['eepromwriteint_62',['eepromWriteInt',['../classEEPROM__TC.html#ad72be8c7a3e8baad6a78f5f086831ec1',1,'EEPROM_TC']]],
   ['en_63',['EN',['../LiquidCrystal__TC_8cpp.html#ac258d921936a269ce86c339d349b50bc',1,'LiquidCrystal_TC.cpp']]],
   ['enableheater_64',['enableHeater',['../classTemperatureControl.html#ad645b841bff6e07bc150ffc9f2e7780a',1,'TemperatureControl']]],

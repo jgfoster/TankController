@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['eeprom_786',['eeprom',['../libTC_8cpp.html#a231c574e99956196091663b46e622c28',1,'libTC.cpp']]],
-  ['eepromreaddouble_787',['eepromReadDouble',['../classEEPROM__TC.html#ad76221b4312f79cb7d818b1c3e15f0c4',1,'EEPROM_TC']]],
+  ['eeprom_786',['eeprom',['../libTC_8cpp.html#a7c0102ebbb96956261ee8f96d803c4d4',1,'libTC.cpp']]],
+  ['eepromreadfloat_787',['eepromReadFloat',['../classEEPROM__TC.html#a9997cf5db9ef43fee3189ade856da834',1,'EEPROM_TC']]],
   ['eepromreadint_788',['eepromReadInt',['../classEEPROM__TC.html#a0de3f126dd0b720f708ef574ac0e8c37',1,'EEPROM_TC']]],
-  ['eepromwritedouble_789',['eepromWriteDouble',['../classEEPROM__TC.html#ac669c2e093773d0c849633d522535183',1,'EEPROM_TC']]],
+  ['eepromwritefloat_789',['eepromWriteFloat',['../classEEPROM__TC.html#a77b1655e89e8a189f8ac1de9a2673499',1,'EEPROM_TC']]],
   ['eepromwriteint_790',['eepromWriteInt',['../classEEPROM__TC.html#ad72be8c7a3e8baad6a78f5f086831ec1',1,'EEPROM_TC']]],
   ['enableheater_791',['enableHeater',['../classTemperatureControl.html#ad645b841bff6e07bc150ffc9f2e7780a',1,'TemperatureControl']]],
   ['enablepid_792',['enablePID',['../classPHControl.html#aa392cf8312f64f14c53d385edfb83db1',1,'PHControl']]],

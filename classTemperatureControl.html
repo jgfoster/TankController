@@ -98,14 +98,14 @@ Collaboration diagram for TemperatureControl:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a61f22f02c57c5e94c5189826ff20b617"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a61f22f02c57c5e94c5189826ff20b617">~TemperatureControl</a> ()</td></tr>
 <tr class="separator:a61f22f02c57c5e94c5189826ff20b617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb02ef4ef7f4f015c537f85afe5fa95"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a0eb02ef4ef7f4f015c537f85afe5fa95">getTargetTemperature</a> ()</td></tr>
-<tr class="separator:a0eb02ef4ef7f4f015c537f85afe5fa95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a88e4018b9306a9ae568c3d6472a686"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a8a88e4018b9306a9ae568c3d6472a686">getTargetTemperature</a> ()</td></tr>
+<tr class="separator:a8a88e4018b9306a9ae568c3d6472a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa90ff7ff465a1fd0cf05778c1283631b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#aa90ff7ff465a1fd0cf05778c1283631b">isHeater</a> ()</td></tr>
 <tr class="separator:aa90ff7ff465a1fd0cf05778c1283631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6d0906ba550ac35741323c5215e80b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#ace6d0906ba550ac35741323c5215e80b">setTargetTemperature</a> (double newTemperature)</td></tr>
-<tr class="separator:ace6d0906ba550ac35741323c5215e80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5297253ca377f401e4741659d4061aa3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a5297253ca377f401e4741659d4061aa3">updateControl</a> (double currentTemperature)=0</td></tr>
-<tr class="separator:a5297253ca377f401e4741659d4061aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889fd45cbdb8edd6499fa8b00e933f7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a889fd45cbdb8edd6499fa8b00e933f7b">setTargetTemperature</a> (float newTemperature)</td></tr>
+<tr class="separator:a889fd45cbdb8edd6499fa8b00e933f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76480c7caa8039e737fb82e0b5d701b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#aa76480c7caa8039e737fb82e0b5d701b">updateControl</a> (float currentTemperature)=0</td></tr>
+<tr class="separator:aa76480c7caa8039e737fb82e0b5d701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -123,12 +123,12 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7fab7a4780b048a707f01f00bd4e2342"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a> = 47</td></tr>
 <tr class="separator:a7fab7a4780b048a707f01f00bd4e2342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36bd39e89731b7f816babd6851d33523"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a36bd39e89731b7f816babd6851d33523">DELTA</a> = 0.05</td></tr>
-<tr class="separator:a36bd39e89731b7f816babd6851d33523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffd6f32152897bbbaa1a08ff6267a70"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#aeffd6f32152897bbbaa1a08ff6267a70">DELTA</a> = 0.05</td></tr>
+<tr class="separator:aeffd6f32152897bbbaa1a08ff6267a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030930626b201c8637f4aacff5ed86b5"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a030930626b201c8637f4aacff5ed86b5">lastSwitchMS</a> = 0</td></tr>
 <tr class="separator:a030930626b201c8637f4aacff5ed86b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f7dbba2655da3e1fdb6d113995873ed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a></td></tr>
-<tr class="separator:a1f7dbba2655da3e1fdb6d113995873ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99620112bb2a668c796650ac121d5cfd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a></td></tr>
+<tr class="separator:a99620112bb2a668c796650ac121d5cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0c7f58dddeb6e8490d1db48a84d466"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> = HIGH</td></tr>
 <tr class="separator:a4c0c7f58dddeb6e8490d1db48a84d466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -168,28 +168,28 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00047">47</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                       {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">getTemp</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (isnan(<a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a>)) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = <a class="code" href="TemperatureControl_8cpp.html#ade1d4e70a20078ec08deb41dc0444ccb">DEFAULT_TEMPERATURE</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">setTemp</a>(<a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> = <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#abd2dddd1f155745607806dec7c22ba20">getTemp</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (isnan(<a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a>)) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> = <a class="code" href="TemperatureControl_8cpp.html#a6827887f6f2c2fa55cae19e1ff3b7c80">DEFAULT_TEMPERATURE</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a811424eeaf1501deb212745be364a5e5">setTemp</a>(<a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  pinMode(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, OUTPUT);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> = <a class="code" href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  digitalWrite(<a class="code" href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">PIN</a>, <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;%s with target temperature of %5.2f C&quot;</span>, this-&gt;<a class="code" href="classTemperatureControl.html#aa90ff7ff465a1fd0cf05778c1283631b">isHeater</a>() ? <span class="stringliteral">&quot;Heater&quot;</span> : <span class="stringliteral">&quot;Chiller&quot;</span>, <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;%s with target temperature of %5.2f C&quot;</span>, this-&gt;<a class="code" href="classTemperatureControl.html#aa90ff7ff465a1fd0cf05778c1283631b">isHeater</a>() ? <span class="stringliteral">&quot;Heater&quot;</span> : <span class="stringliteral">&quot;Chiller&quot;</span>, <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a>);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html_af1395b3b786599e1f6ccf55cb73d9f4b"><div class="ttname"><a href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a></div><div class="ttdeci">#define TURN_SOLENOID_OFF</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00006">TankControllerLib.h:6</a></div></div>
-<div class="ttc" id="aTemperatureControl_8cpp_html_ade1d4e70a20078ec08deb41dc0444ccb"><div class="ttname"><a href="TemperatureControl_8cpp.html#ade1d4e70a20078ec08deb41dc0444ccb">DEFAULT_TEMPERATURE</a></div><div class="ttdeci">const double DEFAULT_TEMPERATURE</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00008">TemperatureControl.cpp:8</a></div></div>
-<div class="ttc" id="aclassEEPROM__TC_html_a3d76a02486f9ea6815637230cd1c2f54"><div class="ttname"><a href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">EEPROM_TC::getTemp</a></div><div class="ttdeci">virtual double getTemp()=0</div></div>
+<div class="ttc" id="aTemperatureControl_8cpp_html_a6827887f6f2c2fa55cae19e1ff3b7c80"><div class="ttname"><a href="TemperatureControl_8cpp.html#a6827887f6f2c2fa55cae19e1ff3b7c80">DEFAULT_TEMPERATURE</a></div><div class="ttdeci">const float DEFAULT_TEMPERATURE</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00008">TemperatureControl.cpp:8</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a59c568088d819c574708d0fc47baa092"><div class="ttname"><a href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance(int version=0)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00017">EEPROM_TC.cpp:17</a></div></div>
-<div class="ttc" id="aclassEEPROM__TC_html_ac4d08ddc62aaf244d289b5db0c9999a0"><div class="ttname"><a href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp</a></div><div class="ttdeci">virtual void setTemp(double value)=0</div></div>
-<div class="ttc" id="aclassTemperatureControl_html_a1f7dbba2655da3e1fdb6d113995873ed"><div class="ttname"><a href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">TemperatureControl::targetTemperature</a></div><div class="ttdeci">double targetTemperature</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00017">TemperatureControl.h:17</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a811424eeaf1501deb212745be364a5e5"><div class="ttname"><a href="classEEPROM__TC.html#a811424eeaf1501deb212745be364a5e5">EEPROM_TC::setTemp</a></div><div class="ttdeci">virtual void setTemp(float value)=0</div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_abd2dddd1f155745607806dec7c22ba20"><div class="ttname"><a href="classEEPROM__TC.html#abd2dddd1f155745607806dec7c22ba20">EEPROM_TC::getTemp</a></div><div class="ttdeci">virtual float getTemp()=0</div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a4c0c7f58dddeb6e8490d1db48a84d466"><div class="ttname"><a href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">TemperatureControl::pinValue</a></div><div class="ttdeci">bool pinValue</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00018">TemperatureControl.h:18</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_a7fab7a4780b048a707f01f00bd4e2342"><div class="ttname"><a href="classTemperatureControl.html#a7fab7a4780b048a707f01f00bd4e2342">TemperatureControl::PIN</a></div><div class="ttdeci">const int PIN</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00014">TemperatureControl.h:14</a></div></div>
+<div class="ttc" id="aclassTemperatureControl_html_a99620112bb2a668c796650ac121d5cfd"><div class="ttname"><a href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">TemperatureControl::targetTemperature</a></div><div class="ttdeci">float targetTemperature</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8h_source.html#l00017">TemperatureControl.h:17</a></div></div>
 <div class="ttc" id="aclassTemperatureControl_html_aa90ff7ff465a1fd0cf05778c1283631b"><div class="ttname"><a href="classTemperatureControl.html#aa90ff7ff465a1fd0cf05778c1283631b">TemperatureControl::isHeater</a></div><div class="ttdeci">virtual bool isHeater()</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00062">TemperatureControl.cpp:62</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="TemperatureControl_8cpp_source.html#l00008">DEFAULT_TEMPERATURE</a>, <a class="el" href="classEEPROM__TC.html#a3d76a02486f9ea6815637230cd1c2f54">EEPROM_TC::getTemp()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00017">EEPROM_TC::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00062">isHeater()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00018">pinValue</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00017">targetTemperature</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00006">TURN_SOLENOID_OFF</a>.</p>
+<p class="reference">References <a class="el" href="TemperatureControl_8cpp_source.html#l00008">DEFAULT_TEMPERATURE</a>, <a class="el" href="classEEPROM__TC.html#abd2dddd1f155745607806dec7c22ba20">EEPROM_TC::getTemp()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00017">EEPROM_TC::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00062">isHeater()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00014">PIN</a>, <a class="el" href="TemperatureControl_8h_source.html#l00018">pinValue</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="classEEPROM__TC.html#a811424eeaf1501deb212745be364a5e5">EEPROM_TC::setTemp()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00017">targetTemperature</a>, and <a class="el" href="TankControllerLib_8h_source.html#l00006">TURN_SOLENOID_OFF</a>.</p>
 
 </div>
 </div>
@@ -268,8 +268,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0eb02ef4ef7f4f015c537f85afe5fa95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eb02ef4ef7f4f015c537f85afe5fa95">&#9670;&nbsp;</a></span>getTargetTemperature()</h2>
+<a id="a8a88e4018b9306a9ae568c3d6472a686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a88e4018b9306a9ae568c3d6472a686">&#9670;&nbsp;</a></span>getTargetTemperature()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +278,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double TemperatureControl::getTargetTemperature </td>
+          <td class="memname">float TemperatureControl::getTargetTemperature </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -292,8 +292,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00026">26</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a>;</div>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                               {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TemperatureControl_8h_source.html#l00017">targetTemperature</a>.</p>
@@ -381,8 +381,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ace6d0906ba550ac35741323c5215e80b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6d0906ba550ac35741323c5215e80b">&#9670;&nbsp;</a></span>setTargetTemperature()</h2>
+<a id="a889fd45cbdb8edd6499fa8b00e933f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889fd45cbdb8edd6499fa8b00e933f7b">&#9670;&nbsp;</a></span>setTargetTemperature()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +390,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void TemperatureControl::setTargetTemperature </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>newTemperature</em></td><td>)</td>
           <td></td>
         </tr>
@@ -399,22 +399,22 @@ Static Private Attributes</h2></td></tr>
 <p>set target temperature and save in EEPROM </p>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00069">69</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                                   {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> != newTemperature) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Change target temperature from %5.2f to %5.2f&quot;</span>, <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a>, newTemperature);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">setTemp</a>(newTemperature);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classTemperatureControl.html#a1f7dbba2655da3e1fdb6d113995873ed">targetTemperature</a> = newTemperature;</div>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> != newTemperature) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Change target temperature from %5.2f to %5.2f&quot;</span>, <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a>, newTemperature);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classEEPROM__TC.html#a59c568088d819c574708d0fc47baa092">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a811424eeaf1501deb212745be364a5e5">setTemp</a>(newTemperature);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> = newTemperature;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EEPROM__TC_8cpp_source.html#l00017">EEPROM_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="classEEPROM__TC.html#ac4d08ddc62aaf244d289b5db0c9999a0">EEPROM_TC::setTemp()</a>, and <a class="el" href="TemperatureControl_8h_source.html#l00017">targetTemperature</a>.</p>
+<p class="reference">References <a class="el" href="EEPROM__TC_8cpp_source.html#l00017">EEPROM_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="classEEPROM__TC.html#a811424eeaf1501deb212745be364a5e5">EEPROM_TC::setTemp()</a>, and <a class="el" href="TemperatureControl_8h_source.html#l00017">targetTemperature</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SetTempSetPoint_8cpp_source.html#l00009">SetTempSetPoint::setValue()</a>, <a class="el" href="TestTCLib_8cpp_source.html#l00052">unittest()</a>, and <a class="el" href="TestMenu_8cpp_source.html#l00024">unittest_setup()</a>.</p>
 
 </div>
 </div>
-<a id="a5297253ca377f401e4741659d4061aa3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5297253ca377f401e4741659d4061aa3">&#9670;&nbsp;</a></span>updateControl()</h2>
+<a id="aa76480c7caa8039e737fb82e0b5d701b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76480c7caa8039e737fb82e0b5d701b">&#9670;&nbsp;</a></span>updateControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +425,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void TemperatureControl::updateControl </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>currentTemperature</em></td><td>)</td>
           <td></td>
         </tr>
@@ -437,7 +437,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classChiller.html#a41591d6b6d653206be5e543e92a4ff0a">Chiller</a>, and <a class="el" href="classHeater.html#af78b19802d8778e7a34c6a928ccd2582">Heater</a>.</p>
+<p>Implemented in <a class="el" href="classChiller.html#aed31ff28e85ecf5b7d3bceae8e1feaa0">Chiller</a>, and <a class="el" href="classHeater.html#a5e35df9b74ae1528f7a16612a77d2f02">Heater</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00179">TankControllerLib::updateControls()</a>.</p>
 
@@ -471,8 +471,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a36bd39e89731b7f816babd6851d33523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36bd39e89731b7f816babd6851d33523">&#9670;&nbsp;</a></span>DELTA</h2>
+<a id="aeffd6f32152897bbbaa1a08ff6267a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeffd6f32152897bbbaa1a08ff6267a70">&#9670;&nbsp;</a></span>DELTA</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +481,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double TemperatureControl::DELTA = 0.05</td>
+          <td class="memname">const float TemperatureControl::DELTA = 0.05</td>
         </tr>
       </table>
   </td>
@@ -575,8 +575,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f7dbba2655da3e1fdb6d113995873ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f7dbba2655da3e1fdb6d113995873ed">&#9670;&nbsp;</a></span>targetTemperature</h2>
+<a id="a99620112bb2a668c796650ac121d5cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99620112bb2a668c796650ac121d5cfd">&#9670;&nbsp;</a></span>targetTemperature</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,7 +585,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double TemperatureControl::targetTemperature</td>
+          <td class="memname">float TemperatureControl::targetTemperature</td>
         </tr>
       </table>
   </td>
