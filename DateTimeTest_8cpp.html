@@ -260,17 +260,17 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="DateTimeTest_8cpp_source.html#l00066">66</a> of file <a class="el" href="DateTimeTest_8cpp_source.html">DateTimeTest.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  GodmodeState *<a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  GodmodeState *<a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> january(2021, 1, 15, 1, 48, 24);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  january.setAsCurrent();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">printToSerial</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  assertEqual(<span class="stringliteral">&quot;2021-01-15 01:48:24\r\n&quot;</span>, <a class="code" href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  assertEqual(<span class="stringliteral">&quot;2021-01-15 01:48:24\r\n&quot;</span>, <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="ttc" id="aTestBlink_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="TestBlink_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="TestBlink_8cpp_source.html#l00010">TestBlink.cpp:10</a></div></div>
+<div class="ttc" id="aBlinkTest_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="BlinkTest_8cpp_source.html#l00010">BlinkTest.cpp:10</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_a6f85dfb1ec9ad818a818b60c614571ee"><div class="ttname"><a href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">DateTime_TC::printToSerial</a></div><div class="ttdeci">void printToSerial()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00055">DateTime_TC.cpp:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00055">DateTime_TC::printToSerial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC::setAsCurrent()</a>, and <a class="el" href="TestBlink_8cpp_source.html#l00010">state</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00055">DateTime_TC::printToSerial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC::setAsCurrent()</a>, and <a class="el" href="BlinkTest_8cpp_source.html#l00010">state</a>.</p>
 
 </div>
 </div>
