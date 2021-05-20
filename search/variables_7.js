@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['google_5finterval_5faddress_1013',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC.html#a8b1b01b73b6ef655c078d74726715f35',1,'EEPROM_TC']]],
-  ['granularity_5faddress_1014',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a148e04caaadc2f25e5bd168205cadcbc',1,'EEPROM_TC']]]
+  ['google_5finterval_5faddress_1013',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC.html#abb75ea22bbaf48dd2bd16eac0cec1c2a',1,'EEPROM_TC']]],
+  ['granularity_5faddress_1014',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a8ab7c7e16e4d407d7c4e30dc0c2ea0ec',1,'EEPROM_TC']]]
 ];

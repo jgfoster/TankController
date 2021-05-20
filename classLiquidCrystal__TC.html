@@ -95,8 +95,8 @@ Collaboration diagram for LiquidCrystal_TC:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5edceb958fcaa365c8a31e41ce46c8e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a> (const char *text, int line)</td></tr>
-<tr class="separator:a5edceb958fcaa365c8a31e41ce46c8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72dc96063b50182adc4feb95a9eeabe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a> (const char *text, uint16_t line)</td></tr>
+<tr class="separator:a72dc96063b50182adc4feb95a9eeabe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -144,17 +144,17 @@ Static Private Attributes</h2></td></tr>
 <p>Constructor sets pins, dimensions, and shows splash screen </p>
 
 <p class="definition">Definition at line <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00029">29</a> of file <a class="el" href="LiquidCrystal__TC_8cpp_source.html">LiquidCrystal_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                   : LiquidCrystal(<a class="code" href="LiquidCrystal__TC_8cpp.html#a260f8d10f06c67cb957a1dabc0d1528b">RS</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#ac258d921936a269ce86c339d349b50bc">EN</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#a42616d5751eaa9b21c7e1d2f0b17d17b">D4</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#aab03d2950d8f735cdfa7469265ed46ea">D5</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#afa75697bf357469b698e3220c9fbdf3c">D6</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#ae37ace289f51e1107a9c8dc4454f08b8">D7</a>) {</div>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                   : LiquidCrystal(<a class="code" href="LiquidCrystal__TC_8cpp.html#a16403c6e8f3f8c9740bdd084c5bae743">RS</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#aed832624522b1b31c2fe2ca95ec9d3d8">EN</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#a0323821614ab3fd8682377b80ec28474">D4</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#a445e0bef7c1166087ea2ab9df56a393c">D5</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#ae49bbe780a1e039ef055a2cf333cdede">D6</a>, <a class="code" href="LiquidCrystal__TC_8cpp.html#a7f4afe1d6e37e303fabbc8e37f3dc3fb">D7</a>) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  Serial.println(<span class="stringliteral">&quot;LiquidCrystal_TC&quot;</span>);  <span class="comment">// Serial_TC might not be ready yet</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  begin(16, 2);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a967f89ffe04c9d847bebed7bb7d234ff">splashScreen</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a260f8d10f06c67cb957a1dabc0d1528b"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a260f8d10f06c67cb957a1dabc0d1528b">RS</a></div><div class="ttdeci">const int RS</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a42616d5751eaa9b21c7e1d2f0b17d17b"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a42616d5751eaa9b21c7e1d2f0b17d17b">D4</a></div><div class="ttdeci">const int D4</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_aab03d2950d8f735cdfa7469265ed46ea"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#aab03d2950d8f735cdfa7469265ed46ea">D5</a></div><div class="ttdeci">const int D5</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_ac258d921936a269ce86c339d349b50bc"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#ac258d921936a269ce86c339d349b50bc">EN</a></div><div class="ttdeci">const int EN</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_ae37ace289f51e1107a9c8dc4454f08b8"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#ae37ace289f51e1107a9c8dc4454f08b8">D7</a></div><div class="ttdeci">const int D7</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
-<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_afa75697bf357469b698e3220c9fbdf3c"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#afa75697bf357469b698e3220c9fbdf3c">D6</a></div><div class="ttdeci">const int D6</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a0323821614ab3fd8682377b80ec28474"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a0323821614ab3fd8682377b80ec28474">D4</a></div><div class="ttdeci">const uint16_t D4</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a16403c6e8f3f8c9740bdd084c5bae743"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a16403c6e8f3f8c9740bdd084c5bae743">RS</a></div><div class="ttdeci">const uint16_t RS</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a445e0bef7c1166087ea2ab9df56a393c"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a445e0bef7c1166087ea2ab9df56a393c">D5</a></div><div class="ttdeci">const uint16_t D5</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_a7f4afe1d6e37e303fabbc8e37f3dc3fb"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#a7f4afe1d6e37e303fabbc8e37f3dc3fb">D7</a></div><div class="ttdeci">const uint16_t D7</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_ae49bbe780a1e039ef055a2cf333cdede"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#ae49bbe780a1e039ef055a2cf333cdede">D6</a></div><div class="ttdeci">const uint16_t D6</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
+<div class="ttc" id="aLiquidCrystal__TC_8cpp_html_aed832624522b1b31c2fe2ca95ec9d3d8"><div class="ttname"><a href="LiquidCrystal__TC_8cpp.html#aed832624522b1b31c2fe2ca95ec9d3d8">EN</a></div><div class="ttdeci">const uint16_t EN</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00009">LiquidCrystal_TC.cpp:9</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a967f89ffe04c9d847bebed7bb7d234ff"><div class="ttname"><a href="classLiquidCrystal__TC.html#a967f89ffe04c9d847bebed7bb7d234ff">LiquidCrystal_TC::splashScreen</a></div><div class="ttdeci">void splashScreen()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00055">LiquidCrystal_TC.cpp:55</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00055">splashScreen()</a>.</p>
@@ -264,8 +264,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5edceb958fcaa365c8a31e41ce46c8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5edceb958fcaa365c8a31e41ce46c8e8">&#9670;&nbsp;</a></span>writeLine()</h2>
+<a id="a72dc96063b50182adc4feb95a9eeabe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72dc96063b50182adc4feb95a9eeabe9">&#9670;&nbsp;</a></span>writeLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +279,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>line</em>&#160;</td>
         </tr>
         <tr>
@@ -292,12 +292,12 @@ Static Private Attributes</h2></td></tr>
 <p>Prints an input string to the desired line of the LCD screen Even numbers go on the bottom line, odd ones go on the top line </p>
 
 <p class="definition">Definition at line <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">90</a> of file <a class="el" href="LiquidCrystal__TC_8cpp_source.html">LiquidCrystal_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                           {</div>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                                {</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  line = line % 2;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  setCursor(0, line);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">char</span> result[17];</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> moreText = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; i++) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 16; i++) {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (moreText &amp;&amp; text[i] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      moreText = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>

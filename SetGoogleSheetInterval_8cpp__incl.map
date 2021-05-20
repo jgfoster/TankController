@@ -2,9 +2,10 @@
 <area shape="rect" id="node1" title=" " alt="" coords="187,5,375,47"/>
 <area shape="rect" id="node2" href="$SetGoogleSheetInterval_8h.html" title=" " alt="" coords="5,95,176,121"/>
 <area shape="rect" id="node6" href="$EEPROM__TC_8h.html" title=" " alt="" coords="200,95,363,121"/>
-<area shape="rect" id="node7" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="411,95,594,121"/>
-<area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="63,169,223,196"/>
-<area shape="rect" id="node4" href="$UIState_8h.html" title=" " alt="" coords="176,244,253,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="214,319,290,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="449,169,556,196"/>
+<area shape="rect" id="node8" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="411,95,594,121"/>
+<area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="47,169,207,196"/>
+<area shape="rect" id="node4" href="$UIState_8h.html" title=" " alt="" coords="116,244,193,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="243,319,319,345"/>
+<area shape="rect" id="node7" href="$TC__util_8h.html" title=" " alt="" coords="245,244,318,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="449,169,556,196"/>
 </map>

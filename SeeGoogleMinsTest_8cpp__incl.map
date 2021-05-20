@@ -1,14 +1,14 @@
 <map id="test/SeeGoogleMinsTest.cpp" name="test/SeeGoogleMinsTest.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="294,5,485,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="537,229,613,256"/>
-<area shape="rect" id="node3" title=" " alt="" coords="23,80,156,107"/>
-<area shape="rect" id="node4" href="$EEPROM__TC_8h.html" title=" " alt="" coords="181,80,292,107"/>
-<area shape="rect" id="node5" href="$Keypad__TC_8h.html" title=" " alt="" coords="340,80,439,107"/>
-<area shape="rect" id="node7" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="463,80,594,107"/>
-<area shape="rect" id="node9" href="$SeeGoogleMins_8h.html" title=" " alt="" coords="617,80,741,107"/>
-<area shape="rect" id="node11" href="$TankControllerLib_8h.html" title=" " alt="" coords="765,80,900,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="360,155,435,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="510,155,616,181"/>
-<area shape="rect" id="node10" href="$UIState_8h.html" title=" " alt="" coords="640,155,718,181"/>
-<area shape="rect" id="node12" href="$TC__util_8h.html" title=" " alt="" coords="794,155,868,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="452,5,643,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="568,229,644,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="165,80,298,107"/>
+<area shape="rect" id="node4" href="$EEPROM__TC_8h.html" title=" " alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node6" href="$Keypad__TC_8h.html" title=" " alt="" coords="637,80,735,107"/>
+<area shape="rect" id="node8" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="482,80,613,107"/>
+<area shape="rect" id="node10" href="$SeeGoogleMins_8h.html" title=" " alt="" coords="760,80,884,107"/>
+<area shape="rect" id="node12" href="$TankControllerLib_8h.html" title=" " alt="" coords="323,80,457,107"/>
+<area shape="rect" id="node5" href="$TC__util_8h.html" title=" " alt="" coords="304,155,377,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="634,155,709,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="503,155,610,181"/>
+<area shape="rect" id="node11" href="$UIState_8h.html" title=" " alt="" coords="783,155,861,181"/>
 </map>

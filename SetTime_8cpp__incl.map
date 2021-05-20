@@ -3,11 +3,12 @@
 <area shape="rect" id="node2" href="$SetTime_8h.html" title=" " alt="" coords="30,80,111,107"/>
 <area shape="rect" id="node6" href="$DateTime__TC_8h.html" title=" " alt="" coords="136,80,299,107"/>
 <area shape="rect" id="node8" href="$EEPROM__TC_8h.html" title=" " alt="" coords="323,80,485,107"/>
-<area shape="rect" id="node9" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="534,80,717,107"/>
-<area shape="rect" id="node11" href="$Serial__TC_8h.html" title=" " alt="" coords="586,229,726,256"/>
+<area shape="rect" id="node10" href="$LiquidCrystal__TC_8h.html" title=" " alt="" coords="534,80,717,107"/>
+<area shape="rect" id="node12" href="$Serial__TC_8h.html" title=" " alt="" coords="614,229,754,256"/>
 <area shape="rect" id="node3" href="$NumberCollectorState_8h.html" title=" " alt="" coords="5,155,165,181"/>
 <area shape="rect" id="node4" href="$UIState_8h.html" title=" " alt="" coords="75,229,152,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="295,304,371,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="366,304,442,331"/>
 <area shape="rect" id="node7" title=" " alt="" coords="255,155,326,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="572,155,679,181"/>
+<area shape="rect" id="node9" href="$TC__util_8h.html" title=" " alt="" coords="367,229,441,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="572,155,679,181"/>
 </map>

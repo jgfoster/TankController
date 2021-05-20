@@ -144,8 +144,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a777d5464735cd39cddb517e186da6f35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a> (<a class="el" href="classUIState.html">UIState</a> *<a class="el" href="TCLibTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>)</td></tr>
 <tr class="separator:a777d5464735cd39cddb517e186da6f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd85638d5f05240b042e6362ff9bf1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">returnToMainMenu</a> (int msDelay=0)</td></tr>
-<tr class="separator:a2dd85638d5f05240b042e6362ff9bf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f9f15d03ceef1abee82a608a4986c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">returnToMainMenu</a> (uint16_t msDelay=0)</td></tr>
+<tr class="separator:ab8f9f15d03ceef1abee82a608a4986c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -252,9 +252,9 @@ Protected Attributes</h2></td></tr>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  (void)<a class="code" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">// default is to just return to main menu</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// this is useful for display-only actions</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  this-&gt;<a class="code" href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">returnToMainMenu</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  this-&gt;<a class="code" href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">returnToMainMenu</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="ttc" id="aclassUIState_html_a2dd85638d5f05240b042e6362ff9bf1a"><div class="ttname"><a href="classUIState.html#a2dd85638d5f05240b042e6362ff9bf1a">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(int msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00018">UIState.cpp:18</a></div></div>
+<div class="ttc" id="aclassUIState_html_ab8f9f15d03ceef1abee82a608a4986c2"><div class="ttname"><a href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(uint16_t msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00018">UIState.cpp:18</a></div></div>
 <div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00100">libTC.cpp:100</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="libTC_8cpp_source.html#l00100">key()</a>, and <a class="el" href="UIState_8cpp_source.html#l00018">returnToMainMenu()</a>.</p>
@@ -425,8 +425,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2dd85638d5f05240b042e6362ff9bf1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dd85638d5f05240b042e6362ff9bf1a">&#9670;&nbsp;</a></span>returnToMainMenu()</h2>
+<a id="ab8f9f15d03ceef1abee82a608a4986c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f9f15d03ceef1abee82a608a4986c2">&#9670;&nbsp;</a></span>returnToMainMenu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,7 +437,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void UIState::returnToMainMenu </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>msDelay</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
@@ -450,14 +450,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="UIState_8cpp_source.html#l00018">18</a> of file <a class="el" href="UIState_8cpp_source.html">UIState.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                          {</div>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                               {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">if</span> (msDelay) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    this-&gt;<a class="code" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classWait.html">Wait</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>, msDelay));</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    this-&gt;<a class="code" href="classUIState.html#a777d5464735cd39cddb517e186da6f35">setNextState</a>((<a class="code" href="classUIState.html">UIState</a>*)<span class="keyword">new</span> <a class="code" href="classMainMenu.html">MainMenu</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00012">MainMenu.h:12</a></div></div>
+<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8h_source.html#l00013">MainMenu.h:13</a></div></div>
 <div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00011">UIState.h:11</a></div></div>
 <div class="ttc" id="aclassUIState_html_a777d5464735cd39cddb517e186da6f35"><div class="ttname"><a href="classUIState.html#a777d5464735cd39cddb517e186da6f35">UIState::setNextState</a></div><div class="ttdeci">void setNextState(UIState *state)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00026">UIState.cpp:26</a></div></div>
 <div class="ttc" id="aclassWait_html"><div class="ttname"><a href="classWait.html">Wait</a></div><div class="ttdef"><b>Definition:</b> <a href="Wait_8h_source.html#l00009">Wait.h:9</a></div></div>
@@ -534,11 +534,11 @@ Protected Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// default is to print the current prompt on the first line of the display</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">prompt</a> = this-&gt;<a class="code" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">prompt</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(prompt, 0);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">writeLine</a>(<span class="stringliteral">&quot;                &quot;</span>, 1);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(prompt, 0);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;                &quot;</span>, 1);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
-<div class="ttc" id="aclassLiquidCrystal__TC_html_a5edceb958fcaa365c8a31e41ce46c8e8"><div class="ttname"><a href="classLiquidCrystal__TC.html#a5edceb958fcaa365c8a31e41ce46c8e8">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, int line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
+<div class="ttc" id="aclassLiquidCrystal__TC_html_a72dc96063b50182adc4feb95a9eeabe9"><div class="ttname"><a href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
 <div class="ttc" id="aclassUIState_html_a0104fcd88e3ae4514e45b94806698ab8"><div class="ttname"><a href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00032">UIState.h:32</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="UIState_8h_source.html#l00032">prompt()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>

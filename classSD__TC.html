@@ -113,10 +113,10 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a7ad7fa640b2f4a8e728e7a870cc53bcf"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSD__TC.html#a7ad7fa640b2f4a8e728e7a870cc53bcf">IO_PIN</a> = 10</td></tr>
-<tr class="separator:a7ad7fa640b2f4a8e728e7a870cc53bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca1521b3fa5407cf829f3b1515796098"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSD__TC.html#aca1521b3fa5407cf829f3b1515796098">SELECT_PIN</a> = 4</td></tr>
-<tr class="separator:aca1521b3fa5407cf829f3b1515796098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85bebf1ba089f1a97b20527adaf0d90"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSD__TC.html#af85bebf1ba089f1a97b20527adaf0d90">IO_PIN</a> = 10</td></tr>
+<tr class="separator:af85bebf1ba089f1a97b20527adaf0d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8074cbb9f4c5f1cacba11e0c828cf468"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSD__TC.html#a8074cbb9f4c5f1cacba11e0c828cf468">SELECT_PIN</a> = 4</td></tr>
+<tr class="separator:a8074cbb9f4c5f1cacba11e0c828cf468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a597672a3ddb947189c844d9e734a9515"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSD__TC.html#a597672a3ddb947189c844d9e734a9515">hasHadError</a> = false</td></tr>
 <tr class="separator:a597672a3ddb947189c844d9e734a9515"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -157,12 +157,12 @@ Static Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;             {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  Serial.println(<span class="stringliteral">&quot;SD_TC&quot;</span>);  <span class="comment">// Serial_TC might not be ready yet</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="TC__util_8h.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(<a class="code" href="classSD__TC.html#aff882f758ae1bc6cdba7228999c92059">_instance</a> == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (!SD.begin(<a class="code" href="classSD__TC.html#aca1521b3fa5407cf829f3b1515796098">SELECT_PIN</a>)) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (!SD.begin(<a class="code" href="classSD__TC.html#a8074cbb9f4c5f1cacba11e0c828cf468">SELECT_PIN</a>)) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Serial.println(<span class="stringliteral">&quot;SD_TC failed to initialize!&quot;</span>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="ttc" id="aTC__util_8h_html_ae62a1773f22b7a2f5635c7497269cd39"><div class="ttname"><a href="TC__util_8h.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a></div><div class="ttdeci">#define assert(p)</div><div class="ttdef"><b>Definition:</b> <a href="TC__util_8h_source.html#l00007">TC_util.h:7</a></div></div>
-<div class="ttc" id="aclassSD__TC_html_aca1521b3fa5407cf829f3b1515796098"><div class="ttname"><a href="classSD__TC.html#aca1521b3fa5407cf829f3b1515796098">SD_TC::SELECT_PIN</a></div><div class="ttdeci">const int SELECT_PIN</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00030">SD_TC.h:30</a></div></div>
+<div class="ttc" id="aclassSD__TC_html_a8074cbb9f4c5f1cacba11e0c828cf468"><div class="ttname"><a href="classSD__TC.html#a8074cbb9f4c5f1cacba11e0c828cf468">SD_TC::SELECT_PIN</a></div><div class="ttdeci">const uint16_t SELECT_PIN</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00030">SD_TC.h:30</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_aff882f758ae1bc6cdba7228999c92059"><div class="ttname"><a href="classSD__TC.html#aff882f758ae1bc6cdba7228999c92059">SD_TC::_instance</a></div><div class="ttdeci">static SD_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00026">SD_TC.h:26</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SD__TC_8h_source.html#l00026">_instance</a>, <a class="el" href="TC__util_8h_source.html#l00007">assert</a>, and <a class="el" href="SD__TC_8h_source.html#l00030">SELECT_PIN</a>.</p>
@@ -486,7 +486,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SD__TC_8cpp_source.html#l00121">121</a> of file <a class="el" href="SD__TC_8cpp_source.html">SD_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  uint16_t i = 0;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">while</span> (i++ &lt; 100) {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    File entry = pDir-&gt;openNextFile();</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (!entry) {</div>
@@ -558,8 +558,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7ad7fa640b2f4a8e728e7a870cc53bcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ad7fa640b2f4a8e728e7a870cc53bcf">&#9670;&nbsp;</a></span>IO_PIN</h2>
+<a id="af85bebf1ba089f1a97b20527adaf0d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85bebf1ba089f1a97b20527adaf0d90">&#9670;&nbsp;</a></span>IO_PIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -568,7 +568,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int SD_TC::IO_PIN = 10</td>
+          <td class="memname">const uint16_t SD_TC::IO_PIN = 10</td>
         </tr>
       </table>
   </td>
@@ -582,8 +582,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aca1521b3fa5407cf829f3b1515796098"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca1521b3fa5407cf829f3b1515796098">&#9670;&nbsp;</a></span>SELECT_PIN</h2>
+<a id="a8074cbb9f4c5f1cacba11e0c828cf468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8074cbb9f4c5f1cacba11e0c828cf468">&#9670;&nbsp;</a></span>SELECT_PIN</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,7 +592,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int SD_TC::SELECT_PIN = 4</td>
+          <td class="memname">const uint16_t SD_TC::SELECT_PIN = 4</td>
         </tr>
       </table>
   </td>

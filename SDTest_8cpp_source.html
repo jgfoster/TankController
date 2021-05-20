@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#adea64911ef30235f11ddabc1faecec69">sd</a>-&gt;<a class="code" href="classSD__TC.html#a8536c28426883e4df70e488aa5f1c298">printRootDirectory</a>();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  String output = String(<a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">int</span> index;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  uint16_t index;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           c (     0)\r\n&quot;</span>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  assertNotEqual(-1, index);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  index = output.indexOf(<span class="stringliteral">&quot;           d/\r\n&quot;</span>);</div>

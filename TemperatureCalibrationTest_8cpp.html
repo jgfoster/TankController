@@ -86,18 +86,18 @@ Include dependency graph for TemperatureCalibrationTest.cpp:</div>
 <div class="center"><img src="TemperatureCalibrationTest_8cpp__incl.png" border="0" usemap="#atest_2TemperatureCalibrationTest_8cpp" alt=""/></div>
 <map name="atest_2TemperatureCalibrationTest_8cpp" id="atest_2TemperatureCalibrationTest_8cpp">
 <area shape="rect" title=" " alt="" coords="410,5,592,47"/>
-<area shape="rect" title=" " alt="" coords="590,319,666,345"/>
+<area shape="rect" title=" " alt="" coords="575,319,651,345"/>
 <area shape="rect" title=" " alt="" coords="22,95,156,121"/>
 <area shape="rect" href="LiquidCrystal__TC_8h.html" title=" " alt="" coords="180,95,363,121"/>
 <area shape="rect" href="EEPROM__TC_8h.html" title=" " alt="" coords="387,95,498,121"/>
-<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="542,169,615,196"/>
+<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="524,169,598,196"/>
 <area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="598,95,732,121"/>
 <area shape="rect" href="TempProbe__TC_8h.html" title=" " alt="" coords="757,95,880,121"/>
-<area shape="rect" href="TemperatureCalibration_8h.html" title=" " alt="" coords="908,95,1075,121"/>
+<area shape="rect" href="TemperatureCalibration_8h.html" title=" " alt="" coords="904,95,1071,121"/>
 <area shape="rect" title=" " alt="" coords="309,169,416,196"/>
-<area shape="rect" title=" " alt="" coords="742,169,890,196"/>
-<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="914,169,1074,196"/>
-<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="848,244,925,271"/>
+<area shape="rect" title=" " alt="" coords="735,169,883,196"/>
+<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="908,169,1068,196"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="838,244,916,271"/>
 </map>
 </div>
 </div>
@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(10.0);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#ab6c74b1b58593dddfcb2220e617a9562">setCorrection</a>(0.0);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  assertEqual(0.0, <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;getCorrectedTemp());</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; ++i) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    delay(1000);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="TCLibTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// A new measured temperature should also be adjusted</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="TCLibTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(15.5);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; ++i) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    delay(1000);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="TCLibTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
