@@ -161,7 +161,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="SetTankID_8h.html">SetTankID.h</a></p>
 <p>Change Tank ID </p>
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00009">9</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00010">10</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb60597ccdd374742982de1da670be48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb60597ccdd374742982de1da670be48">&#9670;&nbsp;</a></span>SetTankID()</h2>
@@ -187,9 +187,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00011">11</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                   : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00012">12</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                   : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  }</div>
 <div class="ttc" id="aclassNumCollectorState_html_a01afcb5b7abc78c4ebdaa7cbc9eb9fd1"><div class="ttname"><a href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState::NumCollectorState</a></div><div class="ttdeci">NumCollectorState(TankControllerLib *tc)</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00010">NumberCollectorState.h:10</a></div></div>
 <div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00040">UIState.h:40</a></div></div>
 </div><!-- fragment -->
@@ -221,11 +221,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00019">19</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                          {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00020">20</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                          {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">getTankID</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
+<div class="ttc" id="aclassEEPROM__TC_html_a528d68dbe7d712e2276089df46482f59"><div class="ttname"><a href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">EEPROM_TC::getTankID</a></div><div class="ttdeci">uint16_t getTankID()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC.cpp:109</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC::getTankID()</a>, and <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>.</p>
+
 </div>
 </div>
 <a id="ac5b4a1f4f9f09a485cf8be3bcb538256"></a>
@@ -253,10 +257,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classNumCollectorState.html#ab1b13b34ab4bc3cc689529c79c1680ee">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00013">13</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                           {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00014">14</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                           {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -285,10 +289,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00016">16</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                     {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetTankID&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00017">17</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                     {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetTankID&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,10 +321,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00022">22</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set Tank ID#    &quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetTankID_8h_source.html#l00023">23</a> of file <a class="el" href="SetTankID_8h_source.html">SetTankID.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                       {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set Tank ID#    &quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -361,7 +365,6 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">returnToMainMenu</a>(3000);  <span class="comment">// after 3-second delay</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="ttc" id="aclassEEPROM__TC_html_a78ade2595a7bbb717cdfc457b9d58c53"><div class="ttname"><a href="classEEPROM__TC.html#a78ade2595a7bbb717cdfc457b9d58c53">EEPROM_TC::setTankID</a></div><div class="ttdeci">void setTankID(uint16_t value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00176">EEPROM_TC.cpp:176</a></div></div>
-<div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a72dc96063b50182adc4feb95a9eeabe9"><div class="ttname"><a href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
 <div class="ttc" id="aclassNumCollectorState_html_a1fb7310d041a232dbbe1cafab7c0d79d"><div class="ttname"><a href="classNumCollectorState.html#a1fb7310d041a232dbbe1cafab7c0d79d">NumCollectorState::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>

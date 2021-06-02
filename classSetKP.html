@@ -161,7 +161,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="SetKP_8h.html">SetKP.h</a></p>
 <p>Set the KP for the PID </p>
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00009">9</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00010">10</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abbb49c4a1398444aea2c996672b0c3c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbb49c4a1398444aea2c996672b0c3c0">&#9670;&nbsp;</a></span>SetKP()</h2>
@@ -187,9 +187,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00011">11</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                               : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00012">12</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                               : <a class="code" href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState</a>(<a class="code" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  }</div>
 <div class="ttc" id="aclassNumCollectorState_html_a01afcb5b7abc78c4ebdaa7cbc9eb9fd1"><div class="ttname"><a href="classNumCollectorState.html#a01afcb5b7abc78c4ebdaa7cbc9eb9fd1">NumCollectorState::NumCollectorState</a></div><div class="ttdeci">NumCollectorState(TankControllerLib *tc)</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00010">NumberCollectorState.h:10</a></div></div>
 <div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00040">UIState.h:40</a></div></div>
 </div><!-- fragment -->
@@ -221,11 +221,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00016">16</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                          {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00017">17</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                          {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a9c6c66f0fd9ff2eb1c601e4d3462a3c3">getKP</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
+<div class="ttc" id="aclassEEPROM__TC_html_a9c6c66f0fd9ff2eb1c601e4d3462a3c3"><div class="ttname"><a href="classEEPROM__TC.html#a9c6c66f0fd9ff2eb1c601e4d3462a3c3">EEPROM_TC::getKP</a></div><div class="ttdeci">float getKP()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00085">EEPROM_TC.cpp:85</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="EEPROM__TC_8cpp_source.html#l00085">EEPROM_TC::getKP()</a>, and <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>.</p>
+
 </div>
 </div>
 <a id="a0e1c9dd79fcdd449458cce36029ba14d"></a>
@@ -253,10 +257,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classNumCollectorState.html#a7993c51cc3295369f4d1b86b4f7233ac">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00019">19</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                      {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00020">20</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                      {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -285,10 +289,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00013">13</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                     {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetKP&quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00014">14</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                     {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;SetKP&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -317,10 +321,10 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00022">22</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set KP          &quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="SetKP_8h_source.html#l00023">23</a> of file <a class="el" href="SetKP_8h_source.html">SetKP.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                       {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Set KP          &quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>
 </div>

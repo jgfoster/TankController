@@ -1,6 +1,8 @@
 <map id="src/UIState/SetTankID.h" name="src/UIState/SetTankID.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,171,32"/>
-<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="8,80,168,107"/>
-<area shape="rect" id="node3" href="$UIState_8h.html" title=" " alt="" coords="49,155,127,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="50,229,126,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="108,5,273,32"/>
+<area shape="rect" id="node2" href="$EEPROM__TC_8h.html" title=" " alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node5" href="$NumberCollectorState_8h.html" title=" " alt="" coords="216,80,376,107"/>
+<area shape="rect" id="node3" href="$TC__util_8h.html" title=" " alt="" coords="105,155,178,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,229,229,256"/>
+<area shape="rect" id="node6" href="$UIState_8h.html" title=" " alt="" coords="229,155,307,181"/>
 </map>
