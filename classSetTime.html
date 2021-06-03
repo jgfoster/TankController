@@ -134,6 +134,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa3c588651c9a95d7b6d84529250924d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18dd9f392689631b00910eadc5463c9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a> [<a class="el" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>] = {0, 0, 0, 0, 0}</td></tr>
 <tr class="separator:af18dd9f392689631b00910eadc5463c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac083602003b807975f76b95028f7843b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a> [<a class="el" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>] = {0.0, 0.0, 0.0, 0.0, 0.0}</td></tr>
+<tr class="separator:ac083602003b807975f76b95028f7843b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0edff0feadfdc3fe1e91708ac068beaa"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSetTime.html#a0edff0feadfdc3fe1e91708ac068beaa">prompts</a> [<a class="el" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>]</td></tr>
 <tr class="separator:a0edff0feadfdc3fe1e91708ac068beaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -230,18 +232,34 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p><a class="el" href="SetTime_8cpp.html">SetTime.cpp</a> </p>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00019">19</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                          {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> 0.0;</div>
+<p class="definition">Definition at line <a class="el" href="SetTime_8cpp_source.html#l00012">12</a> of file <a class="el" href="SetTime_8cpp_source.html">SetTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                               {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a> == 0) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// initialize current values with current date time</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[0] = now.year();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[1] = now.month();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[2] = now.day();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[3] = now.hour();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[4] = now.minute();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classSetTime.html#ac083602003b807975f76b95028f7843b">current</a>[<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a>];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
+<div class="ttc" id="aclassSetTime_html_aa3c588651c9a95d7b6d84529250924d3"><div class="ttname"><a href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">SetTime::subState</a></div><div class="ttdeci">uint16_t subState</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00028">SetTime.h:28</a></div></div>
+<div class="ttc" id="aclassSetTime_html_ac083602003b807975f76b95028f7843b"><div class="ttname"><a href="classSetTime.html#ac083602003b807975f76b95028f7843b">SetTime::current</a></div><div class="ttdeci">float current[NUM_VALUES]</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00030">SetTime.h:30</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="SetTime_8h_source.html#l00030">current</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, and <a class="el" href="SetTime_8h_source.html#l00028">subState</a>.</p>
+
 </div>
 </div>
 <a id="ac59c63cfaa022c1622636555b8bf3f1a"></a>
@@ -333,14 +351,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00022">22</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                       {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSetTime.html#a0edff0feadfdc3fe1e91708ac068beaa">prompts</a>[<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a>];</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00021">21</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                       {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSetTime.html#a0edff0feadfdc3fe1e91708ac068beaa">prompts</a>[<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a>];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
 <div class="ttc" id="aclassSetTime_html_a0edff0feadfdc3fe1e91708ac068beaa"><div class="ttname"><a href="classSetTime.html#a0edff0feadfdc3fe1e91708ac068beaa">SetTime::prompts</a></div><div class="ttdeci">const char * prompts[NUM_VALUES]</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00031">SetTime.h:31</a></div></div>
-<div class="ttc" id="aclassSetTime_html_aa3c588651c9a95d7b6d84529250924d3"><div class="ttname"><a href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">SetTime::subState</a></div><div class="ttdeci">uint16_t subState</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00029">SetTime.h:29</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SetTime_8h_source.html#l00031">prompts</a>, and <a class="el" href="SetTime_8h_source.html#l00029">subState</a>.</p>
+<p class="reference">References <a class="el" href="SetTime_8h_source.html#l00031">prompts</a>, and <a class="el" href="SetTime_8h_source.html#l00028">subState</a>.</p>
 
 </div>
 </div>
@@ -367,46 +384,69 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="SetTime_8cpp.html">SetTime.cpp</a> </p>
 
 <p>Implements <a class="el" href="classNumCollectorState.html#a969f40d3ace35ee2c69dd12f12afcb71">NumCollectorState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8cpp_source.html#l00012">12</a> of file <a class="el" href="SetTime_8cpp_source.html">SetTime.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a>++] = <a class="code" href="classNumCollectorState.html#a1fb7310d041a232dbbe1cafab7c0d79d">value</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a> &lt; <a class="code" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classNumCollectorState.html#a8e9678c3d38e0b079c90fe7f5418812d">clear</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classNumCollectorState.html#a24652948b488037a1911c461a51fcb63">start</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classDateTime__TC.html">DateTime_TC</a> dt(<a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[0], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[1], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[2], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[3], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[4]);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    dt.setAsCurrent();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">as16CharacterString</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Set time to %s&quot;</span>, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;New Date/Time:  &quot;</span>, 0);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, 1);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">returnToMainMenu</a>(3000);  <span class="comment">// after 3-second delay</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SetTime_8cpp_source.html#l00025">25</a> of file <a class="el" href="SetTime_8cpp_source.html">SetTime.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                  {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a>++] = <a class="code" href="classNumCollectorState.html#a1fb7310d041a232dbbe1cafab7c0d79d">value</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">subState</a> &lt; <a class="code" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classNumCollectorState.html#a8e9678c3d38e0b079c90fe7f5418812d">clear</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classNumCollectorState.html#a24652948b488037a1911c461a51fcb63">start</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classDateTime__TC.html">DateTime_TC</a> dt(<a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[0], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[1], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[2], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[3], <a class="code" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">values</a>[4]);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    dt.setAsCurrent();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">as16CharacterString</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Set time to %s&quot;</span>, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;New Date/Time:  &quot;</span>, 0);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, 1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">returnToMainMenu</a>(3000);  <span class="comment">// after 3-second delay</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_a517888828f617bf1de7d424398b474be"><div class="ttname"><a href="classDateTime__TC.html#a517888828f617bf1de7d424398b474be">DateTime_TC::as16CharacterString</a></div><div class="ttdeci">char * as16CharacterString()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00049">DateTime_TC.cpp:49</a></div></div>
-<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a72dc96063b50182adc4feb95a9eeabe9"><div class="ttname"><a href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
 <div class="ttc" id="aclassNumCollectorState_html_a1fb7310d041a232dbbe1cafab7c0d79d"><div class="ttname"><a href="classNumCollectorState.html#a1fb7310d041a232dbbe1cafab7c0d79d">NumCollectorState::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8h_source.html#l00030">NumberCollectorState.h:30</a></div></div>
 <div class="ttc" id="aclassNumCollectorState_html_a24652948b488037a1911c461a51fcb63"><div class="ttname"><a href="classNumCollectorState.html#a24652948b488037a1911c461a51fcb63">NumCollectorState::start</a></div><div class="ttdeci">virtual void start()</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8cpp_source.html#l00082">NumberCollectorState.cpp:82</a></div></div>
 <div class="ttc" id="aclassNumCollectorState_html_a8e9678c3d38e0b079c90fe7f5418812d"><div class="ttname"><a href="classNumCollectorState.html#a8e9678c3d38e0b079c90fe7f5418812d">NumCollectorState::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8cpp_source.html#l00011">NumberCollectorState.cpp:11</a></div></div>
-<div class="ttc" id="aclassSetTime_html_a485e08c46022b03265252865975b3e26"><div class="ttname"><a href="classSetTime.html#a485e08c46022b03265252865975b3e26">SetTime::NUM_VALUES</a></div><div class="ttdeci">static const uint16_t NUM_VALUES</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00028">SetTime.h:28</a></div></div>
-<div class="ttc" id="aclassSetTime_html_af18dd9f392689631b00910eadc5463c9"><div class="ttname"><a href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">SetTime::values</a></div><div class="ttdeci">uint16_t values[NUM_VALUES]</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00030">SetTime.h:30</a></div></div>
+<div class="ttc" id="aclassSetTime_html_a485e08c46022b03265252865975b3e26"><div class="ttname"><a href="classSetTime.html#a485e08c46022b03265252865975b3e26">SetTime::NUM_VALUES</a></div><div class="ttdeci">static const uint16_t NUM_VALUES</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00027">SetTime.h:27</a></div></div>
+<div class="ttc" id="aclassSetTime_html_af18dd9f392689631b00910eadc5463c9"><div class="ttname"><a href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">SetTime::values</a></div><div class="ttdeci">uint16_t values[NUM_VALUES]</div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00029">SetTime.h:29</a></div></div>
 <div class="ttc" id="aclassUIState_html_ab8f9f15d03ceef1abee82a608a4986c2"><div class="ttname"><a href="classUIState.html#ab8f9f15d03ceef1abee82a608a4986c2">UIState::returnToMainMenu</a></div><div class="ttdeci">void returnToMainMenu(uint16_t msDelay=0)</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8cpp_source.html#l00018">UIState.cpp:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00049">DateTime_TC::as16CharacterString()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="NumberCollectorState_8cpp_source.html#l00011">NumCollectorState::clear()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="SetTime_8h_source.html#l00028">NUM_VALUES</a>, <a class="el" href="UIState_8cpp_source.html#l00018">UIState::returnToMainMenu()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC::setAsCurrent()</a>, <a class="el" href="NumberCollectorState_8cpp_source.html#l00082">NumCollectorState::start()</a>, <a class="el" href="SetTime_8h_source.html#l00029">subState</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, <a class="el" href="SetTime_8h_source.html#l00030">values</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00049">DateTime_TC::as16CharacterString()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="NumberCollectorState_8cpp_source.html#l00011">NumCollectorState::clear()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="SetTime_8h_source.html#l00027">NUM_VALUES</a>, <a class="el" href="UIState_8cpp_source.html#l00018">UIState::returnToMainMenu()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC::setAsCurrent()</a>, <a class="el" href="NumberCollectorState_8cpp_source.html#l00082">NumCollectorState::start()</a>, <a class="el" href="SetTime_8h_source.html#l00028">subState</a>, <a class="el" href="NumberCollectorState_8h_source.html#l00030">NumCollectorState::value</a>, <a class="el" href="SetTime_8h_source.html#l00029">values</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac083602003b807975f76b95028f7843b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac083602003b807975f76b95028f7843b">&#9670;&nbsp;</a></span>current</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float SetTime::current[<a class="el" href="classSetTime.html#a485e08c46022b03265252865975b3e26">NUM_VALUES</a>] = {0.0, 0.0, 0.0, 0.0, 0.0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00030">30</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00012">getCurrentValue()</a>.</p>
+
+</div>
+</div>
 <a id="a485e08c46022b03265252865975b3e26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a485e08c46022b03265252865975b3e26">&#9670;&nbsp;</a></span>NUM_VALUES</h2>
 
@@ -427,9 +467,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00028">28</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00027">27</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00012">setValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00025">setValue()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00031">31</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetTime_8h_source.html#l00022">prompt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetTime_8h_source.html#l00021">prompt()</a>.</p>
 
 </div>
 </div>
@@ -481,9 +521,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00029">29</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00028">28</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetTime_8h_source.html#l00022">prompt()</a>, and <a class="el" href="SetTime_8cpp_source.html#l00012">setValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00012">getCurrentValue()</a>, <a class="el" href="SetTime_8h_source.html#l00021">prompt()</a>, and <a class="el" href="SetTime_8cpp_source.html#l00025">setValue()</a>.</p>
 
 </div>
 </div>
@@ -507,9 +547,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00030">30</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SetTime_8h_source.html#l00029">29</a> of file <a class="el" href="SetTime_8h_source.html">SetTime.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00012">setValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetTime_8cpp_source.html#l00025">setValue()</a>.</p>
 
 </div>
 </div>

@@ -83,46 +83,58 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a> = <a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classSetTime.html">SetTime</a>* <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classSetTime.html">SetTime</a>(<a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// the default time is the code compile time</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  assertTrue(now.year() &gt; 2020);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// get currently displayed lines</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  std::vector&lt;String&gt; lines = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;getLines();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  assertEqual(<span class="stringliteral">&quot;Set Year (YYYY):&quot;</span>, lines.at(0));</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(2020);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  assertEqual(<span class="stringliteral">&quot;Month (1-12):   &quot;</span>, lines.at(0));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(03);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  assertEqual(<span class="stringliteral">&quot;Day (1-31):     &quot;</span>, lines.at(0));</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(18);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  assertEqual(<span class="stringliteral">&quot;Hour (0-23):    &quot;</span>, lines.at(0));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(13);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> june(2021, 06, 01, 20, 57, 15);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  june.<a class="code" href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">setAsCurrent</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// the default time is the code compile time</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  assertTrue(now.year() == 2021);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// get currently displayed lines</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  std::vector&lt;String&gt; lines = <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;getLines();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  assertEqual(<span class="stringliteral">&quot;Set Year (YYYY):&quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  assertEqual(<span class="stringliteral">&quot;   2021-&gt;     0 &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  assertEqual(2021, <a class="code" href="namespacetest.html">test</a>-&gt;getCurrentValue());</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(2020);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  assertEqual(<span class="stringliteral">&quot;Month (1-12):   &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  assertEqual(<span class="stringliteral">&quot;      6-&gt;     0 &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  assertEqual(06, <a class="code" href="namespacetest.html">test</a>-&gt;getCurrentValue());</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(03);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  assertEqual(<span class="stringliteral">&quot;Minute (0-59):  &quot;</span>, lines.at(0));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(15);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// during the delay we showed the new value</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  assertEqual(<span class="stringliteral">&quot;Day (1-31):     &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  assertEqual(<span class="stringliteral">&quot;      1-&gt;     0 &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  assertEqual(01, <a class="code" href="namespacetest.html">test</a>-&gt;getCurrentValue());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(18);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  assertEqual(<span class="stringliteral">&quot;New Date/Time:  &quot;</span>, lines[0]);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-03-18 13:15&quot;</span>, lines[1]);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// a year ago ensures that it precedes the compile time</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-03-18 13:15&quot;</span>, <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().as16CharacterString());</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  assertEqual(<span class="stringliteral">&quot;SetTime&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// transition to Wait</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  assertEqual(<span class="stringliteral">&quot;Wait&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  delay(3000);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// queue MainMenu to be next</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// transition to MainMenu</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// now we should be back to the main menu</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  assertEqual(<span class="stringliteral">&quot;MainMenu&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  assertEqual(<span class="stringliteral">&quot;Hour (0-23):    &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  assertEqual(<span class="stringliteral">&quot;     20-&gt;     0 &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  assertEqual(20, <a class="code" href="namespacetest.html">test</a>-&gt;getCurrentValue());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(13);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  assertEqual(<span class="stringliteral">&quot;Minute (0-59):  &quot;</span>, lines.at(0));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  assertEqual(<span class="stringliteral">&quot;     57-&gt;     0 &quot;</span>, lines.at(1));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  assertEqual(57, <a class="code" href="namespacetest.html">test</a>-&gt;getCurrentValue());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(15);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">// during the delay we showed the new value</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  lines = <a class="code" href="libTC_8cpp.html#a3bf3612a8f063fccc6be2322d778577b">lcd</a>-&gt;getLines();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  assertEqual(<span class="stringliteral">&quot;New Date/Time:  &quot;</span>, lines[0]);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-03-18 13:15&quot;</span>, lines[1]);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// a year ago ensures that it precedes the compile time</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  assertEqual(<span class="stringliteral">&quot;2020-03-18 13:15&quot;</span>, <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().as16CharacterString());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  assertEqual(<span class="stringliteral">&quot;SetTime&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// transition to Wait</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  assertEqual(<span class="stringliteral">&quot;Wait&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  delay(3000);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// queue MainMenu to be next</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();  <span class="comment">// transition to MainMenu</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// now we should be back to the main menu</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  assertEqual(<span class="stringliteral">&quot;MainMenu&quot;</span>, <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2">stateName</a>());</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;unittest_main()</div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aLiquidCrystal__TC_8h_html"><div class="ttname"><a href="LiquidCrystal__TC_8h.html">LiquidCrystal_TC.h</a></div></div>
 <div class="ttc" id="aMenuTest_8cpp_html_a22694a8fab4db4814d370750d9dfdc13"><div class="ttname"><a href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
@@ -131,6 +143,7 @@ $(function() {
 <div class="ttc" id="aTankControllerLib_8h_html"><div class="ttname"><a href="TankControllerLib_8h.html">TankControllerLib.h</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
 <div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
+<div class="ttc" id="aclassDateTime__TC_html_afdcd786be827d68c0fcebd7c2c749d6f"><div class="ttname"><a href="classDateTime__TC.html#afdcd786be827d68c0fcebd7c2c749d6f">DateTime_TC::setAsCurrent</a></div><div class="ttdeci">void setAsCurrent()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00080">DateTime_TC.cpp:80</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html"><div class="ttname"><a href="classLiquidCrystal__TC.html">LiquidCrystal_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8h_source.html#l00010">LiquidCrystal_TC.h:10</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
 <div class="ttc" id="aclassSetTime_html"><div class="ttname"><a href="classSetTime.html">SetTime</a></div><div class="ttdef"><b>Definition:</b> <a href="SetTime_8h_source.html#l00009">SetTime.h:9</a></div></div>
