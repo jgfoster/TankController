@@ -13,8 +13,8 @@ var searchData=
   ['getkd_94',['getKd',['../classPID__TC.html#a9e530894e59d16398d15fe9f10ed7a72',1,'PID_TC']]],
   ['getkd_95',['getKD',['../classEEPROM__TC.html#a628686b61cdb8986809746e2d61d445f',1,'EEPROM_TC']]],
   ['getkey_96',['getKey',['../classKeypad__TC.html#af05734b4c284c56421a53d3e94f3f83a',1,'Keypad_TC']]],
-  ['getki_97',['getKI',['../classEEPROM__TC.html#a0a7a503dc962ea5e0b5f58cab3407f39',1,'EEPROM_TC']]],
-  ['getki_98',['getKi',['../classPID__TC.html#a0fa8dafe045d0f933bdc29ec70de38f7',1,'PID_TC']]],
+  ['getki_97',['getKi',['../classPID__TC.html#a0fa8dafe045d0f933bdc29ec70de38f7',1,'PID_TC']]],
+  ['getki_98',['getKI',['../classEEPROM__TC.html#a0a7a503dc962ea5e0b5f58cab3407f39',1,'EEPROM_TC']]],
   ['getkp_99',['getKP',['../classEEPROM__TC.html#a9c6c66f0fd9ff2eb1c601e4d3462a3c3',1,'EEPROM_TC']]],
   ['getkp_100',['getKp',['../classPID__TC.html#ad3999679ced2ce47c6b5b9be5462e720',1,'PID_TC']]],
   ['getmac_101',['getMac',['../classEEPROM__TC.html#ad57a3757a1e611681d8768a4dc1c5292',1,'EEPROM_TC::getMac()'],['../classEthernet__TC.html#a8852cec83187c967f826cb0a337f838f',1,'Ethernet_TC::getMac()']]],
@@ -42,8 +42,9 @@ var searchData=
   ['gettempinterval_123',['getTempInterval',['../classEEPROM__TC.html#ac1cce145f6b7b388f94b9df685d9c46c',1,'EEPROM_TC']]],
   ['gettempseriespointer_124',['getTempSeriesPointer',['../classEEPROM__TC.html#a89b5faddb318d290c29c34746e31e101',1,'EEPROM_TC']]],
   ['gettempseriessize_125',['getTempSeriesSize',['../classEEPROM__TC.html#a2ad630e1d487b7da6c35fc5ddb7d4f24',1,'EEPROM_TC']]],
-  ['getusepid_126',['getUsePID',['../classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d',1,'PHControl']]],
-  ['google_5finterval_5faddress_127',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC.html#abb75ea22bbaf48dd2bd16eac0cec1c2a',1,'EEPROM_TC']]],
-  ['gotdhcplease_128',['gotDHCPLease',['../classEthernet__TC.html#ab57d1c2e3ce8d280b9275223ba954191',1,'Ethernet_TC']]],
-  ['granularity_5faddress_129',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a8ab7c7e16e4d407d7c4e30dc0c2ea0ec',1,'EEPROM_TC']]]
+  ['getuncorrectedrunningaverage_126',['getUncorrectedRunningAverage',['../classTempProbe__TC.html#aac6bd5548573a83845439c1c743eda1c',1,'TempProbe_TC']]],
+  ['getusepid_127',['getUsePID',['../classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d',1,'PHControl']]],
+  ['google_5finterval_5faddress_128',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC.html#abb75ea22bbaf48dd2bd16eac0cec1c2a',1,'EEPROM_TC']]],
+  ['gotdhcplease_129',['gotDHCPLease',['../classEthernet__TC.html#ab57d1c2e3ce8d280b9275223ba954191',1,'Ethernet_TC']]],
+  ['granularity_5faddress_130',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a8ab7c7e16e4d407d7c4e30dc0c2ea0ec',1,'EEPROM_TC']]]
 ];
