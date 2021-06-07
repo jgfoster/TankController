@@ -22,7 +22,7 @@ var searchData=
   ['loadkd_872',['loadKd',['../classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1',1,'SeePIDConstants']]],
   ['loadki_873',['loadKi',['../classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a',1,'SeePIDConstants']]],
   ['loadkp_874',['loadKp',['../classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03',1,'SeePIDConstants']]],
-  ['loadslope_875',['loadSlope',['../classSeePIDConstants.html#a471eccbd21c645cfe2fc8aa2bd676d87',1,'SeePIDConstants']]],
+  ['loadpid_875',['loadPID',['../classSeePIDConstants.html#a30804af11a8eebb34b60843c33466423',1,'SeePIDConstants']]],
   ['logtoserial_876',['logToSerial',['../classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa',1,'PID_TC']]],
   ['loop_877',['loop',['../classTankController_1_1TankController.html#afdeed807f138f490df5dc004eeb3d68c',1,'TankController.TankController.loop()'],['../classPushingBox.html#afac22795f9ae4291485322d344ff15af',1,'PushingBox::loop()'],['../classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3',1,'TankControllerLib::loop()'],['../classMainMenu.html#a1030afe998ac2fbcaf6af266dc78195e',1,'MainMenu::loop()'],['../classSeeDeviceUptime.html#ab83681083d66f18b43aba8a1cd8ec0c8',1,'SeeDeviceUptime::loop()'],['../classSeePHSlope.html#aa3015be64f5cea3b47fe9ea5b802902a',1,'SeePHSlope::loop()'],['../classSeePIDConstants.html#ad980b82b45bb9159f24dc84168a7d940',1,'SeePIDConstants::loop()'],['../classUIState.html#a14bebe1f298527641c25930ef6f0db59',1,'UIState::loop()'],['../classWait.html#af6f7e34c6acd1211ff695eeb0c5a680f',1,'Wait::loop()'],['../libTC_8cpp.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;libTC.cpp']]]
 ];

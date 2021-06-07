@@ -36,7 +36,7 @@ var searchData=
   ['loadkd_198',['loadKd',['../classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1',1,'SeePIDConstants']]],
   ['loadki_199',['loadKi',['../classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a',1,'SeePIDConstants']]],
   ['loadkp_200',['loadKp',['../classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03',1,'SeePIDConstants']]],
-  ['loadslope_201',['loadSlope',['../classSeePIDConstants.html#a471eccbd21c645cfe2fc8aa2bd676d87',1,'SeePIDConstants']]],
+  ['loadpid_201',['loadPID',['../classSeePIDConstants.html#a30804af11a8eebb34b60843c33466423',1,'SeePIDConstants']]],
   ['log_5fsize_202',['LOG_SIZE',['../BlinkTest_8cpp.html#ae6230041d753d1d6c3a6e689a2d2d807',1,'BlinkTest.cpp']]],
   ['logindex_203',['logIndex',['../BlinkTest_8cpp.html#a9fc1a824521534a2febec8f2e708f664',1,'BlinkTest.cpp']]],
   ['logtoserial_204',['logToSerial',['../classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa',1,'PID_TC']]],

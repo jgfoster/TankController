@@ -125,8 +125,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ad5d33f7f6d5116dfbccf70d0c130e45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7ccee41a94fa9f27d151ca58137ef1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1">loadKd</a> (uint16_t line)</td></tr>
 <tr class="separator:aba7ccee41a94fa9f27d151ca58137ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a471eccbd21c645cfe2fc8aa2bd676d87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePIDConstants.html#a471eccbd21c645cfe2fc8aa2bd676d87">loadSlope</a> (uint16_t line)</td></tr>
-<tr class="separator:a471eccbd21c645cfe2fc8aa2bd676d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30804af11a8eebb34b60843c33466423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeePIDConstants.html#a30804af11a8eebb34b60843c33466423">loadPID</a> (uint16_t line)</td></tr>
+<tr class="separator:a30804af11a8eebb34b60843c33466423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -207,12 +207,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00038">38</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                          {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Kd: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKd());</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00039">39</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                          {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Kd: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKd());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3ce5f9dadf933557e9e4ac22cf58d9af"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC.cpp:18</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a72dc96063b50182adc4feb95a9eeabe9"><div class="ttname"><a href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">LiquidCrystal_TC::writeLine</a></div><div class="ttdeci">void writeLine(const char *text, uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC.cpp:90</a></div></div>
@@ -220,7 +220,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00012">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>.</p>
 
 </div>
 </div>
@@ -248,16 +248,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00032">32</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                          {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Ki: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKi());</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00033">33</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                          {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Ki: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKi());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00012">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>.</p>
 
 </div>
 </div>
@@ -285,21 +285,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00026">26</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                          {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Kp: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKp());</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00027">27</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                          {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Kp: %.1f&quot;</span>, <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;getKp());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, line);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00012">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>.</p>
 
 </div>
 </div>
-<a id="a471eccbd21c645cfe2fc8aa2bd676d87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a471eccbd21c645cfe2fc8aa2bd676d87">&#9670;&nbsp;</a></span>loadSlope()</h2>
+<a id="a30804af11a8eebb34b60843c33466423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30804af11a8eebb34b60843c33466423">&#9670;&nbsp;</a></span>loadPID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +308,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SeePIDConstants::loadSlope </td>
+          <td class="memname">void SeePIDConstants::loadPID </td>
           <td>(</td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>line</em></td><td>)</td>
@@ -321,6 +321,22 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00045">45</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                           {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">bool</span> flag = <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">getUsePID</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">if</span> (flag) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: ON         &quot;</span>, line);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: OFF        &quot;</span>, line);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a0b68770ec54ae43a7970736c191b8a8d"><div class="ttname"><a href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">PHControl::getUsePID</a></div><div class="ttdeci">bool getUsePID()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00024">PHControl.h:24</a></div></div>
+<div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00022">PHControl.cpp:22</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00024">PHControl::getUsePID()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="PHControl_8cpp_source.html#l00022">PHControl::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>.</p>
 
 </div>
 </div>
@@ -350,26 +366,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00012">12</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                           {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  int32_t elapsedSeconds = ((millis() - <a class="code" href="classSeePIDConstants.html#a9ca612aae5f956cd7860c58daeba400b">startTime</a>) / 3000) % 2;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">switch</span> (elapsedSeconds) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <a class="code" href="classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03">loadKp</a>(0);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <a class="code" href="classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a">loadKi</a>(1);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1">loadKd</a>(0);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classLiquidCrystal__TC.html#a3ce5f9dadf933557e9e4ac22cf58d9af">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;               &quot;</span>, 1);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="aclassSeePIDConstants_html_a49d458fa10fcebfc8bea74be15400b03"><div class="ttname"><a href="classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03">SeePIDConstants::loadKp</a></div><div class="ttdeci">void loadKp(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00026">SeePIDConstants.cpp:26</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">13</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                           {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  int32_t elapsedSeconds = ((millis() - <a class="code" href="classSeePIDConstants.html#a9ca612aae5f956cd7860c58daeba400b">startTime</a>) / 3000) % 2;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">switch</span> (elapsedSeconds) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <a class="code" href="classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03">loadKp</a>(0);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <a class="code" href="classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a">loadKi</a>(1);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <a class="code" href="classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1">loadKd</a>(0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="classSeePIDConstants.html#a30804af11a8eebb34b60843c33466423">loadPID</a>(1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="ttc" id="aclassSeePIDConstants_html_a30804af11a8eebb34b60843c33466423"><div class="ttname"><a href="classSeePIDConstants.html#a30804af11a8eebb34b60843c33466423">SeePIDConstants::loadPID</a></div><div class="ttdeci">void loadPID(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00045">SeePIDConstants.cpp:45</a></div></div>
+<div class="ttc" id="aclassSeePIDConstants_html_a49d458fa10fcebfc8bea74be15400b03"><div class="ttname"><a href="classSeePIDConstants.html#a49d458fa10fcebfc8bea74be15400b03">SeePIDConstants::loadKp</a></div><div class="ttdeci">void loadKp(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00027">SeePIDConstants.cpp:27</a></div></div>
 <div class="ttc" id="aclassSeePIDConstants_html_a9ca612aae5f956cd7860c58daeba400b"><div class="ttname"><a href="classSeePIDConstants.html#a9ca612aae5f956cd7860c58daeba400b">SeePIDConstants::startTime</a></div><div class="ttdeci">uint32_t startTime</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8h_source.html#l00028">SeePIDConstants.h:28</a></div></div>
-<div class="ttc" id="aclassSeePIDConstants_html_aba7ccee41a94fa9f27d151ca58137ef1"><div class="ttname"><a href="classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1">SeePIDConstants::loadKd</a></div><div class="ttdeci">void loadKd(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00038">SeePIDConstants.cpp:38</a></div></div>
-<div class="ttc" id="aclassSeePIDConstants_html_ad5d33f7f6d5116dfbccf70d0c130e45a"><div class="ttname"><a href="classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a">SeePIDConstants::loadKi</a></div><div class="ttdeci">void loadKi(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00032">SeePIDConstants.cpp:32</a></div></div>
+<div class="ttc" id="aclassSeePIDConstants_html_aba7ccee41a94fa9f27d151ca58137ef1"><div class="ttname"><a href="classSeePIDConstants.html#aba7ccee41a94fa9f27d151ca58137ef1">SeePIDConstants::loadKd</a></div><div class="ttdeci">void loadKd(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00039">SeePIDConstants.cpp:39</a></div></div>
+<div class="ttc" id="aclassSeePIDConstants_html_ad5d33f7f6d5116dfbccf70d0c130e45a"><div class="ttname"><a href="classSeePIDConstants.html#ad5d33f7f6d5116dfbccf70d0c130e45a">SeePIDConstants::loadKi</a></div><div class="ttdeci">void loadKi(uint16_t line)</div><div class="ttdef"><b>Definition:</b> <a href="SeePIDConstants_8cpp_source.html#l00033">SeePIDConstants.cpp:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00018">LiquidCrystal_TC::instance()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00038">loadKd()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00032">loadKi()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00026">loadKp()</a>, <a class="el" href="SeePIDConstants_8h_source.html#l00028">startTime</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00090">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="SeePIDConstants_8cpp_source.html#l00039">loadKd()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00033">loadKi()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00027">loadKp()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00045">loadPID()</a>, and <a class="el" href="SeePIDConstants_8h_source.html#l00028">startTime</a>.</p>
 
 </div>
 </div>
@@ -462,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SeePIDConstants_8h_source.html#l00028">28</a> of file <a class="el" href="SeePIDConstants_8h_source.html">SeePIDConstants.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00012">loop()</a>, and <a class="el" href="SeePIDConstants_8h_source.html#l00018">start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>, and <a class="el" href="SeePIDConstants_8h_source.html#l00018">start()</a>.</p>
 
 </div>
 </div>
