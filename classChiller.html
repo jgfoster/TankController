@@ -165,7 +165,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00050">50</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;: <a class="code" href="classTemperatureControl.html#a3e4b5fface3dcfc92800e13e1593b5f1">TemperatureControl</a>(){};</div>
-<div class="ttc" id="aclassTemperatureControl_html_a3e4b5fface3dcfc92800e13e1593b5f1"><div class="ttname"><a href="classTemperatureControl.html#a3e4b5fface3dcfc92800e13e1593b5f1">TemperatureControl::TemperatureControl</a></div><div class="ttdeci">TemperatureControl()</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00047">TemperatureControl.cpp:47</a></div></div>
+<div class="ttc" id="aclassTemperatureControl_html_a3e4b5fface3dcfc92800e13e1593b5f1"><div class="ttname"><a href="classTemperatureControl.html#a3e4b5fface3dcfc92800e13e1593b5f1">TemperatureControl::TemperatureControl</a></div><div class="ttdeci">TemperatureControl()</div><div class="ttdef"><b>Definition:</b> <a href="TemperatureControl_8cpp_source.html#l00044">TemperatureControl.cpp:44</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -229,35 +229,35 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classTemperatureControl.html#aa76480c7caa8039e737fb82e0b5d701b">TemperatureControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00077">77</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  uint32_t currentMillis = millis();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// pause 30 seconds between switching chiller on and off to prevent damage to chiller</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (currentMillis - <a class="code" href="classChiller.html#ab2bde82ea9bf460799cb494d12ffc2f1">previousMillis</a> &gt;= <a class="code" href="classChiller.html#a0c3c1ef26a9d27ec9ac51a7ef3068ac8">TIME_INTERVAL</a>) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> newValue = <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classChiller.html#ab2bde82ea9bf460799cb494d12ffc2f1">previousMillis</a> = currentMillis;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// if in calibration, turn unit off</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;isInCalibration()) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// if the observed temperature is above the set-point range turn on the chiller</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#aeffd6f32152897bbbaa1a08ff6267a70">DELTA</a>) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// if the observed temperature is below the set-point range turn off the chiller</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#aeffd6f32152897bbbaa1a08ff6267a70">DELTA</a>) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (newValue != <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> = newValue;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">printToSerial</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      uint32_t currentMS = millis();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;chiller turned %s after %lu ms&quot;</span>, <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> ? <span class="stringliteral">&quot;off&quot;</span> : <span class="stringliteral">&quot;on&quot;</span>, currentMS - <a class="code" href="classTemperatureControl.html#a27a85bbf4768ac63ef83d7287b9e8fef">lastSwitchMS</a>);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <a class="code" href="classTemperatureControl.html#a27a85bbf4768ac63ef83d7287b9e8fef">lastSwitchMS</a> = currentMS;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      digitalWrite(<a class="code" href="classTemperatureControl.html#ae3cf0fbf4bae06bc852ca932c65fb5c4">PIN</a>, <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="TemperatureControl_8cpp_source.html#l00074">74</a> of file <a class="el" href="TemperatureControl_8cpp_source.html">TemperatureControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  uint32_t currentMillis = millis();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// pause 30 seconds between switching chiller on and off to prevent damage to chiller</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span> (currentMillis - <a class="code" href="classChiller.html#ab2bde82ea9bf460799cb494d12ffc2f1">previousMillis</a> &gt;= <a class="code" href="classChiller.html#a0c3c1ef26a9d27ec9ac51a7ef3068ac8">TIME_INTERVAL</a>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> newValue = <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classChiller.html#ab2bde82ea9bf460799cb494d12ffc2f1">previousMillis</a> = currentMillis;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// if in calibration, turn unit off</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classTankControllerLib.html#a287a4571ad0c8a9cbab60a3cc40f43b5">TankControllerLib::instance</a>()-&gt;isInCalibration()) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// if the observed temperature is above the set-point range turn on the chiller</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &gt;= <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> + <a class="code" href="classTemperatureControl.html#aeffd6f32152897bbbaa1a08ff6267a70">DELTA</a>) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// if the observed temperature is below the set-point range turn off the chiller</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentTemperature &lt;= <a class="code" href="classTemperatureControl.html#a99620112bb2a668c796650ac121d5cfd">targetTemperature</a> - <a class="code" href="classTemperatureControl.html#aeffd6f32152897bbbaa1a08ff6267a70">DELTA</a>) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      newValue = <a class="code" href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (newValue != <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> = newValue;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().<a class="code" href="classDateTime__TC.html#a6f85dfb1ec9ad818a818b60c614571ee">printToSerial</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      uint32_t currentMS = millis();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;chiller turned %s after %lu ms&quot;</span>, <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a> ? <span class="stringliteral">&quot;off&quot;</span> : <span class="stringliteral">&quot;on&quot;</span>, currentMS - <a class="code" href="classTemperatureControl.html#a27a85bbf4768ac63ef83d7287b9e8fef">lastSwitchMS</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <a class="code" href="classTemperatureControl.html#a27a85bbf4768ac63ef83d7287b9e8fef">lastSwitchMS</a> = currentMS;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      digitalWrite(<a class="code" href="classTemperatureControl.html#ae3cf0fbf4bae06bc852ca932c65fb5c4">PIN</a>, <a class="code" href="classTemperatureControl.html#a4c0c7f58dddeb6e8490d1db48a84d466">pinValue</a>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html_a8f4f5928dac06303977eacf87e9531fa"><div class="ttname"><a href="TankControllerLib_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a></div><div class="ttdeci">#define TURN_SOLENOID_ON</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00007">TankControllerLib.h:7</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html_af1395b3b786599e1f6ccf55cb73d9f4b"><div class="ttname"><a href="TankControllerLib_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a></div><div class="ttdeci">#define TURN_SOLENOID_OFF</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00006">TankControllerLib.h:6</a></div></div>
@@ -301,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00047">47</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00077">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00074">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -327,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="TemperatureControl_8h_source.html#l00046">46</a> of file <a class="el" href="TemperatureControl_8h_source.html">TemperatureControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00077">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TemperatureControl_8cpp_source.html#l00074">updateControl()</a>.</p>
 
 </div>
 </div>
