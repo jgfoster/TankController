@@ -86,6 +86,8 @@ Collaboration diagram for PushingBox:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad31ff2e424100bc67119f1fa013a2a8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#ad31ff2e424100bc67119f1fa013a2a8d">PushingBox</a> (const char *pushingBoxID)</td></tr>
+<tr class="separator:ad31ff2e424100bc67119f1fa013a2a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1222f4cedd350d49055df3cb3bf2fe3d"><td class="memItemLeft" align="right" valign="top">EthernetClient *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a1222f4cedd350d49055df3cb3bf2fe3d">getClient</a> ()</td></tr>
 <tr class="separator:a1222f4cedd350d49055df3cb3bf2fe3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9cd6a58811deb08b7be4570a7e097b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#acb9cd6a58811deb08b7be4570a7e097b">getServer</a> ()</td></tr>
@@ -95,8 +97,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6aed1c2400105a8a7cef30b7d8fb5b79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPushingBox.html">PushingBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a6aed1c2400105a8a7cef30b7d8fb5b79">instance</a> ()</td></tr>
-<tr class="separator:a6aed1c2400105a8a7cef30b7d8fb5b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c501a3f42deadda67894d0beb258cfa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPushingBox.html">PushingBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a3c501a3f42deadda67894d0beb258cfa">instance</a> (const char *pushingBoxID=nullptr)</td></tr>
+<tr class="separator:a3c501a3f42deadda67894d0beb258cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -107,7 +109,7 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a2e84205ce62a559583497efcab5a1733"><td class="memItemLeft" align="right" valign="top">EthernetClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a></td></tr>
 <tr class="separator:a2e84205ce62a559583497efcab5a1733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fa303ac0639976b0af6837e587301d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">DevID</a> = &quot;v172D35C152EDA6C&quot;</td></tr>
+<tr class="memitem:a43fa303ac0639976b0af6837e587301d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">DevID</a> = nullptr</td></tr>
 <tr class="separator:a43fa303ac0639976b0af6837e587301d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac273795dee3006d64f4c52382dbc6cf2"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">nextSendTime</a> = 70000</td></tr>
 <tr class="separator:ac273795dee3006d64f4c52382dbc6cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +124,36 @@ Static Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00006">6</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad31ff2e424100bc67119f1fa013a2a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31ff2e424100bc67119f1fa013a2a8d">&#9670;&nbsp;</a></span>PushingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PushingBox::PushingBox </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pushingBoxID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00024">24</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                               {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">DevID</a> = pushingBoxID;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="aclassPushingBox_html_a43fa303ac0639976b0af6837e587301d"><div class="ttname"><a href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">PushingBox::DevID</a></div><div class="ttdeci">const char * DevID</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00027">PushingBox.h:27</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00027">DevID</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00017">instance()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1222f4cedd350d49055df3cb3bf2fe3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1222f4cedd350d49055df3cb3bf2fe3d">&#9670;&nbsp;</a></span>getClient()</h2>
 
@@ -146,15 +177,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00012">12</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                              {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  }</div>
-<div class="ttc" id="aclassPushingBox_html_a2e84205ce62a559583497efcab5a1733"><div class="ttname"><a href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">PushingBox::client</a></div><div class="ttdeci">EthernetClient client</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00025">PushingBox.h:25</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00013">13</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                              {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<div class="ttc" id="aclassPushingBox_html_a2e84205ce62a559583497efcab5a1733"><div class="ttname"><a href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">PushingBox::client</a></div><div class="ttdeci">EthernetClient client</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00026">PushingBox.h:26</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00025">client</a>.</p>
+<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00026">client</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBoxTest_8cpp_source.html#l00035">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBoxTest_8cpp_source.html#l00036">unittest()</a>.</p>
 
 </div>
 </div>
@@ -181,20 +212,20 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00015">15</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                          {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">server</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  }</div>
-<div class="ttc" id="aclassPushingBox_html_a6d1ff69cb48a38623b1f3b1950178eac"><div class="ttname"><a href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">PushingBox::server</a></div><div class="ttdeci">const char * server</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00029">PushingBox.h:29</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00016">16</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                          {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">server</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
+<div class="ttc" id="aclassPushingBox_html_a6d1ff69cb48a38623b1f3b1950178eac"><div class="ttname"><a href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">PushingBox::server</a></div><div class="ttdeci">const char * server</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00030">PushingBox.h:30</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00029">server</a>.</p>
+<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00030">server</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBoxTest_8cpp_source.html#l00035">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBoxTest_8cpp_source.html#l00036">unittest()</a>.</p>
 
 </div>
 </div>
-<a id="a6aed1c2400105a8a7cef30b7d8fb5b79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aed1c2400105a8a7cef30b7d8fb5b79">&#9670;&nbsp;</a></span>instance()</h2>
+<a id="a3c501a3f42deadda67894d0beb258cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c501a3f42deadda67894d0beb258cfa">&#9670;&nbsp;</a></span>instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +236,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classPushingBox.html">PushingBox</a> * PushingBox::instance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pushingBoxID</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -218,18 +250,18 @@ Static Private Attributes</h2></td></tr>
 <p>accessor for singleton </p>
 
 <p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00017">17</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                 {</div>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                         {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">_instance</a>) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPushingBox.html">PushingBox</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPushingBox.html#ad31ff2e424100bc67119f1fa013a2a8d">PushingBox</a>(pushingBoxID);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">_instance</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="aclassPushingBox_html"><div class="ttname"><a href="classPushingBox.html">PushingBox</a></div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00006">PushingBox.h:6</a></div></div>
-<div class="ttc" id="aclassPushingBox_html_abba2f28655a475c59c58f3db22974ab7"><div class="ttname"><a href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">PushingBox::_instance</a></div><div class="ttdeci">static PushingBox * _instance</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00022">PushingBox.h:22</a></div></div>
+<div class="ttc" id="aclassPushingBox_html_abba2f28655a475c59c58f3db22974ab7"><div class="ttname"><a href="classPushingBox.html#abba2f28655a475c59c58f3db22974ab7">PushingBox::_instance</a></div><div class="ttdeci">static PushingBox * _instance</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00023">PushingBox.h:23</a></div></div>
+<div class="ttc" id="aclassPushingBox_html_ad31ff2e424100bc67119f1fa013a2a8d"><div class="ttname"><a href="classPushingBox.html#ad31ff2e424100bc67119f1fa013a2a8d">PushingBox::PushingBox</a></div><div class="ttdeci">PushingBox(const char *pushingBoxID)</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8cpp_source.html#l00024">PushingBox.cpp:24</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00022">_instance</a>.</p>
+<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00023">_instance</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00024">PushingBox()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00129">TankControllerLib::loop()</a>, and <a class="el" href="BlinkTest_8cpp_source.html#l00041">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00031">TankControllerLib::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00130">TankControllerLib::loop()</a>, and <a class="el" href="BlinkTest_8cpp_source.html#l00041">unittest()</a>.</p>
 
 </div>
 </div>
@@ -248,40 +280,45 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00024">24</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                      {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// is it time to send ?</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> now = millis();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (now &gt;= <a class="code" href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">nextSendTime</a>) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classPushingBox.html#a743435eabf490af2b15cb19e3803aadf">sendData</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> minutes = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a1ddffdb0858ee2855c6aa9141856f1f5">getGoogleSheetInterval</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (minutes == 0xffff) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      minutes = 20;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> interval = minutes * 60l * 1000l;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// jump to the next multiple of interval</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">nextSendTime</a> = (now / interval + 1) * interval;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// are we still connected?</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connected()) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// if so, read response</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> next;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">while</span> ((next = <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.read()) != -1) {  <span class="comment">// Flawfinder: ignore</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      Serial.print((<span class="keywordtype">char</span>)next);             <span class="comment">// print response if any to serial</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// will this close every 15 ms?</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.stop();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00028">28</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                      {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// is it time to send ?</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> now = millis();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> (now &gt;= <a class="code" href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">nextSendTime</a>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classPushingBox.html#a743435eabf490af2b15cb19e3803aadf">sendData</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> minutes = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a1ddffdb0858ee2855c6aa9141856f1f5">getGoogleSheetInterval</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (minutes == 0xffff) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      minutes = 20;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> interval = minutes * 60l * 1000l;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// jump to the next multiple of interval</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">nextSendTime</a> = (now / interval + 1) * interval;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// are we still connected?</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connected()) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.available()) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="comment">// if so, read response</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;===== PushingBox response:&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordtype">int</span> next;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">while</span> ((next = <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.read()) != -1) {    <span class="comment">// Flawfinder: ignore</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        Serial.print(next ? (<span class="keywordtype">char</span>)next : <span class="charliteral">&#39;?&#39;</span>);  <span class="comment">// print response if any to serial</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;===== end of PushingBox response&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// will this close every 15 ms?</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.stop();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a1ddffdb0858ee2855c6aa9141856f1f5"><div class="ttname"><a href="classEEPROM__TC.html#a1ddffdb0858ee2855c6aa9141856f1f5">EEPROM_TC::getGoogleSheetInterval</a></div><div class="ttdeci">uint16_t getGoogleSheetInterval()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00070">EEPROM_TC.cpp:70</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
-<div class="ttc" id="aclassPushingBox_html_a743435eabf490af2b15cb19e3803aadf"><div class="ttname"><a href="classPushingBox.html#a743435eabf490af2b15cb19e3803aadf">PushingBox::sendData</a></div><div class="ttdeci">void sendData()</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8cpp_source.html#l00050">PushingBox.cpp:50</a></div></div>
-<div class="ttc" id="aclassPushingBox_html_ac273795dee3006d64f4c52382dbc6cf2"><div class="ttname"><a href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">PushingBox::nextSendTime</a></div><div class="ttdeci">unsigned long nextSendTime</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00028">PushingBox.h:28</a></div></div>
+<div class="ttc" id="aclassPushingBox_html_a743435eabf490af2b15cb19e3803aadf"><div class="ttname"><a href="classPushingBox.html#a743435eabf490af2b15cb19e3803aadf">PushingBox::sendData</a></div><div class="ttdeci">void sendData()</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8cpp_source.html#l00058">PushingBox.cpp:58</a></div></div>
+<div class="ttc" id="aclassPushingBox_html_ac273795dee3006d64f4c52382dbc6cf2"><div class="ttname"><a href="classPushingBox.html#ac273795dee3006d64f4c52382dbc6cf2">PushingBox::nextSendTime</a></div><div class="ttdeci">unsigned long nextSendTime</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00029">PushingBox.h:29</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00025">client</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00070">EEPROM_TC::getGoogleSheetInterval()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PushingBox_8h_source.html#l00028">nextSendTime</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00050">sendData()</a>.</p>
+<p class="reference">References <a class="el" href="PushingBox_8h_source.html#l00026">client</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00070">EEPROM_TC::getGoogleSheetInterval()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PushingBox_8h_source.html#l00029">nextSendTime</a>, <a class="el" href="PushingBox_8cpp_source.html#l00058">sendData()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00129">TankControllerLib::loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00130">TankControllerLib::loop()</a>.</p>
 
 </div>
 </div>
@@ -308,44 +345,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00050">50</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                          {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> tankID = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">getTankID</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">if</span> (!tankID) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Set Tank ID in order to send data to PushingBox&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">char</span> format[] =</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="stringliteral">&quot;GET /pushingbox?devid=%s&amp;tankid=%i&amp;tempData=%.2f&amp;pHdata=%.3f HTTP/1.1\r\n&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="stringliteral">&quot;Host: api.pushingbox.com\r\n&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="stringliteral">&quot;Connection: close\r\n&quot;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[200];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// look up tankid, temperature, ph</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">float</span> temperature = <a class="code" href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a>()-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">float</span> pH = <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">getPh</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), format, <a class="code" href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">DevID</a>, tankID, temperature, pH);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;attempting to connect to PushingBox...&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connected() || <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connect(<a class="code" href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">server</a>, 80)) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;connected&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.write(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;connection failed&quot;</span>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8cpp_source.html#l00058">58</a> of file <a class="el" href="PushingBox_8cpp_source.html">PushingBox.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                          {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">int</span> tankID = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">getTankID</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (!tankID) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Set Tank ID in order to send data to PushingBox&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">char</span> format[] =</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="stringliteral">&quot;GET /pushingbox?devid=%s&amp;tankid=%i&amp;tempData=%.2f&amp;pHdata=%.3f HTTP/1.1\r\n&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="stringliteral">&quot;Host: api.pushingbox.com\r\n&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="stringliteral">&quot;Connection: close\r\n&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[200];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// look up tankid, temperature, ph</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">float</span> temperature = <a class="code" href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a>()-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">float</span> pH = <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">getPh</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), format, <a class="code" href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">DevID</a>, tankID, temperature, pH);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">for</span> (; i &lt; <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>); ++i) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[i] == <span class="charliteral">&#39;\r&#39;</span>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[i] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[i] = <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;attempting to connect to PushingBox...&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connected() || <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.connect(<a class="code" href="classPushingBox.html#a6d1ff69cb48a38623b1f3b1950178eac">server</a>, 80)) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;connected&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classPushingBox.html#a2e84205ce62a559583497efcab5a1733">client</a>.write(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;connection failed&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
-<div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a528d68dbe7d712e2276089df46482f59"><div class="ttname"><a href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">EEPROM_TC::getTankID</a></div><div class="ttdeci">uint16_t getTankID()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC.cpp:109</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_a203a6cdd1ab831cd1ece679de2af9ca9"><div class="ttname"><a href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">PHProbe::getPh</a></div><div class="ttdeci">float getPh()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00019">PHProbe.h:19</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00015">PHProbe.cpp:15</a></div></div>
-<div class="ttc" id="aclassPushingBox_html_a43fa303ac0639976b0af6837e587301d"><div class="ttname"><a href="classPushingBox.html#a43fa303ac0639976b0af6837e587301d">PushingBox::DevID</a></div><div class="ttdeci">const char * DevID</div><div class="ttdef"><b>Definition:</b> <a href="PushingBox_8h_source.html#l00026">PushingBox.h:26</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_a6c6ebd674045b13c2cb7f249c594f67b"><div class="ttname"><a href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">TempProbe_TC::getRunningAverage</a></div><div class="ttdeci">float getRunningAverage()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8h_source.html#l00102">TempProbe_TC.h:102</a></div></div>
 <div class="ttc" id="aclassTempProbe__TC_html_ab1ac81002f8d2e86564804755baca4e8"><div class="ttname"><a href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a></div><div class="ttdeci">static TempProbe_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="TempProbe__TC_8cpp_source.html#l00018">TempProbe_TC.cpp:18</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="PushingBox_8h_source.html#l00025">client</a>, <a class="el" href="PushingBox_8h_source.html#l00026">DevID</a>, <a class="el" href="PHProbe_8h_source.html#l00019">PHProbe::getPh()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00102">TempProbe_TC::getRunningAverage()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC::getTankID()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00018">TempProbe_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="PushingBox_8h_source.html#l00029">server</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="PushingBox_8h_source.html#l00026">client</a>, <a class="el" href="PushingBox_8h_source.html#l00027">DevID</a>, <a class="el" href="PHProbe_8h_source.html#l00019">PHProbe::getPh()</a>, <a class="el" href="TempProbe__TC_8h_source.html#l00102">TempProbe_TC::getRunningAverage()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC::getTankID()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00015">PHProbe::instance()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00018">TempProbe_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="PushingBox_8h_source.html#l00030">server</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00024">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00028">loop()</a>.</p>
 
 </div>
 </div>
@@ -370,7 +413,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00022">22</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00023">23</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00017">instance()</a>.</p>
 
@@ -396,9 +439,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00025">25</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00026">26</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBox_8h_source.html#l00012">getClient()</a>, <a class="el" href="PushingBox_8cpp_source.html#l00024">loop()</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00050">sendData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBox_8h_source.html#l00013">getClient()</a>, <a class="el" href="PushingBox_8cpp_source.html#l00028">loop()</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00058">sendData()</a>.</p>
 
 </div>
 </div>
@@ -412,7 +455,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* PushingBox::DevID = &quot;v172D35C152EDA6C&quot;</td>
+          <td class="memname">const char* PushingBox::DevID = nullptr</td>
         </tr>
       </table>
   </td>
@@ -422,9 +465,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00026">26</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00027">27</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00050">sendData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00024">PushingBox()</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00058">sendData()</a>.</p>
 
 </div>
 </div>
@@ -448,9 +491,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00028">28</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00029">29</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00024">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBox_8cpp_source.html#l00028">loop()</a>.</p>
 
 </div>
 </div>
@@ -474,9 +517,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00029">29</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PushingBox_8h_source.html#l00030">30</a> of file <a class="el" href="PushingBox_8h_source.html">PushingBox.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PushingBox_8h_source.html#l00015">getServer()</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00050">sendData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PushingBox_8h_source.html#l00016">getServer()</a>, and <a class="el" href="PushingBox_8cpp_source.html#l00058">sendData()</a>.</p>
 
 </div>
 </div>
