@@ -111,7 +111,7 @@ Protected Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aa5d4dd13d1a7441c25db71da2cc83eca"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">mac</a> [6] = {0x90, 0xA2, 0xDA, 0x00, 0x00, 0x00}</td></tr>
 <tr class="separator:aa5d4dd13d1a7441c25db71da2cc83eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ddfb057847186e88c41f7082be86455"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a> = IPAddress(192, 168, 1, 2)</td></tr>
+<tr class="memitem:a6ddfb057847186e88c41f7082be86455"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a> = IPAddress(192, 168, 1, 10)</td></tr>
 <tr class="separator:a6ddfb057847186e88c41f7082be86455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac590b5b6f700a2338e992edfb103e011"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#ac590b5b6f700a2338e992edfb103e011">time_serverIP</a></td></tr>
 <tr class="separator:ac590b5b6f700a2338e992edfb103e011"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,30 +159,34 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">8</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                         {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  pinMode(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, OUTPUT);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  digitalWrite(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, HIGH);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Attempting to connect to Ethernet&quot;</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordflow">if</span> (Ethernet.begin(<a class="code" href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">mac</a>, 5000)) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a> = Ethernet.localIP();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;DHCP address is %i.%i.%i.%i&quot;</span>, <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[0], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[1], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[2], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[3]);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;DHCP failed, trying %i.%i.%i.%i&quot;</span>, <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[0], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[1], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[2], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[3]);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Ethernet.begin(<a class="code" href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">mac</a>, <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Done with Ethernet setup&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a> = <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">9</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                         {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  pinMode(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, OUTPUT);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  digitalWrite(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, HIGH);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Attempting to connect to Ethernet&quot;</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">if</span> (Ethernet.begin(<a class="code" href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">mac</a>, 5000)) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a> = Ethernet.localIP();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;DHCP address is %i.%i.%i.%i&quot;</span>, <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[0], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[1], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[2], <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a>[3]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// update IP by adding tank ID to last octet</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[3] += <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">getTankID</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;DHCP failed, trying %i.%i.%i.%i&quot;</span>, <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[0], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[1], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[2], <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>[3]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Ethernet.begin(<a class="code" href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">mac</a>, <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Done with Ethernet setup&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a> = <a class="code" href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">defaultIP</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a528d68dbe7d712e2276089df46482f59"><div class="ttname"><a href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">EEPROM_TC::getTankID</a></div><div class="ttdeci">uint16_t getTankID()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC.cpp:109</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a445a3239a130253dc54d9320d8e22662"><div class="ttname"><a href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">Ethernet_TC::IO_PIN</a></div><div class="ttdeci">const int IO_PIN</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00036">Ethernet_TC.h:36</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a542a0c5eb0c0e90741b3ae16dde7366f"><div class="ttname"><a href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">Ethernet_TC::IP</a></div><div class="ttdeci">IPAddress IP</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00037">Ethernet_TC.h:37</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a6ddfb057847186e88c41f7082be86455"><div class="ttname"><a href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">Ethernet_TC::defaultIP</a></div><div class="ttdeci">IPAddress defaultIP</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00034">Ethernet_TC.h:34</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_aa5d4dd13d1a7441c25db71da2cc83eca"><div class="ttname"><a href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">Ethernet_TC::mac</a></div><div class="ttdeci">byte mac[6]</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00033">Ethernet_TC.h:33</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00034">defaultIP</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00036">IO_PIN</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00037">IP</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00033">mac</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
+<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00034">defaultIP</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00109">EEPROM_TC::getTankID()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00036">IO_PIN</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00037">IP</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00033">mac</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00023">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00026">instance()</a>.</p>
 
 </div>
 </div>
@@ -217,7 +221,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00037">IP</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00011">SeeDeviceAddress::start()</a>, and <a class="el" href="EthernetTest_8cpp_source.html#l00008">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00011">SeeDeviceAddress::start()</a>, and <a class="el" href="EthernetTest_8cpp_source.html#l00009">unittest()</a>.</p>
 
 </div>
 </div>
@@ -286,7 +290,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00042">numAttemptedDHCPReleases</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EthernetTest_8cpp_source.html#l00008">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EthernetTest_8cpp_source.html#l00009">unittest()</a>.</p>
 
 </div>
 </div>
@@ -345,19 +349,19 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00023">23</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                   {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a> = <span class="keyword">new</span> <a class="code" href="classEthernet__TC.html#a7b262019ad409e1f0679a2c953622e30">Ethernet_TC</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
-<div class="ttc" id="aclassEthernet__TC_html_a7b262019ad409e1f0679a2c953622e30"><div class="ttname"><a href="classEthernet__TC.html#a7b262019ad409e1f0679a2c953622e30">Ethernet_TC::Ethernet_TC</a></div><div class="ttdeci">Ethernet_TC()</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC.cpp:8</a></div></div>
+<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00026">26</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                   {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a> = <span class="keyword">new</span> <a class="code" href="classEthernet__TC.html#a7b262019ad409e1f0679a2c953622e30">Ethernet_TC</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">_instance</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="aclassEthernet__TC_html_a7b262019ad409e1f0679a2c953622e30"><div class="ttname"><a href="classEthernet__TC.html#a7b262019ad409e1f0679a2c953622e30">Ethernet_TC::Ethernet_TC</a></div><div class="ttdeci">Ethernet_TC()</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC.cpp:9</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_ab25eb6ddeae8770ec29ad9c4eb9f8dcc"><div class="ttname"><a href="classEthernet__TC.html#ab25eb6ddeae8770ec29ad9c4eb9f8dcc">Ethernet_TC::_instance</a></div><div class="ttdeci">static Ethernet_TC * _instance</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00032">Ethernet_TC.h:32</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00032">_instance</a>, and <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC()</a>.</p>
+<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00032">_instance</a>, and <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00011">SeeDeviceAddress::start()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00043">TankControllerLib::TankControllerLib()</a>, and <a class="el" href="EthernetTest_8cpp_source.html#l00008">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeeDeviceAddress_8cpp_source.html#l00011">SeeDeviceAddress::start()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00043">TankControllerLib::TankControllerLib()</a>, and <a class="el" href="EthernetTest_8cpp_source.html#l00009">unittest()</a>.</p>
 
 </div>
 </div>
@@ -376,21 +380,21 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00030">30</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                 {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  uint32_t current_millis = millis();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span> ((current_millis - <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a>) &gt;= <a class="code" href="classEthernet__TC.html#a1a2984ed1db3507788e407a43d123991">LEASE_INTERVAL</a> || current_millis &lt; <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a>) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Ethernet.maintain();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a> = current_millis;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classEthernet__TC.html#a10733152f6083b40e6d9592425dd79b9">numAttemptedDHCPReleases</a>++;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00033">33</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                 {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  uint32_t current_millis = millis();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">if</span> ((current_millis - <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a>) &gt;= <a class="code" href="classEthernet__TC.html#a1a2984ed1db3507788e407a43d123991">LEASE_INTERVAL</a> || current_millis &lt; <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Ethernet.maintain();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">previous_lease</a> = current_millis;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classEthernet__TC.html#a10733152f6083b40e6d9592425dd79b9">numAttemptedDHCPReleases</a>++;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="aclassEthernet__TC_html_a1a2984ed1db3507788e407a43d123991"><div class="ttname"><a href="classEthernet__TC.html#a1a2984ed1db3507788e407a43d123991">Ethernet_TC::LEASE_INTERVAL</a></div><div class="ttdeci">const uint32_t LEASE_INTERVAL</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00039">Ethernet_TC.h:39</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a248ddfcd35126560eeb7f697cac8109c"><div class="ttname"><a href="classEthernet__TC.html#a248ddfcd35126560eeb7f697cac8109c">Ethernet_TC::previous_lease</a></div><div class="ttdeci">uint32_t previous_lease</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00038">Ethernet_TC.h:38</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00039">LEASE_INTERVAL</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00042">numAttemptedDHCPReleases</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00038">previous_lease</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EthernetTest_8cpp_source.html#l00008">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EthernetTest_8cpp_source.html#l00009">unittest()</a>.</p>
 
 </div>
 </div>
@@ -417,7 +421,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00032">32</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00023">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00026">instance()</a>.</p>
 
 </div>
 </div>
@@ -431,7 +435,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IPAddress Ethernet_TC::defaultIP = IPAddress(192, 168, 1, 2)</td>
+          <td class="memname">IPAddress Ethernet_TC::defaultIP = IPAddress(192, 168, 1, 10)</td>
         </tr>
       </table>
   </td>
@@ -443,7 +447,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00034">34</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00024">gotDHCPLease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00024">gotDHCPLease()</a>.</p>
 
 </div>
 </div>
@@ -469,7 +473,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00036">36</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC()</a>.</p>
 
 </div>
 </div>
@@ -495,7 +499,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00037">37</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00014">getIP()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00024">gotDHCPLease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00014">getIP()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00024">gotDHCPLease()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +525,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00039">39</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00030">renewDHCPLease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00033">renewDHCPLease()</a>.</p>
 
 </div>
 </div>
@@ -547,7 +551,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00033">33</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00008">Ethernet_TC()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00017">getMac()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00009">Ethernet_TC()</a>, and <a class="el" href="Ethernet__TC_8h_source.html#l00017">getMac()</a>.</p>
 
 </div>
 </div>
@@ -573,7 +577,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00042">42</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8h_source.html#l00020">getNumAttemptedDHCPReleases()</a>, and <a class="el" href="Ethernet__TC_8cpp_source.html#l00030">renewDHCPLease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8h_source.html#l00020">getNumAttemptedDHCPReleases()</a>, and <a class="el" href="Ethernet__TC_8cpp_source.html#l00033">renewDHCPLease()</a>.</p>
 
 </div>
 </div>
@@ -599,7 +603,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00038">38</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00030">renewDHCPLease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00033">renewDHCPLease()</a>.</p>
 
 </div>
 </div>
