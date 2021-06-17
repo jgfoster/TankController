@@ -1,8 +1,8 @@
 var searchData=
 [
   ['readfault_292',['readFault',['../classTempProbe__TC.html#ad8060a952cdfa0b12867bc601fa8da12',1,'TempProbe_TC']]],
-  ['readme_293',['README',['../md_other_README.html',1,'(Global Namespace)'],['../md_README.html',1,'(Global Namespace)']]],
-  ['readme_2emd_294',['README.md',['../GUI_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)'],['../other_2README_8md.html',1,'(Global Namespace)']]],
+  ['readme_293',['README',['../md_README.html',1,'']]],
+  ['readme_2emd_294',['README.md',['../GUI_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
   ['readph_295',['readPH',['../libTC_8cpp.html#a5553d6470a60df558e51564ed301fe5d',1,'libTC.cpp']]],
   ['readpin_296',['readPin',['../libTC_8cpp.html#a01025937004118335be261c2eeb5d39d',1,'libTC.cpp']]],
   ['readserial_297',['readSerial',['../libTC_8cpp.html#a5fcb7b45bb0e9a66a03d6381080e9d5e',1,'libTC.cpp']]],
