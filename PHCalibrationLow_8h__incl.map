@@ -1,6 +1,8 @@
 <map id="src/UIState/PHCalibrationLow.h" name="src/UIState/PHCalibrationLow.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,179,47"/>
-<area shape="rect" id="node2" href="$NumberCollectorState_8h.html" title=" " alt="" coords="12,95,172,121"/>
-<area shape="rect" id="node3" href="$UIState_8h.html" title=" " alt="" coords="53,169,131,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="54,244,130,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="52,5,225,47"/>
+<area shape="rect" id="node2" href="$PHCalibration_8h.html" title=" " alt="" coords="83,95,195,121"/>
+<area shape="rect" id="node3" href="$PHProbe_8h.html" title=" " alt="" coords="5,244,141,271"/>
+<area shape="rect" id="node5" href="$NumberCollectorState_8h.html" title=" " alt="" coords="120,169,280,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="101,319,177,345"/>
+<area shape="rect" id="node6" href="$UIState_8h.html" title=" " alt="" coords="165,244,243,271"/>
 </map>
