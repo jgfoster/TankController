@@ -8,6 +8,5 @@ var searchData=
   ['view_5fpid_1177',['VIEW_PID',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a3852835a1d7034c3872650e7e98ddc27',1,'MainMenu']]],
   ['view_5ftank_5fid_1178',['VIEW_TANK_ID',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a751c59218961a34c6936fff1371c070c',1,'MainMenu']]],
   ['view_5ftime_1179',['VIEW_TIME',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a5433b6b5e4b9e09e4a817bf0d13cf25d',1,'MainMenu']]],
-  ['view_5fuptime_1180',['VIEW_UPTIME',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a60a2df9ac65897590652bdd69eef4c2e',1,'MainMenu']]],
-  ['view_5fversion_1181',['VIEW_VERSION',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863ad3420c7b18e0e97a2e343fce5f84e598',1,'MainMenu']]]
+  ['view_5fversion_1180',['VIEW_VERSION',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863ad3420c7b18e0e97a2e343fce5f84e598',1,'MainMenu']]]
 ];
