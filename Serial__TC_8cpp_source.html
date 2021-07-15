@@ -111,7 +111,12 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// SD_TC::instance()-&gt;appendToLog(buffer);</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classSerial__TC.html#a7aed1bfa6c14ad04e2752482d6dca3c7">printIsActive</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifdef MOCK_PINS_COUNT</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if DEBUG</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// std::cout &lt;&lt; &quot;\tSERIAL: &quot; &lt;&lt; buffer &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
 <div class="ttc" id="aDateTime__TC_8h_html"><div class="ttname"><a href="DateTime__TC_8h.html">DateTime_TC.h</a></div></div>
 <div class="ttc" id="aSD__TC_8h_html"><div class="ttname"><a href="SD__TC_8h.html">SD_TC.h</a></div></div>

@@ -16,7 +16,8 @@ var searchData=
   ['contributing_31',['Contributing',['../md_CONTRIBUTING.html',1,'']]],
   ['contributing_2emd_32',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]],
   ['contributor_20covenant_20code_20of_20conduct_33',['Contributor Covenant Code of Conduct',['../md_CODE_OF_CONDUCT.html',1,'']]],
-  ['correction_34',['correction',['../classTempProbe__TC.html#a127095a2268cfa2959db1a2a6d9ccefb',1,'TempProbe_TC']]],
-  ['cout_35',['COUT',['../TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167',1,'TC_util.h']]],
-  ['current_36',['current',['../classSetTime.html#ac083602003b807975f76b95028f7843b',1,'SetTime']]]
+  ['controlsolenoid_34',['controlSolenoid',['../PHControlTest_8cpp.html#acf45143a5c2619c8c67eea4c23eebb10',1,'controlSolenoid():&#160;PHControlTest.cpp'],['../PushingBoxTest_8cpp.html#acf45143a5c2619c8c67eea4c23eebb10',1,'controlSolenoid():&#160;PushingBoxTest.cpp']]],
+  ['correction_35',['correction',['../classTempProbe__TC.html#a127095a2268cfa2959db1a2a6d9ccefb',1,'TempProbe_TC']]],
+  ['cout_36',['COUT',['../TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167',1,'TC_util.h']]],
+  ['current_37',['current',['../classSetTime.html#ac083602003b807975f76b95028f7843b',1,'SetTime']]]
 ];
