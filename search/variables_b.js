@@ -5,7 +5,7 @@ var searchData=
   ['lastswitchms_1084',['lastSwitchMS',['../classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0',1,'PHControl::lastSwitchMS()'],['../classTemperatureControl.html#a27a85bbf4768ac63ef83d7287b9e8fef',1,'TemperatureControl::lastSwitchMS()']]],
   ['lasttime_1085',['lastTime',['../classTempProbe__TC.html#a337ba3feaf0160156ddc31bfbeaa73ef',1,'TempProbe_TC']]],
   ['lastwarnms_1086',['lastWarnMS',['../classPHControl.html#a95fd419884d38616ec5cbab82127c237',1,'PHControl']]],
-  ['lc_1087',['lc',['../MenuTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;MenuTest.cpp'],['../PHControlTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;PHControlTest.cpp'],['../SetCalibrationClearTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;SetCalibrationClearTest.cpp']]],
+  ['lc_1087',['lc',['../MenuTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;MenuTest.cpp'],['../PHControlTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;PHControlTest.cpp'],['../SetCalibrationClearTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;SetCalibrationClearTest.cpp'],['../TemperatureControlTest_8cpp.html#ada324f7255a30d4da55cd5f3b4a4aaf8',1,'lc():&#160;TemperatureControlTest.cpp']]],
   ['lcdline_1088',['lcdLine',['../libTC_8cpp.html#ae5d09e1c3c4572b9f3a0bf759d0a65f6',1,'libTC.cpp']]],
   ['lease_5finterval_1089',['LEASE_INTERVAL',['../classEthernet__TC.html#a1a2984ed1db3507788e407a43d123991',1,'Ethernet_TC']]],
   ['led_5fpin_1090',['LED_PIN',['../BlinkTest_8cpp.html#adf2e253753f2f288daf9af6617c3e47a',1,'BlinkTest.cpp']]],
