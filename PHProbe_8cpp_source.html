@@ -72,118 +72,128 @@ $(function() {
 <div class="contents">
 <a href="PHProbe_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PHProbe_8h.html">Devices/PHProbe.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Serial__TC_8h.html">Devices/Serial_TC.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;avr/wdt.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  class instance variables</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html">PHProbe</a> *<a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">PHProbe::_instance</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//  class methods</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">   15</a></span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html">PHProbe</a> *<a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>() {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a>) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//  instance methods</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">   26</a></span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe::PHProbe</a>() {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Serial1.begin(9600);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// wait for Serial Monitor to connect. Needed for native USB port boards only:</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">while</span> (!Serial1)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  Serial1.print(<span class="stringliteral">&quot;*OK,0\r&quot;</span>);  <span class="comment">// Turn off the returning of OK after command to EZO pH</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  Serial1.print(<span class="stringliteral">&quot;C,1\r&quot;</span>);    <span class="comment">// Reset pH stamp to continuous measurement: once per second</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">PHProbe::clearCalibration</a>() {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  Serial1.print(<span class="stringliteral">&quot;Cal,clear\r&quot;</span>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a>() {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  Serial1.print(<span class="stringliteral">&quot;SLOPE,?\r&quot;</span>);  <span class="comment">// Sending request for Calibration Slope</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = <span class="stringliteral">&quot;       Slope requested!&quot;</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">   44</a></span>&#160;String <a class="code" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">PHProbe::getSlope</a>() {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// for example &quot;?SLOPE,99.7,100.3, -0.89&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.length() &lt; 10) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> String(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  String slope = <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.substring(7);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> slope;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">PHProbe::serialEvent1</a>() {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {                 <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(<span class="charliteral">&#39;\r&#39;</span>);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0 &amp;&amp; <span class="keywordtype">string</span>[<span class="keywordtype">string</span>.length() - 1] == <span class="charliteral">&#39;\r&#39;</span>) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="comment">// We should not see the CR (https://github.com/Arduino-CI/arduino_ci/pull/302)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> = <span class="keywordtype">string</span>.toFloat();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">string</span>[0] == <span class="charliteral">&#39;?&#39;</span>) {  <span class="comment">// answer to a previous query</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe serialEvent1: \&quot;%s\&quot;&quot;</span>, <span class="keywordtype">string</span>.c_str());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 7 &amp;&amp; <span class="keywordtype">string</span>.substring(0, 7) == <span class="stringliteral">&quot;?SLOPE,&quot;</span>) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          <span class="comment">// for example &quot;?SLOPE,16.1,100.0&quot;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = string;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// &quot;pH decreases with increase in temperature. But this does not mean that</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//  water becomes more acidic at higher temperatures.&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// https://www.westlab.com/blog/2017/11/15/how-does-temperature-affect-ph</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">PHProbe::setTemperatureCompensation</a>(<span class="keywordtype">float</span> temperature) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">const</span> String PARTIAL_COMMAND = <span class="stringliteral">&quot;T,&quot;</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (temperature &gt; 0 &amp;&amp; temperature &lt; 100) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    fullCommand = PARTIAL_COMMAND + String(temperature, 2) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    fullCommand = PARTIAL_COMMAND + <span class="stringliteral">&quot;20\r&quot;</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - %s&quot;</span>, fullCommand.c_str());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">PHProbe::setHighpointCalibration</a>(<span class="keywordtype">float</span> highpoint) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,High,&quot;</span> + String(highpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">PHProbe::setLowpointCalibration</a>(<span class="keywordtype">float</span> lowpoint) {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,low,&quot;</span> + String(lowpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">  105</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">PHProbe::setMidpointCalibration</a>(<span class="keywordtype">float</span> midpoint) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,mid,&quot;</span> + String(midpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Serial__TC_8h.html">Devices/Serial_TC.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  class instance variables</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html">PHProbe</a> *<a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">PHProbe::_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//  class methods</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">   17</a></span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html">PHProbe</a> *<a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a>) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">_instance</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//  instance methods</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">   28</a></span>&#160;<span class="comment"></span><a class="code" href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe::PHProbe</a>() {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  Serial1.begin(9600);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// wait for Serial Monitor to connect. Needed for native USB port boards only:</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">while</span> (!Serial1)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  Serial1.print(<span class="stringliteral">&quot;*OK,0\r&quot;</span>);  <span class="comment">// Turn off the returning of OK after command to EZO pH</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  Serial1.print(<span class="stringliteral">&quot;C,1\r&quot;</span>);    <span class="comment">// Reset pH stamp to continuous measurement: once per second</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">PHProbe::clearCalibration</a>() {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  Serial1.print(<span class="stringliteral">&quot;Cal,clear\r&quot;</span>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  Serial1.print(<span class="stringliteral">&quot;SLOPE,?\r&quot;</span>);  <span class="comment">// Sending request for Calibration Slope</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = <span class="stringliteral">&quot;       Slope requested!&quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">   46</a></span>&#160;String <a class="code" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">PHProbe::getSlope</a>() {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// for example &quot;?SLOPE,99.7,100.3, -0.89&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.length() &lt; 10) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> String(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  String slope = <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.substring(7);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> slope;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">PHProbe::serialEvent1</a>() {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {                 <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(<span class="charliteral">&#39;\r&#39;</span>);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0 &amp;&amp; <span class="keywordtype">string</span>[<span class="keywordtype">string</span>.length() - 1] == <span class="charliteral">&#39;\r&#39;</span>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="comment">// We should not see the CR (https://github.com/Arduino-CI/arduino_ci/pull/302)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> = <span class="keywordtype">string</span>.toFloat();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// we have seen situations where the CO2 bubbler stays on and drives the pH down</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> &lt; 7.0) {  <span class="comment">// hang so as to trigger the watchdog timer reset</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          wdt_disable();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          wdt_enable(WDTO_15MS);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;pH value dropped to %5.3f so trigger a reset!&quot;</span>, <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">string</span>[0] == <span class="charliteral">&#39;?&#39;</span>) {  <span class="comment">// answer to a previous query</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe serialEvent1: \&quot;%s\&quot;&quot;</span>, <span class="keywordtype">string</span>.c_str());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 7 &amp;&amp; <span class="keywordtype">string</span>.substring(0, 7) == <span class="stringliteral">&quot;?SLOPE,&quot;</span>) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="comment">// for example &quot;?SLOPE,16.1,100.0&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = string;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// &quot;pH decreases with increase in temperature. But this does not mean that</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//  water becomes more acidic at higher temperatures.&quot;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// https://www.westlab.com/blog/2017/11/15/how-does-temperature-affect-ph</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">PHProbe::setTemperatureCompensation</a>(<span class="keywordtype">float</span> temperature) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">const</span> String PARTIAL_COMMAND = <span class="stringliteral">&quot;T,&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  String fullCommand;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">if</span> (temperature &gt; 0 &amp;&amp; temperature &lt; 100) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    fullCommand = PARTIAL_COMMAND + String(temperature, 2) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    fullCommand = PARTIAL_COMMAND + <span class="stringliteral">&quot;20\r&quot;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - %s&quot;</span>, fullCommand.c_str());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">PHProbe::setHighpointCalibration</a>(<span class="keywordtype">float</span> highpoint) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  String fullCommand;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,High,&quot;</span> + String(highpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">  109</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">PHProbe::setLowpointCalibration</a>(<span class="keywordtype">float</span> lowpoint) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  String fullCommand;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,low,&quot;</span> + String(lowpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">  115</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">PHProbe::setMidpointCalibration</a>(<span class="keywordtype">float</span> midpoint) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  String fullCommand;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,mid,&quot;</span> + String(midpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="ttc" id="aPHProbe_8h_html"><div class="ttname"><a href="PHProbe_8h.html">PHProbe.h</a></div></div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aSerial__TC_8h_html"><div class="ttname"><a href="Serial__TC_8h.html">Serial_TC.h</a></div></div>
 <div class="ttc" id="aclassPHProbe_html"><div class="ttname"><a href="classPHProbe.html">PHProbe</a></div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00016">PHProbe.h:16</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a22a4fd05ff79363b8ffbcca1846998d4"><div class="ttname"><a href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">PHProbe::setHighpointCalibration</a></div><div class="ttdeci">void setHighpointCalibration(float highpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00093">PHProbe.cpp:93</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a2642bd5abcdb89511579f71f26d1fdcf"><div class="ttname"><a href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">PHProbe::setLowpointCalibration</a></div><div class="ttdeci">void setLowpointCalibration(float lowpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00099">PHProbe.cpp:99</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a26ea7c4d67dc34b8aac98fc71a024889"><div class="ttname"><a href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe::PHProbe</a></div><div class="ttdeci">PHProbe()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00026">PHProbe.cpp:26</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a349dcae5ba87e26a5e8072f42d7fe556"><div class="ttname"><a href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">PHProbe::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00056">PHProbe.cpp:56</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a48820cfee99bd39abe84f7c892ab6d11"><div class="ttname"><a href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">PHProbe::setMidpointCalibration</a></div><div class="ttdeci">void setMidpointCalibration(float midpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00105">PHProbe.cpp:105</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a528afbeb70d3a47989603faff2d00571"><div class="ttname"><a href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">PHProbe::clearCalibration</a></div><div class="ttdeci">void clearCalibration()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00035">PHProbe.cpp:35</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a5c0653d0adf7bffb0316453c35f72f2a"><div class="ttname"><a href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a></div><div class="ttdeci">void sendSlopeRequest()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00039">PHProbe.cpp:39</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00015">PHProbe.cpp:15</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_a752ea565748075bf450e1cd66c3f1dc2"><div class="ttname"><a href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">PHProbe::setTemperatureCompensation</a></div><div class="ttdeci">void setTemperatureCompensation(float temperature)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00081">PHProbe.cpp:81</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a22a4fd05ff79363b8ffbcca1846998d4"><div class="ttname"><a href="classPHProbe.html#a22a4fd05ff79363b8ffbcca1846998d4">PHProbe::setHighpointCalibration</a></div><div class="ttdeci">void setHighpointCalibration(float highpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00103">PHProbe.cpp:103</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a2642bd5abcdb89511579f71f26d1fdcf"><div class="ttname"><a href="classPHProbe.html#a2642bd5abcdb89511579f71f26d1fdcf">PHProbe::setLowpointCalibration</a></div><div class="ttdeci">void setLowpointCalibration(float lowpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00109">PHProbe.cpp:109</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a26ea7c4d67dc34b8aac98fc71a024889"><div class="ttname"><a href="classPHProbe.html#a26ea7c4d67dc34b8aac98fc71a024889">PHProbe::PHProbe</a></div><div class="ttdeci">PHProbe()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00028">PHProbe.cpp:28</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a349dcae5ba87e26a5e8072f42d7fe556"><div class="ttname"><a href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">PHProbe::serialEvent1</a></div><div class="ttdeci">void serialEvent1()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00058">PHProbe.cpp:58</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a48820cfee99bd39abe84f7c892ab6d11"><div class="ttname"><a href="classPHProbe.html#a48820cfee99bd39abe84f7c892ab6d11">PHProbe::setMidpointCalibration</a></div><div class="ttdeci">void setMidpointCalibration(float midpoint)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00115">PHProbe.cpp:115</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a528afbeb70d3a47989603faff2d00571"><div class="ttname"><a href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">PHProbe::clearCalibration</a></div><div class="ttdeci">void clearCalibration()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00037">PHProbe.cpp:37</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a5c0653d0adf7bffb0316453c35f72f2a"><div class="ttname"><a href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">PHProbe::sendSlopeRequest</a></div><div class="ttdeci">void sendSlopeRequest()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00041">PHProbe.cpp:41</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00017">PHProbe.cpp:17</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a752ea565748075bf450e1cd66c3f1dc2"><div class="ttname"><a href="classPHProbe.html#a752ea565748075bf450e1cd66c3f1dc2">PHProbe::setTemperatureCompensation</a></div><div class="ttdeci">void setTemperatureCompensation(float temperature)</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00091">PHProbe.cpp:91</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_aafad50793f6eb29485aba9eda2b0437c"><div class="ttname"><a href="classPHProbe.html#aafad50793f6eb29485aba9eda2b0437c">PHProbe::_instance</a></div><div class="ttdeci">static PHProbe * _instance</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00036">PHProbe.h:36</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_ab18ebca3d2a5b4f049e5fbf3dd350a2d"><div class="ttname"><a href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">PHProbe::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00038">PHProbe.h:38</a></div></div>
 <div class="ttc" id="aclassPHProbe_html_abf04b935ac5a398966e000e35fed275c"><div class="ttname"><a href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">PHProbe::slopeResponse</a></div><div class="ttdeci">String slopeResponse</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00039">PHProbe.h:39</a></div></div>
-<div class="ttc" id="aclassPHProbe_html_aea75550dbd7924630426f83075ac8e07"><div class="ttname"><a href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">PHProbe::getSlope</a></div><div class="ttdeci">String getSlope()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00044">PHProbe.cpp:44</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_aea75550dbd7924630426f83075ac8e07"><div class="ttname"><a href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">PHProbe::getSlope</a></div><div class="ttdeci">String getSlope()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00046">PHProbe.cpp:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
