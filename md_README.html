@@ -80,7 +80,7 @@ $(function() {
 </ul>
 <h3>Install</h3>
 <p>To install onto an Arduino Mega2560 use the <a href="https://www.arduino.cc/en/software">Arduino IDE</a>.</p>
-<p>By default, the Arduino compiler links to a <code>printf</code> library that does not support printing floating point numbers. To get that feature (which we use!), add the following lines to <code>boards.txt</code> and use the Tools menu to select "`RV printf Version: "Full printf"&lt;tt&gt;. On macOS, the&lt;/tt&gt;boards.txt&lt;tt&gt;is located at&lt;/tt&gt;~/Library/Arduino15/packages/arduino/hardware/avr/1.8.3`. For background see &lt;a href="<a href="https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6">https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6</a>"&gt;here.</p>
+<p>By default, the Arduino compiler links to a <code>printf</code> library that does not support printing floating point numbers. To get that feature (which we use!), add the following lines to <code>boards.txt</code> and use the Tools menu to select "`ARV printf Version: "Full printf"<code>. On macOS, the</code>boards.txt&lt;tt&gt;is located at~/Library/Arduino15/packages/arduino/hardware/avr/1.8.3<code>. For background see [here](<a href="https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6">https://forum.arduino.cc/t/no-sprintf-float-formatting-come-back-five-year/331790/6</a>). (The</code>avr<code>directory should get created by a successful run of</code>scripts/testAndBuild.sh`.)</p>
 <div class="fragment"><div class="line">menu.printf=AVR printf Version</div>
 <div class="line"> </div>
 <div class="line">mega.menu.printf.default=Default printf</div>

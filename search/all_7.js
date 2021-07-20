@@ -21,8 +21,8 @@ var searchData=
   ['getmaxdataage_105',['getMaxDataAge',['../classEEPROM__TC.html#a0f3a406fd3c27df81c96de487c4e97fb',1,'EEPROM_TC']]],
   ['getmode_106',['getMode',['../classPID__TC.html#afa17baa68de52951b91cd5a5bb6446ac',1,'PID_TC']]],
   ['getnumattempteddhcpreleases_107',['getNumAttemptedDHCPReleases',['../classEthernet__TC.html#a4be5cb309dd33d94d25cd2ef9dc7b6a0',1,'Ethernet_TC']]],
-  ['getph_108',['getPH',['../classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf',1,'EEPROM_TC']]],
-  ['getph_109',['getPh',['../classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9',1,'PHProbe']]],
+  ['getph_108',['getPh',['../classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9',1,'PHProbe']]],
+  ['getph_109',['getPH',['../classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf',1,'EEPROM_TC']]],
   ['getphdelay_110',['getPHDelay',['../classEEPROM__TC.html#af67943e9fe3f5bcec558cde4826462c6',1,'EEPROM_TC']]],
   ['getphinterval_111',['getPHInterval',['../classEEPROM__TC.html#a3d87b0ba5ff1e6cca0fd6e3968fa0eda',1,'EEPROM_TC']]],
   ['getphseriespointer_112',['getPHSeriesPointer',['../classEEPROM__TC.html#ad2500c4e4b1c6e1137a54cfd2163bc82',1,'EEPROM_TC']]],
@@ -45,6 +45,5 @@ var searchData=
   ['getuncorrectedrunningaverage_129',['getUncorrectedRunningAverage',['../classTempProbe__TC.html#aac6bd5548573a83845439c1c743eda1c',1,'TempProbe_TC']]],
   ['getusepid_130',['getUsePID',['../classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d',1,'PHControl']]],
   ['google_5finterval_5faddress_131',['GOOGLE_INTERVAL_ADDRESS',['../classEEPROM__TC.html#abb75ea22bbaf48dd2bd16eac0cec1c2a',1,'EEPROM_TC']]],
-  ['gotdhcplease_132',['gotDHCPLease',['../classEthernet__TC.html#ab57d1c2e3ce8d280b9275223ba954191',1,'Ethernet_TC']]],
-  ['granularity_5faddress_133',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a8ab7c7e16e4d407d7c4e30dc0c2ea0ec',1,'EEPROM_TC']]]
+  ['granularity_5faddress_132',['GRANULARITY_ADDRESS',['../classEEPROM__TC.html#a8ab7c7e16e4d407d7c4e30dc0c2ea0ec',1,'EEPROM_TC']]]
 ];
