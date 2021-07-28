@@ -115,8 +115,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a6ddfb057847186e88c41f7082be86455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac590b5b6f700a2338e992edfb103e011"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#ac590b5b6f700a2338e992edfb103e011">time_serverIP</a></td></tr>
 <tr class="separator:ac590b5b6f700a2338e992edfb103e011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445a3239a130253dc54d9320d8e22662"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a> = 4</td></tr>
-<tr class="separator:a445a3239a130253dc54d9320d8e22662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0759590a755238474d8f30ae5f41c3c5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a0759590a755238474d8f30ae5f41c3c5">SD_SELECT_PIN</a> = 4</td></tr>
+<tr class="separator:a0759590a755238474d8f30ae5f41c3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a542a0c5eb0c0e90741b3ae16dde7366f"><td class="memItemLeft" align="right" valign="top">IPAddress&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">IP</a></td></tr>
 <tr class="separator:a542a0c5eb0c0e90741b3ae16dde7366f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10733152f6083b40e6d9592425dd79b9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEthernet__TC.html#a10733152f6083b40e6d9592425dd79b9">numAttemptedDHCPReleases</a> = 0</td></tr>
@@ -157,8 +157,8 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8cpp_source.html#l00011">11</a> of file <a class="el" href="Ethernet__TC_8cpp_source.html">Ethernet_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                         {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  pinMode(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, OUTPUT);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  digitalWrite(<a class="code" href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">IO_PIN</a>, HIGH);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  pinMode(<a class="code" href="classEthernet__TC.html#a0759590a755238474d8f30ae5f41c3c5">SD_SELECT_PIN</a>, OUTPUT);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  digitalWrite(<a class="code" href="classEthernet__TC.html#a0759590a755238474d8f30ae5f41c3c5">SD_SELECT_PIN</a>, HIGH);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classEthernet__TC.html#a27bec2085a71e32aa1064e52fb389ccf">readMac</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Attempting to connect to Ethernet&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  wdt_disable();</div>
@@ -178,13 +178,13 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a528d68dbe7d712e2276089df46482f59"><div class="ttname"><a href="classEEPROM__TC.html#a528d68dbe7d712e2276089df46482f59">EEPROM_TC::getTankID</a></div><div class="ttdeci">uint16_t getTankID()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00111">EEPROM_TC.cpp:111</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
+<div class="ttc" id="aclassEthernet__TC_html_a0759590a755238474d8f30ae5f41c3c5"><div class="ttname"><a href="classEthernet__TC.html#a0759590a755238474d8f30ae5f41c3c5">Ethernet_TC::SD_SELECT_PIN</a></div><div class="ttdeci">const int SD_SELECT_PIN</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00034">Ethernet_TC.h:34</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a27bec2085a71e32aa1064e52fb389ccf"><div class="ttname"><a href="classEthernet__TC.html#a27bec2085a71e32aa1064e52fb389ccf">Ethernet_TC::readMac</a></div><div class="ttdeci">void readMac(bool forceReset=false)</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8cpp_source.html#l00044">Ethernet_TC.cpp:44</a></div></div>
-<div class="ttc" id="aclassEthernet__TC_html_a445a3239a130253dc54d9320d8e22662"><div class="ttname"><a href="classEthernet__TC.html#a445a3239a130253dc54d9320d8e22662">Ethernet_TC::IO_PIN</a></div><div class="ttdeci">const int IO_PIN</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00034">Ethernet_TC.h:34</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a542a0c5eb0c0e90741b3ae16dde7366f"><div class="ttname"><a href="classEthernet__TC.html#a542a0c5eb0c0e90741b3ae16dde7366f">Ethernet_TC::IP</a></div><div class="ttdeci">IPAddress IP</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00035">Ethernet_TC.h:35</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_a6ddfb057847186e88c41f7082be86455"><div class="ttname"><a href="classEthernet__TC.html#a6ddfb057847186e88c41f7082be86455">Ethernet_TC::defaultIP</a></div><div class="ttdeci">IPAddress defaultIP</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00032">Ethernet_TC.h:32</a></div></div>
 <div class="ttc" id="aclassEthernet__TC_html_aa5d4dd13d1a7441c25db71da2cc83eca"><div class="ttname"><a href="classEthernet__TC.html#aa5d4dd13d1a7441c25db71da2cc83eca">Ethernet_TC::mac</a></div><div class="ttdeci">byte mac[6]</div><div class="ttdef"><b>Definition:</b> <a href="Ethernet__TC_8h_source.html#l00031">Ethernet_TC.h:31</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00032">defaultIP</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00111">EEPROM_TC::getTankID()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00034">IO_PIN</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00035">IP</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00031">mac</a>, <a class="el" href="Ethernet__TC_8cpp_source.html#l00044">readMac()</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
+<p class="reference">References <a class="el" href="Ethernet__TC_8h_source.html#l00032">defaultIP</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00111">EEPROM_TC::getTankID()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00035">IP</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00031">mac</a>, <a class="el" href="Ethernet__TC_8cpp_source.html#l00044">readMac()</a>, <a class="el" href="Ethernet__TC_8h_source.html#l00034">SD_SELECT_PIN</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00031">instance()</a>.</p>
 
@@ -456,32 +456,6 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a445a3239a130253dc54d9320d8e22662"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a445a3239a130253dc54d9320d8e22662">&#9670;&nbsp;</a></span>IO_PIN</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Ethernet_TC::IO_PIN = 4</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00034">34</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00011">Ethernet_TC()</a>.</p>
-
-</div>
-</div>
 <a id="a542a0c5eb0c0e90741b3ae16dde7366f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a542a0c5eb0c0e90741b3ae16dde7366f">&#9670;&nbsp;</a></span>IP</h2>
 
@@ -557,6 +531,32 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00038">38</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Ethernet__TC_8h_source.html#l00021">getNumAttemptedDHCPReleases()</a>, and <a class="el" href="Ethernet__TC_8cpp_source.html#l00038">loop()</a>.</p>
+
+</div>
+</div>
+<a id="a0759590a755238474d8f30ae5f41c3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0759590a755238474d8f30ae5f41c3c5">&#9670;&nbsp;</a></span>SD_SELECT_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Ethernet_TC::SD_SELECT_PIN = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Ethernet__TC_8h_source.html#l00034">34</a> of file <a class="el" href="Ethernet__TC_8h_source.html">Ethernet_TC.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Ethernet__TC_8cpp_source.html#l00011">Ethernet_TC()</a>.</p>
 
 </div>
 </div>
