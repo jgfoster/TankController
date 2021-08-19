@@ -525,12 +525,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">char</span> status = <a class="code" href="TCLibTest_8cpp.html#a3d006126bd90cbd977b54004c5dee363">tempControl</a>-&gt;<a class="code" href="classTemperatureControl.html#aa90ff7ff465a1fd0cf05778c1283631b">isHeater</a>() ? <span class="charliteral">&#39;h&#39;</span> : <span class="charliteral">&#39;c&#39;</span>;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="TCLibTest_8cpp.html#a3d006126bd90cbd977b54004c5dee363">tempControl</a>-&gt;<a class="code" href="classTemperatureControl.html#a355ba7008c072aed6f7864b084c19235">isOn</a>()) {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    status = toupper(status);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">// status -= &#39;a&#39; - &#39;A&#39;;  // convert to uppercase</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  snprintf(output, <span class="keyword">sizeof</span>(output), <span class="stringliteral">&quot;T%c%5.2f %c %5.2f&quot;</span>, equals, temp, status, <a class="code" href="TCLibTest_8cpp.html#a3d006126bd90cbd977b54004c5dee363">tempControl</a>-&gt;<a class="code" href="classTemperatureControl.html#a8a88e4018b9306a9ae568c3d6472a686">getTargetTemperature</a>());</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(output, 1);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  snprintf(output, <span class="keyword">sizeof</span>(output), <span class="stringliteral">&quot;T%c%5.2f %c %5.2f&quot;</span>, equals, temp, status, <a class="code" href="TCLibTest_8cpp.html#a3d006126bd90cbd977b54004c5dee363">tempControl</a>-&gt;<a class="code" href="classTemperatureControl.html#a8a88e4018b9306a9ae568c3d6472a686">getTargetTemperature</a>());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(output, 1);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
 <div class="ttc" id="aPushingBoxTest_8cpp_html_a872595b7f64ee8987ab2003a2c7b4b82"><div class="ttname"><a href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a></div><div class="ttdeci">TempProbe_TC * tempProbe</div><div class="ttdef"><b>Definition:</b> <a href="PushingBoxTest_8cpp_source.html#l00017">PushingBoxTest.cpp:17</a></div></div>
 <div class="ttc" id="aTCLibTest_8cpp_html_a3d006126bd90cbd977b54004c5dee363"><div class="ttname"><a href="TCLibTest_8cpp.html#a3d006126bd90cbd977b54004c5dee363">tempControl</a></div><div class="ttdeci">TemperatureControl * tempControl</div><div class="ttdef"><b>Definition:</b> <a href="TCLibTest_8cpp_source.html#l00020">TCLibTest.cpp:20</a></div></div>
 <div class="ttc" id="aclassLiquidCrystal__TC_html_a3d9ff2175612e6a930574db1b0cfb71b"><div class="ttname"><a href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a></div><div class="ttdeci">static LiquidCrystal_TC * instance(const char *version=&quot;21.01.1&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="LiquidCrystal__TC_8cpp_source.html#l00019">LiquidCrystal_TC.cpp:19</a></div></div>
@@ -551,7 +550,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TempProbe__TC_8h_source.html#l00102">TempProbe_TC::getRunningAverage()</a>, <a class="el" href="PHControl_8h_source.html#l00021">PHControl::getTargetPh()</a>, <a class="el" href="TemperatureControl_8h_source.html#l00028">TemperatureControl::getTargetTemperature()</a>, <a class="el" href="PHControl_8cpp_source.html#l00022">PHControl::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00017">PHProbe::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00020">TemperatureControl::instance()</a>, <a class="el" href="TempProbe__TC_8cpp_source.html#l00018">TempProbe_TC::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00019">LiquidCrystal_TC::instance()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00060">TemperatureControl::isHeater()</a>, <a class="el" href="PHControl_8cpp_source.html#l00054">PHControl::isOn()</a>, <a class="el" href="TemperatureControl_8cpp_source.html#l00064">TemperatureControl::isOn()</a>, <a class="el" href="TCLibTest_8cpp_source.html#l00020">tempControl</a>, <a class="el" href="PushingBoxTest_8cpp_source.html#l00017">tempProbe</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00049">LiquidCrystal_TC::writeLine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00243">loop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00242">loop()</a>.</p>
 
 </div>
 </div>
@@ -650,27 +649,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUIState.html#a14bebe1f298527641c25930ef6f0db59">UIState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="MainMenu_8cpp_source.html#l00243">243</a> of file <a class="el" href="MainMenu_8cpp_source.html">MainMenu.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#a6b7ffd1cc6c0cedf91ac7a680164acac">level1</a> == 0) {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="classMainMenu.html#a65e06900f98172b33dc75913eceaa4e5">idle</a>();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#a6b7ffd1cc6c0cedf91ac7a680164acac">level1</a> == 1) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a> == -1) {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;View settings&quot;</span>, 0);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="classMainMenu.html#abcc999d12ca01027965e70fc5ab3d81a">viewMenus</a>[<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a>], 0);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a> == -1) {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;Change settings &quot;</span>, 0);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="classMainMenu.html#abdb4ecd2a4b9b71a38879db8b6a27455">setMenus</a>[<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a>], 0);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;&lt;4   ^2  8v   6&gt;&quot;</span>, 1);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="MainMenu_8cpp_source.html#l00242">242</a> of file <a class="el" href="MainMenu_8cpp_source.html">MainMenu.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#a6b7ffd1cc6c0cedf91ac7a680164acac">level1</a> == 0) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="classMainMenu.html#a65e06900f98172b33dc75913eceaa4e5">idle</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#a6b7ffd1cc6c0cedf91ac7a680164acac">level1</a> == 1) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a> == -1) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;View settings&quot;</span>, 0);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="classMainMenu.html#abcc999d12ca01027965e70fc5ab3d81a">viewMenus</a>[<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a>], 0);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a> == -1) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;Change settings &quot;</span>, 0);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<a class="code" href="classMainMenu.html#abdb4ecd2a4b9b71a38879db8b6a27455">setMenus</a>[<a class="code" href="classMainMenu.html#aebad7cdf3bb0c924228ce2035485ef01">level2</a>], 0);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;&lt;4   ^2  8v   6&gt;&quot;</span>, 1);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
 <div class="ttc" id="aclassMainMenu_html_a65e06900f98172b33dc75913eceaa4e5"><div class="ttname"><a href="classMainMenu.html#a65e06900f98172b33dc75913eceaa4e5">MainMenu::idle</a></div><div class="ttdeci">void idle()</div><div class="ttdef"><b>Definition:</b> <a href="MainMenu_8cpp_source.html#l00218">MainMenu.cpp:218</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="MainMenu_8cpp_source.html#l00218">idle()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00019">LiquidCrystal_TC::instance()</a>, <a class="el" href="MainMenu_8h_source.html#l00057">level1</a>, <a class="el" href="MainMenu_8h_source.html#l00058">level2</a>, <a class="el" href="MainMenu_8h_source.html#l00060">setMenus</a>, <a class="el" href="MainMenu_8h_source.html#l00059">viewMenus</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00049">LiquidCrystal_TC::writeLine()</a>.</p>
@@ -1011,7 +1010,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MainMenu_8h_source.html#l00057">57</a> of file <a class="el" href="MainMenu_8h_source.html">MainMenu.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00125">down()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00062">handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00092">left()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00243">loop()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00100">right()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00113">up()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00125">down()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00062">handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00092">left()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00242">loop()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00100">right()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00113">up()</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1036,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MainMenu_8h_source.html#l00058">58</a> of file <a class="el" href="MainMenu_8h_source.html">MainMenu.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00125">down()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00062">handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00092">left()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00243">loop()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00100">right()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00171">selectSet()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00137">selectView()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00113">up()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00125">down()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00062">handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00092">left()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00242">loop()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00100">right()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00171">selectSet()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00137">selectView()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00113">up()</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1062,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MainMenu_8h_source.html#l00060">60</a> of file <a class="el" href="MainMenu_8h_source.html">MainMenu.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00243">loop()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00033">MainMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00242">loop()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00033">MainMenu()</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1088,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MainMenu_8h_source.html#l00059">59</a> of file <a class="el" href="MainMenu_8h_source.html">MainMenu.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00243">loop()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00033">MainMenu()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00242">loop()</a>, and <a class="el" href="MainMenu_8cpp_source.html#l00033">MainMenu()</a>.</p>
 
 </div>
 </div>

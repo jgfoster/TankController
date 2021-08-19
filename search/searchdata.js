@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "v",
   7: "sv",
   8: "sv",
-  9: "acdelnt",
+  9: "acdelnst",
   10: "clrt"
 };
 
