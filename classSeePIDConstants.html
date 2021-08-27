@@ -324,17 +324,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SeePIDConstants_8cpp_source.html#l00045">45</a> of file <a class="el" href="SeePIDConstants_8cpp_source.html">SeePIDConstants.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                           {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">bool</span> flag = <a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;<a class="code" href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">getUsePID</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">if</span> (flag) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: ON         &quot;</span>, line);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: OFF        &quot;</span>, line);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="aclassPHControl_html_a0b68770ec54ae43a7970736c191b8a8d"><div class="ttname"><a href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">PHControl::getUsePID</a></div><div class="ttdeci">bool getUsePID()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00024">PHControl.h:24</a></div></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a>()-&gt;getUsePID()) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: ON&quot;</span>, line);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classLiquidCrystal__TC.html#a3d9ff2175612e6a930574db1b0cfb71b">LiquidCrystal_TC::instance</a>()-&gt;<a class="code" href="classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9">writeLine</a>(<span class="stringliteral">&quot;PID: OFF&quot;</span>, line);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="ttc" id="aclassPHControl_html_ae5fc105e9feffb9822ab404c7b042804"><div class="ttname"><a href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">PHControl::instance</a></div><div class="ttdeci">static PHControl * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00022">PHControl.cpp:22</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00024">PHControl::getUsePID()</a>, <a class="el" href="PHControl_8cpp_source.html#l00022">PHControl::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00019">LiquidCrystal_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00049">LiquidCrystal_TC::writeLine()</a>.</p>
+<p class="reference">References <a class="el" href="PHControl_8cpp_source.html#l00022">PHControl::instance()</a>, <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00019">LiquidCrystal_TC::instance()</a>, and <a class="el" href="LiquidCrystal__TC_8cpp_source.html#l00049">LiquidCrystal_TC::writeLine()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SeePIDConstants_8cpp_source.html#l00013">loop()</a>.</p>
 
