@@ -18,7 +18,7 @@ var searchData=
   ['senddata_950',['sendData',['../classPushingBox.html#a743435eabf490af2b15cb19e3803aadf',1,'PushingBox']]],
   ['sendfromph_951',['sendFromPH',['../classTankController_1_1TankController.html#ae7c008c40b8829729737b444dc46c0f5',1,'TankController::TankController']]],
   ['sendsloperequest_952',['sendSlopeRequest',['../classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a',1,'PHProbe']]],
-  ['serial_953',['serial',['../Serial__TC_8h.html#ac902b0b823624a70811a850c4ebabf39',1,'serial(const char *format...):&#160;Serial_TC.cpp'],['../Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39',1,'serial(const char *format...):&#160;Serial_TC.cpp']]],
+  ['serial_953',['serial',['../Serial__TC_8h.html#a822c3c9e2647d480c6ea4b4d29f77afb',1,'serial(const __FlashStringHelper *format...):&#160;Serial_TC.cpp'],['../Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb',1,'serial(const __FlashStringHelper *format...):&#160;Serial_TC.cpp']]],
   ['serial_5ftc_954',['Serial_TC',['../classSerial__TC.html#a1084181ac129e9d2caa14995c0b9151b',1,'Serial_TC']]],
   ['serialevent_955',['serialEvent',['../classTankControllerLib.html#adb1344797128ca7e032ade0588ad7a8a',1,'TankControllerLib']]],
   ['serialevent1_956',['serialEvent1',['../classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556',1,'PHProbe::serialEvent1()'],['../classTankControllerLib.html#aeba296b1c881822a6bbeae0b0517d76d',1,'TankControllerLib::serialEvent1()']]],
@@ -77,5 +77,5 @@ var searchData=
   ['splashscreen_1009',['splashScreen',['../classLiquidCrystal__TC.html#a95c82b02043300f2b78836d3655dec46',1,'LiquidCrystal_TC']]],
   ['start_1010',['start',['../classSeeFreeMemory.html#a9d5da02ed9067f3d7041dc722c92c13c',1,'SeeFreeMemory::start()'],['../classNumCollectorState.html#a24652948b488037a1911c461a51fcb63',1,'NumCollectorState::start()'],['../classWait.html#aada68d93510c40ddc9418ed388f2ff4b',1,'Wait::start()'],['../classUIState.html#a9a4a56c0f68998ce342a73585c256cce',1,'UIState::start()'],['../classSeeVersion.html#ad8b06923022c46cf99b7c0ec0a96a85f',1,'SeeVersion::start()'],['../classSeeTankID.html#af4d035e1c7df4ad17d817ba7a121501f',1,'SeeTankID::start()'],['../classSeePIDConstants.html#abfb5a44fa0e74597baf478d648870701',1,'SeePIDConstants::start()'],['../classSeePHSlope.html#a8831fa8ca96b958901ec42aca342a9f7',1,'SeePHSlope::start()'],['../classSeeLogFile.html#afd186d0203b1acf66ee2587a83255343',1,'SeeLogFile::start()'],['../classSeeGoogleMins.html#a3e43a653679b37e29ec62d6d1be1aa15',1,'SeeGoogleMins::start()'],['../classSeeDeviceAddress.html#ac7dc9b198c9f7af215ae356b78da25f3',1,'SeeDeviceAddress::start()']]],
   ['startloop_1011',['startLoop',['../classTankController_1_1TankController.html#a2de4526899085b4f92f0685c1a60de86',1,'TankController::TankController']]],
-  ['statename_1012',['stateName',['../classTankControllerLib.html#a6447f6c37194d00de0a46976466781b2',1,'TankControllerLib']]]
+  ['statename_1012',['stateName',['../classTankControllerLib.html#a88ee54091dab6d078a709345172ec642',1,'TankControllerLib']]]
 ];

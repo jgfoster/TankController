@@ -97,10 +97,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2339f75c1abc006d2192fe1fc5d3a9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0927177c3bb8578d2be2b1cbe9cb356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrationManagement.html#ab0927177c3bb8578d2be2b1cbe9cb356">handleKey</a> (char <a class="el" href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a>)</td></tr>
 <tr class="separator:ab0927177c3bb8578d2be2b1cbe9cb356"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ccac9f5cdfd39e9b498de5140cdf97"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrationManagement.html#a12ccac9f5cdfd39e9b498de5140cdf97">name</a> ()</td></tr>
-<tr class="separator:a12ccac9f5cdfd39e9b498de5140cdf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eaf3946584d91e5b09ee2ef8266a71a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrationManagement.html#a1eaf3946584d91e5b09ee2ef8266a71a">prompt</a> ()</td></tr>
-<tr class="separator:a1eaf3946584d91e5b09ee2ef8266a71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8828cf60840eb23b3832b03357bcd53d"><td class="memItemLeft" align="right" valign="top">const __FlashStringHelper *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrationManagement.html#a8828cf60840eb23b3832b03357bcd53d">name</a> ()</td></tr>
+<tr class="separator:a8828cf60840eb23b3832b03357bcd53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843561ad9eb02ce46c3902afbe047bb7"><td class="memItemLeft" align="right" valign="top">const __FlashStringHelper *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCalibrationManagement.html#a843561ad9eb02ce46c3902afbe047bb7">prompt</a> ()</td></tr>
+<tr class="separator:a843561ad9eb02ce46c3902afbe047bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUIState"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUIState')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUIState.html">UIState</a></td></tr>
 <tr class="memitem:a76040d2fa8fc60d3bcfcb537ec86ec67 inherit pub_methods_classUIState"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIState.html#a76040d2fa8fc60d3bcfcb537ec86ec67">UIState</a> (<a class="el" href="classTankControllerLib.html">TankControllerLib</a> *<a class="el" href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">tc</a>)</td></tr>
 <tr class="separator:a76040d2fa8fc60d3bcfcb537ec86ec67 inherit pub_methods_classUIState"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,8 +211,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a12ccac9f5cdfd39e9b498de5140cdf97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12ccac9f5cdfd39e9b498de5140cdf97">&#9670;&nbsp;</a></span>name()</h2>
+<a id="a8828cf60840eb23b3832b03357bcd53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8828cf60840eb23b3832b03357bcd53d">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +221,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* CalibrationManagement::name </td>
+          <td class="memname">const __FlashStringHelper* CalibrationManagement::name </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -234,17 +234,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState</a>.</p>
+<p>Implements <a class="el" href="classUIState.html#a60f884c77b67e3325340aec3c2729379">UIState</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CalibrationManagement_8h_source.html#l00014">14</a> of file <a class="el" href="CalibrationManagement_8h_source.html">CalibrationManagement.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                     {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;CalibrationManagement&quot;</span>;</div>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> F(<span class="stringliteral">&quot;CalibrationManagement&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1eaf3946584d91e5b09ee2ef8266a71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eaf3946584d91e5b09ee2ef8266a71a">&#9670;&nbsp;</a></span>prompt()</h2>
+<a id="a843561ad9eb02ce46c3902afbe047bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843561ad9eb02ce46c3902afbe047bb7">&#9670;&nbsp;</a></span>prompt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* CalibrationManagement::prompt </td>
+          <td class="memname">const __FlashStringHelper* CalibrationManagement::prompt </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -266,11 +266,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState</a>.</p>
+<p>Reimplemented from <a class="el" href="classUIState.html#a99da6ec265d67796c350e7acc7d839c0">UIState</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="CalibrationManagement_8h_source.html#l00017">17</a> of file <a class="el" href="CalibrationManagement_8h_source.html">CalibrationManagement.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                       {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Cal Management&quot;</span>;</div>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                      {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> F(<span class="stringliteral">&quot;Cal Management&quot;</span>);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  };</div>
 </div><!-- fragment -->
 </div>

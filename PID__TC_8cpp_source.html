@@ -143,7 +143,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">   73</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPID__TC.html#ae45b55c61c1971635a6dd5131f739daa">PID_TC::logToSerial</a>() {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Kp: %6.1f Ki: %6.1f Kd: %6.1f\r\nPID output (s):%4.1f&quot;</span>, <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKp(), <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKi(), <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKd(),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;Kp: %6.1f Ki: %6.1f Kd: %6.1f\r\nPID output (s):%4.1f&quot;</span>), <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKp(), <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKi(), <a class="code" href="classPID__TC.html#aaacc056114353ff7b409d0af3027023d">pPID</a>-&gt;GetKd(),</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;         <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(<a class="code" href="classPID__TC.html#a601a013d338c237b514a042b80f851e2">output</a>) / 1000);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
@@ -167,7 +167,7 @@ $(function() {
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="ttc" id="aEEPROM__TC_8h_html"><div class="ttname"><a href="EEPROM__TC_8h.html">EEPROM_TC.h</a></div></div>
 <div class="ttc" id="aPID__TC_8h_html"><div class="ttname"><a href="PID__TC_8h.html">PID_TC.h</a></div></div>
-<div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
+<div class="ttc" id="aSerial__TC_8cpp_html_a822c3c9e2647d480c6ea4b4d29f77afb"><div class="ttname"><a href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a></div><div class="ttdeci">void serial(const __FlashStringHelper *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aSerial__TC_8h_html"><div class="ttname"><a href="Serial__TC_8h.html">Serial_TC.h</a></div></div>
 <div class="ttc" id="aTC__util_8h_html"><div class="ttname"><a href="TC__util_8h.html">TC_util.h</a></div></div>
 <div class="ttc" id="aTankControllerLib_8h_html"><div class="ttname"><a href="TankControllerLib_8h.html">TankControllerLib.h</a></div></div>

@@ -111,8 +111,8 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classNumCollectorState.html#a969f40d3ace35ee2c69dd12f12afcb71">setValue</a>(<span class="keywordtype">float</span> <a class="code" href="BlinkTest_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>) {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    storedValue = <a class="code" href="classNumCollectorState.html#a1fb7310d041a232dbbe1cafab7c0d79d">value</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classUIState.html#a250672e847e2630a82af13320dab7978">name</a>() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;TestNumCollectorState&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> __FlashStringHelper* <a class="code" href="classUIState.html#a60f884c77b67e3325340aec3c2729379">name</a>() {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> F(<span class="stringliteral">&quot;TestNumCollectorState&quot;</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classNumCollectorState.html#a5ecb7a7f1e1c81a5881d8c06528653df">getCurrentValue</a>() {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> priorValue;</div>
@@ -120,8 +120,8 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  uint16_t <a class="code" href="classNumCollectorState.html#a7993c51cc3295369f4d1b86b4f7233ac">getCurrentValuePrecision</a>() {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> priorValuePrecision;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">prompt</a>() {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Test:&quot;</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">const</span> __FlashStringHelper* <a class="code" href="classUIState.html#a99da6ec265d67796c350e7acc7d839c0">prompt</a>() {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> F(<span class="stringliteral">&quot;Test:&quot;</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// Testing</span></div>
@@ -175,9 +175,9 @@ $(function() {
 <div class="ttc" id="aclassNumCollectorState_html_afabb2e77ac28d26fbfc27fddb058c023"><div class="ttname"><a href="classNumCollectorState.html#afabb2e77ac28d26fbfc27fddb058c023">NumCollectorState::printValue</a></div><div class="ttdeci">void printValue()</div><div class="ttdef"><b>Definition:</b> <a href="NumberCollectorState_8cpp_source.html#l00059">NumberCollectorState.cpp:59</a></div></div>
 <div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00012">TankControllerLib.h:12</a></div></div>
 <div class="ttc" id="aclassUIState_html"><div class="ttname"><a href="classUIState.html">UIState</a></div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00011">UIState.h:11</a></div></div>
-<div class="ttc" id="aclassUIState_html_a0104fcd88e3ae4514e45b94806698ab8"><div class="ttname"><a href="classUIState.html#a0104fcd88e3ae4514e45b94806698ab8">UIState::prompt</a></div><div class="ttdeci">virtual const char * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00032">UIState.h:32</a></div></div>
-<div class="ttc" id="aclassUIState_html_a250672e847e2630a82af13320dab7978"><div class="ttname"><a href="classUIState.html#a250672e847e2630a82af13320dab7978">UIState::name</a></div><div class="ttdeci">virtual const char * name()=0</div></div>
 <div class="ttc" id="aclassUIState_html_a357d1e91ae55a8beda87b51cfc9a7d75"><div class="ttname"><a href="classUIState.html#a357d1e91ae55a8beda87b51cfc9a7d75">UIState::tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00040">UIState.h:40</a></div></div>
+<div class="ttc" id="aclassUIState_html_a60f884c77b67e3325340aec3c2729379"><div class="ttname"><a href="classUIState.html#a60f884c77b67e3325340aec3c2729379">UIState::name</a></div><div class="ttdeci">virtual const __FlashStringHelper * name()=0</div></div>
+<div class="ttc" id="aclassUIState_html_a99da6ec265d67796c350e7acc7d839c0"><div class="ttname"><a href="classUIState.html#a99da6ec265d67796c350e7acc7d839c0">UIState::prompt</a></div><div class="ttdeci">virtual const __FlashStringHelper * prompt()</div><div class="ttdef"><b>Definition:</b> <a href="UIState_8h_source.html#l00032">UIState.h:32</a></div></div>
 <div class="ttc" id="alibTC_8cpp_html_a7cff2cc7026c4f8e0c5be4c9a85fb2d8"><div class="ttname"><a href="libTC_8cpp.html#a7cff2cc7026c4f8e0c5be4c9a85fb2d8">key</a></div><div class="ttdeci">void key(char key)</div><div class="ttdef"><b>Definition:</b> <a href="libTC_8cpp_source.html#l00100">libTC.cpp:100</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

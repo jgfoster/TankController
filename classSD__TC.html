@@ -159,10 +159,10 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SD__TC_8cpp_source.html#l00026">26</a> of file <a class="el" href="SD__TC_8cpp_source.html">SD_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;             {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Serial.println(<span class="stringliteral">&quot;SD_TC()&quot;</span>);  <span class="comment">// Serial_TC might not be ready yet</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  Serial.println(F(<span class="stringliteral">&quot;SD_TC()&quot;</span>));  <span class="comment">// Serial_TC might not be ready yet</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="TC__util_8h.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a>(<a class="code" href="classSD__TC.html#aff882f758ae1bc6cdba7228999c92059">_instance</a> == <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classSD__TC.html#a4ade6f768356267fa36dffa2e2b76bcc">sd</a>.begin(<a class="code" href="classSD__TC.html#a2adad824869c170e73e354f9c7182268">SD_SELECT_PIN</a>)) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Serial.println(<span class="stringliteral">&quot;SD_TC failed to initialize!&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Serial.println(F(<span class="stringliteral">&quot;SD_TC failed to initialize!&quot;</span>));</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="ttc" id="aTC__util_8h_html_ae62a1773f22b7a2f5635c7497269cd39"><div class="ttname"><a href="TC__util_8h.html#ae62a1773f22b7a2f5635c7497269cd39">assert</a></div><div class="ttdeci">#define assert(p)</div><div class="ttdef"><b>Definition:</b> <a href="TC__util_8h_source.html#l00007">TC_util.h:7</a></div></div>
@@ -272,13 +272,13 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classSD__TC.html#a597672a3ddb947189c844d9e734a9515">hasHadError</a>) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="classSD__TC.html#a597672a3ddb947189c844d9e734a9515">hasHadError</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;Unable to open file: \&quot;%s\&quot;&quot;</span>, path);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;Unable to open file: \&quot;%s\&quot;&quot;</span>), path);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;Unable to open file: \&quot;&quot;</span> &lt;&lt; path &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
+<div class="ttc" id="aSerial__TC_8cpp_html_a822c3c9e2647d480c6ea4b4d29f77afb"><div class="ttname"><a href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a></div><div class="ttdeci">void serial(const __FlashStringHelper *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_a597672a3ddb947189c844d9e734a9515"><div class="ttname"><a href="classSD__TC.html#a597672a3ddb947189c844d9e734a9515">SD_TC::hasHadError</a></div><div class="ttdeci">bool hasHadError</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8h_source.html#l00029">SD_TC.h:29</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="TC__util_8h_source.html#l00019">COUT</a>, <a class="el" href="SD__TC_8h_source.html#l00029">hasHadError</a>, <a class="el" href="SD__TC_8h_source.html#l00030">sd</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
@@ -308,7 +308,7 @@ Static Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                        {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">char</span> path[30];</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  snprintf(path, <span class="keyword">sizeof</span>(path), <span class="stringliteral">&quot;%4i%02i%02i.log&quot;</span>, now.year(), now.month(), now.day());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  snprintf_P(path, <span class="keyword">sizeof</span>(path), (PGM_P)F(<span class="stringliteral">&quot;%4i%02i%02i.log&quot;</span>), now.year(), now.month(), now.day());</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classSD__TC.html#a628e7ae160a69446fdf3a8dd137394c5">appendDataToPath</a>(line, path);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="ttc" id="aclassDateTime__TC_html"><div class="ttname"><a href="classDateTime__TC.html">DateTime_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8h_source.html#l00011">DateTime_TC.h:11</a></div></div>
@@ -494,7 +494,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SD__TC_8cpp_source.html#l00098">98</a> of file <a class="el" href="SD__TC_8cpp_source.html">SD_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                               {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// serial(&quot;SD_TC::printRootDirectory()&quot;);</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// serial(F(&quot;SD_TC::printRootDirectory()&quot;));</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00191">TankControllerLib::setup()</a>, and <a class="el" href="SDTest_8cpp_source.html#l00147">unittest()</a>.</p>
@@ -530,7 +530,7 @@ Static Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SD__TC_8cpp_source.html#l00102">102</a> of file <a class="el" href="SD__TC_8cpp_source.html">SD_TC.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                   {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> now = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  snprintf(path, size, <span class="stringliteral">&quot;%4i%02i%02i.csv&quot;</span>, now.year(), now.month(), now.day());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  snprintf_P(path, size, (PGM_P)F(<span class="stringliteral">&quot;%4i%02i%02i.csv&quot;</span>), now.year(), now.month(), now.day());</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(path);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment -->

@@ -7,7 +7,7 @@ var searchData=
   ['window_5fsize_574',['WINDOW_SIZE',['../classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc',1,'PHControl::WINDOW_SIZE()'],['../classPID__TC.html#aa10540e9a6091abbf6e2a2582a5139ab',1,'PID_TC::WINDOW_SIZE()']]],
   ['writedatatosd_575',['writeDataToSD',['../classTankControllerLib.html#afbcfe66278d55d4fb1eb9dd5096d0a5a',1,'TankControllerLib']]],
   ['writedatatoserial_576',['writeDataToSerial',['../classTankControllerLib.html#a965fb5fd0f71e3053faedf4e3c5404d0',1,'TankControllerLib']]],
-  ['writeline_577',['writeLine',['../classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9',1,'LiquidCrystal_TC']]],
+  ['writeline_577',['writeLine',['../classLiquidCrystal__TC.html#a72dc96063b50182adc4feb95a9eeabe9',1,'LiquidCrystal_TC::writeLine(const char *text, uint16_t line)'],['../classLiquidCrystal__TC.html#a9e26005cc45e0546829f3704a6c9355e',1,'LiquidCrystal_TC::writeLine(const __FlashStringHelper *text, uint16_t line)']]],
   ['writesd_578',['writeSD',['../classTankController_1_1TankController.html#aaa320be2f8198f50305646b3f9e4aaae',1,'TankController::TankController']]],
   ['writeserial1_579',['writeSerial1',['../libTC_8cpp.html#a1c5012081f6984e916d8632bba0d9e4e',1,'libTC.cpp']]]
 ];
