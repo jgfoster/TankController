@@ -88,12 +88,12 @@ Collaboration diagram for PHProbe:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a203a6cdd1ab831cd1ece679de2af9ca9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">getPh</a> ()</td></tr>
 <tr class="separator:a203a6cdd1ab831cd1ece679de2af9ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17fbb4164078b3ad73a0785914a67113"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a17fbb4164078b3ad73a0785914a67113">getSlopeResponse</a> ()</td></tr>
-<tr class="separator:a17fbb4164078b3ad73a0785914a67113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad649e535fd53f1133dcb731d375f99f3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#ad649e535fd53f1133dcb731d375f99f3">getSlopeResponse</a> () const</td></tr>
+<tr class="separator:ad649e535fd53f1133dcb731d375f99f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528afbeb70d3a47989603faff2d00571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a528afbeb70d3a47989603faff2d00571">clearCalibration</a> ()</td></tr>
 <tr class="separator:a528afbeb70d3a47989603faff2d00571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea75550dbd7924630426f83075ac8e07"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#aea75550dbd7924630426f83075ac8e07">getSlope</a> ()</td></tr>
-<tr class="separator:aea75550dbd7924630426f83075ac8e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3d5d5d5b1ab92d77ebe8f7f8bfece1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a4b3d5d5d5b1ab92d77ebe8f7f8bfece1">getSlope</a> (char *<a class="el" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, int size)</td></tr>
+<tr class="separator:a4b3d5d5d5b1ab92d77ebe8f7f8bfece1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c0653d0adf7bffb0316453c35f72f2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a5c0653d0adf7bffb0316453c35f72f2a">sendSlopeRequest</a> ()</td></tr>
 <tr class="separator:a5c0653d0adf7bffb0316453c35f72f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349dcae5ba87e26a5e8072f42d7fe556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#a349dcae5ba87e26a5e8072f42d7fe556">serialEvent1</a> ()</td></tr>
@@ -121,8 +121,8 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab18ebca3d2a5b4f049e5fbf3dd350a2d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> = 0</td></tr>
 <tr class="separator:ab18ebca3d2a5b4f049e5fbf3dd350a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf04b935ac5a398966e000e35fed275c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = &quot;&quot;</td></tr>
-<tr class="separator:abf04b935ac5a398966e000e35fed275c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67c2cdbf1e91fe8d3ab7476d40276ea"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a> [32] = &quot;&quot;</td></tr>
+<tr class="separator:ae67c2cdbf1e91fe8d3ab7476d40276ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -196,7 +196,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  Serial1.print(<span class="stringliteral">&quot;Cal,clear\r&quot;</span>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00116">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00117">unittest()</a>.</p>
 
 </div>
 </div>
@@ -235,40 +235,52 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aea75550dbd7924630426f83075ac8e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea75550dbd7924630426f83075ac8e07">&#9670;&nbsp;</a></span>getSlope()</h2>
+<a id="a4b3d5d5d5b1ab92d77ebe8f7f8bfece1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3d5d5d5b1ab92d77ebe8f7f8bfece1">&#9670;&nbsp;</a></span>getSlope()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String PHProbe::getSlope </td>
+          <td class="memname">void PHProbe::getSlope </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00046">46</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                         {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// for example &quot;?SLOPE,99.7,100.3, -0.89&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.length() &lt; 10) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> String(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  String slope = <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>.substring(7);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> slope;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="aclassPHProbe_html_abf04b935ac5a398966e000e35fed275c"><div class="ttname"><a href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">PHProbe::slopeResponse</a></div><div class="ttdeci">String slopeResponse</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00039">PHProbe.h:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00047">47</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                             {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">// for example &quot;?SLOPE,99.7,100.3, -0.89&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (strlen(<a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>) &gt; 10) {            <span class="comment">// Flawfinder: ignore</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    strncpy(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a> + 7, size);  <span class="comment">// Flawfinder: ignore</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_ae67c2cdbf1e91fe8d3ab7476d40276ea"><div class="ttname"><a href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">PHProbe::slopeResponse</a></div><div class="ttdeci">char slopeResponse[32]</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00039">PHProbe.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00039">slopeResponse</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, and <a class="el" href="PHProbe_8h_source.html#l00039">slopeResponse</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHProbeTest_8cpp_source.html#l00085">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePHSlope_8cpp_source.html#l00010">SeePHSlope::loop()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00085">unittest()</a>.</p>
 
 </div>
 </div>
-<a id="a17fbb4164078b3ad73a0785914a67113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17fbb4164078b3ad73a0785914a67113">&#9670;&nbsp;</a></span>getSlopeResponse()</h2>
+<a id="ad649e535fd53f1133dcb731d375f99f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad649e535fd53f1133dcb731d375f99f3">&#9670;&nbsp;</a></span>getSlopeResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,10 +289,10 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String PHProbe::getSlopeResponse </td>
+          <td class="memname">const char* PHProbe::getSlopeResponse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -291,8 +303,8 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="PHProbe_8h_source.html#l00022">22</a> of file <a class="el" href="PHProbe_8h_source.html">PHProbe.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                            {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a>;</div>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                       {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00039">slopeResponse</a>.</p>
@@ -337,7 +349,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00036">_instance</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00028">PHProbe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHCalibration_8h_source.html#l00012">PHCalibration::getCurrentValue()</a>, <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00218">MainMenu::idle()</a>, <a class="el" href="SeePHSlope_8cpp_source.html#l00010">SeePHSlope::loop()</a>, <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="PushingBox_8cpp_source.html#l00062">PushingBox::sendData()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00170">TankControllerLib::serialEvent1()</a>, <a class="el" href="PHCalibrationHigh_8cpp_source.html#l00009">PHCalibrationHigh::setValue()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, <a class="el" href="SeePHSlope_8cpp_source.html#l00014">SeePHSlope::start()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00045">TankControllerLib::TankControllerLib()</a>, <a class="el" href="PHCalibrationMidTest_8cpp_source.html#l00008">unittest()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00209">TankControllerLib::updateControls()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00242">TankControllerLib::writeDataToSD()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00277">TankControllerLib::writeDataToSerial()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHCalibration_8h_source.html#l00012">PHCalibration::getCurrentValue()</a>, <a class="el" href="SetCalibrationClear_8cpp_source.html#l00009">SetCalibrationClear::handleKey()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00218">MainMenu::idle()</a>, <a class="el" href="SeePHSlope_8cpp_source.html#l00010">SeePHSlope::loop()</a>, <a class="el" href="libTC_8cpp_source.html#l00136">readPH()</a>, <a class="el" href="PushingBox_8cpp_source.html#l00062">PushingBox::sendData()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00170">TankControllerLib::serialEvent1()</a>, <a class="el" href="PHCalibrationHigh_8cpp_source.html#l00009">PHCalibrationHigh::setValue()</a>, <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, <a class="el" href="SeePHSlope_8cpp_source.html#l00016">SeePHSlope::start()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00045">TankControllerLib::TankControllerLib()</a>, <a class="el" href="PHCalibrationMidTest_8cpp_source.html#l00008">unittest()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00209">TankControllerLib::updateControls()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00242">TankControllerLib::writeDataToSD()</a>, and <a class="el" href="TankControllerLib_8cpp_source.html#l00277">TankControllerLib::writeDataToSerial()</a>.</p>
 
 </div>
 </div>
@@ -358,13 +370,14 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00041">41</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                               {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  Serial1.print(<span class="stringliteral">&quot;SLOPE,?\r&quot;</span>);  <span class="comment">// Sending request for Calibration Slope</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = <span class="stringliteral">&quot;       Slope requested!&quot;</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// Sending request for Calibration Slope</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  Serial1.print(<span class="stringliteral">&quot;SLOPE,?\r&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  strncpy(<a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>, <span class="stringliteral">&quot;       Slope requested!&quot;</span>, <span class="keyword">sizeof</span>(<a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>));  <span class="comment">// Flawfinder: ignore</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHProbe_8h_source.html#l00039">slopeResponse</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SeePHSlope_8cpp_source.html#l00014">SeePHSlope::start()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00076">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SeePHSlope_8cpp_source.html#l00016">SeePHSlope::start()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00076">unittest()</a>.</p>
 
 </div>
 </div>
@@ -384,37 +397,38 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>interrupt handler for data arriving from probe </p>
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00058">58</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                           {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {                 <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(<span class="charliteral">&#39;\r&#39;</span>);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0 &amp;&amp; <span class="keywordtype">string</span>[<span class="keywordtype">string</span>.length() - 1] == <span class="charliteral">&#39;\r&#39;</span>) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="comment">// We should not see the CR (https://github.com/Arduino-CI/arduino_ci/pull/302)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> = <span class="keywordtype">string</span>.toFloat();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// we have seen situations where the CO2 bubbler stays on and drives the pH down</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> &amp;&amp; <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> &lt; 7.0) {  <span class="comment">// hang so as to trigger the watchdog timer reset</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                     <span class="comment">// treat 0 as valid since probe might not be connected</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          wdt_disable();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          wdt_enable(WDTO_120MS);  <span class="comment">// allow enough time to print message</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;pH value dropped to %5.3f so trigger a reset!&quot;</span>, <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">string</span>[0] == <span class="charliteral">&#39;?&#39;</span>) {  <span class="comment">// answer to a previous query</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe serialEvent1: \&quot;%s\&quot;&quot;</span>, <span class="keywordtype">string</span>.c_str());</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 7 &amp;&amp; <span class="keywordtype">string</span>.substring(0, 7) == <span class="stringliteral">&quot;?SLOPE,&quot;</span>) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="comment">// for example &quot;?SLOPE,16.1,100.0&quot;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <a class="code" href="classPHProbe.html#abf04b935ac5a398966e000e35fed275c">slopeResponse</a> = string;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00059">59</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                           {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// if we see that the Atlas Scientific product has sent a character</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">while</span> (Serial1.available() &gt; 0) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    String <span class="keywordtype">string</span> = Serial1.readStringUntil(<span class="charliteral">&#39;\r&#39;</span>);  <span class="comment">// read the string until we see a &lt;CR&gt;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0 &amp;&amp; <span class="keywordtype">string</span>[<span class="keywordtype">string</span>.length() - 1] == <span class="charliteral">&#39;\r&#39;</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">// We should not see the CR (https://github.com/Arduino-CI/arduino_ci/pull/302)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">string</span>.remove(<span class="keywordtype">string</span>.length() - 1);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 0) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">if</span> (isdigit(<span class="keywordtype">string</span>[0])) {  <span class="comment">// if the first character in the string is a digit</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// convert the string to a floating point number so it can be evaluated by the Arduino</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> = <span class="keywordtype">string</span>.toFloat();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// we have seen situations where the CO2 bubbler stays on and drives the pH down</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> &amp;&amp; <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a> &lt; 7.0) {  <span class="comment">// hang so as to trigger the watchdog timer reset</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                     <span class="comment">// treat 0 as valid since probe might not be connected</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          wdt_disable();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          wdt_enable(WDTO_120MS);  <span class="comment">// allow enough time to print message</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;pH value dropped to %5.3f so trigger a reset!&quot;</span>, <a class="code" href="classPHProbe.html#ab18ebca3d2a5b4f049e5fbf3dd350a2d">value</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keywordtype">string</span>[0] == <span class="charliteral">&#39;?&#39;</span>) {  <span class="comment">// answer to a previous query</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe serialEvent1: \&quot;%s\&quot;&quot;</span>, <span class="keywordtype">string</span>.c_str());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.length() &gt; 7 &amp;&amp; <span class="keywordtype">string</span>.substring(0, 7) == <span class="stringliteral">&quot;?SLOPE,&quot;</span>) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          <span class="comment">// for example &quot;?SLOPE,16.1,100.0&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          strncpy(<a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>, <span class="keywordtype">string</span>.c_str(), <span class="keyword">sizeof</span>(<a class="code" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">slopeResponse</a>));  <span class="comment">// Flawfinder: ignore</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="ttc" id="aSerial__TC_8cpp_html_ac902b0b823624a70811a850c4ebabf39"><div class="ttname"><a href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a></div><div class="ttdeci">void serial(const char *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="PHProbe_8h_source.html#l00039">slopeResponse</a>, and <a class="el" href="PHProbe_8h_source.html#l00038">value</a>.</p>
@@ -439,13 +453,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00104">104</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                     {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,High,&quot;</span> + String(highpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00105">105</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                                     {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[17];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Cal,High,%.3f\r&quot;</span>, highpoint);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  Serial1.print(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="PHCalibrationHigh_8cpp_source.html#l00009">PHCalibrationHigh::setValue()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00067">unittest()</a>.</p>
 
 </div>
@@ -466,13 +482,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00110">110</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                   {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,low,&quot;</span> + String(lowpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00111">111</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                                   {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[16];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Cal,low,%.3f\r&quot;</span>, lowpoint);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  Serial1.print(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="PHCalibrationLow_8cpp_source.html#l00012">PHCalibrationLow::setValue()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00049">unittest()</a>.</p>
 
 </div>
@@ -493,13 +511,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00116">116</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                                   {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  fullCommand = <span class="stringliteral">&quot;Cal,mid,&quot;</span> + String(midpoint, 3) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00117">117</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                   {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[16];</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;Cal,mid,%.3f\r&quot;</span>, midpoint);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  Serial1.print(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="PHCalibrationMid_8cpp_source.html#l00012">PHCalibrationMid::setValue()</a>, and <a class="el" href="PHProbeTest_8cpp_source.html#l00058">unittest()</a>.</p>
 
 </div>
@@ -520,20 +540,19 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00092">92</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                          {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">const</span> String PARTIAL_COMMAND = <span class="stringliteral">&quot;T,&quot;</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  String fullCommand;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">if</span> (temperature &gt; 0 &amp;&amp; temperature &lt; 100) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    fullCommand = PARTIAL_COMMAND + String(temperature, 2) + <span class="stringliteral">&quot;\r&quot;</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    fullCommand = PARTIAL_COMMAND + <span class="stringliteral">&quot;20\r&quot;</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - %s&quot;</span>, fullCommand.c_str());</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  Serial1.print(fullCommand);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHProbe_8cpp_source.html#l00094">94</a> of file <a class="el" href="PHProbe_8cpp_source.html">PHProbe.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                          {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[10];</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span> (temperature &gt; 0 &amp;&amp; temperature &lt; 100) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;T,%.2f\r&quot;</span>, temperature);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    snprintf(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>), <span class="stringliteral">&quot;T,20\r&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#ac902b0b823624a70811a850c4ebabf39">serial</a>(<span class="stringliteral">&quot;PHProbe::setTemperatureCompensation) - %s&quot;</span>, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  Serial1.print(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);  <span class="comment">// send that string to the Atlas Scientific product</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, and <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PHProbeTest_8cpp_source.html#l00034">unittest()</a>.</p>
 
@@ -567,8 +586,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abf04b935ac5a398966e000e35fed275c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf04b935ac5a398966e000e35fed275c">&#9670;&nbsp;</a></span>slopeResponse</h2>
+<a id="ae67c2cdbf1e91fe8d3ab7476d40276ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67c2cdbf1e91fe8d3ab7476d40276ea">&#9670;&nbsp;</a></span>slopeResponse</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,7 +596,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String PHProbe::slopeResponse = &quot;&quot;</td>
+          <td class="memname">char PHProbe::slopeResponse[32] = &quot;&quot;</td>
         </tr>
       </table>
   </td>
@@ -589,7 +608,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHProbe_8h_source.html#l00039">39</a> of file <a class="el" href="PHProbe_8h_source.html">PHProbe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHProbe_8cpp_source.html#l00046">getSlope()</a>, <a class="el" href="PHProbe_8h_source.html#l00022">getSlopeResponse()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00041">sendSlopeRequest()</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00058">serialEvent1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHProbe_8cpp_source.html#l00047">getSlope()</a>, <a class="el" href="PHProbe_8h_source.html#l00022">getSlopeResponse()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00041">sendSlopeRequest()</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00059">serialEvent1()</a>.</p>
 
 </div>
 </div>
@@ -615,7 +634,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHProbe_8h_source.html#l00038">38</a> of file <a class="el" href="PHProbe_8h_source.html">PHProbe.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHProbe_8h_source.html#l00019">getPh()</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00058">serialEvent1()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHProbe_8h_source.html#l00019">getPh()</a>, and <a class="el" href="PHProbe_8cpp_source.html#l00059">serialEvent1()</a>.</p>
 
 </div>
 </div>
