@@ -76,19 +76,53 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EthernetServer__TC_8h.html">Devices/EthernetServer_TC.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="EthernetServerTest_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">   11</a></span>&#160;<a class="code" href="EthernetServerTest_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a>(<a class="code" href="namespacetest.html">test</a>) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="EthernetServerTest_8cpp.html#a06f4e30fe4e8dbe01cd10f91e4f824d3">   11</a></span>&#160;<a class="code" href="EthernetServerTest_8cpp.html#a06f4e30fe4e8dbe01cd10f91e4f824d3">unittest</a>(basic) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classEthernetServer__TC.html">EthernetServer_TC</a>* server = <a class="code" href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a3ba6ea9591201d7935ff53375abc3bb4">className</a>());</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;unittest_main()</div>
-<div class="ttc" id="aEthernetServerTest_8cpp_html_a8a6cf13ae9f1d45784d14115e35f17a5"><div class="ttname"><a href="EthernetServerTest_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a></div><div class="ttdeci">unittest(test)</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServerTest_8cpp_source.html#l00011">EthernetServerTest.cpp:11</a></div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  EthernetClient_CI client;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  assertEqual(<span class="stringliteral">&quot;EthernetServer_TC&quot;</span>, server-&gt;<a class="code" href="classEthernetServer__TC.html#a3ba6ea9591201d7935ff53375abc3bb4">className</a>());</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  assertEqual(80, server-&gt;getPort());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  server-&gt;setHasClientCalling(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  delay(1);        <span class="comment">// so that start time is not zero!</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  server-&gt;<a class="code" href="classEthernetServer__TC.html#a4c043523339a0594f398292a9c05182e">loop</a>();  <span class="comment">// accept connection</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  client = server-&gt;getClient();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  assertTrue(client);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  assertEqual(0, client.writeBuffer()-&gt;size());</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> request[] =</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="stringliteral">&quot;GET /echo?value=%22foo%22 HTTP/1.1\r\n&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="stringliteral">&quot;Host: localhost:80\r\n&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="stringliteral">&quot;Accept: text/plain;charset=UTF-8\r\n&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="stringliteral">&quot;Accept-Encoding: identity\r\n&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="stringliteral">&quot;Accept-Language: en-US\r\n&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  client.pushToReadBuffer(request);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  server-&gt;<a class="code" href="classEthernetServer__TC.html#a4c043523339a0594f398292a9c05182e">loop</a>();  <span class="comment">// generate response</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  deque&lt;uint8_t&gt;* pBuffer = client.writeBuffer();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  assertTrue(pBuffer-&gt;size() &gt; 100);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  String response;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">while</span> (!pBuffer-&gt;empty()) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    response.concat(pBuffer-&gt;front());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    pBuffer-&gt;pop_front();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> expectedResponse[] =</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="stringliteral">&quot;HTTP/1.1 200 OK\r\n&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="stringliteral">&quot;Content-Type: text/plain;charset=UTF-8\r\n&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="stringliteral">&quot;Content-Encoding: identity\r\n&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="stringliteral">&quot;Content-Language: en-US\r\n&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="stringliteral">&quot;Content-Length: 3\r\n&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="stringliteral">&quot;\r\n&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="stringliteral">&quot;foo&quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  assertEqual(expectedResponse, response);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  client.stop();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  server-&gt;<a class="code" href="classEthernetServer__TC.html#a4c043523339a0594f398292a9c05182e">loop</a>();  <span class="comment">// notify server that client stopped</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;unittest_main()</div>
+<div class="ttc" id="aEthernetServerTest_8cpp_html_a06f4e30fe4e8dbe01cd10f91e4f824d3"><div class="ttname"><a href="EthernetServerTest_8cpp.html#a06f4e30fe4e8dbe01cd10f91e4f824d3">unittest</a></div><div class="ttdeci">unittest(basic)</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServerTest_8cpp_source.html#l00011">EthernetServerTest.cpp:11</a></div></div>
 <div class="ttc" id="aEthernetServer__TC_8h_html"><div class="ttname"><a href="EthernetServer__TC_8h.html">EthernetServer_TC.h</a></div></div>
-<div class="ttc" id="aclassEthernetServer__TC_html"><div class="ttname"><a href="classEthernetServer__TC.html">EthernetServer_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00015">EthernetServer_TC.h:15</a></div></div>
-<div class="ttc" id="aclassEthernetServer__TC_html_a1dd22791e14ccd4ed5381470f29f470e"><div class="ttname"><a href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a></div><div class="ttdeci">static EthernetServer_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00012">EthernetServer_TC.cpp:12</a></div></div>
-<div class="ttc" id="aclassEthernetServer__TC_html_a3ba6ea9591201d7935ff53375abc3bb4"><div class="ttname"><a href="classEthernetServer__TC.html#a3ba6ea9591201d7935ff53375abc3bb4">EthernetServer_TC::className</a></div><div class="ttdeci">const char * className() const</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00020">EthernetServer_TC.h:20</a></div></div>
-<div class="ttc" id="anamespacetest_html"><div class="ttname"><a href="namespacetest.html">test</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8py_source.html#l00001">test.py:1</a></div></div>
+<div class="ttc" id="aclassEthernetServer__TC_html"><div class="ttname"><a href="classEthernetServer__TC.html">EthernetServer_TC</a></div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00017">EthernetServer_TC.h:17</a></div></div>
+<div class="ttc" id="aclassEthernetServer__TC_html_a1dd22791e14ccd4ed5381470f29f470e"><div class="ttname"><a href="classEthernetServer__TC.html#a1dd22791e14ccd4ed5381470f29f470e">EthernetServer_TC::instance</a></div><div class="ttdeci">static EthernetServer_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00017">EthernetServer_TC.cpp:17</a></div></div>
+<div class="ttc" id="aclassEthernetServer__TC_html_a3ba6ea9591201d7935ff53375abc3bb4"><div class="ttname"><a href="classEthernetServer__TC.html#a3ba6ea9591201d7935ff53375abc3bb4">EthernetServer_TC::className</a></div><div class="ttdeci">const char * className() const</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8h_source.html#l00022">EthernetServer_TC.h:22</a></div></div>
+<div class="ttc" id="aclassEthernetServer__TC_html_a4c043523339a0594f398292a9c05182e"><div class="ttname"><a href="classEthernetServer__TC.html#a4c043523339a0594f398292a9c05182e">EthernetServer_TC::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00117">EthernetServer_TC.cpp:117</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
