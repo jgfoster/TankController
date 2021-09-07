@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resetlcdscreen_617',['ResetLCDScreen',['../classResetLCDScreen.html',1,'']]]
+  ['resetlcdscreen_615',['ResetLCDScreen',['../classResetLCDScreen.html',1,'']]]
 ];

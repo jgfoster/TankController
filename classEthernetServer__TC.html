@@ -140,7 +140,7 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:aab169adb6cf936d5f06217bf01949119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classEthernetServer__TC.html">EthernetServer_TC</a> provides wrapper for web server for <a class="el" href="namespaceTankController.html">TankController</a></p>
+<div class="textblock"><p><a class="el" href="classEthernetServer__TC.html">EthernetServer_TC</a> provides wrapper for web server for <a class="el" href="classTankController.html">TankController</a></p>
 <p>If running in test mode, superclass = EthernetServer_CI </p>
 
 <p class="definition">Definition at line <a class="el" href="EthernetServer__TC_8h_source.html#l00017">17</a> of file <a class="el" href="EthernetServer__TC_8h_source.html">EthernetServer_TC.h</a>.</p>
@@ -342,7 +342,7 @@ Static Private Attributes</h2></td></tr>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classEthernetServer__TC.html#a463046a9ef70f22f338487693da9c7d8">file</a>.close();</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="classEthernetServer__TC.html#a81bd7a7926a84c394945efe331080dd1">client</a>.stop();</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classEthernetServer__TC.html#aa354d90ad8d3dec2db2484457322a967">state</a> = <a class="code" href="EthernetServer__TC_8h.html#ac57d45241aef37e9555a010a7dbe48eca96c582a5af213ca7fb34f970d83875f5">NOT_CONNECTED</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;write = %lu; freeMemory = %i&quot;</span>), totalBytes, <a class="code" href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a>()-&gt;freeMemory());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;write = %lu; freeMemory = %i&quot;</span>), totalBytes, <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>()-&gt;freeMemory());</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;timeInRead = %lu; timeInWrite = %lu; timeInFlush = %lu&quot;</span>), timeInRead, timeInWrite, timeInFlush);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  wdt_enable(WDTO_8S);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -350,9 +350,9 @@ Static Private Attributes</h2></td></tr>
 <div class="ttc" id="aclassEthernetServer__TC_html_a463046a9ef70f22f338487693da9c7d8"><div class="ttname"><a href="classEthernetServer__TC.html#a463046a9ef70f22f338487693da9c7d8">EthernetServer_TC::file</a></div><div class="ttdeci">bool file()</div><div class="ttdef"><b>Definition:</b> <a href="EthernetServer__TC_8cpp_source.html#l00052">EthernetServer_TC.cpp:52</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_a57c8913b739afef10f0ec8f0f22df107"><div class="ttname"><a href="classSD__TC.html#a57c8913b739afef10f0ec8f0f22df107">SD_TC::open</a></div><div class="ttdeci">File open(const char *path, oflag_t oflag=0x00)</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00091">SD_TC.cpp:91</a></div></div>
 <div class="ttc" id="aclassSD__TC_html_adee0823bfc81cc5ca3e50c665d12c055"><div class="ttname"><a href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a></div><div class="ttdeci">static SD_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="SD__TC_8cpp_source.html#l00014">SD_TC.cpp:14</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a1931963d26969fb6db8e4bd7302efe2c"><div class="ttname"><a href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib.cpp:35</a></div></div>
+<div class="ttc" id="aclassTankController_html_abf33fd357e013dc8f6b4c3f781f26726"><div class="ttname"><a href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a></div><div class="ttdeci">static TankController * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00035">TankController.cpp:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="EthernetServer__TC_8h_source.html#l00034">buffer</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00032">client</a>, <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib::instance()</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">NOT_CONNECTED</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="EthernetServer__TC_8cpp_source.html#l00156">sendHeadersWithSize()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="EthernetServer__TC_8h_source.html#l00033">state</a>.</p>
+<p class="reference">References <a class="el" href="EthernetServer__TC_8h_source.html#l00034">buffer</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00032">client</a>, <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">NOT_CONNECTED</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="EthernetServer__TC_8cpp_source.html#l00156">sendHeadersWithSize()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="EthernetServer__TC_8h_source.html#l00033">state</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="EthernetServer__TC_8cpp_source.html#l00106">get()</a>.</p>
 
@@ -436,7 +436,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EthernetServer__TC_8h_source.html#l00029">_instance</a>, and <a class="el" href="EthernetServer__TC_8cpp_source.html#l00028">EthernetServer_TC()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00151">TankControllerLib::loop()</a>, and <a class="el" href="EthernetServerTest_8cpp_source.html#l00011">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankController_8cpp_source.html#l00151">TankController::loop()</a>, and <a class="el" href="EthernetServerTest_8cpp_source.html#l00011">unittest()</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ Static Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EthernetServer__TC_8h_source.html#l00034">buffer</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00035">bufferContentsSize</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00032">client</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00036">connectedAt</a>, <a class="el" href="EthernetServer__TC_8cpp_source.html#l00106">get()</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">GET_REQUEST</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">HAS_REQUEST</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">NOT_CONNECTED</a>, <a class="el" href="EthernetServer__TC_8h_source.html#l00010">READ_REQUEST</a>, and <a class="el" href="EthernetServer__TC_8h_source.html#l00033">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TankControllerLib_8cpp_source.html#l00151">TankControllerLib::loop()</a>, and <a class="el" href="EthernetServerTest_8cpp_source.html#l00011">unittest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TankController_8cpp_source.html#l00151">TankController::loop()</a>, and <a class="el" href="EthernetServerTest_8cpp_source.html#l00011">unittest()</a>.</p>
 
 </div>
 </div>

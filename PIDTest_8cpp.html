@@ -80,27 +80,27 @@ $(function() {
 <code>#include &quot;<a class="el" href="Serial__TC_8h_source.html">Devices/Serial_TC.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PHCalibrationHigh_8h_source.html">PHCalibrationHigh.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TC__util_8h_source.html">TC_util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TankController_8h_source.html">TankController.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PIDTest.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="PIDTest_8cpp__incl.png" border="0" usemap="#atest_2PIDTest_8cpp" alt=""/></div>
 <map name="atest_2PIDTest_8cpp" id="atest_2PIDTest_8cpp">
 <area shape="rect" title=" " alt="" coords="428,5,548,32"/>
-<area shape="rect" title=" " alt="" coords="581,379,657,405"/>
+<area shape="rect" title=" " alt="" coords="579,379,655,405"/>
 <area shape="rect" title=" " alt="" coords="44,80,177,107"/>
 <area shape="rect" title=" " alt="" coords="213,155,288,181"/>
 <area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="407,80,569,107"/>
 <area shape="rect" href="PID__TC_8h.html" title=" " alt="" coords="253,80,382,107"/>
-<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="495,304,635,331"/>
+<area shape="rect" href="Serial__TC_8h.html" title=" " alt="" coords="494,304,634,331"/>
 <area shape="rect" href="PHCalibrationHigh_8h.html" title=" " alt="" coords="644,80,783,107"/>
-<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="898,155,971,181"/>
-<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="867,80,1002,107"/>
-<area shape="rect" title=" " alt="" coords="495,155,566,181"/>
+<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="895,155,969,181"/>
+<area shape="rect" href="TankController_8h.html" title=" " alt="" coords="874,80,990,107"/>
+<area shape="rect" title=" " alt="" coords="494,155,565,181"/>
 <area shape="rect" href="PHCalibration_8h.html" title=" " alt="" coords="657,155,769,181"/>
-<area shape="rect" href="PHProbe_8h.html" title=" " alt="" coords="603,229,739,256"/>
-<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="763,229,923,256"/>
-<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="757,304,835,331"/>
+<area shape="rect" href="PHProbe_8h.html" title=" " alt="" coords="601,229,737,256"/>
+<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="761,229,921,256"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="756,304,833,331"/>
 </map>
 </div>
 </div>
@@ -194,8 +194,8 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="PIDTest_8cpp_source.html#l00060">60</a> of file <a class="el" href="PIDTest_8cpp_source.html">PIDTest.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                   {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// set UI to one of the calibration states</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a> *<a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a> = <a class="code" href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">setNextState</a>(<span class="keyword">new</span> <a class="code" href="classPHCalibrationHigh.html">PHCalibrationHigh</a>(<a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="namespaceTankController.html">TankController</a> *<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a> = <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<span class="keyword">new</span> <a class="code" href="classPHCalibrationHigh.html">PHCalibrationHigh</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>), <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classPID__TC.html">PID_TC</a> *pPID = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  pPID-&gt;<a class="code" href="classPID__TC.html#a258f1f59402f09bc8c78b59d43db29de">setTunings</a>(2, 5, 1);</div>
@@ -215,13 +215,13 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  assertEqual(0.0, output);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="ttc" id="aMenuTest_8cpp_html_a22694a8fab4db4814d370750d9dfdc13"><div class="ttname"><a href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
+<div class="ttc" id="aMenuTest_8cpp_html_aff1ed99815bb5701964eebd1565235d3"><div class="ttname"><a href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a></div><div class="ttdeci">TankController * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
 <div class="ttc" id="aclassPHCalibrationHigh_html"><div class="ttname"><a href="classPHCalibrationHigh.html">PHCalibrationHigh</a></div><div class="ttdef"><b>Definition:</b> <a href="PHCalibrationHigh_8h_source.html#l00009">PHCalibrationHigh.h:9</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00012">TankControllerLib.h:12</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00180">TankControllerLib.cpp:180</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a1931963d26969fb6db8e4bd7302efe2c"><div class="ttname"><a href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib.cpp:35</a></div></div>
+<div class="ttc" id="aclassTankController_html_ab33240eb3f712e0dd82116770cbbebbb"><div class="ttname"><a href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">TankController::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00180">TankController.cpp:180</a></div></div>
+<div class="ttc" id="aclassTankController_html_abf33fd357e013dc8f6b4c3f781f26726"><div class="ttname"><a href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a></div><div class="ttdeci">static TankController * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00035">TankController.cpp:35</a></div></div>
+<div class="ttc" id="anamespaceTankController_html"><div class="ttname"><a href="namespaceTankController.html">TankController</a></div><div class="ttdef"><b>Definition:</b> <a href="TankController_8py_source.html#l00001">TankController.py:1</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00062">PID_TC::computeOutput()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00180">TankControllerLib::setNextState()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00101">PID_TC::setTunings()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00062">PID_TC::computeOutput()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00180">TankController::setNextState()</a>, <a class="el" href="PID__TC_8cpp_source.html#l00101">PID_TC::setTunings()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
 
 </div>
 </div>

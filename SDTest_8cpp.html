@@ -77,7 +77,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="DateTime__TC_8h_source.html">DateTime_TC.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SD__TC_8h_source.html">SD_TC.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TC__util_8h_source.html">TC_util.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="TankControllerLib_8h_source.html">TankControllerLib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TankController_8h_source.html">TankController.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="PHCalibrationMid_8h_source.html">UIState/PHCalibrationMid.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SDTest.cpp:</div>
@@ -85,19 +85,19 @@ Include dependency graph for SDTest.cpp:</div>
 <div class="center"><img src="SDTest_8cpp__incl.png" border="0" usemap="#atest_2SDTest_8cpp" alt=""/></div>
 <map name="atest_2SDTest_8cpp" id="atest_2SDTest_8cpp">
 <area shape="rect" title=" " alt="" coords="316,5,432,32"/>
-<area shape="rect" title=" " alt="" coords="450,379,526,405"/>
+<area shape="rect" title=" " alt="" coords="444,379,520,405"/>
 <area shape="rect" title=" " alt="" coords="44,80,177,107"/>
 <area shape="rect" href="DateTime__TC_8h.html" title=" " alt="" coords="201,80,313,107"/>
 <area shape="rect" href="SD__TC_8h.html" title=" " alt="" coords="337,80,412,107"/>
-<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="451,155,524,181"/>
-<area shape="rect" href="TankControllerLib_8h.html" title=" " alt="" coords="487,80,622,107"/>
-<area shape="rect" href="PHCalibrationMid_8h.html" title=" " alt="" coords="646,80,828,107"/>
-<area shape="rect" title=" " alt="" coords="214,155,284,181"/>
-<area shape="rect" title=" " alt="" coords="360,155,426,181"/>
-<area shape="rect" href="PHCalibration_8h.html" title=" " alt="" coords="681,155,793,181"/>
-<area shape="rect" href="PHProbe_8h.html" title=" " alt="" coords="600,304,736,331"/>
-<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="714,229,874,256"/>
-<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="760,304,837,331"/>
+<area shape="rect" href="TC__util_8h.html" title=" " alt="" coords="446,155,519,181"/>
+<area shape="rect" href="TankController_8h.html" title=" " alt="" coords="487,80,603,107"/>
+<area shape="rect" href="PHCalibrationMid_8h.html" title=" " alt="" coords="627,80,810,107"/>
+<area shape="rect" title=" " alt="" coords="208,155,279,181"/>
+<area shape="rect" title=" " alt="" coords="354,155,421,181"/>
+<area shape="rect" href="PHCalibration_8h.html" title=" " alt="" coords="662,155,774,181"/>
+<area shape="rect" href="PHProbe_8h.html" title=" " alt="" coords="594,304,730,331"/>
+<area shape="rect" href="NumberCollectorState_8h.html" title=" " alt="" coords="709,229,869,256"/>
+<area shape="rect" href="UIState_8h.html" title=" " alt="" coords="754,304,832,331"/>
 </map>
 </div>
 </div>
@@ -262,17 +262,17 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SDTest_8cpp_source.html#l00049">49</a> of file <a class="el" href="SDTest_8cpp_source.html">SDTest.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                            {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a> = <a class="code" href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classPHCalibrationMid.html">PHCalibrationMid</a>* <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classPHCalibrationMid.html">PHCalibrationMid</a>(<a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  assertTrue(<a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a84af234d2c13810514c878ca40362d43">isInCalibration</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="namespaceTankController.html">TankController</a>* <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a> = <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classPHCalibrationMid.html">PHCalibrationMid</a>* <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classPHCalibrationMid.html">PHCalibrationMid</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  assertTrue(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">isInCalibration</a>());</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">char</span> data[250];</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> d1(2021, 4, 15);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  d1.setAsCurrent();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  assertFalse(<a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;exists(<span class="stringliteral">&quot;20210415.csv&quot;</span>));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  delay(1000);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  assertTrue(<a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;exists(<span class="stringliteral">&quot;20210415.csv&quot;</span>));</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  File file = <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;<a class="code" href="classSD__TC.html#a57c8913b739afef10f0ec8f0f22df107">open</a>(<span class="stringliteral">&quot;20210415.csv&quot;</span>);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  assertTrue(file.size() &lt; <span class="keyword">sizeof</span>(data));</div>
@@ -286,16 +286,16 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  file.close();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="ttc" id="aMenuTest_8cpp_html_a22694a8fab4db4814d370750d9dfdc13"><div class="ttname"><a href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a></div><div class="ttdeci">TankControllerLib * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
+<div class="ttc" id="aMenuTest_8cpp_html_aff1ed99815bb5701964eebd1565235d3"><div class="ttname"><a href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a></div><div class="ttdeci">TankController * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
 <div class="ttc" id="aclassPHCalibrationMid_html"><div class="ttname"><a href="classPHCalibrationMid.html">PHCalibrationMid</a></div><div class="ttdef"><b>Definition:</b> <a href="PHCalibrationMid_8h_source.html#l00009">PHCalibrationMid.h:9</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html"><div class="ttname"><a href="classTankControllerLib.html">TankControllerLib</a></div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8h_source.html#l00012">TankControllerLib.h:12</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a15063b2395d90ede4306269a5d3de694"><div class="ttname"><a href="classTankControllerLib.html#a15063b2395d90ede4306269a5d3de694">TankControllerLib::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00180">TankControllerLib.cpp:180</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a1931963d26969fb6db8e4bd7302efe2c"><div class="ttname"><a href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a></div><div class="ttdeci">static TankControllerLib * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib.cpp:35</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a231e4bec233ac32a49745f4af710ffe3"><div class="ttname"><a href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">TankControllerLib::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00151">TankControllerLib.cpp:151</a></div></div>
-<div class="ttc" id="aclassTankControllerLib_html_a84af234d2c13810514c878ca40362d43"><div class="ttname"><a href="classTankControllerLib.html#a84af234d2c13810514c878ca40362d43">TankControllerLib::isInCalibration</a></div><div class="ttdeci">bool isInCalibration()</div><div class="ttdef"><b>Definition:</b> <a href="TankControllerLib_8cpp_source.html#l00112">TankControllerLib.cpp:112</a></div></div>
+<div class="ttc" id="aclassTankController_html_a8ff6f45d90270d9d639f331bcb690d5e"><div class="ttname"><a href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">TankController::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00151">TankController.cpp:151</a></div></div>
+<div class="ttc" id="aclassTankController_html_ab295a273164fc64bac81ed6364dbcfc7"><div class="ttname"><a href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">TankController::isInCalibration</a></div><div class="ttdeci">bool isInCalibration()</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00112">TankController.cpp:112</a></div></div>
+<div class="ttc" id="aclassTankController_html_ab33240eb3f712e0dd82116770cbbebbb"><div class="ttname"><a href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">TankController::setNextState</a></div><div class="ttdeci">void setNextState(UIState *newState, bool update=false)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00180">TankController.cpp:180</a></div></div>
+<div class="ttc" id="aclassTankController_html_abf33fd357e013dc8f6b4c3f781f26726"><div class="ttname"><a href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a></div><div class="ttdeci">static TankController * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00035">TankController.cpp:35</a></div></div>
+<div class="ttc" id="anamespaceTankController_html"><div class="ttname"><a href="namespaceTankController.html">TankController</a></div><div class="ttdef"><b>Definition:</b> <a href="TankController_8py_source.html#l00001">TankController.py:1</a></div></div>
 <div class="ttc" id="anamespacetest_html"><div class="ttname"><a href="namespacetest.html">test</a></div><div class="ttdef"><b>Definition:</b> <a href="test_8py_source.html#l00001">test.py:1</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00112">TankControllerLib::isInCalibration()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00151">TankControllerLib::loop()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00081">DateTime_TC::setAsCurrent()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00180">TankControllerLib::setNextState()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
+<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00112">TankController::isInCalibration()</a>, <a class="el" href="TankController_8cpp_source.html#l00151">TankController::loop()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00081">DateTime_TC::setAsCurrent()</a>, <a class="el" href="TankController_8cpp_source.html#l00180">TankController::setNextState()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
 
 </div>
 </div>
@@ -397,13 +397,13 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SDTest_8cpp_source.html#l00025">25</a> of file <a class="el" href="SDTest_8cpp_source.html">SDTest.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                             {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">char</span> data[250];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classTankControllerLib.html">TankControllerLib</a>* <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a> = <a class="code" href="classTankControllerLib.html#a1931963d26969fb6db8e4bd7302efe2c">TankControllerLib::instance</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="namespaceTankController.html">TankController</a>* <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a> = <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classDateTime__TC.html">DateTime_TC</a> d1(2021, 4, 15);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  d1.setAsCurrent();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  assertFalse(<a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;exists(<span class="stringliteral">&quot;20210415.csv&quot;</span>));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  delay(1000);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="MenuTest_8cpp.html#a22694a8fab4db4814d370750d9dfdc13">tc</a>-&gt;<a class="code" href="classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3">loop</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  assertTrue(<a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;exists(<span class="stringliteral">&quot;20210415.csv&quot;</span>));</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  File file = <a class="code" href="classSD__TC.html#adee0823bfc81cc5ca3e50c665d12c055">SD_TC::instance</a>()-&gt;<a class="code" href="classSD__TC.html#a57c8913b739afef10f0ec8f0f22df107">open</a>(<span class="stringliteral">&quot;20210415.csv&quot;</span>);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  assertTrue(file.size() &lt; <span class="keyword">sizeof</span>(data));</div>
@@ -419,7 +419,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  file.close();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00035">TankControllerLib::instance()</a>, <a class="el" href="TankControllerLib_8cpp_source.html#l00151">TankControllerLib::loop()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00081">DateTime_TC::setAsCurrent()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
+<p class="reference">References <a class="el" href="SD__TC_8cpp_source.html#l00014">SD_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00151">TankController::loop()</a>, <a class="el" href="SD__TC_8cpp_source.html#l00091">SD_TC::open()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00081">DateTime_TC::setAsCurrent()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00016">tc</a>.</p>
 
 </div>
 </div>

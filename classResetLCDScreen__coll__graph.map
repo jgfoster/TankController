@@ -1,5 +1,5 @@
 <map id="ResetLCDScreen" name="ResetLCDScreen">
 <area shape="rect" id="node1" title=" " alt="" coords="5,109,128,136"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="92,5,159,32"/>
-<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="153,109,277,136"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="83,5,149,32"/>
+<area shape="rect" id="node3" href="$classTankController.html" title=" " alt="" coords="152,109,259,136"/>
 </map>

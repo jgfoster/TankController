@@ -1,5 +1,5 @@
 <map id="SetCalibrationClear" name="SetCalibrationClear">
 <area shape="rect" id="node1" title=" " alt="" coords="5,109,139,136"/>
-<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="103,5,169,32"/>
-<area shape="rect" id="node3" href="$classTankControllerLib.html" title=" " alt="" coords="163,109,287,136"/>
+<area shape="rect" id="node2" href="$classUIState.html" title=" " alt="" coords="93,5,160,32"/>
+<area shape="rect" id="node3" href="$classTankController.html" title=" " alt="" coords="163,109,269,136"/>
 </map>

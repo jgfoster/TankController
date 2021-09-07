@@ -1,6 +1,6 @@
 <map id="TemperatureCalibration" name="TemperatureCalibration">
 <area shape="rect" id="node1" title=" " alt="" coords="5,185,161,212"/>
 <area shape="rect" id="node2" href="$classNumCollectorState.html" title=" " alt="" coords="17,109,149,136"/>
-<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="113,5,179,32"/>
-<area shape="rect" id="node4" href="$classTankControllerLib.html" title=" " alt="" coords="173,109,297,136"/>
+<area shape="rect" id="node3" href="$classUIState.html" title=" " alt="" coords="105,5,171,32"/>
+<area shape="rect" id="node4" href="$classTankController.html" title=" " alt="" coords="174,109,281,136"/>
 </map>
