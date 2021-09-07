@@ -81,63 +81,67 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TemperatureCalibration_8h.html">TemperatureCalibration.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="TemperatureCalibrationTest_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">   11</a></span>&#160;<a class="code" href="TemperatureCalibrationTest_8cpp.html#a8a6cf13ae9f1d45784d14115e35f17a5">unittest</a>(<a class="code" href="namespacetest.html">test</a>) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="comment">// with no correction, we have a temperature of 10.0</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="classTempProbe__TC.html">TempProbe_TC</a>* <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a> = <a class="code" href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(10.0);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#ab6c74b1b58593dddfcb2220e617a9562">setCorrection</a>(0.0);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  assertEqual(0.0, <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;getCorrectedTemp());</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    delay(1000);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  delay(1000);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">float</span> temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  assertTrue(9.9 &lt;= temp &amp;&amp; temp &lt;= 10.1);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// set UI to TemperatureCalibration state</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="namespaceTankController.html">TankController</a>* <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a> = <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  assertFalse(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">isInCalibration</a>());</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>* <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  assertTrue(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">isInCalibration</a>());</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// UI sets actual temperature to 10.5</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(10.5);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// The new temperature should be 10.5</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">getRawTemperature</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  assertTrue(9.9 &lt;= temp &amp;&amp; temp &lt;= 10.1);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  assertTrue(10.49 &lt;= temp &amp;&amp; temp &lt;= 10.51);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// A new measured temperature should also be adjusted</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(15.5);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    delay(1000);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  delay(1000);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  assertTrue(15.9 &lt;= temp &amp;&amp; temp &lt;= 16.1);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  temp = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2b359d59f8ccc63c29f86f29f5d7ddd6">getCorrectedTemp</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  assertTrue(0.49 &lt; temp &amp;&amp; temp &lt; 0.51);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// test for issue #174</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(16.0);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    delay(1000);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  delay(1000);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  assertEqual(16.0, temp);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;unittest_main()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  GodmodeState* <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a> = GODMODE();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">// with no correction, we have a temperature of 10.0</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classTempProbe__TC.html">TempProbe_TC</a>* <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a> = <a class="code" href="classTempProbe__TC.html#ab1ac81002f8d2e86564804755baca4e8">TempProbe_TC::instance</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(10.0);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#ab6c74b1b58593dddfcb2220e617a9562">setCorrection</a>(0.0);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  assertEqual(0.0, <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;getCorrectedTemp());</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    delay(1000);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  delay(1000);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">float</span> temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  assertTrue(9.9 &lt;= temp &amp;&amp; temp &lt;= 10.1);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">// set UI to TemperatureCalibration state</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="namespaceTankController.html">TankController</a>* <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a> = <a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  assertFalse(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">isInCalibration</a>());</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>* <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  assertTrue(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab295a273164fc64bac81ed6364dbcfc7">isInCalibration</a>());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// UI sets actual temperature to 10.5</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut = <span class="stringliteral">&quot;&quot;</span>;  <span class="comment">// the history of data written</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(10.5);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  assertEqual(<span class="stringliteral">&quot;Set temperature correction to 0.50\r\n&quot;</span>, <a class="code" href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a>-&gt;serialPort[0].dataOut);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// The new temperature should be 10.5</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">getRawTemperature</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  assertTrue(9.9 &lt;= temp &amp;&amp; temp &lt;= 10.1);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  assertTrue(10.49 &lt;= temp &amp;&amp; temp &lt;= 10.51);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// A new measured temperature should also be adjusted</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;setTemperature(15.5);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    delay(1000);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  delay(1000);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  assertTrue(15.9 &lt;= temp &amp;&amp; temp &lt;= 16.1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  temp = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a2b359d59f8ccc63c29f86f29f5d7ddd6">getCorrectedTemp</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  assertTrue(0.49 &lt; temp &amp;&amp; temp &lt; 0.51);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// test for issue #174</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#a8ff6f45d90270d9d639f331bcb690d5e">loop</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="namespacetest.html">test</a> = <span class="keyword">new</span> <a class="code" href="classTemperatureCalibration.html">TemperatureCalibration</a>(<a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a>-&gt;<a class="code" href="classTankController.html#ab33240eb3f712e0dd82116770cbbebbb">setNextState</a>(<a class="code" href="namespacetest.html">test</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="namespacetest.html">test</a>-&gt;setValue(16.0);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 100; ++i) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    delay(1000);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  delay(1000);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  temp = <a class="code" href="PushingBoxTest_8cpp.html#a872595b7f64ee8987ab2003a2c7b4b82">tempProbe</a>-&gt;<a class="code" href="classTempProbe__TC.html#a6c6ebd674045b13c2cb7f249c594f67b">getRunningAverage</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  assertEqual(16.0, temp);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;unittest_main()</div>
+<div class="ttc" id="aBlinkTest_8cpp_html_a1122a0f42fcd5680fe620949e6ee936a"><div class="ttname"><a href="BlinkTest_8cpp.html#a1122a0f42fcd5680fe620949e6ee936a">state</a></div><div class="ttdeci">GodmodeState * state</div><div class="ttdef"><b>Definition:</b> <a href="BlinkTest_8cpp_source.html#l00011">BlinkTest.cpp:11</a></div></div>
 <div class="ttc" id="aEEPROM__TC_8h_html"><div class="ttname"><a href="EEPROM__TC_8h.html">EEPROM_TC.h</a></div></div>
 <div class="ttc" id="aLiquidCrystal__TC_8h_html"><div class="ttname"><a href="LiquidCrystal__TC_8h.html">LiquidCrystal_TC.h</a></div></div>
 <div class="ttc" id="aMenuTest_8cpp_html_aff1ed99815bb5701964eebd1565235d3"><div class="ttname"><a href="MenuTest_8cpp.html#aff1ed99815bb5701964eebd1565235d3">tc</a></div><div class="ttdeci">TankController * tc</div><div class="ttdef"><b>Definition:</b> <a href="MenuTest_8cpp_source.html#l00016">MenuTest.cpp:16</a></div></div>
