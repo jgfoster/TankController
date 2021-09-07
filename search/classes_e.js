@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wait_642',['Wait',['../classWait.html',1,'']]]
+  ['wait_640',['Wait',['../classWait.html',1,'']]]
 ];
