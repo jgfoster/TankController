@@ -88,12 +88,20 @@ Collaboration diagram for PHControl:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e4ea494c465b1c9f0a3a4f0a0685371"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a1e4ea494c465b1c9f0a3a4f0a0685371">getTargetPh</a> ()</td></tr>
 <tr class="separator:a1e4ea494c465b1c9f0a3a4f0a0685371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e736b6a84354c425c2650a0cc9a869c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a9e736b6a84354c425c2650a0cc9a869c">getCurrentPHTarget</a> ()</td></tr>
+<tr class="separator:a9e736b6a84354c425c2650a0cc9a869c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54cf652c6f3d3bb989bc319c480415b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#ac54cf652c6f3d3bb989bc319c480415b">getRampTimeStart</a> ()</td></tr>
+<tr class="separator:ac54cf652c6f3d3bb989bc319c480415b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139ed38a5c2017adf69f94026d0b6294"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a139ed38a5c2017adf69f94026d0b6294">getRampTimeEnd</a> ()</td></tr>
+<tr class="separator:a139ed38a5c2017adf69f94026d0b6294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b68770ec54ae43a7970736c191b8a8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a0b68770ec54ae43a7970736c191b8a8d">getUsePID</a> ()</td></tr>
 <tr class="separator:a0b68770ec54ae43a7970736c191b8a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f06039ac29d90e65e2bbcc4f9b15825"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a3f06039ac29d90e65e2bbcc4f9b15825">isOn</a> ()</td></tr>
 <tr class="separator:a3f06039ac29d90e65e2bbcc4f9b15825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1de89e4c7184a39d837de7917590cb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#aa1de89e4c7184a39d837de7917590cb7">setTargetPh</a> (float newPh)</td></tr>
 <tr class="separator:aa1de89e4c7184a39d837de7917590cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2928705a72da4e7950a2b5a17578272b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a2928705a72da4e7950a2b5a17578272b">setRamp</a> (float newPhRampTime)</td></tr>
+<tr class="separator:a2928705a72da4e7950a2b5a17578272b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa392cf8312f64f14c53d385edfb83db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#aa392cf8312f64f14c53d385edfb83db1">enablePID</a> (bool flag)</td></tr>
 <tr class="separator:aa392cf8312f64f14c53d385edfb83db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8340fe03ddd89a686cacd86e369d32a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a8340fe03ddd89a686cacd86e369d32a0">updateControl</a> (float pH)</td></tr>
@@ -103,6 +111,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5fc105e9feffb9822ab404c7b042804"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classPHControl.html">PHControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#ae5fc105e9feffb9822ab404c7b042804">instance</a> ()</td></tr>
 <tr class="separator:ae5fc105e9feffb9822ab404c7b042804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdab2fe83f389ca46d04a277a07c3eb0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#acdab2fe83f389ca46d04a277a07c3eb0">clearInstance</a> ()</td></tr>
+<tr class="separator:acdab2fe83f389ca46d04a277a07c3eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -121,6 +131,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9889c4c4231282bf3a2010a9e002c3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e3905d560087943ee4bdd74a6193888"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a></td></tr>
 <tr class="separator:a6e3905d560087943ee4bdd74a6193888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8604ac3b672176a8dd6b1c89234fcccb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a></td></tr>
+<tr class="separator:a8604ac3b672176a8dd6b1c89234fcccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68a411d75645be2018c8b27d3f96926"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a></td></tr>
+<tr class="separator:ac68a411d75645be2018c8b27d3f96926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b5f52cce2473c974351ea359f7d471"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a></td></tr>
+<tr class="separator:aa0b5f52cce2473c974351ea359f7d471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1eaad1f4c6d31bbd56b34b9c8b9f56"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a></td></tr>
+<tr class="separator:a8c1eaad1f4c6d31bbd56b34b9c8b9f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c518c84fdbbb8b423bd2947741e29cc"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc">WINDOW_SIZE</a> = 10000</td></tr>
 <tr class="separator:a4c518c84fdbbb8b423bd2947741e29cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848aef84fb4eccca0dd136d62b35297c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a> = true</td></tr>
@@ -158,37 +176,93 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00029">29</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                     {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  pinMode(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, OUTPUT);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  digitalWrite(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf">getPH</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">if</span> (isnan(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>)) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = <a class="code" href="PHControl_8cpp.html#a404b2325e6adbd4bf36d41acf848464a">DEFAULT_PH</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">setPH</a>(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[40];</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  strncpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, (PGM_P)F(<span class="stringliteral">&quot;PHControl with target pH = &quot;</span>), <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  dtostrf(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00037">37</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                     {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  pinMode(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, OUTPUT);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  digitalWrite(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf">getPH</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">if</span> (isnan(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>)) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = <a class="code" href="PHControl_8cpp.html#a404b2325e6adbd4bf36d41acf848464a">DEFAULT_PH</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">setPH</a>(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#aa7030a1c274462afa35d876a4e710abb">getRampTimeEnd</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> == 0xFFFFFFFF || <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> == 0) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a485e4cf0a6088752c96c76312e5c87c7">setRampTimeEnd</a>(<a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a> = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a1aae28e213e90acd76ecf910c94c6704">setRampTimeStart</a>(<a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a> = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#af42098eda13bd511ec5b59dbe47197f0">getRampTimeStart</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a> = <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a0ba6bf684ef844417e0d185d0e6359ca">getRampStartingPH</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[40];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  strncpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, (PGM_P)F(<span class="stringliteral">&quot;PHControl with target pH = &quot;</span>), <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  dtostrf(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="ttc" id="aDateTime__TC_8cpp_html_a5819dbc2d305e99e930c734a0d28bc3b"><div class="ttname"><a href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a></div><div class="ttdeci">char buffer[20]</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00048">DateTime_TC.cpp:48</a></div></div>
-<div class="ttc" id="aPHControl_8cpp_html_a404b2325e6adbd4bf36d41acf848464a"><div class="ttname"><a href="PHControl_8cpp.html#a404b2325e6adbd4bf36d41acf848464a">DEFAULT_PH</a></div><div class="ttdeci">const float DEFAULT_PH</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00010">PHControl.cpp:10</a></div></div>
+<div class="ttc" id="aPHControl_8cpp_html_a404b2325e6adbd4bf36d41acf848464a"><div class="ttname"><a href="PHControl_8cpp.html#a404b2325e6adbd4bf36d41acf848464a">DEFAULT_PH</a></div><div class="ttdeci">const float DEFAULT_PH</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00011">PHControl.cpp:11</a></div></div>
 <div class="ttc" id="aSerial__TC_8cpp_html_a822c3c9e2647d480c6ea4b4d29f77afb"><div class="ttname"><a href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a></div><div class="ttdeci">void serial(const __FlashStringHelper *format...)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8cpp_source.html#l00010">Serial_TC.cpp:10</a></div></div>
 <div class="ttc" id="aTankController_8h_html_af1395b3b786599e1f6ccf55cb73d9f4b"><div class="ttname"><a href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a></div><div class="ttdeci">#define TURN_SOLENOID_OFF</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8h_source.html#l00006">TankController.h:6</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a0ba6bf684ef844417e0d185d0e6359ca"><div class="ttname"><a href="classEEPROM__TC.html#a0ba6bf684ef844417e0d185d0e6359ca">EEPROM_TC::getRampStartingPH</a></div><div class="ttdeci">float getRampStartingPH()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00117">EEPROM_TC.cpp:117</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_a101b5051b98f0a9fa12559da965d6dbf"><div class="ttname"><a href="classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf">EEPROM_TC::getPH</a></div><div class="ttdeci">float getPH()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00096">EEPROM_TC.cpp:96</a></div></div>
-<div class="ttc" id="aclassEEPROM__TC_html_a8efc7372197ebe3ba6222676a1273b98"><div class="ttname"><a href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">EEPROM_TC::setPH</a></div><div class="ttdeci">void setPH(float value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00165">EEPROM_TC.cpp:165</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a1aae28e213e90acd76ecf910c94c6704"><div class="ttname"><a href="classEEPROM__TC.html#a1aae28e213e90acd76ecf910c94c6704">EEPROM_TC::setRampTimeStart</a></div><div class="ttdeci">void setRampTimeStart(uint32_t value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00189">EEPROM_TC.cpp:189</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a485e4cf0a6088752c96c76312e5c87c7"><div class="ttname"><a href="classEEPROM__TC.html#a485e4cf0a6088752c96c76312e5c87c7">EEPROM_TC::setRampTimeEnd</a></div><div class="ttdeci">void setRampTimeEnd(uint32_t value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00192">EEPROM_TC.cpp:192</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a8efc7372197ebe3ba6222676a1273b98"><div class="ttname"><a href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">EEPROM_TC::setPH</a></div><div class="ttdeci">void setPH(float value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00174">EEPROM_TC.cpp:174</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_aa7030a1c274462afa35d876a4e710abb"><div class="ttname"><a href="classEEPROM__TC.html#aa7030a1c274462afa35d876a4e710abb">EEPROM_TC::getRampTimeEnd</a></div><div class="ttdeci">uint32_t getRampTimeEnd()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00114">EEPROM_TC.cpp:114</a></div></div>
 <div class="ttc" id="aclassEEPROM__TC_html_abbfd37647f8204f6af70ed14ee2e439a"><div class="ttname"><a href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a></div><div class="ttdeci">static EEPROM_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC.cpp:14</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_af42098eda13bd511ec5b59dbe47197f0"><div class="ttname"><a href="classEEPROM__TC.html#af42098eda13bd511ec5b59dbe47197f0">EEPROM_TC::getRampTimeStart</a></div><div class="ttdeci">uint32_t getRampTimeStart()</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00111">EEPROM_TC.cpp:111</a></div></div>
 <div class="ttc" id="aclassPHControl_html_a6e3905d560087943ee4bdd74a6193888"><div class="ttname"><a href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">PHControl::targetPh</a></div><div class="ttdeci">float targetPh</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00014">PHControl.h:14</a></div></div>
 <div class="ttc" id="aclassPHControl_html_a7543d86ce3f12d6d3525b152c809301a"><div class="ttname"><a href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PHControl::PH_CONTROL_PIN</a></div><div class="ttdeci">const uint16_t PH_CONTROL_PIN</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00012">PHControl.h:12</a></div></div>
+<div class="ttc" id="aclassPHControl_html_a8c1eaad1f4c6d31bbd56b34b9c8b9f56"><div class="ttname"><a href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">PHControl::rampTimeEnd</a></div><div class="ttdeci">uint32_t rampTimeEnd</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00018">PHControl.h:18</a></div></div>
+<div class="ttc" id="aclassPHControl_html_aa0b5f52cce2473c974351ea359f7d471"><div class="ttname"><a href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">PHControl::rampTimeStart</a></div><div class="ttdeci">uint32_t rampTimeStart</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00017">PHControl.h:17</a></div></div>
+<div class="ttc" id="aclassPHControl_html_ac68a411d75645be2018c8b27d3f96926"><div class="ttname"><a href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">PHControl::rampStartingPh</a></div><div class="ttdeci">float rampStartingPh</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00016">PHControl.h:16</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="PHControl_8cpp_source.html#l00010">DEFAULT_PH</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00096">EEPROM_TC::getPH()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PHControl_8h_source.html#l00012">PH_CONTROL_PIN</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00165">EEPROM_TC::setPH()</a>, <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>, and <a class="el" href="TankController_8h_source.html#l00006">TURN_SOLENOID_OFF</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="PHControl_8cpp_source.html#l00011">DEFAULT_PH</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00096">EEPROM_TC::getPH()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00117">EEPROM_TC::getRampStartingPH()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00114">EEPROM_TC::getRampTimeEnd()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00111">EEPROM_TC::getRampTimeStart()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PHControl_8h_source.html#l00012">PH_CONTROL_PIN</a>, <a class="el" href="PHControl_8h_source.html#l00016">rampStartingPh</a>, <a class="el" href="PHControl_8h_source.html#l00018">rampTimeEnd</a>, <a class="el" href="PHControl_8h_source.html#l00017">rampTimeStart</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00174">EEPROM_TC::setPH()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00192">EEPROM_TC::setRampTimeEnd()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00189">EEPROM_TC::setRampTimeStart()</a>, <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>, and <a class="el" href="TankController_8h_source.html#l00006">TURN_SOLENOID_OFF</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00022">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00023">instance()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acdab2fe83f389ca46d04a277a07c3eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdab2fe83f389ca46d04a277a07c3eb0">&#9670;&nbsp;</a></span>clearInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PHControl::clearInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00030">30</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                              {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">delete</span> <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a15ed4eada2c5bc517a9d19fabfa7bf6f"><div class="ttname"><a href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">PHControl::_instance</a></div><div class="ttdeci">static PHControl * _instance</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00008">PHControl.h:8</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00008">_instance</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControlTest_8cpp_source.html#l00172">unittest()</a>.</p>
+
+</div>
+</div>
 <a id="aa392cf8312f64f14c53d385edfb83db1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa392cf8312f64f14c53d385edfb83db1">&#9670;&nbsp;</a></span>enablePID()</h2>
 
@@ -205,17 +279,120 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00056">56</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                   {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a> = flag;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// save to EEPROM?</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(flag ? F(<span class="stringliteral">&quot;enable PID&quot;</span>) : F(<span class="stringliteral">&quot;disable PID&quot;</span>));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="ttc" id="aclassPHControl_html_a848aef84fb4eccca0dd136d62b35297c"><div class="ttname"><a href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">PHControl::usePID</a></div><div class="ttdeci">bool usePID</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00016">PHControl.h:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00096">96</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                   {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a> = flag;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// save to EEPROM?</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(flag ? F(<span class="stringliteral">&quot;enable PID&quot;</span>) : F(<span class="stringliteral">&quot;disable PID&quot;</span>));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a848aef84fb4eccca0dd136d62b35297c"><div class="ttname"><a href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">PHControl::usePID</a></div><div class="ttdeci">bool usePID</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00020">PHControl.h:20</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="PHControl_8h_source.html#l00016">usePID</a>.</p>
+<p class="reference">References <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, and <a class="el" href="PHControl_8h_source.html#l00020">usePID</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="PHControlTest_8cpp_source.html#l00030">reset()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00014">EnablePID::setValue()</a>, <a class="el" href="SeePIDConstantsTest_8cpp_source.html#l00012">unittest()</a>, and <a class="el" href="PushingBoxTest_8cpp_source.html#l00020">unittest_setup()</a>.</p>
+
+</div>
+</div>
+<a id="a9e736b6a84354c425c2650a0cc9a869c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e736b6a84354c425c2650a0cc9a869c">&#9670;&nbsp;</a></span>getCurrentPHTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PHControl::getCurrentPHTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00029">29</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                             {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<div class="ttc" id="aclassPHControl_html_a8604ac3b672176a8dd6b1c89234fcccb"><div class="ttname"><a href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">PHControl::currentPHTarget</a></div><div class="ttdeci">float currentPHTarget</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00015">PHControl.h:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00015">currentPHTarget</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControlTest_8cpp_source.html#l00172">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="a139ed38a5c2017adf69f94026d0b6294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139ed38a5c2017adf69f94026d0b6294">&#9670;&nbsp;</a></span>getRampTimeEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PHControl::getRampTimeEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00035">35</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00018">rampTimeEnd</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SetPHSetPoint_8cpp_source.html#l00015">SetPHSetPoint::getCurrentValue()</a>.</p>
+
+</div>
+</div>
+<a id="ac54cf652c6f3d3bb989bc319c480415b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54cf652c6f3d3bb989bc319c480415b">&#9670;&nbsp;</a></span>getRampTimeStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PHControl::getRampTimeStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00032">32</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                              {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00017">rampTimeStart</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SetPHSetPoint_8cpp_source.html#l00015">SetPHSetPoint::getCurrentValue()</a>.</p>
 
 </div>
 </div>
@@ -242,14 +419,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00021">21</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                      {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00026">26</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                      {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SetPHSetPoint_8cpp_source.html#l00010">SetPHSetPoint::getCurrentValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SetPHSetPoint_8cpp_source.html#l00015">SetPHSetPoint::getCurrentValue()</a>.</p>
 
 </div>
 </div>
@@ -276,12 +453,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00024">24</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                   {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00038">38</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00016">usePID</a>.</p>
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00020">usePID</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="EnablePID_8cpp_source.html#l00010">EnablePID::getCurrentValue()</a>.</p>
 
@@ -311,19 +488,18 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>static member function to return singleton </p>
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00022">22</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                               {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPHControl.html#a3a30ca8641e813c97122deae74599a10">PHControl</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="aclassPHControl_html_a15ed4eada2c5bc517a9d19fabfa7bf6f"><div class="ttname"><a href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">PHControl::_instance</a></div><div class="ttdeci">static PHControl * _instance</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00008">PHControl.h:8</a></div></div>
-<div class="ttc" id="aclassPHControl_html_a3a30ca8641e813c97122deae74599a10"><div class="ttname"><a href="classPHControl.html#a3a30ca8641e813c97122deae74599a10">PHControl::PHControl</a></div><div class="ttdeci">PHControl()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00029">PHControl.cpp:29</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00023">23</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                               {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a> = <span class="keyword">new</span> <a class="code" href="classPHControl.html#a3a30ca8641e813c97122deae74599a10">PHControl</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classPHControl.html#a15ed4eada2c5bc517a9d19fabfa7bf6f">_instance</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="aclassPHControl_html_a3a30ca8641e813c97122deae74599a10"><div class="ttname"><a href="classPHControl.html#a3a30ca8641e813c97122deae74599a10">PHControl::PHControl</a></div><div class="ttdeci">PHControl()</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8cpp_source.html#l00037">PHControl.cpp:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00008">_instance</a>, and <a class="el" href="PHControl_8cpp_source.html#l00029">PHControl()</a>.</p>
+<p class="reference">References <a class="el" href="PHControl_8h_source.html#l00008">_instance</a>, and <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="EnablePID_8cpp_source.html#l00010">EnablePID::getCurrentValue()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00010">SetPHSetPoint::getCurrentValue()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00218">MainMenu::idle()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00048">SeePIDConstants::loadPID()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00014">EnablePID::setValue()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00014">SetPHSetPoint::setValue()</a>, <a class="el" href="TankController_8cpp_source.html#l00047">TankController::TankController()</a>, <a class="el" href="EnablePIDTest_8cpp_source.html#l00009">unittest()</a>, <a class="el" href="MenuTest_8cpp_source.html#l00026">unittest_setup()</a>, <a class="el" href="TankController_8cpp_source.html#l00212">TankController::updateControls()</a>, and <a class="el" href="TankController_8cpp_source.html#l00245">TankController::writeDataToSD()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="EnablePID_8cpp_source.html#l00010">EnablePID::getCurrentValue()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00015">SetPHSetPoint::getCurrentValue()</a>, <a class="el" href="MainMenu_8cpp_source.html#l00218">MainMenu::idle()</a>, <a class="el" href="SeePIDConstants_8cpp_source.html#l00048">SeePIDConstants::loadPID()</a>, <a class="el" href="EnablePID_8cpp_source.html#l00014">EnablePID::setValue()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00025">SetPHSetPoint::setValue()</a>, <a class="el" href="TankController_8cpp_source.html#l00047">TankController::TankController()</a>, <a class="el" href="EnablePIDTest_8cpp_source.html#l00009">unittest()</a>, <a class="el" href="MenuTest_8cpp_source.html#l00026">unittest_setup()</a>, <a class="el" href="TankController_8cpp_source.html#l00212">TankController::updateControls()</a>, and <a class="el" href="TankController_8cpp_source.html#l00245">TankController::writeDataToSD()</a>.</p>
 
 </div>
 </div>
@@ -342,15 +518,64 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00062">62</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                     {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">return</span> digitalRead(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>) == <a class="code" href="TankController_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00102">102</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                     {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">return</span> digitalRead(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>) == <a class="code" href="TankController_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 <div class="ttc" id="aTankController_8h_html_a8f4f5928dac06303977eacf87e9531fa"><div class="ttname"><a href="TankController_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a></div><div class="ttdeci">#define TURN_SOLENOID_ON</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8h_source.html#l00007">TankController.h:7</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="PHControl_8h_source.html#l00012">PH_CONTROL_PIN</a>, and <a class="el" href="TankController_8h_source.html#l00007">TURN_SOLENOID_ON</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MainMenu_8cpp_source.html#l00218">MainMenu::idle()</a>, and <a class="el" href="PHControlTest_8cpp_source.html#l00050">unittest()</a>.</p>
+
+</div>
+</div>
+<a id="a2928705a72da4e7950a2b5a17578272b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2928705a72da4e7950a2b5a17578272b">&#9670;&nbsp;</a></span>setRamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PHControl::setRamp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>newPhRampTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00074">74</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">if</span> (newPhRampTimeHours &gt; 0) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[40];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">float</span> currentRampTime = <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> - <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    strncpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, (PGM_P)F(<span class="stringliteral">&quot;change ramp time from &quot;</span>), <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    dtostrf(currentRampTime, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    strcpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)), (PGM_P)F(<span class="stringliteral">&quot; to &quot;</span>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    dtostrf(newPhRampTimeHours, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a> = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().secondstime();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> = <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a> + (newPhRampTimeHours * 3600);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a> = <a class="code" href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a>()-&gt;<a class="code" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">getPh</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a1aae28e213e90acd76ecf910c94c6704">setRampTimeStart</a>(<a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a485e4cf0a6088752c96c76312e5c87c7">setRampTimeEnd</a>(<a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a50faee203d04bd201e02fe13f50309b7">setRampStartingPH</a>(<a class="code" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a485e4cf0a6088752c96c76312e5c87c7">setRampTimeEnd</a>(<a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<span class="stringliteral">&quot;set ramp time to 0&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="ttc" id="aclassDateTime__TC_html_ae1b05da93afda7c496482990198b14e1"><div class="ttname"><a href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a></div><div class="ttdeci">static DateTime_TC now()</div><div class="ttdef"><b>Definition:</b> <a href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC.cpp:31</a></div></div>
+<div class="ttc" id="aclassEEPROM__TC_html_a50faee203d04bd201e02fe13f50309b7"><div class="ttname"><a href="classEEPROM__TC.html#a50faee203d04bd201e02fe13f50309b7">EEPROM_TC::setRampStartingPH</a></div><div class="ttdeci">float setRampStartingPH(float value)</div><div class="ttdef"><b>Definition:</b> <a href="EEPROM__TC_8cpp_source.html#l00195">EEPROM_TC.cpp:195</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a203a6cdd1ab831cd1ece679de2af9ca9"><div class="ttname"><a href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">PHProbe::getPh</a></div><div class="ttdeci">float getPh()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8h_source.html#l00019">PHProbe.h:19</a></div></div>
+<div class="ttc" id="aclassPHProbe_html_a6bb38c05e8c1bad76368572647311f7e"><div class="ttname"><a href="classPHProbe.html#a6bb38c05e8c1bad76368572647311f7e">PHProbe::instance</a></div><div class="ttdeci">static PHProbe * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PHProbe_8cpp_source.html#l00018">PHProbe.cpp:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="PHProbe_8h_source.html#l00019">PHProbe::getPh()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="PHProbe_8cpp_source.html#l00018">PHProbe::instance()</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="PHControl_8h_source.html#l00016">rampStartingPh</a>, <a class="el" href="PHControl_8h_source.html#l00018">rampTimeEnd</a>, <a class="el" href="PHControl_8h_source.html#l00017">rampTimeStart</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00195">EEPROM_TC::setRampStartingPH()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00192">EEPROM_TC::setRampTimeEnd()</a>, and <a class="el" href="EEPROM__TC_8cpp_source.html#l00189">EEPROM_TC::setRampTimeStart()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SetPHSetPoint_8cpp_source.html#l00025">SetPHSetPoint::setValue()</a>, and <a class="el" href="PHControlTest_8cpp_source.html#l00172">unittest()</a>.</p>
 
 </div>
 </div>
@@ -370,23 +595,23 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00043">43</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                       {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> != newPh) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[40];</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    strncpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, (PGM_P)F(<span class="stringliteral">&quot;change target pH from &quot;</span>), <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    dtostrf(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    strcpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)), (PGM_P)F(<span class="stringliteral">&quot; to &quot;</span>));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    dtostrf(newPh, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = newPh;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">setPH</a>(newPh);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00061">61</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                       {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> != newPh) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>[40];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    strncpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, (PGM_P)F(<span class="stringliteral">&quot;change target pH from &quot;</span>), <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    dtostrf(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    strcpy_P(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)), (PGM_P)F(<span class="stringliteral">&quot; to &quot;</span>));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    dtostrf(newPh, 5, 3, <a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a> + strnlen(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>, <span class="keyword">sizeof</span>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>)));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(<a class="code" href="DateTime__TC_8cpp.html#a5819dbc2d305e99e930c734a0d28bc3b">buffer</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> = newPh;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classEEPROM__TC.html#abbfd37647f8204f6af70ed14ee2e439a">EEPROM_TC::instance</a>()-&gt;<a class="code" href="classEEPROM__TC.html#a8efc7372197ebe3ba6222676a1273b98">setPH</a>(newPh);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00165">EEPROM_TC::setPH()</a>, and <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>.</p>
+<p class="reference">References <a class="el" href="DateTime__TC_8cpp_source.html#l00048">buffer</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00014">EEPROM_TC::instance()</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="EEPROM__TC_8cpp_source.html#l00174">EEPROM_TC::setPH()</a>, and <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControlTest_8cpp_source.html#l00030">reset()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00014">SetPHSetPoint::setValue()</a>, <a class="el" href="PHControlTest_8cpp_source.html#l00082">unittest()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00026">unittest_setup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControlTest_8cpp_source.html#l00030">reset()</a>, <a class="el" href="SetPHSetPoint_8cpp_source.html#l00025">SetPHSetPoint::setValue()</a>, <a class="el" href="PHControlTest_8cpp_source.html#l00082">unittest()</a>, and <a class="el" href="MenuTest_8cpp_source.html#l00026">unittest_setup()</a>.</p>
 
 </div>
 </div>
@@ -406,53 +631,61 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00066">66</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                      {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> msToBeOn;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">int</span> nowModWindow = millis() % <a class="code" href="classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc">WINDOW_SIZE</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;PHControl::updateControl(&quot;</span> &lt;&lt; pH &lt;&lt; <span class="stringliteral">&quot;) at &quot;</span> &lt;&lt; millis());</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a>) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    msToBeOn = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;<a class="code" href="classPID__TC.html#a129c014b8d9b8a55fbcd33fb3a24a78a">computeOutput</a>(<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>, pH);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (msToBeOn &gt; 9000) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">if</span> (msToBeOn &gt; 10000 &amp;&amp; <a class="code" href="classPHControl.html#a95fd419884d38616ec5cbab82127c237">lastWarnMS</a> + 60000 &lt; millis()) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;WARNING: PID asked for an on time of %i which has been capped at 9000&quot;</span>), msToBeOn);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classPHControl.html#a95fd419884d38616ec5cbab82127c237">lastWarnMS</a> = millis();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      msToBeOn = 9000;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    msToBeOn = pH &gt; <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> ? 9000 : 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;target: &quot;</span> &lt;&lt; <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> &lt;&lt; <span class="stringliteral">&quot;; current: &quot;</span> &lt;&lt; pH &lt;&lt; <span class="stringliteral">&quot;; nowModWindow = &quot;</span> &lt;&lt; nowModWindow</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;; msToBeOn = &quot;</span> &lt;&lt; msToBeOn);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> newValue;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>()-&gt;isInCalibration()) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be off since in calibration&quot;</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    newValue = <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;  <span class="comment">// turn off CO2 while in calibration</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a9889c4c4231282bf3a2010a9e002c3bf">SOLENOID_OPENING_TIME</a> &lt; msToBeOn &amp;&amp; nowModWindow &lt; msToBeOn) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be on&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    newValue = <a class="code" href="TankController_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;  <span class="comment">// open CO2 solenoid</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be off&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    newValue = <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;  <span class="comment">// close CO2 solenoid</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">if</span> (newValue != digitalRead(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>)) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    digitalWrite(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, newValue);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    uint32_t currentMS = millis();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;CO2 bubbler turned %s after %lu ms&quot;</span>), newValue ? <span class="stringliteral">&quot;off&quot;</span> : <span class="stringliteral">&quot;on&quot;</span>, currentMS - <a class="code" href="classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0">lastSwitchMS</a>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0">lastSwitchMS</a> = currentMS;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="PHControl_8cpp_source.html#l00106">106</a> of file <a class="el" href="PHControl_8cpp_source.html">PHControl.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                      {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">int</span> msToBeOn;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">int</span> nowModWindow = millis() % <a class="code" href="classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc">WINDOW_SIZE</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">float</span> currentTime = <a class="code" href="classDateTime__TC.html#ae1b05da93afda7c496482990198b14e1">DateTime_TC::now</a>().secondstime();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">// if ramp is being used</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span> (currentTime &lt; <a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a>) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a> =</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a> + ((currentTime - <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>) * (<a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a> - <a class="code" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">rampStartingPh</a>) / (<a class="code" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">rampTimeEnd</a> - <a class="code" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">rampTimeStart</a>));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a> = <a class="code" href="classPHControl.html#a6e3905d560087943ee4bdd74a6193888">targetPh</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;PHControl::updateControl(&quot;</span> &lt;&lt; pH &lt;&lt; <span class="stringliteral">&quot;) at &quot;</span> &lt;&lt; millis());</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a848aef84fb4eccca0dd136d62b35297c">usePID</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    msToBeOn = <a class="code" href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a>()-&gt;<a class="code" href="classPID__TC.html#a129c014b8d9b8a55fbcd33fb3a24a78a">computeOutput</a>(<a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a>, pH);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span> (msToBeOn &gt; 9000) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">if</span> (msToBeOn &gt; 10000 &amp;&amp; <a class="code" href="classPHControl.html#a95fd419884d38616ec5cbab82127c237">lastWarnMS</a> + 60000 &lt; millis()) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;WARNING: PID asked for an on time of %i which has been capped at 9000&quot;</span>), msToBeOn);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="classPHControl.html#a95fd419884d38616ec5cbab82127c237">lastWarnMS</a> = millis();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      msToBeOn = 9000;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    msToBeOn = pH &gt; <a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a> ? 9000 : 0;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;target: &quot;</span> &lt;&lt; <a class="code" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">currentPHTarget</a> &lt;&lt; <span class="stringliteral">&quot;; current: &quot;</span> &lt;&lt; pH &lt;&lt; <span class="stringliteral">&quot;; nowModWindow = &quot;</span> &lt;&lt; nowModWindow</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                  &lt;&lt; <span class="stringliteral">&quot;; msToBeOn = &quot;</span> &lt;&lt; msToBeOn);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">bool</span> newValue;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a>()-&gt;isInCalibration()) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be off since in calibration&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    newValue = <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;  <span class="comment">// turn off CO2 while in calibration</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classPHControl.html#a9889c4c4231282bf3a2010a9e002c3bf">SOLENOID_OPENING_TIME</a> &lt; msToBeOn &amp;&amp; nowModWindow &lt; msToBeOn) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be on&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    newValue = <a class="code" href="TankController_8h.html#a8f4f5928dac06303977eacf87e9531fa">TURN_SOLENOID_ON</a>;  <span class="comment">// open CO2 solenoid</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a>(<span class="stringliteral">&quot;pH control should be off&quot;</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    newValue = <a class="code" href="TankController_8h.html#af1395b3b786599e1f6ccf55cb73d9f4b">TURN_SOLENOID_OFF</a>;  <span class="comment">// close CO2 solenoid</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">if</span> (newValue != digitalRead(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>)) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    digitalWrite(<a class="code" href="classPHControl.html#a7543d86ce3f12d6d3525b152c809301a">PH_CONTROL_PIN</a>, newValue);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    uint32_t currentMS = millis();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="Serial__TC_8cpp.html#a822c3c9e2647d480c6ea4b4d29f77afb">serial</a>(F(<span class="stringliteral">&quot;CO2 bubbler turned %s after %lu ms&quot;</span>), newValue ? <span class="stringliteral">&quot;off&quot;</span> : <span class="stringliteral">&quot;on&quot;</span>, currentMS - <a class="code" href="classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0">lastSwitchMS</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0">lastSwitchMS</a> = currentMS;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
 <div class="ttc" id="aTC__util_8h_html_a051dcff3fa35db18fbabb4fde1bd1167"><div class="ttname"><a href="TC__util_8h.html#a051dcff3fa35db18fbabb4fde1bd1167">COUT</a></div><div class="ttdeci">#define COUT(x)</div><div class="ttdef"><b>Definition:</b> <a href="TC__util_8h_source.html#l00019">TC_util.h:19</a></div></div>
 <div class="ttc" id="aclassPHControl_html_a26d86c769ef5c8d2c9b49e09425caea0"><div class="ttname"><a href="classPHControl.html#a26d86c769ef5c8d2c9b49e09425caea0">PHControl::lastSwitchMS</a></div><div class="ttdeci">uint32_t lastSwitchMS</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00010">PHControl.h:10</a></div></div>
-<div class="ttc" id="aclassPHControl_html_a4c518c84fdbbb8b423bd2947741e29cc"><div class="ttname"><a href="classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc">PHControl::WINDOW_SIZE</a></div><div class="ttdeci">const uint16_t WINDOW_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00015">PHControl.h:15</a></div></div>
+<div class="ttc" id="aclassPHControl_html_a4c518c84fdbbb8b423bd2947741e29cc"><div class="ttname"><a href="classPHControl.html#a4c518c84fdbbb8b423bd2947741e29cc">PHControl::WINDOW_SIZE</a></div><div class="ttdeci">const uint16_t WINDOW_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00019">PHControl.h:19</a></div></div>
 <div class="ttc" id="aclassPHControl_html_a95fd419884d38616ec5cbab82127c237"><div class="ttname"><a href="classPHControl.html#a95fd419884d38616ec5cbab82127c237">PHControl::lastWarnMS</a></div><div class="ttdeci">uint32_t lastWarnMS</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00011">PHControl.h:11</a></div></div>
 <div class="ttc" id="aclassPHControl_html_a9889c4c4231282bf3a2010a9e002c3bf"><div class="ttname"><a href="classPHControl.html#a9889c4c4231282bf3a2010a9e002c3bf">PHControl::SOLENOID_OPENING_TIME</a></div><div class="ttdeci">const uint16_t SOLENOID_OPENING_TIME</div><div class="ttdef"><b>Definition:</b> <a href="PHControl_8h_source.html#l00013">PHControl.h:13</a></div></div>
 <div class="ttc" id="aclassPID__TC_html_a018320ab44c3ddbf18a1a7abd4d5701f"><div class="ttname"><a href="classPID__TC.html#a018320ab44c3ddbf18a1a7abd4d5701f">PID_TC::instance</a></div><div class="ttdeci">static PID_TC * instance()</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00012">PID_TC.cpp:12</a></div></div>
 <div class="ttc" id="aclassPID__TC_html_a129c014b8d9b8a55fbcd33fb3a24a78a"><div class="ttname"><a href="classPID__TC.html#a129c014b8d9b8a55fbcd33fb3a24a78a">PID_TC::computeOutput</a></div><div class="ttdeci">float computeOutput(float target, float current)</div><div class="ttdef"><b>Definition:</b> <a href="PID__TC_8cpp_source.html#l00062">PID_TC.cpp:62</a></div></div>
 <div class="ttc" id="aclassTankController_html_abf33fd357e013dc8f6b4c3f781f26726"><div class="ttname"><a href="classTankController.html#abf33fd357e013dc8f6b4c3f781f26726">TankController::instance</a></div><div class="ttdeci">static TankController * instance(const char *pushingBoxID=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="TankController_8cpp_source.html#l00035">TankController.cpp:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00062">PID_TC::computeOutput()</a>, <a class="el" href="TC__util_8h_source.html#l00019">COUT</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="PHControl_8h_source.html#l00010">lastSwitchMS</a>, <a class="el" href="PHControl_8h_source.html#l00011">lastWarnMS</a>, <a class="el" href="PHControl_8h_source.html#l00012">PH_CONTROL_PIN</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="PHControl_8h_source.html#l00013">SOLENOID_OPENING_TIME</a>, <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>, <a class="el" href="TankController_8h_source.html#l00006">TURN_SOLENOID_OFF</a>, <a class="el" href="TankController_8h_source.html#l00007">TURN_SOLENOID_ON</a>, <a class="el" href="PHControl_8h_source.html#l00016">usePID</a>, and <a class="el" href="PHControl_8h_source.html#l00015">WINDOW_SIZE</a>.</p>
+<p class="reference">References <a class="el" href="PID__TC_8cpp_source.html#l00062">PID_TC::computeOutput()</a>, <a class="el" href="TC__util_8h_source.html#l00019">COUT</a>, <a class="el" href="PHControl_8h_source.html#l00015">currentPHTarget</a>, <a class="el" href="PID__TC_8cpp_source.html#l00012">PID_TC::instance()</a>, <a class="el" href="TankController_8cpp_source.html#l00035">TankController::instance()</a>, <a class="el" href="PHControl_8h_source.html#l00010">lastSwitchMS</a>, <a class="el" href="PHControl_8h_source.html#l00011">lastWarnMS</a>, <a class="el" href="DateTime__TC_8cpp_source.html#l00031">DateTime_TC::now()</a>, <a class="el" href="PHControl_8h_source.html#l00012">PH_CONTROL_PIN</a>, <a class="el" href="PHControl_8h_source.html#l00016">rampStartingPh</a>, <a class="el" href="PHControl_8h_source.html#l00018">rampTimeEnd</a>, <a class="el" href="PHControl_8h_source.html#l00017">rampTimeStart</a>, <a class="el" href="Serial__TC_8cpp_source.html#l00010">serial()</a>, <a class="el" href="PHControl_8h_source.html#l00013">SOLENOID_OPENING_TIME</a>, <a class="el" href="PHControl_8h_source.html#l00014">targetPh</a>, <a class="el" href="TankController_8h_source.html#l00006">TURN_SOLENOID_OFF</a>, <a class="el" href="TankController_8h_source.html#l00007">TURN_SOLENOID_ON</a>, <a class="el" href="PHControl_8h_source.html#l00020">usePID</a>, and <a class="el" href="PHControl_8h_source.html#l00019">WINDOW_SIZE</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="TankController_8cpp_source.html#l00212">TankController::updateControls()</a>.</p>
 
@@ -482,7 +715,33 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00008">8</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00022">instance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00030">clearInstance()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00023">instance()</a>.</p>
+
+</div>
+</div>
+<a id="a8604ac3b672176a8dd6b1c89234fcccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8604ac3b672176a8dd6b1c89234fcccb">&#9670;&nbsp;</a></span>currentPHTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PHControl::currentPHTarget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00015">15</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControl_8h_source.html#l00029">getCurrentPHTarget()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -508,7 +767,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00010">10</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +793,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00011">11</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +819,85 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00012">12</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00062">isOn()</a>, <a class="el" href="PHControl_8cpp_source.html#l00029">PHControl()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00102">isOn()</a>, <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
+
+</div>
+</div>
+<a id="ac68a411d75645be2018c8b27d3f96926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68a411d75645be2018c8b27d3f96926">&#9670;&nbsp;</a></span>rampStartingPh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PHControl::rampStartingPh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00016">16</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>, <a class="el" href="PHControl_8cpp_source.html#l00074">setRamp()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
+
+</div>
+</div>
+<a id="a8c1eaad1f4c6d31bbd56b34b9c8b9f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">&#9670;&nbsp;</a></span>rampTimeEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PHControl::rampTimeEnd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00018">18</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControl_8h_source.html#l00035">getRampTimeEnd()</a>, <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>, <a class="el" href="PHControl_8cpp_source.html#l00074">setRamp()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
+
+</div>
+</div>
+<a id="aa0b5f52cce2473c974351ea359f7d471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b5f52cce2473c974351ea359f7d471">&#9670;&nbsp;</a></span>rampTimeStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t PHControl::rampTimeStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00017">17</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="PHControl_8h_source.html#l00032">getRampTimeStart()</a>, <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>, <a class="el" href="PHControl_8cpp_source.html#l00074">setRamp()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -586,7 +923,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00013">13</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -612,7 +949,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00014">14</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8h_source.html#l00021">getTargetPh()</a>, <a class="el" href="PHControl_8cpp_source.html#l00029">PHControl()</a>, <a class="el" href="PHControl_8cpp_source.html#l00043">setTargetPh()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8h_source.html#l00026">getTargetPh()</a>, <a class="el" href="PHControl_8cpp_source.html#l00037">PHControl()</a>, <a class="el" href="PHControl_8cpp_source.html#l00061">setTargetPh()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -636,9 +973,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00016">16</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00020">20</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00056">enablePID()</a>, <a class="el" href="PHControl_8h_source.html#l00024">getUsePID()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00096">enablePID()</a>, <a class="el" href="PHControl_8h_source.html#l00038">getUsePID()</a>, and <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
@@ -662,9 +999,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00015">15</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PHControl_8h_source.html#l00019">19</a> of file <a class="el" href="PHControl_8h_source.html">PHControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00066">updateControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="PHControl_8cpp_source.html#l00106">updateControl()</a>.</p>
 
 </div>
 </div>
