@@ -88,6 +88,9 @@ $(function() {
 
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>amplitude
+: <a class="el" href="classPHControl.html#a4955f578ab90a3a90c8195f8e6b308b7">PHControl</a>
+</li>
 <li>AMPLITUDE_ADDRESS
 : <a class="el" href="classEEPROM__TC.html#a49a525c43cfd1b75238732b799af494b">EEPROM_TC</a>
 </li>
@@ -126,6 +129,9 @@ $(function() {
 </li>
 <li>currentPHTarget
 : <a class="el" href="classPHControl.html#a8604ac3b672176a8dd6b1c89234fcccb">PHControl</a>
+</li>
+<li>currentTemperatureTarget
+: <a class="el" href="classTemperatureControl.html#aa9ce4a0442a12c215ecef17f57bbaa2d">TemperatureControl</a>
 </li>
 </ul>
 
@@ -282,6 +288,8 @@ $(function() {
 </li>
 <li>NUM_VALUES
 : <a class="el" href="classSetPHSetPoint.html#ae2c68d49deff4fb1ca2e8616b453fb66">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#adcd37e0f6673402e41a9f4034030ebfe">SetPHWithSine</a>
+, <a class="el" href="classSetTempSetPoint.html#a1a57d8cb3905555816f07138736028d4">SetTempSetPoint</a>
 , <a class="el" href="classSetTime.html#a485e08c46022b03265252865975b3e26">SetTime</a>
 </li>
 <li>numAttemptedDHCPReleases
@@ -304,6 +312,9 @@ $(function() {
 <li>panel
 : <a class="el" href="classTankController_1_1TankController.html#afdd51b598073eb98137399db70864097">TankController.TankController</a>
 </li>
+<li>period
+: <a class="el" href="classPHControl.html#a71367d8b74e81547de8fad8ec7d42e7a">PHControl</a>
+</li>
 <li>PH_ADDRESS
 : <a class="el" href="classEEPROM__TC.html#a1604817b4087ce90d37a43cc9f08432f">EEPROM_TC</a>
 </li>
@@ -322,8 +333,23 @@ $(function() {
 <li>PH_SERIES_SIZE_ADDRESS
 : <a class="el" href="classEEPROM__TC.html#af6ba669a43d8e36662155058bf2bb654">EEPROM_TC</a>
 </li>
+<li>PH_SET_TYPE_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#adde4a7362875ed265e1e7822fd9f4dcf">EEPROM_TC</a>
+</li>
+<li>PH_SINE_AMPLITUDE_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a9a4a63e014ab2fb0395d3e97d02ee6b5">EEPROM_TC</a>
+</li>
+<li>PH_SINE_PERIOD_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a3d761f54b0b76b93bffbde7d3c44c6e9">EEPROM_TC</a>
+</li>
+<li>PH_SINE_START_TIME_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a8b4102cc5c00c2782e8e7b73cc03e83a">EEPROM_TC</a>
+</li>
 <li>phProbe
 : <a class="el" href="classTankController_1_1TankController.html#aa7944947a152b753d82f153a72cfc995">TankController.TankController</a>
+</li>
+<li>pHSetType
+: <a class="el" href="classPHControl.html#a1600b80a0fd5843617be50e90e5ed1ce">PHControl</a>
 </li>
 <li>pins
 : <a class="el" href="classTankController_1_1TankController.html#ad1ae40fa297a68534867c2c6105ffe10">TankController.TankController</a>
@@ -333,6 +359,8 @@ $(function() {
 </li>
 <li>precision
 : <a class="el" href="classSetPHSetPoint.html#a313be99d5dcf39d35bf45ac586aed629">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#a4d680213e37bbfea90199389cfed3a6f">SetPHWithSine</a>
+, <a class="el" href="classSetTempSetPoint.html#a6a6b45052df645b545cb980b9c8a24d8">SetTempSetPoint</a>
 </li>
 <li>previousMillis
 : <a class="el" href="classChiller.html#ab2bde82ea9bf460799cb494d12ffc2f1">Chiller</a>
@@ -342,6 +370,8 @@ $(function() {
 </li>
 <li>prompts
 : <a class="el" href="classSetPHSetPoint.html#a921d37a9d3fdd0199a8404d97ecc8ea5">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#a57ecf47eb661d311d85e7611beb49eb4">SetPHWithSine</a>
+, <a class="el" href="classSetTempSetPoint.html#ad585d65fd8f1da418e699e9c37a55d34">SetTempSetPoint</a>
 , <a class="el" href="classSetTime.html#ac5bd14b4ee59bdb861db4068df680fca">SetTime</a>
 </li>
 <li>puppetPad
@@ -354,20 +384,34 @@ $(function() {
 <li>RAMP_STARTING_PH_ADDRESS
 : <a class="el" href="classEEPROM__TC.html#af4bde4d9b44e6c469051dd7657a17ebc">EEPROM_TC</a>
 </li>
-<li>RAMP_TIME_END_ADDRESS
-: <a class="el" href="classEEPROM__TC.html#a8a56eb060786ce509a56a871523cb89e">EEPROM_TC</a>
+<li>RAMP_STARTING_TEMP_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#aa15016f73e8344a1ea7f2c48b7f33e4c">EEPROM_TC</a>
 </li>
-<li>RAMP_TIME_START_ADDRESS
-: <a class="el" href="classEEPROM__TC.html#a9af6f108dd6774940e7322f310a5cacc">EEPROM_TC</a>
+<li>RAMP_TIME_END_PH_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a4b52398af0360e635ddb91def72fbe38">EEPROM_TC</a>
+</li>
+<li>RAMP_TIME_END_TEMP_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a1072abab8321381180c4c718f5fd6639">EEPROM_TC</a>
+</li>
+<li>RAMP_TIME_START_PH_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#a7991cffb998c9810a0bddb5c5c5cc5e1">EEPROM_TC</a>
+</li>
+<li>RAMP_TIME_START_TEMP_ADDRESS
+: <a class="el" href="classEEPROM__TC.html#af294920a6dd5daf5576b563288aabd99">EEPROM_TC</a>
 </li>
 <li>rampStartingPh
 : <a class="el" href="classPHControl.html#ac68a411d75645be2018c8b27d3f96926">PHControl</a>
 </li>
+<li>rampStartingTemp
+: <a class="el" href="classTemperatureControl.html#a19a5eb73d2a5524b344e1849872243ed">TemperatureControl</a>
+</li>
 <li>rampTimeEnd
 : <a class="el" href="classPHControl.html#a8c1eaad1f4c6d31bbd56b34b9c8b9f56">PHControl</a>
+, <a class="el" href="classTemperatureControl.html#a75d39b953d0a5f84c39bbc189cab9399">TemperatureControl</a>
 </li>
 <li>rampTimeStart
 : <a class="el" href="classPHControl.html#aa0b5f52cce2473c974351ea359f7d471">PHControl</a>
+, <a class="el" href="classTemperatureControl.html#a3e898d40af3d7dc6bd5ca4af7260a9e0">TemperatureControl</a>
 </li>
 <li>refResistor
 : <a class="el" href="classTempProbe__TC.html#a9f864fd6342b8c825990cd55c56df51c">TempProbe_TC</a>
@@ -401,6 +445,9 @@ $(function() {
 <li>setMenus
 : <a class="el" href="classMainMenu.html#af3b3248277a867617a67536053cba583">MainMenu</a>
 </li>
+<li>sineStartTime
+: <a class="el" href="classPHControl.html#a6b0012597c894abc6d0149c3d6ef3651">PHControl</a>
+</li>
 <li>slopeResponse
 : <a class="el" href="classPHProbe.html#ae67c2cdbf1e91fe8d3ab7476d40276ea">PHProbe</a>
 </li>
@@ -416,6 +463,8 @@ $(function() {
 </li>
 <li>subState
 : <a class="el" href="classSetPHSetPoint.html#a308e8fcc092437fe840752d1ffcba68f">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#aa31e3b1ed390afd9afea4a3754af50c6">SetPHWithSine</a>
+, <a class="el" href="classSetTempSetPoint.html#a224b0a2a51d936f7f1e052c73e9f14f3">SetTempSetPoint</a>
 , <a class="el" href="classSetTime.html#aa3c588651c9a95d7b6d84529250924d3">SetTime</a>
 </li>
 </ul>
@@ -487,6 +536,8 @@ $(function() {
 </li>
 <li>values
 : <a class="el" href="classSetPHSetPoint.html#af33a40bd81b5d40340c6b777ef2884fd">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#ab67b3ce8903b81402e2cf580f987c91d">SetPHWithSine</a>
+, <a class="el" href="classSetTempSetPoint.html#a34675ff15b42e29a6e0630ee03d55331">SetTempSetPoint</a>
 , <a class="el" href="classSetTime.html#af18dd9f392689631b00910eadc5463c9">SetTime</a>
 </li>
 <li>viewMenus

@@ -70,6 +70,7 @@ $(function() {
 </li>
 <li>getAmplitude()
 : <a class="el" href="classEEPROM__TC.html#ab1f6b6100e9db17b067595a7c3c9ca21">EEPROM_TC</a>
+, <a class="el" href="classPHControl.html#a829940816bf004f0fc03941f87f766ef">PHControl</a>
 </li>
 <li>getClient()
 : <a class="el" href="classPushingBox.html#a1222f4cedd350d49055df3cb3bf2fe3d">PushingBox</a>
@@ -77,8 +78,11 @@ $(function() {
 <li>getCorrectedTemp()
 : <a class="el" href="classEEPROM__TC.html#a2b359d59f8ccc63c29f86f29f5d7ddd6">EEPROM_TC</a>
 </li>
-<li>getCurrentPHTarget()
-: <a class="el" href="classPHControl.html#a9e736b6a84354c425c2650a0cc9a869c">PHControl</a>
+<li>getCurrentPhTarget()
+: <a class="el" href="classPHControl.html#a1a2ba3b261692bf668033d131230c9be">PHControl</a>
+</li>
+<li>getCurrentTemperatureTarget()
+: <a class="el" href="classTemperatureControl.html#ac72e4e362c7321af8ab2734b4dbc1719">TemperatureControl</a>
 </li>
 <li>getCurrentValue()
 : <a class="el" href="classEnablePID.html#a9ed274e8684f85b8f81b3f1b35dc76a1">EnablePID</a>
@@ -90,6 +94,7 @@ $(function() {
 , <a class="el" href="classSetKI.html#a1437dc71204e018f26c234ab8a796c9c">SetKI</a>
 , <a class="el" href="classSetKP.html#a9ade06f915969389387b7ba739a8d6d7">SetKP</a>
 , <a class="el" href="classSetPHSetPoint.html#a579b39b8f4466bcaa10be1fabc974c28">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#a30671a833fb37527bc468a12d862f6c6">SetPHWithSine</a>
 , <a class="el" href="classSetTankID.html#afcd5104b9d99a7030308ee3d3396be50">SetTankID</a>
 , <a class="el" href="classSetTempSetPoint.html#a6b04f5f68bb2d60a7794a4d77f9fb035">SetTempSetPoint</a>
 , <a class="el" href="classSetTime.html#a307219a7d321dca6d55fc35fa068b187">SetTime</a>
@@ -102,6 +107,7 @@ $(function() {
 , <a class="el" href="classSetKI.html#a5bf82efc30f48d7aff1f4c06f61272ed">SetKI</a>
 , <a class="el" href="classSetKP.html#a0e1c9dd79fcdd449458cce36029ba14d">SetKP</a>
 , <a class="el" href="classSetPHSetPoint.html#ac1d7e5e2007149be3b367aaac2006b53">SetPHSetPoint</a>
+, <a class="el" href="classSetPHWithSine.html#a9b69d673b9113c1a6a6c17dcc5956efa">SetPHWithSine</a>
 , <a class="el" href="classSetTempSetPoint.html#aed4e21885d299cc00d2aad0f486540ad">SetTempSetPoint</a>
 , <a class="el" href="classTemperatureCalibration.html#acfde7a63f8410edc67fdaa6fa1d1ff70">TemperatureCalibration</a>
 </li>
@@ -157,34 +163,59 @@ $(function() {
 <li>getNumAttemptedDHCPReleases()
 : <a class="el" href="classEthernet__TC.html#a4be5cb309dd33d94d25cd2ef9dc7b6a0">Ethernet_TC</a>
 </li>
-<li>getPH()
-: <a class="el" href="classEEPROM__TC.html#a101b5051b98f0a9fa12559da965d6dbf">EEPROM_TC</a>
+<li>getPeriod()
+: <a class="el" href="classPHControl.html#adbd66bf273b2769487ad307524b33188">PHControl</a>
 </li>
 <li>getPh()
-: <a class="el" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">PHProbe</a>
+: <a class="el" href="classEEPROM__TC.html#a6eb43034bb803a958bc5781049d5d94c">EEPROM_TC</a>
+, <a class="el" href="classPHProbe.html#a203a6cdd1ab831cd1ece679de2af9ca9">PHProbe</a>
 </li>
-<li>getPHDelay()
-: <a class="el" href="classEEPROM__TC.html#af67943e9fe3f5bcec558cde4826462c6">EEPROM_TC</a>
+<li>getPhDelay()
+: <a class="el" href="classEEPROM__TC.html#af2a323126ee0279be38291b5dce33bd2">EEPROM_TC</a>
 </li>
-<li>getPHInterval()
-: <a class="el" href="classEEPROM__TC.html#a3d87b0ba5ff1e6cca0fd6e3968fa0eda">EEPROM_TC</a>
+<li>getPhInterval()
+: <a class="el" href="classEEPROM__TC.html#a441e091ff0dbb21fc860869532ae53cf">EEPROM_TC</a>
 </li>
-<li>getPHSeriesPointer()
-: <a class="el" href="classEEPROM__TC.html#ad2500c4e4b1c6e1137a54cfd2163bc82">EEPROM_TC</a>
+<li>getPhRampTimeEnd()
+: <a class="el" href="classEEPROM__TC.html#a23369068d101d0b7e4ed43bd63144f5a">EEPROM_TC</a>
+, <a class="el" href="classPHControl.html#a993d565a27f8b62bc4610c13a0ba6810">PHControl</a>
+, <a class="el" href="classTemperatureControl.html#a6203dae9455dda53f02d2a48b46ce13f">TemperatureControl</a>
 </li>
-<li>getPHSeriesSize()
-: <a class="el" href="classEEPROM__TC.html#a6af13b166c57d2ff85e67203388a5520">EEPROM_TC</a>
+<li>getPhRampTimeStart()
+: <a class="el" href="classEEPROM__TC.html#afcdab69b7c27e0f9dd46f32583e3d0b9">EEPROM_TC</a>
+, <a class="el" href="classPHControl.html#a65263e8490ae2cd63fc66dbf12ba9598">PHControl</a>
+, <a class="el" href="classTemperatureControl.html#a5f9e017a5af7d656e724e78da377d3f3">TemperatureControl</a>
 </li>
-<li>getRampStartingPH()
-: <a class="el" href="classEEPROM__TC.html#a0ba6bf684ef844417e0d185d0e6359ca">EEPROM_TC</a>
+<li>getPhSeriesPointer()
+: <a class="el" href="classEEPROM__TC.html#ac8a30a709a78a012c38372c2bbcbe509">EEPROM_TC</a>
 </li>
-<li>getRampTimeEnd()
-: <a class="el" href="classEEPROM__TC.html#aa7030a1c274462afa35d876a4e710abb">EEPROM_TC</a>
-, <a class="el" href="classPHControl.html#a139ed38a5c2017adf69f94026d0b6294">PHControl</a>
+<li>getPhSeriesSize()
+: <a class="el" href="classEEPROM__TC.html#a0a5809b46f9f610b2e8d875abf088347">EEPROM_TC</a>
 </li>
-<li>getRampTimeStart()
-: <a class="el" href="classEEPROM__TC.html#af42098eda13bd511ec5b59dbe47197f0">EEPROM_TC</a>
-, <a class="el" href="classPHControl.html#ac54cf652c6f3d3bb989bc319c480415b">PHControl</a>
+<li>getPhSetType()
+: <a class="el" href="classEEPROM__TC.html#a0eabf4e5fcf6f24218707587eaffed1c">EEPROM_TC</a>
+, <a class="el" href="classPHControl.html#abc3757a174a71cffbe4a3a697c35aaf3">PHControl</a>
+</li>
+<li>getPhSineAmplitude()
+: <a class="el" href="classEEPROM__TC.html#ac2a395f3b9f8c93086ab0c0317f5a343">EEPROM_TC</a>
+</li>
+<li>getPhSinePeriod()
+: <a class="el" href="classEEPROM__TC.html#a1f4a7134a0e3d6a9fada78d959e4cde4">EEPROM_TC</a>
+</li>
+<li>getPhSineStartTime()
+: <a class="el" href="classEEPROM__TC.html#af7edc2f9fd981c1c45d6741c668cf3fa">EEPROM_TC</a>
+</li>
+<li>getRampStartingPh()
+: <a class="el" href="classEEPROM__TC.html#aeda2b60038ffaa551e3e44df1fec6472">EEPROM_TC</a>
+</li>
+<li>getRampStartingTemp()
+: <a class="el" href="classEEPROM__TC.html#a46f3a19386dbe34a8cb08aa443a77bbe">EEPROM_TC</a>
+</li>
+<li>getRampTimeEndTemp()
+: <a class="el" href="classEEPROM__TC.html#a1e91009e8b037b8a3aa4f2358b690382">EEPROM_TC</a>
+</li>
+<li>getRampTimeStartTemp()
+: <a class="el" href="classEEPROM__TC.html#a8ecad781d5e7414d8586e0fd3ffcead6">EEPROM_TC</a>
 </li>
 <li>getRawTemperature()
 : <a class="el" href="classTempProbe__TC.html#aab52c631535639bd8392986a7e581eaa">TempProbe_TC</a>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5frequest_1220',['GET_REQUEST',['../EthernetServer__TC_8h.html#ac57d45241aef37e9555a010a7dbe48eca4ead30c3e3b2331eddeeb1a64b392e84',1,'EthernetServer_TC.h']]]
+  ['flat_5ftype_1291',['FLAT_TYPE',['../classPHControl.html#a88893eb6f21be03cae0ec634f7bbd3f5a29d51f01592b95284973fdbe89b7a1f7',1,'PHControl']]]
 ];

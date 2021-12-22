@@ -1,5 +1,5 @@
 <map id="src/Devices/EEPROM_TC.h" name="src/Devices/EEPROM_TC.h">
-<area shape="rect" id="node1" title=" " alt="" coords="3091,8,3275,34"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3144,8,3328,34"/>
 <area shape="rect" id="node2" href="$libTC_8cpp.html" title=" " alt="" coords="5,90,109,116"/>
 <area shape="rect" id="node3" href="$EEPROM__TC_8cpp.html" title=" " alt="" coords="134,82,285,124"/>
 <area shape="rect" id="node4" href="$Ethernet__TC_8cpp.html" title=" " alt="" coords="309,82,451,124"/>
@@ -36,9 +36,10 @@
 <area shape="rect" id="node40" href="$SeeTankIDTest_8cpp.html" title=" " alt="" coords="5220,90,5383,116"/>
 <area shape="rect" id="node41" href="$SetChillOrHeatTest_8cpp.html" title=" " alt="" coords="5407,90,5593,116"/>
 <area shape="rect" id="node42" href="$SetPHSetPointTest_8cpp.html" title=" " alt="" coords="5617,90,5804,116"/>
-<area shape="rect" id="node43" href="$TCLibTest_8cpp.html" title=" " alt="" coords="5828,90,5961,116"/>
-<area shape="rect" id="node44" href="$TemperatureCalibrationTest_8cpp.html" title=" " alt="" coords="5986,82,6169,124"/>
-<area shape="rect" id="node45" href="$TempProbe__TCTest_8cpp.html" title=" " alt="" coords="6193,90,6383,116"/>
+<area shape="rect" id="node43" href="$SetPHWithSineTest_8cpp.html" title=" " alt="" coords="5828,90,6017,116"/>
+<area shape="rect" id="node44" href="$TCLibTest_8cpp.html" title=" " alt="" coords="6041,90,6175,116"/>
+<area shape="rect" id="node45" href="$TemperatureCalibrationTest_8cpp.html" title=" " alt="" coords="6199,82,6382,124"/>
+<area shape="rect" id="node46" href="$TempProbe__TCTest_8cpp.html" title=" " alt="" coords="6407,90,6596,116"/>
 <area shape="rect" id="node16" href="$MainMenu_8cpp.html" title=" " alt="" coords="3013,179,3190,206"/>
 <area shape="rect" id="node19" href="$SetKD_8cpp.html" title=" " alt="" coords="2504,179,2659,206"/>
 <area shape="rect" id="node22" href="$SetKI_8cpp.html" title=" " alt="" coords="2838,179,2989,206"/>

@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['view_5faddress_1238',['VIEW_ADDRESS',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863aad1e848b769cf28ec12d8703b6862562',1,'MainMenu']]],
-  ['view_5fcommand_5fcount_1239',['VIEW_COMMAND_COUNT',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863abff72d824728e0d1cdde4b71687af299',1,'MainMenu']]],
-  ['view_5ffree_5fmemory_1240',['VIEW_FREE_MEMORY',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863af1f97585fd393bbecb7955e4e8c3cb98',1,'MainMenu']]],
-  ['view_5fgoogle_5fmins_1241',['VIEW_GOOGLE_MINS',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863af9d569462278d97306f3250088da60dc',1,'MainMenu']]],
-  ['view_5flog_5ffile_1242',['VIEW_LOG_FILE',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a5502892eba6bff27406d45c7a8e71e36',1,'MainMenu']]],
-  ['view_5fph_5fslope_1243',['VIEW_PH_SLOPE',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a63605c5bbd144f3405c2caf0605a5b8b',1,'MainMenu']]],
-  ['view_5fpid_1244',['VIEW_PID',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a3852835a1d7034c3872650e7e98ddc27',1,'MainMenu']]],
-  ['view_5ftank_5fid_1245',['VIEW_TANK_ID',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a751c59218961a34c6936fff1371c070c',1,'MainMenu']]],
-  ['view_5ftime_1246',['VIEW_TIME',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863a5433b6b5e4b9e09e4a817bf0d13cf25d',1,'MainMenu']]],
-  ['view_5fversion_1247',['VIEW_VERSION',['../classMainMenu.html#a784c31ba6cba2bcfa3a95c3eaaa68863ad3420c7b18e0e97a2e343fce5f84e598',1,'MainMenu']]]
+  ['set_5fcalibration_1297',['SET_CALIBRATION',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5adede9140aaa272b4965f560306e5a0d8',1,'MainMenu']]],
+  ['set_5fcalibration_5fclear_1298',['SET_CALIBRATION_CLEAR',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a877eaeb1cc4c5524b798cc71e6212983',1,'MainMenu']]],
+  ['set_5fchill_5for_5fheat_1299',['SET_CHILL_OR_HEAT',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5afc563c2149dd4583912b9924b4b3bc4e',1,'MainMenu']]],
+  ['set_5fcommand_5fcount_1300',['SET_COMMAND_COUNT',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5aeb38234b6c46d6b3aca6886ccaf5096c',1,'MainMenu']]],
+  ['set_5fgoogle_5fmins_1301',['SET_GOOGLE_MINS',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a8ea7486bf177f8b5700de5029fa92fcd',1,'MainMenu']]],
+  ['set_5fkd_1302',['SET_KD',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a742a4a9b23bc9aff312887355367062f',1,'MainMenu']]],
+  ['set_5fki_1303',['SET_KI',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5aed502dfbae0cb6d5a7430e9a89412a15',1,'MainMenu']]],
+  ['set_5fkp_1304',['SET_KP',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a695abc7c7c68f945dccc74c0540e6165',1,'MainMenu']]],
+  ['set_5fph_1305',['SET_PH',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a539fb8869643e174fdda7d8231a7be3e',1,'MainMenu']]],
+  ['set_5fph_5fwith_5fsine_1306',['SET_PH_WITH_SINE',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a98d5dfbcc4419e5f922c95558b451d31',1,'MainMenu']]],
+  ['set_5fpid_5fon_5foff_1307',['SET_PID_ON_OFF',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5ae45b3f535f1cf12ff4d14387120aef39',1,'MainMenu']]],
+  ['set_5ftank_5fid_1308',['SET_TANK_ID',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a53b8ff374922e75600ae6d114c6e14c1',1,'MainMenu']]],
+  ['set_5ftemp_5fcalibration_1309',['SET_TEMP_CALIBRATION',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a8836278e6c48ec9275b4c2d64a76f393',1,'MainMenu']]],
+  ['set_5ftemperature_1310',['SET_TEMPERATURE',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5aa2d97e66c4e56a00f99e3beabe0883a9',1,'MainMenu']]],
+  ['set_5ftime_1311',['SET_TIME',['../classMainMenu.html#ae278e09138bde1a63332d575c2965dd5a1b3ae6d57adf46a65f6681e3fcb6b86f',1,'MainMenu']]],
+  ['sine_5ftype_1312',['SINE_TYPE',['../classPHControl.html#a88893eb6f21be03cae0ec634f7bbd3f5aa8851ecb25b408b0caf087a71ce5da87',1,'PHControl']]]
 ];
