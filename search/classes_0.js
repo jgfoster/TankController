@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bitcollector_644',['BitCollector',['../classBitCollector.html',1,'']]]
+  ['bitcollector_0',['BitCollector',['../classBitCollector.html',1,'']]]
 ];
