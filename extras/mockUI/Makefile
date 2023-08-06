@@ -27,7 +27,7 @@ $(PY_LIB) : TankController.o ../pybind11/setup.py ../libTC.cpp
 	-I$(LIBRARIES)/Ethernet/src       				\
 	-I$(LIBRARIES)/Ethernet/src/utility				\
 	-I$(LIBRARIES)/Keypad/src       					\
-	-I$(LIBRARIES)/LiquidCrystal/src  				\
+	-I$(LIBRARIES)/LiquidCrystal_CI/src  				\
 	-I$(LIBRARIES)/RTClib/src									\
 	-I$(LIBRARIES)/SdFat/src									\
 	-I../pybind11/include											\
@@ -50,7 +50,7 @@ TankController.o : Godmode.o
 	-I$(LIBRARIES)/Ethernet/src       					\
 	-I$(LIBRARIES)/Ethernet/src/utility					\
 	-I$(LIBRARIES)/Keypad/src       						\
-	-I$(LIBRARIES)/LiquidCrystal/src  					\
+	-I$(LIBRARIES)/LiquidCrystal_CI/src  					\
 	-I$(LIBRARIES)/RTClib/src										\
 	-I$(LIBRARIES)/SdFat/src										\
 	$(TC_PATH)/*.cpp                      			\
@@ -62,7 +62,7 @@ TankController.o : Godmode.o
 	$(LIBRARIES)/Ethernet/src/*.cpp							\
 	$(LIBRARIES)/Ethernet/src/utility/*.cpp 		\
 	$(LIBRARIES)/Keypad/src/*.cpp								\
-	$(LIBRARIES)/LiquidCrystal/src/*.cpp  			\
+	$(LIBRARIES)/LiquidCrystal_CI/src/*.cpp  			\
 	$(LIBRARIES)/RTClib/src/*.cpp 							\
 	$(LIBRARIES)/SdFat/src/*.cpp 						  	\
 	$(LIBRARIES)/SdFat/src/*/*.cpp 							\

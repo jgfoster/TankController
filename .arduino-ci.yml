@@ -23,6 +23,7 @@ unittest:
     - "PID"
     - "Ethernet"
     - "LiquidCrystal"
+    - "LiquidCrystal_CI"
     - "RTClib"
     - "Keypad"
     - "SdFat"

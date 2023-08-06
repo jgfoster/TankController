@@ -30,6 +30,7 @@ INCLUDE=-I$(ARDUINO_CI)/arduino \
   -I$(LIBRARIES)/Ethernet/src \
   -I$(LIBRARIES)/Ethernet/src/utility \
   -I$(LIBRARIES)/LiquidCrystal/src \
+  -I$(LIBRARIES)/LiquidCrystal_CI/src \
   -I$(LIBRARIES)/RTClib/src \
   -I$(LIBRARIES)/Keypad/src \
   -I$(LIBRARIES)/SdFat/src \
